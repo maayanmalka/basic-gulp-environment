@@ -22,13 +22,13 @@ gulp.task('fonts', function() {
   .pipe(gulp.dest('dist/fonts'))
 })
 
-gulp.task('images', function(){
-  return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
-  // Caching images that ran through imagemin
-  .pipe(cache(imagemin({
-      interlaced: true
-    })))
-  .pipe(gulp.dest('dist/images'))
+gulp.task('img', function(){
+  return gulp.src('app/img/**/*.+(png|jpg|jpeg|gif|svg)')
+  // Caching img that ran through imagemin
+  // .pipe(cache(imagemin({
+  //     interlaced: true
+  //   })))
+  .pipe(gulp.dest('dist/img'))
 });
 
 gulp.task('useref', function(){
@@ -44,16 +44,16 @@ gulp.task('useref', function(){
 gulp.task('sass', function() {
   return gulp.src('app/scss/**/*.scss') // Gets all files ending with .scss in app/scss
     .pipe(sass())
-    .pipe(gulp.dest('app/css'))
+    .pipe(gulp.dest('dist/css'))
     .pipe(browserSync.reload({
       stream: true
     }))
 });
 
-gulp.task('templates', function() {
-  return gulp.src('app/lib/**/*.jade')
-    .pipe(jade())
-    .pipe(gulp.dest('app'))
+gulp.task('jade', function() {
+  return gulp.src('app/**/*.jade')
+    .pipe(jade()) // Sends it through a gulp plugin
+    .pipe(gulp.dest('dist')) // Outputs the file in the destination folder
     .pipe(browserSync.reload({
       stream: true
     }))
@@ -63,14 +63,14 @@ gulp.task('templates', function() {
 gulp.task('browserSync', function() {
   browserSync.init({
     server: {
-      baseDir: 'app'
+      baseDir: './dist',
     },
   })
 });
 
-gulp.task('watch', ['browserSync', 'sass' , 'templates'], function (){
+gulp.task('watch', ['browserSync', 'sass' , 'jade'], function (){
   gulp.watch('app/scss/**/*.scss', ['sass']); 
-  gulp.watch('app/lib/**/*.jade', ['templates']); 
+  gulp.watch('app/**/*.jade', ['jade']); 
   // Reloads the browser whenever HTML or JS files change
   gulp.watch('app/**/*.html', browserSync.reload); 
   gulp.watch('app/js/**/*.js', browserSync.reload); 
@@ -78,13 +78,13 @@ gulp.task('watch', ['browserSync', 'sass' , 'templates'], function (){
 
 gulp.task('build', function (callback) {
   runSequence('clean:dist', 
-    ['sass', 'templates', 'useref', 'images', 'fonts'],
+    ['sass', 'jade', 'useref', 'img', 'fonts'],
     callback
   )
 })
 
 gulp.task('default', function (callback) {
-  runSequence(['sass', 'templates', 'browserSync', 'watch'],
+  runSequence(['build' , 'sass', 'jade', 'browserSync', 'watch'],
     callback
   )
 })
