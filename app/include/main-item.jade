@@ -1,0 +1,51 @@
+.main-item
+  .main-item__gallery
+    img(src='../img/pages/cardboard-puppetshow_large.png', alt='cardboard-puppetshow', style='width:638px;height:638px;')
+  .main-item__content
+    h1.item--title 
+      block main-item__title
+    .main-item__content--title-info-line
+      .price.price--pdf
+        .price__icon
+        .price__content
+          block main-item__price-number
+            h2.price__content--free def Price number
+          block main-item__file-size 
+            .price__content--pdf-size def size of file
+      .badges-container
+        block main-item__badges
+          .info-line__badge.difficulty__badge--scissors
+          .info-line__badge.age__badge
+    .main-item__content--description
+      block main-item__description--p
+        p.description--text
+          | def description p
+      block main-item__description--ul
+        ul.description--text
+          li def 1
+          li def 2
+          li def 3
+          li def 4
+    .main-item__content--cta
+      block main-item__cta-title
+        h3.cta-title Send this PDF to my mailbox
+      
+
+
+      // FORM
+      // Begin MailChimp Signup Form
+      #mc_embed_signup
+        form#mc-embedded-subscribe-form.validate(action='//thecatbears.us14.list-manage.com/subscribe/post?u=a7426f90aa46ed0d3d13700af&id=759f0584e8', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+          #mc_embed_signup_scroll.vertical-form
+            .mc-field-group
+              label(for='mce-EMAIL') Email Address 
+              input#mce-EMAIL.required.email(type='email', value='', name='EMAIL', placeholder='Email')
+            #mce-responses.clear
+              #mce-error-response.response(style='display:none')
+              #mce-success-response.response(style='display:none')
+            // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+            div(style='position: absolute; left: -5000px;', aria-hidden='true')
+              input(type='text', name='b_a7426f90aa46ed0d3d13700af_759f0584e8', tabindex='-1', value='')
+            .clear
+              input#mc-embedded-subscribe.button(type='submit', value='Send to my mailbox', name='subscribe')
+      // End mc_embed_signup

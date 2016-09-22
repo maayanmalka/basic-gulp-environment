@@ -69,7 +69,7 @@ h1.item--title {
   width: 100%;
   border-bottom: 1px solid #e4f3d9;
   padding-bottom: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   /*background-color: lime;*/
   justify-content: space-between;
 }
@@ -89,7 +89,6 @@ h1.item--title {
 .price__icon {
   height: 100%;
   width: 44px;
-  /*background-color: red;*/
   background: url('../img/pages/icon-pdf.png');
 }
 
@@ -121,27 +120,16 @@ h2.price__content--free {
   margin-left: 15px;
 }
 
-.age__badge {
-  /*	background-color: orange;*/
-  width: 40px;
-  background: url('../img/pages/icon-age.png') no-repeat;
-}
-
-.difficulty__badge--scissors {
-  /*background-color: yellow;*/
-  background: url('../img/badge_scissors.png') no-repeat;
-  background-size: 100% 100%;
-}
 
 /*DESCRIPTION*/
 
-.main-item__content--description {
-  height: 200px;
+.main-item__description {
+  // height: 200px;
   width: 100%;
-  border-bottom: 1px solid #e4f3d9;
-  padding-bottom: 20px;
+  color : black;  
+  // padding-bottom: 20px;
   margin-bottom: 30px;
-  /*background-color: lightgreen;*/
+
 }
 
 ul.description--text {
@@ -157,22 +145,25 @@ ul.description--text {
   }
 }
 
-.main-item__content--cta {
-  align-self: flex-end;
-  width: 100%;
-  height: 200px;
-  /*background-color: pink;*/
+.main-item__subscribe {
+  padding-top : 40px;
 }
 
-.cta-title {
-  /*background-color: orange;*/
-  padding-bottom: 20px;
+.main-item__subscribe--title {
+  padding-bottom: 13px;
 }
+
+.main-item__cta {
+
+}
+
 
 /*PROMOTION*/
 
 .promo-item {
   background-color: white;
+  border-radius: 5px;
+  border: 1px solid #eee;
   margin-top: 50px;
   width: 100%;
   height: 350px;
@@ -185,7 +176,6 @@ ul.description--text {
 .promo-item__image {
   width: 270px;
   height: 350px;
-  /*background-color: red;*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -203,11 +193,9 @@ ul.description--text {
   width: 420px;
   padding-right: 50px;
   margin-bottom: 30px;
-  /*background-color: red;*/
 }
 
 .promo-item__content--cta {
-  /*background-color: lime;*/
   max-width: 590px;
   min-height: 150px;
   display: flex;
@@ -227,9 +215,9 @@ ul.description--text {
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-  border: 1px solid #eee;
+  border: 1px solid white;
   border-radius: 5px;
-  box-shadow: 0px 1px 1px #ddd;
+  // box-shadow: 0px 1px 1px #ddd;
   transition: border 100ms ease-in-out , box-shadow 200ms ease-in-out;
   &:hover {
     border: 1px solid #bbb;
@@ -280,7 +268,6 @@ ul.description--text {
   .promo-item__image {
     height: 510px;
     width: 380px;
-    /*background-color: red;*/
   }
   .promo-item__closing-image {
     display: none;
@@ -308,10 +295,10 @@ ul.description--text {
     font-size: 24px;
   }
   .main-item__gallery {
-    /*background-color: red;*/
     width: 336px;
     height: 336px;
-    padding: 0;
+    padding: 0 0 20px 0 ;
+
     img {
       height: auto;
       width: auto;
@@ -319,6 +306,11 @@ ul.description--text {
       max-height: 336px;
     }
   }
+  
+  .main-item__subscribe--title {
+    text-align: center;
+  }
+  
   .promo-item {
     flex-direction: column;
     height: 815px;
@@ -343,7 +335,6 @@ ul.description--text {
   .promo-item__image {
     width: 270px;
     height: 350px;
-    /*background-color: red;*/
   }
   /*INSTAGRAM MEDIA*/
   .instagram-media {
@@ -352,3 +343,50 @@ ul.description--text {
     padding-top: 0px !important;
   }
 }
+
+
+
+// border-bottom: 1px solid #e4f3d9;
+
+
+
+
+
+
+
+
+// DEV colors:
+
+// body {
+//   background : white;
+// }
+
+// .main-item__content {
+//   background-color: #e2e2e2;
+// }
+
+// .main-item__gallery {
+//   background-color:  green ;
+// }
+
+// .main-item__content--title-info-line {
+//   background-color: purple ;
+// }
+// .main-item__content--description {
+//   background-color: pink;
+// }
+// .main-item__description {
+//   background-color: lightgreen;
+// }
+
+// .main-item__cta {
+//   background-color: purple;
+// }
+// .main-item__subscribe {
+//   background-color: skyblue;
+// }
+
+// .main-item__subscribe--title {
+//   background-color: red;
+//   }
+

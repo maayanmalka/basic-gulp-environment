@@ -4,12 +4,11 @@ body {
   font-family: 'Open Sans', sans-serif;
   margin: 0 auto;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: white;
   overflow-x: hidden; }
 
 p {
   font-family: 'Open Sans', sans-serif;
-  color: #555;
   font-size: 16px;
   line-height: 22px; }
 
@@ -19,10 +18,9 @@ a {
   transition: color 0.2s ease; }
 
 h2 {
-  text-decoration: none;
-  transition: color 0.2s ease; }
+  text-decoration: none; }
 
-a:hover, a h2:hover {
+a:hover {
   color: #ff9231; }
 
 h1, h2, h3, h4, p, a, div {
@@ -34,12 +32,37 @@ h1 {
   font-weight: 100; }
 
 h2 {
-  color: #191919;
   font-size: 18px;
   font-weight: 600; }
 
 input, button, submit {
   border: none; }
+
+.btn {
+  min-width: 110px;
+  min-height: 32px;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: #ff9231;
+  display: flex;
+  border-radius: 2px;
+  justify-content: center;
+  align-content: center;
+  margin: 0;
+  padding: 0 14px;
+  transition: background-color 0.2s ease-in-out; }
+  .btn:hover {
+    background-color: red;
+    color: white; }
+  .btn:active {
+    background-color: #ff9231; }
+
+.btn__primary {
+  height: 48px;
+  font-size: 22px;
+  padding-top: 14px;
+  border-radius: 5px; }
 
 #site-wrapper {
   max-width: 1100px;
@@ -79,7 +102,8 @@ input, button, submit {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center; }
+  align-content: center;
+  margin-bottom: 20px; }
 
 .logo-header {
   width: 183px;
@@ -120,9 +144,6 @@ input, button, submit {
   margin-right: 15px;
   border-radius: 2px; }
 
-.horizontal-form .button {
-  border-radius: 2px; }
-
 .vertical-form .email {
   width: 100%;
   margin-bottom: 20px;
@@ -131,24 +152,11 @@ input, button, submit {
 .email:hover {
   border: 1px solid #999; }
 
-.button {
-  min-width: 110px;
-  min-height: 32px;
-  color: white;
-  font-weight: 400;
-  background-color: #ff9231;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  margin: 0;
-  padding: 0;
-  transition: background-color 0.2s ease; }
-
-.vertical-form .button {
+.vertical-form .btn {
   width: 100%;
   height: 63px;
-  font-size: 22px; }
+  font-size: 22px;
+  border-radius: 5px; }
 
 .button:hover {
   background-color: #ff7800; }
@@ -160,8 +168,7 @@ input, button, submit {
   margin: 0 auto;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  /*background-color: red;*/ }
+  justify-content: flex-start; }
 
 .vertical-form {
   margin: 0 auto;
@@ -169,7 +176,6 @@ input, button, submit {
   flex-direction: column;
   /*justify-content: space-between;*/
   align-items: center;
-  /*background-color: red;*/
   width: 100%;
   height: 100px; }
 
@@ -188,7 +194,7 @@ input, button, submit {
   justify-content: flex-start;
   z-index: 9999;
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 20px;
   margin-bottom: -200px; }
 
 .box {
@@ -205,22 +211,31 @@ input, button, submit {
   width: 336px;
   height: 336px;
   border-radius: 5px;
-  box-shadow: 0px 2px 2px #f2f2f2;
+  box-shadow: 0px 2px 8px #e9e9e9;
   border: 1px solid #e2e2e2; }
 
-.badge {
+.badge-on-thumb {
   position: absolute;
   width: 52px;
   height: 52px;
   background-size: 100% 100%;
-  bottom: 25px;
-  left: 265px; }
+  bottom: 13px;
+  left: 277px; }
 
-.badge-draw {
-  background: url("../img/badge_pencil.png"); }
+.age__badge {
+  /*  background-color: orange;*/
+  width: 40px;
+  background: url("../img/pages/icon-age.png") no-repeat; }
 
-.badge-scissors {
-  background: url("../img/badge_scissors.png"); }
+.difficulty__badge--pencil {
+  /*background-color: yellow;*/
+  background: url("../img/badge_pencil.png") no-repeat;
+  background-size: 100% 100%; }
+
+.difficulty__badge--scissors {
+  /*background-color: yellow;*/
+  background: url("../img/badge_scissors.png") no-repeat;
+  background-size: 100% 100%; }
 
 .box h2, .box p {
   margin-top: 10px; }
@@ -298,7 +313,7 @@ input, button, submit {
     justify-content: center;
     align-items: center; }
   .menu {
-    margin-bottom: 40px;
+    margin-bottom: 24px;
     justify-content: center; }
   .menu-homepage {
     align-self: center; }
@@ -308,3 +323,7 @@ input, button, submit {
     padding: 0; }
   .footer-note-container {
     padding-left: 0; } }
+
+.form-container {
+  display: flex;
+  justify-content: center; }

@@ -1,107 +1,68 @@
-doctype html
-html
-  head
-    link(rel='stylesheet', type='text/css', href='css/normalize.css')
-    link(rel='stylesheet', type='text/css', href='css/styles.css')
-    meta(charset='UTF-8')
-    link(rel='stylesheet', href='css/responsive.css')
-    link(rel='icon', type='image/png', href='img/logo-bee_small.png', sizes='16x16')
-    link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Patrick+Hand', rel='stylesheet')
-    title The Catbears
-  body
-    #site-wrapper
-      #upper-site
-        .menu.menu-homepage
-          p
-            a(href='index.html') About
-          p
-            a(href='index.html') Contact
-        .header-container
-          .logo-header
-            a(href='index.html')
-              img(src='img/logo-header.png', alt='logo-header', style='width:183px;height:121px;')
-          .form-header-container
-            p.form-title Get monthly updates of the latest activities
-            // Begin MailChimp Signup Form
-            #mc_embed_signup 
-              form#mc-embedded-subscribe-form.validate(action='//thecatbears.us14.list-manage.com/subscribe/post?u=a7426f90aa46ed0d3d13700af&id=759f0584e8', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
-                #mc_embed_signup_scroll.horizontal-form
-                  .mc-field-group
-                    label(for='mce-EMAIL') Email Address 
-                    input#mce-EMAIL.required.email(type='email', value='', name='EMAIL', placeholder='Email')
-                  #mce-responses.clear
-                    #mce-error-response.response(style='display:none')
-                    #mce-success-response.response(style='display:none')
-                  // real people should not fill this in and expect good things - do not remove this or risk form bot signups
-                  div(style='position: absolute; left: -5000px;', aria-hidden='true')
-                    input(type='text', name='b_a7426f90aa46ed0d3d13700af_759f0584e8', tabindex='-1', value='')
-                  .clear
-                    input#mc-embedded-subscribe.button(type='submit', value='Subscribe', name='subscribe')
-            // End mc_embed_signup
-      #lower-site
-        .box
-          a(href='pages/puppet-show.html')
-            .image-container
-              img(src='img/thumb_cardboard-puppet-show.png', alt='cardboard-puppet-show', style='width:336px;height:336px;')
-              .badge.badge-scissors
-            h2 Cardboard Puppet Show
-            p Build a simple cardboard puppet show from everyday materials.
-        .box
-          a(href='pages/draw-a-duck.html')
-            .image-container
-              img(src='img/thumb_draw-a-duck.png', alt='thumb_draw-a-duck', style='width:336px;height:336px;')
-              .badge.badge-draw
-            h2 Draw A Duck
-            p What’s the simplest way to draw a duck? it’s super easy and fun!
-        .box.box3
-          a(href='pages/strawberry-graffity.html')
-            .image-container
-              img(src='img/thumb_strawberry-graffity.png', alt='thumb_strawberry-graffity', style='width:336px;height:336px;')
-              .badge.badge-scissors
-            h2 Strawberry Street Art
-            p Learn the basics of graffity, make a stencil and a cool trick with plastacine.
-        .box
-          a(href='pages/coloring-little-things.html')
-            .image-container
-              img(src='img/thumb_coloring-little-things.png', alt='coloring-little-things', style='width:336px;height:336px;')
-              .badge.badge-draw
-            h2 Coloring Little Things
-            p Print your coloring pages and let the coloring begin! 
-        .box
-          a(href='pages/felt.html')
-            .image-container
-              img(src='img/thumb_felt.png', alt='thumb_felt', style='width:336px;height:336px;')
-              .badge.badge-scissors
-            h2 Make Felt Catbears
-            p Felt is a great material for making your ideas come to life.
-        .box.box6
-          a(href='pages/letters.html')
-            .image-container
-              img(src='img/thumb_letters.png', alt='thumb_letters', style='width:336px;height:336px;')
-              .badge.badge-draw
-            h2 Let's Draw Some Letters
-            p
-              | So many shapes! learn the Alphabet with drawing and coloring the all the letters.
-        .box
-          a(href='pages/draw-a-duck.html')
-            .image-container
-              img(src='img/thumb_draw-a-duck.png', alt='thumb_draw-a-duck', style='width:336px;height:336px;')
-              .badge.badge-draw
-            h2 Draw A Duck
-            p What’s the simplest way to draw a duck? it’s super easy and fun!
-        //
-          <div class="box box-form">
-          <a href="index.html"></a>
-          </div>
-        //
-          <div class="box"></div>
-          <div class="box"></div>
-          <div class="box"></div>
-    #footer
-      a(href='index.html')
-        .footer-note
-          .footer-note-container
-            .logo-footer
-              img(src='img/footer-logo.png', alt='logo-footer', style='width:173px;height:115px;')
-            p.copyright 2016 © All rights reserved
-      .footer-bg
+extends ./templates/home-page__layout.jade
+
+block title
+  title The Catbears
+
+block box1
+  .box
+    a(href='puppet-show.html')
+      .image-container
+        img(src='../img/thumb_cardboard-puppet-show.png', alt='cardboard-puppet-show', style='width:336px;height:336px;')
+        .badge-on-thumb.difficulty__badge--scissors
+      h2 Cardboard Puppet Show
+      p Build a simple cardboard puppet show from everyday materials.
+
+block box2
+  .box
+    a(href='draw-a-duck.html')
+      .image-container
+        img(src='../img/thumb_draw-a-duck.png', alt='thumb_draw-a-duck', style='width:336px;height:336px;')
+        .badge-on-thumb.difficulty__badge--pencil
+      h2 Draw A Duck
+      p What’s the simplest way to draw a duck? it’s super easy and fun!
+
+block box3
+  .box.box3
+    a(href='strawberry-graffity.html')
+      .image-container
+        img(src='../img/thumb_strawberry-graffity.png', alt='thumb_strawberry-graffity', style='width:336px;height:336px;')
+        .badge-on-thumb.difficulty__badge--scissors
+      h2 Strawberry Street Art
+      p Learn the basics of graffity, make a stencil and a cool trick with plastacine.
+
+block box4
+  .box
+    a(href='coloring-little-things.html')
+      .image-container
+        img(src='../img/thumb_coloring-little-things.png', alt='coloring-little-things', style='width:336px;height:336px;')
+        .badge-on-thumb.difficulty__badge--pencil
+      h2 Coloring Little Things
+      p Print your coloring ./and let the coloring begin! 
+
+block box5
+  .box
+    a(href='felt.html')
+      .image-container
+        img(src='../img/thumb_felt.png', alt='thumb_felt', style='width:336px;height:336px;')
+        .badge-on-thumb.difficulty__badge--scissors
+      h2 Make Felt Catbears
+      p Felt is a great material for making your ideas come to life.
+
+block box6
+  .box.box6
+    a(href='letters.html')
+      .image-container
+        img(src='../img/thumb_letters.png', alt='thumb_letters', style='width:336px;height:336px;')
+        .badge-on-thumb.difficulty__badge--pencil
+      h2 Let's Draw Some Letters
+      p
+        | So many shapes! learn the Alphabet with drawing and coloring the all the letters.
+
+block box7
+  .box
+    a(href='draw-a-duck.html')
+      .image-container
+        img(src='../img/thumb_draw-a-duck.png', alt='thumb_draw-a-duck', style='width:336px;height:336px;')
+        .badge-on-thumb.difficulty__badge--pencil
+      h2 Draw A Duck
+      p What’s the simplest way to draw a duck? it’s super easy and fun!
