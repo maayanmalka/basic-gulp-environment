@@ -207,7 +207,7 @@ input, button, submit {
   position: relative; }
 
 .box img {
-  background-color: #e3e3e3;
+  background-color: white;
   width: 336px;
   height: 336px;
   border-radius: 5px;

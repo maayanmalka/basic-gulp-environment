@@ -1,21 +1,18 @@
 /*REMOVE INSTAGRAM STYLES*/
 
 .instagram-media {
-  a, p {
-    display: none;
-  }
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  margin: 0 !important;
+  background : white !important;
+  margin: 0 auto !important;
   padding: 0 !important;
-  max-width: none !important;
-  width: 596px !important;
-  height: auto !important;
-  div {
-    margin: 0 !important;
-    background-image: none !important;
-  }
+  width: 555px !important;
+}
+
+.instagram-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 638px;
+  width : 638px;
 }
 
 /*END - INSTAGRAM STYLES*/
@@ -249,8 +246,12 @@ ul.description--text {
   .main-item__gallery {
     max-width: 438px;
     max-height: 438px;
-    padding: 30px 0;
-    img {
+    display: flex;
+    flex-direction : column;
+    justify-content: flex-start;
+    align-items: center;
+    // padding: 30px 0;
+    img , {
       height: auto;
       width: auto;
       max-width: 438px;
@@ -279,10 +280,14 @@ ul.description--text {
     width: auto;
   }
   /*INSTAGRAM MEDIA*/
+  
+  .instagram-item {
+    height: 450px;
+    width: 600px;
+  }
+
   .instagram-media {
-    width: 400px !important;
-    height: auto !important;
-    padding-top: 30px !important;
+    width: 355px !important;
   }
 }
 
@@ -296,7 +301,7 @@ ul.description--text {
   }
   .main-item__gallery {
     width: 336px;
-    height: 336px;
+    height: 370px;
     padding: 0 0 20px 0 ;
 
     img {
@@ -337,10 +342,13 @@ ul.description--text {
     height: 350px;
   }
   /*INSTAGRAM MEDIA*/
+  .instagram-item {
+    height : 350px;
+    width: 300px;
+  }
+
   .instagram-media {
-    width: 332px !important;
-    height: auto !important;
-    padding-top: 0px !important;
+    width: 270px !important;
   }
 }
 
@@ -389,4 +397,3 @@ ul.description--text {
 // .main-item__subscribe--title {
 //   background-color: red;
 //   }
-
