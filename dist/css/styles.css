@@ -1,5 +1,8 @@
 /*Colors
 CATBEARS ORANGE : #ff9231*/
+* {
+  box-sizing: border-box; }
+
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0 auto;
@@ -59,9 +62,9 @@ input, button, submit {
     background-color: #ff9231; }
 
 .btn__primary {
-  height: 48px;
+  height: 60px;
   font-size: 22px;
-  padding-top: 14px;
+  padding-top: 13px;
   border-radius: 5px; }
 
 #site-wrapper {
@@ -70,7 +73,8 @@ input, button, submit {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 20px; }
 
 #upper-site {
   margin-top: 13px;
@@ -186,30 +190,39 @@ input, button, submit {
 
 /*  	MAILCHIMP FORM -----> */
 #lower-site {
-  /*background-color: orange;*/
   min-height: 500px;
   width: 1100PX;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-around;
   z-index: 9999;
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: -200px; }
 
 .box {
-  padding: 0 15px;
-  width: 336px;
-  height: 440px;
-  margin-bottom: 50px; }
+  max-width: 336px;
+  max-height: 440px;
+  margin-bottom: 50px;
+  width: 100%;
+  height: 100%; }
+
+.box-spacer {
+  height: 1px;
+  background-color: none;
+  margin-bottom: 0px; }
 
 .image-container {
-  position: relative; }
+  position: relative;
+  width: 100%;
+  height: 100%; }
 
 .box img {
   background-color: white;
-  width: 336px;
-  height: 336px;
+  max-width: 336px;
+  max-height: 336px;
+  width: 100%;
+  height: 100%;
   border-radius: 5px;
   box-shadow: 0px 2px 8px #e9e9e9;
   border: 1px solid #e2e2e2; }
@@ -220,10 +233,9 @@ input, button, submit {
   height: 52px;
   background-size: 100% 100%;
   bottom: 13px;
-  left: 277px; }
+  left: 9px; }
 
 .age__badge {
-  /*  background-color: orange;*/
   width: 40px;
   background: url("../img/pages/icon-age.png") no-repeat; }
 
@@ -233,17 +245,11 @@ input, button, submit {
   background-size: 100% 100%; }
 
 .difficulty__badge--scissors {
-  /*background-color: yellow;*/
   background: url("../img/badge_scissors.png") no-repeat;
   background-size: 100% 100%; }
 
 .box h2, .box p {
   margin-top: 10px; }
-
-.box-form {
-  /*	padding-left: 15px;
-  	padding-right: 15px;
-  	background-color: white;*/ }
 
 #footer {
   color: #777;
@@ -275,35 +281,20 @@ input, button, submit {
   background: url("../img/footer-image-cropped.png");
   background-size: 100% 100%; }
 
-@media (max-width: 1920px) {
-  /*	.box:nth-child(2n){
-  		margin-top  : 30px;
-  	}
-  	.box:nth-child(3n){
-  		margin-top  : 60px;
-  	}*/ }
-
 @media (max-width: 1200px) {
-  /*	.box:nth-child(2n){
-  		margin-top  : 0px;
-  	}
-  	.box:nth-child(3n){
-  		margin-top  : 0px;
-  	}*/
-  #site-wrapper, #lower-site {
-    width: 735PX; }
-  /*	.box:nth-child(2n){
-  		margin-top  : 30px;
-  	}*/ }
+  #site-wrapper {
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto; }
+  #lower-site {
+    width: 100%; } }
 
 /*MOBILE*/
 @media (max-width: 800px) {
-  #site-wrapper, #lower-site {
-    width: 336PX;
-    /*background-color: pink;*/ }
+  #site-wrapper {
+    max-width: 600px; }
   .footer-bg {
-    display: none;
-    /*background-position: -700px -100px; ;*/ }
+    display: none; }
   .footer-note {
     width: 100%;
     margin-top: -250px;
@@ -317,8 +308,6 @@ input, button, submit {
     justify-content: center; }
   .menu-homepage {
     align-self: center; }
-  #site-wrapper {
-    padding: 0 15px; }
   .box {
     padding: 0; }
   .footer-note-container {

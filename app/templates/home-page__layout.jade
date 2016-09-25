@@ -8,6 +8,17 @@ html
     link(rel='stylesheet', href='../css/responsive.css')
     link(rel='icon', type='image/png', href='../img/logo-bee_small.png', sizes='16x16')
     link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Patrick+Hand', rel='stylesheet')
+
+    link(href='../img/logo_180x180.png', rel='apple-touch-icon')
+    link(href='../img/logo_180x180.png', rel='apple-touch-icon', sizes='76x76')
+    link(href='../img/logo_180x180.png', rel='apple-touch-icon', sizes='120x120')
+    link(href='../img/logo_180x180.png', rel='apple-touch-icon', sizes='152x152')
+    link(href='../img/logo_180x180.png', rel='apple-touch-icon', sizes='180x180')
+    link(href='../img/logo_192x192.png', rel='icon', sizes='192x192')
+    link(href='../img/logo_180x180.png', rel='icon', sizes='128x128')
+  
+
+
     block title
     include ../include/google-analytics.jade  
   body
@@ -43,12 +54,14 @@ html
                       input#mc-embedded-subscribe.btn(type='submit', value='Subscribe', name='subscribe')
               // End mc_embed_signup
       #lower-site
-        block box1
-        block box2
-        block box3
-        block box4
-        block box5
-        block box6
         block box7
+        block box6
+        block box3
+        block box5
+        block box4
+        block box2
+        block box1
+        block box-spacer
+        block box-spacer
   
     include ../include/footer.jade 
