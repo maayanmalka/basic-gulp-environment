@@ -3,6 +3,7 @@ CATBEARS ORANGE : #ff9231*/
 
 * {
   box-sizing: border-box;
+  // flex : 0 1 auto;
 }
 
 body {
@@ -12,7 +13,7 @@ body {
   background-color: white;
   overflow-x: hidden;
 }
-
+ 
 p {
   font-family: 'Open Sans', sans-serif;
   //color: #555;
@@ -59,18 +60,19 @@ input, button, submit {
 
 
 .btn {
-  min-width: 110px;
-  min-height: 32px;
+  width: 100%;
+  display: flex !important;
+  min-height: 38px;
   color: white;
   font-weight: 400;
   font-size : 16px;
   background-color: #ff9231; //#ff7800;
-  display: flex;
-  border-radius: 2px;
-  justify-content: center;
-  align-content: center;
+  text-align: center !important;
+  border-radius: 4px;
+  justify-content: center !important;
+  align-content: center !important;
   margin: 0;
-  padding: 0 14px;
+  padding: 0 30px;
   transition: background-color 0.2s ease-in-out;
   
   &:hover {
@@ -86,7 +88,7 @@ input, button, submit {
   height: 60px;
   font-size : 22px;
   padding-top : 13px;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 
@@ -95,7 +97,7 @@ input, button, submit {
 
 
 #site-wrapper {
-  max-width: 1100px;
+  max-width: 1160px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -152,6 +154,7 @@ input, button, submit {
 
 .form-header-container {
   /*width : 336px;*/
+  text-align: center;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -173,22 +176,41 @@ input, button, submit {
 
 /*MAILCHIMP FORM*/
 
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+
+#mc_embed_signup {
+  width : 100%;
+}
+
+
+#mc-embedded-subscribe, .clear , .clear input {
+  -webkit-appearance: none !important;
+  text-align: center !important;
+}
+
+.homepage-form {
+  max-width: 336px;
+}
+
 .email {
-  font-size: 14px;
+  font-size: 16px;
   min-height: 30px;
   border: 1px solid #c2c2c2;
   background-color: #fbfbfb;
-  border-radius: 5px;
+  border-radius: 4px;
   margin: 0;
   padding: 0;
-  padding-left: 10px;
+  padding-left: 16px;
 }
 
 .horizontal-form {
   .email {
     width: 100%;
     margin-right: 15px;
-    border-radius: 2px;
+    border-radius: 4px;
   }
 }
 
@@ -207,7 +229,7 @@ input, button, submit {
   width: 100%;
   height: 63px;
   font-size : 22px;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 .button:hover {
@@ -218,11 +240,16 @@ input, button, submit {
   background-color: #f4f4f4;
 }
 
+
+#mc_embed_signup_scroll {
+  
+}
+
 .horizontal-form {
   margin: 0 auto;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 
 .vertical-form {
@@ -237,6 +264,7 @@ input, button, submit {
 
 .mc-field-group {
   display: flex;
+  width : 100%;
   label {
     display: none;
   }
@@ -273,7 +301,6 @@ input, button, submit {
 .image-container {
   position: relative;
   width : 100%;
-  height : 100%;
 }
 
 .box img {
@@ -282,7 +309,7 @@ input, button, submit {
   max-height: 336px;
   width : 100%;
   height : 100%;
-  border-radius: 5px;
+  border-radius: 4px;
   box-shadow: 0px 2px 8px #e9e9e9;
   border: 1px solid #e2e2e2;
 }
@@ -405,12 +432,13 @@ input, button, submit {
   .footer-note-container {
     padding-left: 0;
   }
-}
 
 
-.form-container {
-  display: flex;
-  justify-content: center;
+
+  .horizontal-form , #mc-embedded-subscribe{
+    height : 45px;
+  }
+
 }
 
 
