@@ -23,6 +23,9 @@ a {
 h2 {
   text-decoration: none; }
 
+a:visited {
+  color: black; }
+
 a:hover {
   color: #ff9231; }
 
@@ -56,8 +59,11 @@ input, button, submit {
   margin: 0;
   padding: 0 30px;
   transition: background-color 0.2s ease-in-out; }
+  .btn:visited {
+    background-color: #ff9231;
+    color: white; }
   .btn:hover {
-    background-color: red;
+    background-color: #ff6300;
     color: white; }
   .btn:active {
     background-color: #ff9231; }
@@ -122,6 +128,9 @@ input, button, submit {
   margin: 0 auto;
   display: flex;
   flex-direction: column; }
+  .form-header-container h1 {
+    font-size: 25px;
+    margin-top: 15px; }
 
 .form {
   font-size: 14px; }
@@ -216,7 +225,7 @@ input, button, submit {
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: -200px;
-  background-color: rgba(255, 255, 255, 0.93);
+  background-color: rgba(255, 255, 255, 0.98);
   border-radius: 10px; }
 
 .box {
@@ -253,9 +262,29 @@ input, button, submit {
   bottom: 13px;
   left: 9px; }
 
-.age__badge {
+.age__badge--1 {
   width: 40px;
-  background: url("../img/pages/icon-age.png") no-repeat; }
+  background: url("../img/pages/icon-age_1.png") no-repeat; }
+
+.age__badge--2 {
+  width: 40px;
+  background: url("../img/pages/icon-age_2.png") no-repeat; }
+
+.age__badge--3 {
+  width: 40px;
+  background: url("../img/pages/icon-age_3.png") no-repeat; }
+
+.age__badge--4 {
+  width: 40px;
+  background: url("../img/pages/icon-age_4.png") no-repeat; }
+
+.age__badge--5 {
+  width: 40px;
+  background: url("../img/pages/icon-age_5.png") no-repeat; }
+
+.age__badge--6 {
+  width: 40px;
+  background: url("../img/pages/icon-age_6.png") no-repeat; }
 
 .difficulty__badge--pencil {
   /*background-color: yellow;*/
@@ -264,6 +293,10 @@ input, button, submit {
 
 .difficulty__badge--scissors {
   background: url("../img/badge_scissors.png") no-repeat;
+  background-size: 100% 100%; }
+
+.badge--instagram {
+  background: url("../img/badge_instagram.png") no-repeat;
   background-size: 100% 100%; }
 
 .box h2, .box p {

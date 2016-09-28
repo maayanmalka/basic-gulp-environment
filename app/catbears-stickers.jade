@@ -1,0 +1,39 @@
+extends ./templates/item-page__static-img_only-logo.jade
+
+block title
+  title Catbears Stickers - The Catbears
+
+
+block gallery-img
+  img(src='../img/pages/catbears-stickers.png', alt='Coloring Little Things')
+    
+block main-item__title
+  | Catbears Stickers
+
+block main-item__price-number
+  | Free PDF
+
+block main-item__file-size 
+  | 1.8 MB
+
+block main-item__badges
+  .info-line__badge.difficulty__badge--scissors
+  .info-line__badge.age__badge--4
+
+block main-item__description--p
+  | Help us spread the word and print some cool Catbears stickers to share with your friends! Here's what you'll need:
+
+block main-item__description--ul
+  li Printer
+  li Sticker Paper
+  li Scissors
+  li A lot of friends!
+
+block main-item__cta
+  a.btn.btn__primary(href='../pdf/The-Catbears-Stickers.pdf' download="The-Catbears-Stickers.pdf") Download PDF
+
+block main-item__subscribe-title
+  | We'll let you know when we're up
+                  
+
+

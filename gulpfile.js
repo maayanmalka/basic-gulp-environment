@@ -142,6 +142,11 @@ gulp.task('useref', function(){
 });
 
 
+gulp.task('pdf-files', function() {
+  return gulp.src('app/pdf/**/*.pdf')
+    .pipe(gulp.dest('dist/pdf'))
+})
+
 gulp.task('sass', function() {
   return gulp.src('app/scss/**/*.scss') // Gets all files ending with .scss in app/scss
     .pipe(sass())
@@ -180,7 +185,7 @@ gulp.task('watch', ['browserSync', 'sass' , 'jade'], function (){
 
 gulp.task('build', function (callback) {
   runSequence('clean:dist', 
-    ['sass', 'jade', 'useref', 'img', 'fonts'],
+    ['sass', 'jade', 'useref', 'img', 'pdf-files', 'fonts'],
     callback
   )
 })
