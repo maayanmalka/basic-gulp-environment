@@ -71,15 +71,14 @@ gulp.task('push:production-silent', function () {
 
 } );
 
+gulp.task('push:production' , ['push:production-silent' , 'bush'], function (){
+})
 
-gulp.task ('booboo' , function () {
+
+gulp.task ('bush' , function () {
   console.log ("!!  Finished uploading to production  !!")
   runSequence('in-the-bush')
   runSequence('open:homepage')
-})
-
-gulp.task('push:production' , ['push:production-silent' , 'booboo'], function (){
-
 })
 
 
