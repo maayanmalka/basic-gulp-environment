@@ -27,6 +27,7 @@ var projectFolders = [
 'img/',
 'css/',
 'pages/',
+'pdf/',
 'scripts/'
 ];
 
