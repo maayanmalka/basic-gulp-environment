@@ -4,6 +4,7 @@ head
     link(rel='stylesheet', type='/text/css', href='../css/normalize.css')
     link(rel='stylesheet', type='text/css', href='../css/styles.css')    
     link(rel='stylesheet', type='text/css', href='../css/item-page__static-img.css')
+    link(rel='stylesheet', href='../css/promo-share.css')
     meta(charset='UTF-8')
     link(rel='icon', type='image/png', href='img/logo-bee_small.png', sizes='16x16')
     link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Patrick+Hand', rel='stylesheet')
@@ -49,24 +50,9 @@ head
 
                 .main-item__subscribe
                   h3.main-item__subscribe--title    
-                    block main-item__subscribe-title
-                  
-                  // Begin MailChimp Signup Form
-                  #mc_embed_signup
-                    form#mc-embedded-subscribe-form.validate(action='//thecatbears.us14.list-manage.com/subscribe/post?u=a7426f90aa46ed0d3d13700af&id=759f0584e8', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
-                      #mc_embed_signup_scroll.horizontal-form
-                        .mc-field-group
-                          label(for='mce-EMAIL') Email Address 
-                          input#mce-EMAIL.required.email(type='email', value='', name='EMAIL', placeholder='Email')
-                        #mce-responses.clear
-                          #mce-error-response.response(style='display:none')
-                          #mce-success-response.response(style='display:none')
-                        // real people should not fill this in and expect good things - do not remove this or risk form bot signups
-                        div(style='position: absolute; left: -5000px;', aria-hidden='true')
-                          input(type='text', name='b_a7426f90aa46ed0d3d13700af_759f0584e8', tabindex='-1', value='')
-                        .clear
-                          input#mc-embedded-subscribe.btn(type='submit', value='Subscribe', name='subscribe')
-                  // End mc_embed_signup
+                    block main-item__subscribe-title               
+                  include ../include/mailchimp-form.jade
+                   
           // END -- MAIN ITEM
 
           //- // 3 ITEMS section
