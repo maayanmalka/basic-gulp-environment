@@ -1,7 +1,5 @@
 .promo-item {
   background-color: white;
-  border-radius: 10px;
-  border: 1px solid #eee;
   margin-top: 50px;
   width: 100%;
   height: 350px;
@@ -9,8 +7,7 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  z-index: 9999;
-  box-shadow: 0px 2px 8px #e9e9e9; }
+  z-index: 9999; }
 
 .promo-item__image {
   width: 270px;
@@ -85,9 +82,7 @@
   .promo-item {
     flex-direction: column;
     height: 815px;
-    align-items: center;
-    border: none;
-    box-shadow: none; }
+    align-items: center; }
   .promo-item__image {
     padding-left: 25px;
     margin: 30px 30px 30px 0;
