@@ -8,6 +8,8 @@
   align-items: flex-start;
   justify-content: flex-start;
   z-index: 9999; }
+  .promo-item p {
+    font-size: 16px; }
 
 .promo-item__image {
   width: 270px;
