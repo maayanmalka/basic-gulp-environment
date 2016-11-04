@@ -9,7 +9,7 @@
   justify-content: flex-start;
   z-index: 9999; }
   .promo-item p {
-    font-size: 16px; }
+    font-size: 18px; }
 
 .promo-item__image {
   width: 270px;
@@ -26,7 +26,7 @@
   flex: 4; }
 
 .promo-item__content--text {
-  width: 420px;
+  width: 450px;
   padding-right: 50px;
   margin-bottom: 30px; }
 
