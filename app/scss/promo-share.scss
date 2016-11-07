@@ -1,17 +1,15 @@
 
 .promo-item {
+  text-align : center;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  padding-top: 50px;
-  padding: 20px;
-  padding-bottom: 40px;
+  padding : 60px 20px;
   margin-bottom: 30px;
   background-color: #fff8f2;
-  text-align : center;
   h1 {
     font-weight: 600;
   }
@@ -19,8 +17,6 @@
     margin-bottom: 20px;
   }
 }
-
-
 
 .subscribe-wrapper {
   display: flex;
@@ -30,14 +26,14 @@
   justify-content: center;
 }
 
-
-
 .share__wrapper {
   width : 280px;
+  margin : 0 auto;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  padding-bottom: 40px;
 }
 .share__button--icon {
   margin : 10px;
@@ -45,8 +41,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 63px;
-  height: 63px;
+  width: 40px;
+  height: 40px;
   opacity: 0.75;
 
   transition: opacity 150ms ease-in-out;
@@ -55,9 +51,22 @@
   }
 }
 
+#mc-embedded-subscribe , .clear , #mce-EMAIL{
+  border-radius: 0;
+}
+
+
+#mc-embedded-subscribe  {
+  display: inline !important;
+  width : 100%;
+  text-align: center ;
+} 
+
+
 @media(max-width: 1200px) {
 
 }
 
 @media(max-width: 800px) {
+
 }

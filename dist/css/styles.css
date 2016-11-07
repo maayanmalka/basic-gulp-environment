@@ -47,6 +47,7 @@ input, button, submit {
 
 .btn {
   width: 100%;
+  text-align: center !important;
   display: flex !important;
   min-height: 38px;
   color: white;
@@ -70,7 +71,6 @@ input, button, submit {
 
 .btn__primary {
   width: 100%;
-  text-align: center;
   height: 60px;
   font-size: 22px;
   padding-top: 13px;
@@ -140,7 +140,9 @@ h1.item--title {
   padding: 0 20px; }
 
 #coast2coast--centered {
-  width: 100%; }
+  width: 100%;
+  text-align: center;
+  align-items: center; }
 
 .box {
   max-width: 336px;
