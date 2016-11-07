@@ -34,7 +34,7 @@ a  {
     color: black;
   }
   &:hover {
-    color: #ec008c;
+    color: #ff0097;
   }
 }
 h1, h2, h3, h4, p, a, div {
@@ -60,7 +60,7 @@ input, button, submit {
   color: white;
   font-weight: 400;
   font-size : 16px;
-  background-color: #ff9231; //#ff7800;
+  background-color: #ec008c; //#ff7800;
   text-align: center !important;
   justify-content: center !important;
   align-content: center !important;
@@ -68,15 +68,15 @@ input, button, submit {
   padding: 0 30px;
   transition: background-color 0.15s ease-in-out;
   &:visited {
-    background-color: #ff9231;
+    background-color: #ec008c;
     color: white;
   }
   &:hover  {
-     background-color: #ec008c; //#ff9231;
+     background-color: #ff0097; //#ff9231;
      color:white;
     }
   &:active {
-    background-color: #ff9231;
+    background-color: #ec008c;;
   }
 }
 .btn__primary {
@@ -85,6 +85,7 @@ input, button, submit {
   font-size : 22px;
   padding-top : 13px;
   padding-bottom : 13px;
+  background-color: #ec008c;
 }
 
 h1.item--title {
@@ -154,7 +155,7 @@ h1.item--title {
 }
 
 #lower-site {
-  width: 1100px;
+  width: 1140px;
   min-height: 500px;
   padding : 0 20px;
 }
@@ -249,42 +250,42 @@ h1.item--title {
 
 
 #footer {
-  color: #777;
-  font-size: 30px;
-  position: relative;
-  margin-top: -430px;
-  z-index: 0;
-  
-  .copyright {
-    font-size : 12px;
-  }
+ width : 100%; 
+ text-align: center;
+ margin-top : 20px; 
+
+ p {
+  color : #777;
+  font-size : 14px;
+  margin-bottom: 100px;
+ } 
 }
 
-.footer-note {
-  width: 250px;
-  height: 220px;
-  background-color: white;
-  position: absolute;
-  top: 546px;
-  z-index: 9999;
-}
-.footer-note-container {
-  padding-left: 35px;
-  padding-top: 35px;
-  text-align: center;
-}
-.copyright {
-  color: #ff9231;
-  font-size: 12px;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-.footer-bg {
-  position: relative;
-  width: 1920px;
-  height: 766px;
-  background-size: 100% 100%;
-}
+// .footer-note {
+//   width: 250px;
+//   height: 220px;
+//   background-color: white;
+//   position: absolute;
+//   top: 546px;
+//   z-index: 9999;
+// }
+// .footer-note-container {
+//   padding-left: 35px;
+//   padding-top: 35px;
+//   text-align: center;
+// }
+// .copyright {
+//   color: #ff9231;
+//   font-size: 12px;
+//   text-transform: uppercase;
+//   font-weight: 600;
+// }
+// .footer-bg {
+//   position: relative;
+//   width: 1920px;
+//   height: 766px;
+//   background-size: 100% 100%;
+// }
 
 @media (max-width: 1200px) {
 
@@ -311,19 +312,6 @@ h1.item--title {
   #lower-site {
     width : 100%;
   }
-  #footer {
-   margin-top: -295px;
-  }
-  .footer-bg {
-    display: none;
-  }
-  .footer-note {
-    width: 100%;
-    margin-top: -250px;
-    padding-bottom: 70px;
-    display: flex;
-    justify-content: center;
-  }
   .menu {
     margin-bottom: 24px;
     justify-content: center;
@@ -334,8 +322,4 @@ h1.item--title {
   .box {
     padding: 0;
   }
-  .footer-note-container {
-    padding-left: 0;
-  }
-
 }
