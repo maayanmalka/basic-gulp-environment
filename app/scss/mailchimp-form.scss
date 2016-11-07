@@ -22,6 +22,13 @@
   margin-top: 10px;
   margin-bottom: 10px;
   width: 100%;
+  background-clip: padding-box;
+  border: 1px solid #e2e2e2;
+  transition : border 200ms ease-in-out;
+  &:focus {
+    border: 1px solid #ff0097;
+    outline: none;
+  }  
 }
 
 .email:hover {

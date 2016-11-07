@@ -73,8 +73,8 @@ input, button, submit {
   width: 100%;
   height: 60px;
   font-size: 22px;
-  padding-top: 13px;
-  padding-bottom: 13px;
+  padding-top: 15px;
+  padding-bottom: 18px;
   background-color: #ec008c; }
 
 h1.item--title {
@@ -226,11 +226,11 @@ h1.item--title {
 #footer {
   width: 100%;
   text-align: center;
-  margin-top: 20px; }
+  padding-top: 20px; }
   #footer p {
     color: #777;
     font-size: 14px;
-    margin-bottom: 100px; }
+    padding-bottom: 70px; }
 
 @media (max-width: 1200px) {
   #site-wrapper {

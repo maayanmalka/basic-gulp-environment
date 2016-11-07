@@ -1,0 +1,31 @@
+//objects.scss
+
+#objects{
+	width: 100%;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	// background-color: rgba(255, 0, 0, 0.12);
+	height: 100vh;
+	z-index: 999999;
+}
+
+.blue-pencil {
+  display: block;
+  position: absolute;	
+  background-image: url("../img/objects/pencil-blue.png");
+  background-repeat: no-repeat;
+  height: 171px;
+  width : 171px;
+  left: 3%;
+  top : 12%;
+}
+
+@media (max-width: 585px) {
+
+  .blue-pencil {
+  	background-size: 25%;
+  }
+
+}

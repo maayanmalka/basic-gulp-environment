@@ -54,7 +54,7 @@ ul.description--text {
   flex-direction: column;
   margin-left: 50px;
   width: 100%;
-  margin-bottom: 50px; }
+  margin-bottom: 80px; }
 
 .main-item__content--title-info-line {
   display: flex;
@@ -149,7 +149,7 @@ ul.description--text {
   .main-item__content {
     width: 100%;
     margin: 0;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
     padding-top: 0; } }
 
 @media (max-width: 585px) {
