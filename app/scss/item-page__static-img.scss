@@ -50,18 +50,17 @@ ul.description--text {
   max-height: 600px;
 }
 #page-navigation {
-  padding-top: 20px;
-  padding-left: 20px;
+  width : 100%;
+  margin-bottom: 30px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: space-between;
 }
 .main-item {
-  background-color: $white;
+  display: flex;
   width: 100%;
   height: 640px;
-  display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
@@ -74,11 +73,12 @@ ul.description--text {
   }
 }
 .main-item__content {
-  padding-top: 13px;
   display: flex;
+  padding-top: 13px;
   flex-direction: column;
   margin-left: 50px;
   width: 100%;
+  margin-bottom: 50px;
 }
 .main-item__content--title-info-line {
   display: flex;
@@ -91,41 +91,53 @@ ul.description--text {
   justify-content: space-between;
 }
 .price {
-  align-self: flex-end;
   display: flex;
   min-width: 160px;
   height: 100%;
+  flex-direction : row;
   justify-content: flex-start;
   align-items: flex-start;
   margin: 0;
   padding: 0;
+  float: left;
 }
 .price__icon {
+  flex-basis : 44px;
   height: 53px;
   width: 44px;
   background: $url_0 no-repeat;
+  float: left;
 }
 .price__content {
   height: 100%;
   margin-left: 10px;
   max-width: 140px;
+  width : 115px;
+  float: left;
 }
 .price__content--pdf-size {
   color: $color_fuscous_gray_approx;
   font-size: 14px;
+  float: left;
 }
 .badges-container {
+  width: 105px;
   display: flex;
+  float: right;
+  margin: 0;
+  padding: 0;
+  float: right;
 }
 .info-line__badge {
   height: 52px;
   width: 52px;
-  margin-left: 15px;
+  // margin-left: 15px;
+  float: right;
 }
 .main-item__description {
   width: 100%;
   color: $black;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 .main-item__subscribe {
   padding-top: 40px;
@@ -134,7 +146,13 @@ ul.description--text {
   padding-bottom: 13px;
 }
 
-
+.main-item__cta {
+  width: 100%;
+  text-align: center;
+  a {
+    width: 100%;
+  }
+}
 
 @media(max-width: 1200px) {
 
@@ -149,29 +167,29 @@ ul.description--text {
     width: 100%;
   }
   .main-item__gallery {
-    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    max-width: 450px;
-    max-height: 450px;
+    max-width: 535px;
+    max-height: 535px;
     width: 100%;
     margin-bottom: 20px;
     img {
       height: auto;
       width: 100%;
-      max-width: 450px;
-      max-height: 450px;
+      // max-width: 450px;
+      // max-height: 450px;
     }
   }
   .main-item__content {
     width: 100%;
     margin: 0;
+    margin-bottom: 50px;
     padding-top: 0;
   }
   
 }
-@media(max-width: 800px) {
+@media(max-width: 585px) {
   .youtube-vid {
     width: 90vw;
     height: 90vw;

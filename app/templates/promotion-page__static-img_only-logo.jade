@@ -1,11 +1,13 @@
 doctype html
-head
+html
+  head
     meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(charset='UTF-8')
     link(rel='stylesheet', type='/text/css', href='../css/normalize.css')
     link(rel='stylesheet', type='text/css', href='../css/styles.css')    
     link(rel='stylesheet', type='text/css', href='../css/item-page__static-img.css')
-    link(rel='stylesheet', href='../css/promo-share.css')
+    link(rel='stylesheet', type='text/css', href='../css/mailchimp-form.css')
+    link(rel='stylesheet', type='text/css', href='../css/promo-share.css')
     link(rel='icon', type='image/png', href='img/logo-bee_small.png', sizes='16x16')
     link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Patrick+Hand', rel='stylesheet')
     block title
@@ -14,56 +16,40 @@ head
 
   body
     #site-wrapper
+      #lower-site
         include ../include/nav__inner-page_only-logo.jade
-        #lower-site
-          // MAIN ITEM 
-          .main-item 
-              .main-item__gallery
-                block gallery-img
-              .main-item__content
-                h1.item--title 
-                  block main-item__title
-                //- .main-item__content--title-info-line
-                  .price.price--pdf
-                    .price__icon
-                    .price__content
+        // MAIN ITEM 
+        .main-item 
+            .main-item__gallery
+              block gallery-img
+            .main-item__content
+              h1.item--title 
+                block main-item__title
+              //- .main-item__content--title-info-line
+                .price.price--pdf
+                  .price__icon
+                  .price__content
+                    
+                    h2.price__content--free
+                      block main-item__price-number
+
+                    .price__content--pdf-size
+                      block main-item__file-size 
                       
-                      h2.price__content--free
-                        block main-item__price-number
+                .badges-container
+                  block main-item__badges
+              .main-item__description   
+                  p.description--text
+                    block main-item__description--p  
 
-                      .price__content--pdf-size
-                        block main-item__file-size 
-                        
-                  .badges-container
-                    block main-item__badges
-                .main-item__description   
-                    p.description--text
-                      block main-item__description--p  
+                  ul.description--text
+                    block main-item__description--ul
 
-                    ul.description--text
-                      block main-item__description--ul
+              .main-item__cta
+                  block main-item__cta           
+              
+        // END -- MAIN ITEM
 
-                .main-item__cta
-                    block main-item__cta           
-                
-                // SIGNUP ITEM
-
-                .main-item__subscribe
-                  h3.main-item__subscribe--title    
-                    block main-item__subscribe-title
-                  include ../include/mailchimp-form.jade 
-                  
-          // END -- MAIN ITEM
-
-          //- // 3 ITEMS section
-          //- .spacer-50
-          //-   h2 Check out these activities  
-          //- block box3
-          //- block box2
-          //- block box1
-          //- block box-spacer
-          //- block box-spacer
-
-          // PROMO: HELP US GROW
-          include ../include/promo-share.jade
+      #coast2coast--centered
+        include ../include/promo-share.jade
     include ../include/footer.jade  

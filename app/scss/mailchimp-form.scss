@@ -1,0 +1,46 @@
+#mc_embed_signup {
+  width : 100%;
+}
+
+#mc-embedded-subscribe, .clear , .clear input {
+  -webkit-appearance: none !important;
+  text-align: center !important;
+}
+
+.email {
+  font-size: 16px;
+  min-height: 30px;
+  border: 1px solid #c2c2c2;
+  background-color: #fbfbfb;
+  margin: 0;
+  padding: 0;
+  padding-left: 16px;
+}
+
+#mce-EMAIL , #mc-embedded-subscribe{
+  height : 45px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.email:hover {
+  border: 1px solid #999;
+}
+
+.button:hover {
+  background-color: #ff7800;
+}
+.input-in-the-back {
+  background-color: #f4f4f4;
+}
+#mc_embed_signup_scroll {
+}
+
+.mc-field-group {
+  display: flex;
+  width : 100%;
+  label {
+    display: none;
+  }
+}

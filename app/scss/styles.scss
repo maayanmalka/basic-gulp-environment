@@ -2,9 +2,6 @@
 CATBEARS ORANGE : #ff9231*/
 
 
-
-
-
 * {
   box-sizing: border-box;
   // flex : 0 1 auto;
@@ -64,7 +61,6 @@ input, button, submit {
   font-size : 16px;
   background-color: #ff9231; //#ff7800;
   text-align: center !important;
-  border-radius: 4px;
   justify-content: center !important;
   align-content: center !important;
   margin: 0;
@@ -83,10 +79,12 @@ input, button, submit {
   }
 }
 .btn__primary {
+  width: 100%;
+  text-align: center;
   height: 60px;
   font-size : 22px;
   padding-top : 13px;
-  border-radius: 4px;
+  padding-bottom : 13px;
 }
 
 h1.item--title {
@@ -97,13 +95,13 @@ h1.item--title {
 
 
 #site-wrapper {
-  max-width: 1160px;
+  // max-width: 1160px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
   margin: 0 auto;
-  padding : 0 20px;
+  padding : 0;
 }
 #upper-site {
   margin-top: 13px;
@@ -137,132 +135,32 @@ h1.item--title {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 .logo-header {
-  width: 183px;
+  width: 152px;
   margin: 0 auto;
   display: flex;
-}
-.form-header-container {
-  text-align: center;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  img {
-    margin-top: 5px;
-    margin-bottom: -7px;
-  }
-  p {
-    color : #ec008c;
-    font-weight: 600;
-  }
-}
-.form {
-  font-size: 14px;
-}
-.form-title {
-  margin: 0 auto;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  font-size: 14px;
-  font-weight: 400;
-  color: #666;
-}
-.form-container {
-  display: flex;
-  justify-content: center;
-}
-#mc_embed_signup {
-  width : 100%;
 }
 
-#mc-embedded-subscribe, .clear , .clear input {
-  -webkit-appearance: none !important;
-  text-align: center !important;
-}
-.homepage-form {
-  max-width: 336px;
-}
-.email {
-  font-size: 16px;
-  min-height: 30px;
-  border: 1px solid #c2c2c2;
-  background-color: #fbfbfb;
-  border-radius: 4px;
-  margin: 0;
-  padding: 0;
-  padding-left: 16px;
-}
-.horizontal-form {
-  .email {
-    width: 100%;
-    margin-right: 15px;
-    border-radius: 4px;
-  }
-}
-.vertical-form .email {
-  width: 100%;
-  margin-bottom: 20px;
-  height: 40px;
-}
-.email:hover {
-  border: 1px solid #999;
-}
-//mailchimp btn is build different - that's why the height is set to 63
-.vertical-form .btn {
-  width: 100%;
-  height: 63px;
-  font-size : 22px;
-  border-radius: 4px;
-}
-.button:hover {
-  background-color: #ff7800;
-}
-.input-in-the-back {
-  background-color: #f4f4f4;
-}
-#mc_embed_signup_scroll {
-}
-.horizontal-form {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.vertical-form {
-  margin: 0 auto;
-  /*display: flex;*/
-  flex-direction: column;
-  /*justify-content: space-between;*/
-  align-items: center;
-  width: 100%;
-  height: 100px;
-}
-.mc-field-group {
-  display: flex;
-  width : 100%;
-  label {
-    display: none;
-  }
-}
 
-/*  	MAILCHIMP FORM -----> */
-
-#lower-site {
-  min-height: 500px;
-  width: 1100PX;
+#lower-site, #coast2coast--centered {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   z-index: 9999;
   margin: 0 auto;
   margin-top: 20px;
-  background-color: rgba(255, 255, 255, 0.98);
-  border-radius: 10px;
+}
+
+#lower-site {
+  width: 1100px;
+  min-height: 500px;
+  padding : 0 20px;
+}
+
+#coast2coast--centered {
+  width: 100%;
 }
 .box {
   max-width: 336px;
@@ -286,7 +184,6 @@ h1.item--title {
   max-width: 336px;
   max-height: 336px;
   width : 100%;
-  height : 100%;
   border-radius: 10px;
   box-shadow: 0px 2px 8px #e9e9e9;
   border: 1px solid #e2e2e2;
@@ -347,8 +244,8 @@ h1.item--title {
     margin-top: 6px; 
   }
 }
-.box-form {
-}
+
+
 #footer {
   color: #777;
   font-size: 30px;
@@ -391,23 +288,26 @@ h1.item--title {
 
   #site-wrapper {
     width : 100%;
-    max-width : 768px;
+    // max-width : 768px;
     margin : 0 auto;
   }
   #lower-site {
-    width : 100%
+    width : 580px;
+  }
+  #lower-site--centered {
+    text-align: center;
   }
 }
 
 /*MOBILE*/
-@media (max-width: 800px) {
+@media (max-width: 585px) {
   p {
   font-family: 'Open Sans', sans-serif;
   line-height: 26px;
 }
 
-  #site-wrapper {
-    max-width: 600px;
+  #lower-site {
+    width : 100%;
   }
   #footer {
    margin-top: -295px;
@@ -434,16 +334,6 @@ h1.item--title {
   }
   .footer-note-container {
     padding-left: 0;
-  }
-  .horizontal-form , #mc-embedded-subscribe{
-    height : 45px;
-  }
-
-  #mc-embedded-subscribe {
-    width: 120px;
-  }
-  #mc-field-group {
-    max-width : 200px;
   }
 
 }

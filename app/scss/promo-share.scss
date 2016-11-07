@@ -1,144 +1,63 @@
-//colors
-$color_celeste_approx: #ccc;
-$white: white;
-$color_chrome_white_approx: #e4f3d9;
-$color_torch_red_approx: #f72222;
-$color_fuscous_gray_approx: #555555;
-$black: black;
-$color_mountain_mist_approx: #999;
-$color_gallery_approx: #eee;
-$color_pink_swan_approx: #bbb;
-$color_alto_approx: #ddd;
-
-
-
 
 .promo-item {
-  background-color: $white;
-  margin-top: 50px;
   width: 100%;
-  height: 350px;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   z-index: 9999;
+  padding-top: 50px;
+  padding: 20px;
+  padding-bottom: 40px;
+  margin-bottom: 30px;
+  background-color: #fff8f2;
+  text-align : center;
+  h1 {
+    font-weight: 600;
+  }
   p {
-    font-size : 18px;
+    margin-bottom: 20px;
   }
 }
 
-.promo-item__image {
-  width: 270px;
-  height: 350px;
+
+
+.subscribe-wrapper {
   display: flex;
+  flex-direction : column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+
+
+.share__wrapper {
+  width : 280px;
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
-.promo-item__content {
-  padding-top: 30px;
-  padding-left: 30px;
-  width: 400px;
-  max-height: 350px;
-  flex: 4;
-}
-.promo-item__content--text {
-  width: 450px;
-  padding-right: 50px;
-  margin-bottom: 30px;
-}
-.promo-item__content--cta {
-  max-width: 565px;
-  min-height: 150px;
+.share__button--icon {
+  margin : 10px;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-.promo-item__button--icon {
-  width: 273px;
-  height: 63px;
-  padding-left: 10px;
-  margin-bottom: 10px;
-  background-color: $white;
-  display: flex;
-  justify-content: flex-start;
   align-items: center;
-  flex-direction: row;
-  border: 1px solid #e4e4e4;
-  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-  border-radius: 5px;
-  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-  transition: border 150ms ease-in-out , box-shadow 150ms ease-in-out;
+  justify-content: center;
+  width: 63px;
+  height: 63px;
+  opacity: 0.75;
+
+  transition: opacity 150ms ease-in-out;
   &:hover {
-    box-shadow: 0px 2px 8px #ffd6ee;
-    border: 1px solid #ffb5e0;
+    opacity: 1;
   }
-  p {
-    padding-left: 15px;
-  }
-}
-.promo-item__closing-image {
-  width: 195px;
-  height: 100%;
-  margin-right: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
 }
 
 @media(max-width: 1200px) {
-  .promo-item {
-      height: 510px;
-  }
-  .promo-item__image {
-     height: 510px;
-     width: 380px;
-  }
-  .promo-item__closing-image {
-    display: none;
-  }
-  .promo-item__content {
-    padding-left: 0;
-  }
-  .promo-item__content--text {
-     width: auto;
-  }
+
 }
 
 @media(max-width: 800px) {
-  .promo-item {
-    flex-direction: column;
-    height: 815px;
-    align-items: center;
-  }
-  .promo-item__image {
-    padding-left: 25px;
-    margin: 30px 30px 30px 0;
-    max-width: 207px;
-    max-height: 247px;
-    width: 100%;
-    height: auto;
-    img {
-      max-width: 207px;
-      max-height: 247px;
-      width: 100%;
-      height: auto;
-    }
-  }
-  .promo-item__content {
-    // padding: 15px;
-
-    width: 100%;
-  }
-  .promo-item__content--text {
-    width: 100%;
-    padding-right: 0;
-  }
-  .promo-item__button--icon {
-    width: 100%;
-    border: 1px solid $color_celeste_approx;
-  }
 }

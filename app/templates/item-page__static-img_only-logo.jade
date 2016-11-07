@@ -5,6 +5,7 @@ head
     link(rel='stylesheet', type='/text/css', href='../css/normalize.css')
     link(rel='stylesheet', type='text/css', href='../css/styles.css')    
     link(rel='stylesheet', type='text/css', href='../css/item-page__static-img.css')
+    link(rel='stylesheet', href='../css/mailchimp-form.css')
     link(rel='stylesheet', href='../css/promo-share.css')
     link(rel='icon', type='image/png', href='img/logo-bee_small.png', sizes='16x16')
     link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Patrick+Hand', rel='stylesheet')
@@ -14,8 +15,8 @@ head
 
   body
     #site-wrapper
-        include ../include/nav__inner-page_only-logo.jade
         #lower-site
+          include ../include/nav__inner-page_only-logo.jade
           // MAIN ITEM 
           .main-item 
               .main-item__gallery
@@ -46,24 +47,7 @@ head
                 .main-item__cta
                     block main-item__cta           
                 
-                // SIGNUP ITEM
-
-                .main-item__subscribe
-                  h3.main-item__subscribe--title    
-                    block main-item__subscribe-title
-                  include ../include/mailchimp-form.jade 
-
           // END -- MAIN ITEM
 
-          //- // 3 ITEMS section
-          //- .spacer-50
-          //-   h2 Check out these activities  
-          //- block box3
-          //- block box2
-          //- block box1
-          //- block box-spacer
-          //- block box-spacer
-
-          // PROMO: HELP US GROW
           include ../include/promo-share.jade  
     include ../include/footer.jade  
