@@ -1,12 +1,11 @@
-extends ./templates/item-page__static-img_only-logo_gallery.jade
+extends ./templates/item-page__static-img_only-logo.jade
 
 block title
   title Catbears Stickers - The Catbears
 
 
-block gallery-template
-  //- img(src='../img/pages/catbears-stickers.png', alt='Coloring Little Things')
-  include ./include/gallery-template.jade
+block gallery-img
+  img(src='../img/pages/catbears-stickers.png', alt='Coloring Little Things')
     
 block main-item__title
   | Catbears Stickers

@@ -9,8 +9,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "bower": "^1.8.0",
+    "brace-expansion": "^1.1.6",
     "browser-sync": "^2.16.0",
     "del": "^2.2.2",
+    "end-of-stream": "^1.1.0",
+    "glob-stream": "^5.3.5",
     "gulp": "^3.9.1",
     "gulp-cache": "^0.4.5",
     "gulp-cssnano": "^2.1.2",

@@ -133,6 +133,7 @@ gulp.task('img', function(){
   .pipe(gulp.dest('dist/img'))
 });
 
+
 gulp.task('useref', function(){
   return gulp.src('app/*.html')
     .pipe(useref())
@@ -146,6 +147,15 @@ gulp.task('useref', function(){
 gulp.task('pdf-files', function() {
   return gulp.src('app/pdf/**/*.pdf')
     .pipe(gulp.dest('dist/pdf'))
+})
+
+
+gulp.task('scripts', function() {
+  return gulp.src('app/scripts/**/*.js')
+    .pipe(gulp.dest('dist/scripts'))
+    .pipe(browserSync.reload({
+      stream: true
+    }))
 })
 
 gulp.task('sass', function() {
@@ -171,22 +181,24 @@ gulp.task('browserSync', function() {
   browserSync.init({
     server: {
       baseDir: './dist',
+      routes: {
+        "/bower_components": "bower_components"
+      }
     },
   })
 });
 
-gulp.task('watch', ['browserSync', 'sass' , 'jade'], function (){
+gulp.task('watch', ['browserSync', 'sass' , 'jade' , 'scripts'], function (){
   gulp.watch('app/scss/**/*.scss', ['sass']); 
   gulp.watch('app/**/*.jade', ['jade']); 
   gulp.watch('app/**/*.+(png|jpg|jpeg|gif|svg)', ['img']); 
-  // Reloads the browser whenever HTML or JS files change
   gulp.watch('app/**/*.html', browserSync.reload); 
-  gulp.watch('app/js/**/*.js', browserSync.reload); 
+  gulp.watch('app/scripts/**/*.js', ['scripts']); 
 });
 
 gulp.task('build', function (callback) {
   runSequence('clean:dist', 
-    ['sass', 'jade', 'useref', 'img', 'pdf-files', 'fonts'],
+    ['sass', 'jade', 'useref', 'img', 'scripts', 'pdf-files', 'fonts'],
     callback
   )
 })

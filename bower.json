@@ -1,0 +1,23 @@
+{
+  "name": "gulp-test",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Maayan Malka"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/maayanmalka/gallery",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.3",
+    "hammerjs": "~2.0.8"
+  },
+  "private": true
+}
