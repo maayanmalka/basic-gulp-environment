@@ -96,22 +96,23 @@ gulp.task('push:staging' , ['push:staging-silent'], function (){
 })
 
 
-gulp.task('push:staging-silent', function () {
+gulp.task('push:staging-silent', function (cb) {
 
     function purgeProjectFolders (index){
       if (index < projectFolders.length){
        conn.rmdir ( "/staging.catbears.com/" + projectFolders[index] , function () {
         console.log ("cleared " + projectFolders[index]);
-        purgeProjectFolders(index + 1);
+        return purgeProjectFolders(index + 1);
        })
       }
        else {
+        console.log('finish clearing')
         return gulp.src('./dist/**/*')
-        .pipe( conn.dest( '/staging.catbears.com' ) ) 
+        .pipe( conn.dest( '/staging.catbears.com' ) ).on('end', cb);
        }
     }
 
-    purgeProjectFolders(0);
+    return purgeProjectFolders(0);
  
  
 } );
