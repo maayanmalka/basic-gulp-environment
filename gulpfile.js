@@ -203,7 +203,7 @@ gulp.task('watch', ['browserSync', 'sass' , 'jade' , 'scripts'], function (){
 });
 
 gulp.task('build', function (callback) {
-  runSequence('clean:dist', 
+  runSequence(//'clean:dist', 
     ['sass', 'jade', 'useref', 'img', 'scripts', 'pdf-files', 'fonts' , 'bower-files'],
     callback
   )
