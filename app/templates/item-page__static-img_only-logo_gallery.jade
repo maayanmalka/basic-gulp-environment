@@ -11,9 +11,10 @@ head
     link(<link href='https://fonts.googleapis.com/css?family=Amatic+SC' , rel='stylesheet')
     link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Patrick+Hand', rel='stylesheet')
 
+    link(rel='stylesheet', type='text/css', href='../css/gallery-tamplate.css')
+    script(type='text/javascript', src='bower_components/jquery/dist/jquery.js')
+    script(type='text/javascript', src='bower_components/hammerjs/hammer.js')
     script(type='text/javascript', src='../scripts/gallery-controller.js')
-    script(type='text/javascript', src='../bower_components/jquery/dist/jquery.js')
-    script(type='text/javascript', src='../bower_components/hammerjs/hammer.js')
 
 
     block title
@@ -27,7 +28,12 @@ head
           // MAIN ITEM 
           .main-item 
               .main-item__gallery
-                block gallery-template
+                .gallery-container
+                  ul#gallery
+                    block gallery-items
+                  #gallery-controller
+                    .gallery__button.gallery__button--left
+                    .gallery__button.gallery__button--right
               .main-item__content
                 h1.item--title 
                   block main-item__title

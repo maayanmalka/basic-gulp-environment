@@ -5,22 +5,25 @@ var galleryWidth;
 var moveToSlide = 0;
 var numOfSlides;
 var currentSlide;
-var width = 300;
-var speed = 400;
+var speed = 600;
+var spacer = 25;
+var galleryItemAndSpacer;
 var $counter;
+var screensize;
+var SingleImageGallery = false;
+var newMainItemSize;
 
 test = function () {
   // debugger
-  alert ("test")
+  // var screensize = $('body').width()
+  alert ("screensize is " + screensize + "   | Jquery is working" )
 }
 
-  
 
 
 $(document).ready(function() {
 
   // test();
-  //configuration
 
 
   $counter = $('.counter');
@@ -29,8 +32,20 @@ $(document).ready(function() {
   $galleryBtnRight = $('.gallery__button--right')
   $galleryBtnLeft = $('.gallery__button--left')
   numOfSlides = $('.gallery__item').length;
-  galleryWidth = 300 * (numOfSlides - 1) ;
-  setCounter()
+  $('.gallery__item').css("margin-right" , spacer)
+
+  if (numOfSlides == 1){
+    SingleImageGallery = true;
+  }
+
+
+
+  
+  
+  setScreensize();
+  setNewGallerySizes();
+
+  //setCounter()
 
   $galleryBtnRight.click( function (){
       gallerySildeRight ();
@@ -39,53 +54,83 @@ $(document).ready(function() {
       gallerySildeLeft ();
   })
 
-
-//
-  // configure hammer.js
-  var galleryTouchElement = document.getElementById('gallery');
+  //configure hammer.js
+  var galleryTouchElement = document.getElementById('gallery-controller');
   var galleryTouchControl = new Hammer(galleryTouchElement);
 
   // listen to events...
   galleryTouchControl.on("swipeleft swipeup", gallerySildeRight );
   galleryTouchControl.on("swiperight swipeup", gallerySildeLeft );
+  // galleryTouchControl.on("tap", gallerySildeRight );
 
 });
+
+$( window ).resize(function() {
+  setScreensize();
+  setNewGallerySizes();
+});
+
+setScreensize = function () {
+  screensize = $('body').width();
+  console.log ("screensize " + screensize)
+}
+
+function setNewGallerySizes () {
+
+  if ( screensize < 1185){
+    newMainItemSize = $('.main-item').width()
+    $('.gallery__item').css('width' , newMainItemSize)
+    $('.gallery__item').css('height' , newMainItemSize) 
+  }
+  else {
+   newMainItemSize = 600
+   $('.gallery__item').css('width' , newMainItemSize)
+   $('.gallery__item').css('height' , newMainItemSize) 
+  }
+
+  galleryItemAndSpacer = $('.gallery__item').width() + spacer;
+  galleryWidth = (galleryItemAndSpacer * numOfSlides) + (spacer * numOfSlides);
+  $gallery.css("width" , galleryWidth )
+}
 
 
 
 function gallerySildeRight () {
-  // slide only if it's possible
-  if (moveToSlide < numOfSlides - 1  ){
-    moveToSlide = (moveToSlide + 1) % numOfSlides ;
+  if (!SingleImageGallery){
 
-    $gallery.animate({'margin-left' : '-=' + width} , speed, function (){
-      currentSlide = ( currentSlide + 1 ) % numOfSlides ;
-    })
+    if (moveToSlide < numOfSlides - 1){
+      moveToSlide = (moveToSlide + 1) % numOfSlides ;
 
+      $gallery.animate({'margin-left' : '-=' + galleryItemAndSpacer} , speed, function (){
+        currentSlide = ( currentSlide + 1 ) % numOfSlides ;
+      })
+
+    }
+
+    // bounce right
+    if (currentSlide === numOfSlides - 1  ){
+      bounceRight();
+    }
+
+    setCounter()
   }
-
-  // bounce right
-  if (currentSlide === numOfSlides - 1  ){
-    bounceRight();
-  }
-
-  setCounter()
 };
 
 function gallerySildeLeft () {
-  // slide only if it's possible
-  if (moveToSlide > 0  ){
-    moveToSlide = (moveToSlide - 1) % numOfSlides ;
+  if (!SingleImageGallery){
+    if (moveToSlide > 0  ){
+      moveToSlide = (moveToSlide - 1) % numOfSlides ;
 
-    $gallery.animate({'margin-left' : '+=' + width} , speed, function (){
-        currentSlide = ( currentSlide - 1 ) % numOfSlides ;
-      })
+      $gallery.animate({'margin-left' : '+=' + galleryItemAndSpacer} , speed, function (){
+          currentSlide = ( currentSlide - 1 ) % numOfSlides ;
+        })
 
-  }
-  setCounter()
+    }
+    setCounter()
 
-  if ( currentSlide === 0 ){
-    bounceLeft();
+    if ( currentSlide === 0 ){
+      bounceLeft();
+    }
   }
 }
 
