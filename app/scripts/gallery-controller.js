@@ -12,12 +12,14 @@ var $counter;
 var screensize;
 var SingleImageGallery = false;
 var newMainItemSize;
+var galleryBubbles = []; 
 
 test = function () {
   // debugger
   // var screensize = $('body').width()
-  alert ("screensize is " + screensize + "   | Jquery is working" )
+  // alert ("screensize is " + screensize + "   | Jquery is working" )
 }
+
 
 
 
@@ -26,7 +28,21 @@ $(document).ready(function() {
   // test();
 
 
-  $counter = $('.counter');
+  // set counter
+  $galleryCounter = $('#gallery-counter');
+  createCounterBubble = function (i) {
+    $galleryCounter.append("<div class='gallery-counter__bubble gallery-counter__bubble--" + i + "'><div>")
+  }
+
+  updateBubble = function (currentBubble){
+  for (i = 0 ; i < numOfSlides ; i++) {
+    $('.gallery-counter__bubble').removeClass('gallery-counter__bubble--selected')
+  }
+  $('.gallery-counter__bubble--' + currentBubble).addClass('gallery-counter__bubble--selected')
+}
+
+
+
   $gallery = $('#gallery');
   currentSlide = 0;
   $galleryBtnRight = $('.gallery__button--right')
@@ -40,12 +56,16 @@ $(document).ready(function() {
 
 
 
-  
+   for (var i=0 ; i < numOfSlides ; i++){
+    var thisBubble = createCounterBubble (i);
+  }
+  updateBubble(currentSlide)
+  // alert ('galleryBubbles ' + galleryBubbles)
   
   setScreensize();
   setNewGallerySizes();
 
-  //setCounter()
+  // setCounter()
 
   $galleryBtnRight.click( function (){
       gallerySildeRight ();
@@ -72,7 +92,7 @@ $( window ).resize(function() {
 
 setScreensize = function () {
   screensize = $('body').width();
-  console.log ("screensize " + screensize)
+  // console.log ("screensize " + screensize)
 }
 
 function setNewGallerySizes () {
@@ -103,6 +123,7 @@ function gallerySildeRight () {
 
       $gallery.animate({'margin-left' : '-=' + galleryItemAndSpacer} , speed, function (){
         currentSlide = ( currentSlide + 1 ) % numOfSlides ;
+        updateBubble(currentSlide);
       })
 
     }
@@ -112,7 +133,7 @@ function gallerySildeRight () {
       bounceRight();
     }
 
-    setCounter()
+    // setCounter()
   }
 };
 
@@ -123,10 +144,11 @@ function gallerySildeLeft () {
 
       $gallery.animate({'margin-left' : '+=' + galleryItemAndSpacer} , speed, function (){
           currentSlide = ( currentSlide - 1 ) % numOfSlides ;
+          updateBubble(currentSlide)
         })
 
     }
-    setCounter()
+    // setCounter()
 
     if ( currentSlide === 0 ){
       bounceLeft();
@@ -150,3 +172,4 @@ function bounceLeft () {
 function setCounter () {
   $counter.html('move to slide number : ' + moveToSlide + "</br></br> current slide shown : " + currentSlide)
 }
+
