@@ -10,9 +10,14 @@ var gulp = require('gulp'),
   cache = require('gulp-cache'),
   del = require('del'),
   runSequence = require('run-sequence'),
-  open = require('gulp-open');
+  open = require('gulp-open'),
+  gulpBowerFiles = require('gulp-bower-files');
+ 
 
 
+gulp.task("bower-files", function(){
+    gulpBowerFiles().pipe(gulp.dest("dist/lib"));
+});
 
 // VINILE FTP
 var ftp = require( 'vinyl-ftp' );
@@ -28,7 +33,8 @@ var projectFolders = [
 'css/',
 'pages/',
 'pdf/',
-'scripts/'
+'scripts/',
+'lib/'
 ];
 
 
@@ -198,7 +204,7 @@ gulp.task('watch', ['browserSync', 'sass' , 'jade' , 'scripts'], function (){
 
 gulp.task('build', function (callback) {
   runSequence('clean:dist', 
-    ['sass', 'jade', 'useref', 'img', 'scripts', 'pdf-files', 'fonts'],
+    ['sass', 'jade', 'useref', 'img', 'scripts', 'pdf-files', 'fonts' , 'bower-files'],
     callback
   )
 })

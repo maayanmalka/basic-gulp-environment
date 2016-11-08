@@ -1,6 +1,6 @@
 
 .gallery-container {
-  width: 100%;
+  width: 600px;
   height: 100%;
   overflow: hidden;
   margin: 0 auto;
@@ -64,10 +64,13 @@
 }
 #gallery-counter {
   width: auto;
-  height: 100%;
+  height: 32px;
   margin-bottom: -30px;
   margin-bottom: -30px;
-  float: right;
+  display: flex;
+  justify-content : center;
+  // float: right;
+  // background-color: pink;
 }
 
 .gallery-counter__bubble {
@@ -81,4 +84,14 @@
 
 .gallery-counter__bubble--selected {
   background-color: #ec008c;
+}
+
+@media(max-width: 1200px) {
+  .gallery-container {
+    width : 100%;
+  }
+  #gallery-counter {
+    display: block-inline;
+    float: right;
+  }
 }

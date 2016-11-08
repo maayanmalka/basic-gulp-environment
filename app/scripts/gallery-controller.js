@@ -5,7 +5,7 @@ var galleryWidth;
 var moveToSlide = 0;
 var numOfSlides;
 var currentSlide;
-var speed = 600;
+var speed = 350;
 var spacer = 25;
 var galleryItemAndSpacer;
 var $counter;
@@ -60,7 +60,6 @@ $(document).ready(function() {
     var thisBubble = createCounterBubble (i);
   }
   updateBubble(currentSlide)
-  // alert ('galleryBubbles ' + galleryBubbles)
   
   setScreensize();
   setNewGallerySizes();
