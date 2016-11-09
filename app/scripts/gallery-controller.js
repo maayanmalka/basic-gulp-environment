@@ -65,7 +65,7 @@ $(document).ready(function() {
   autoSlideOFF = false;
   
   autoSlideON = function () {
-    console.log('Auto Slide ON')
+    // console.log('Auto Slide ON')
 
     if ( currentSlide === 0 ){
       autoSlidingToRight = true;
@@ -84,13 +84,13 @@ $(document).ready(function() {
   }
 
   autoSlidePause = function (){
-    console.log('pause!')
+    // console.log('pause!')
     autoSlidePaused = true;
     autoSlidePausing();
   }
   
   autoSlideRestart = function (){
-    console.log('play!')
+    // console.log('play!')
     autoSlidePaused = false;
     autoSlideRestarting();
     // autoSlideInit();
@@ -110,12 +110,12 @@ $(document).ready(function() {
   autoSlideInit();
 
   autoSlidePausing = function (){
-    console.log ('stopping!')
+    // console.log ('stopping!')
     clearInterval(timer);
   }
 
   autoSlideRestarting = function (){
-    console.log ('restarting!')
+    // console.log ('restarting!')
     autoSlideInit();
   }
   // <- End Auto Slide
@@ -144,7 +144,7 @@ $(document).ready(function() {
   var galleryTouchControl = new Hammer(galleryTouchElement);
 
   // listen to events...
-  galleryTouchControl.on("swipeleft swipeup tap", function(){
+  galleryTouchControl.on("swipeleft swipeup ", function(){
     gallerySildeRight();
     autoSlidePauseRestart();
   } );

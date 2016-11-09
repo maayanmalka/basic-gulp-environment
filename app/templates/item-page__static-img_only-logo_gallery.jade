@@ -31,7 +31,7 @@ head
                 .gallery-container
                   ul#gallery
                     block gallery-items
-                  #gallery-controller(onmouseover='pauseAutoSlide()', onmouseout='playAutoSlide()' ) 
+                  #gallery-controller(onmouseover='autoSlidePause()', onmouseout='autoSlideRestart()' ) 
                     .gallery__button.gallery__button--left
                     .gallery__button.gallery__button--right
                 #gallery-counter
