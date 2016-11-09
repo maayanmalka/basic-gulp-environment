@@ -64,6 +64,7 @@ ul.description--text {
   height: 640px;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 .main-item__gallery {
   height: 600px;
@@ -170,6 +171,8 @@ ul.description--text {
     justify-content: flex-start;
     height: auto;
     width: 100%;
+    margin-bottom: 0;
+
   }
   .main-item__gallery {
     flex-direction: column;
