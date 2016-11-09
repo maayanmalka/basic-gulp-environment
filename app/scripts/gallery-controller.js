@@ -5,20 +5,22 @@ var galleryWidth;
 var moveToSlide = 0;
 var numOfSlides;
 var currentSlide;
-var speed = 350;
+var speed = 450;
 var spacer = 25;
 var galleryItemAndSpacer;
 var $counter;
 var screensize;
 var SingleImageGallery = false;
 var newMainItemSize;
-var galleryBubbles = []; 
+var autoSlideTimer;
+var autoSlidingToRight;
+var hoverGallery;
+var pressedGallery;
 
 test = function () {
-  // debugger
-  // var screensize = $('body').width()
-  // alert ("screensize is " + screensize + "   | Jquery is working" )
+  alert ('test function')
 }
+
 
 
 
@@ -28,7 +30,8 @@ $(document).ready(function() {
   // test();
 
 
-  // set counter
+
+  // set bubble counter
   $galleryCounter = $('#gallery-counter');
   createCounterBubble = function (i) {
     $galleryCounter.append("<div class='gallery-counter__bubble gallery-counter__bubble--" + i + "'><div>")
@@ -54,6 +57,70 @@ $(document).ready(function() {
     SingleImageGallery = true;
   }
 
+  // Auto Slide
+  
+  autoSlideTimer = 5000;
+  autoSlidingToRight = true;
+  autoSlidePaused = false;
+  autoSlideOFF = false;
+  
+  autoSlideON = function () {
+    console.log('Auto Slide ON')
+
+    if ( currentSlide === 0 ){
+      autoSlidingToRight = true;
+    }
+    if ( currentSlide === numOfSlides -1 ){
+      autoSlidingToRight = false;
+    }
+
+    if(!autoSlidePaused){
+      if (autoSlidingToRight){
+        gallerySildeRight ();
+      }else{
+        gallerySildeLeft ();
+      }
+    }
+  }
+
+  autoSlidePause = function (){
+    console.log('pause!')
+    autoSlidePaused = true;
+    autoSlidePausing();
+  }
+  
+  autoSlideRestart = function (){
+    console.log('play!')
+    autoSlidePaused = false;
+    autoSlideRestarting();
+    // autoSlideInit();
+  }
+
+  autoSlidePauseRestart = function () {
+    autoSlidePause();
+    autoSlideRestart();
+  }
+
+  var timer;
+
+  autoSlideInit = function() {
+    timer = setInterval( autoSlideON , autoSlideTimer);
+  };
+
+  autoSlideInit();
+
+  autoSlidePausing = function (){
+    console.log ('stopping!')
+    clearInterval(timer);
+  }
+
+  autoSlideRestarting = function (){
+    console.log ('restarting!')
+    autoSlideInit();
+  }
+  // <- End Auto Slide
+
+
 
 
    for (var i=0 ; i < numOfSlides ; i++){
@@ -64,7 +131,6 @@ $(document).ready(function() {
   setScreensize();
   setNewGallerySizes();
 
-  // setCounter()
 
   $galleryBtnRight.click( function (){
       gallerySildeRight ();
@@ -78,9 +144,15 @@ $(document).ready(function() {
   var galleryTouchControl = new Hammer(galleryTouchElement);
 
   // listen to events...
-  galleryTouchControl.on("swipeleft swipeup", gallerySildeRight );
-  galleryTouchControl.on("swiperight swipeup", gallerySildeLeft );
-  // galleryTouchControl.on("tap", gallerySildeRight );
+  galleryTouchControl.on("swipeleft swipeup tap", function(){
+    gallerySildeRight();
+    autoSlidePauseRestart();
+  } );
+  galleryTouchControl.on("swiperight swipeup ", function(){
+    gallerySildeLeft();
+    autoSlidePauseRestart();
+    }
+  );
 
 });
 
@@ -132,7 +204,6 @@ function gallerySildeRight () {
       bounceRight();
     }
 
-    // setCounter()
   }
 };
 
@@ -147,7 +218,6 @@ function gallerySildeLeft () {
         })
 
     }
-    // setCounter()
 
     if ( currentSlide === 0 ){
       bounceLeft();
@@ -167,8 +237,4 @@ function bounceLeft () {
   .animate({'margin-left' : '-=' + 40} , 100)
 };
 
-
-function setCounter () {
-  $counter.html('move to slide number : ' + moveToSlide + "</br></br> current slide shown : " + currentSlide)
-}
 
