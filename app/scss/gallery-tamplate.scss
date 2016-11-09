@@ -47,15 +47,25 @@
 
     .gallery__button {
       height: 100%;
-      width: 80px;
+      width: 50%;
+      opacity: 0.2;
+      transition : opacity 150ms ease-in-out;
+      &:hover , &:active {
+        opacity: 1;
+      }
+      &:focus , &:visited {
+        opacity: 0.2;
+      }
     }
 
     .gallery__button--left {
-      // background-color: rgba(135, 206, 235, 0.25);      
+      // background-color: rgba(135, 206, 235, 0.25);
+      background: url('../img/btn-gallery--left.png') center left 7% no-repeat;      
       float: left;
     }    
     .gallery__button--right {
       // background-color: rgba(255, 120, 0, 0.25);
+      background: url('../img/btn-gallery--right.png') center right 7% no-repeat; 
       float: right;
 
     }
@@ -93,5 +103,11 @@
   #gallery-counter {
     display: block-inline;
     float: right;
+  }
+}
+
+@media(max-width: 768px) {
+  .gallery__button {
+    display: none;
   }
 }
