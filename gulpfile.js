@@ -59,7 +59,7 @@ gulp.task('open:staging', function(){
 
 
 
-gulp.task('push:production-silent', function () {
+gulp.task('push:production-silent', function (cb) {
 
     function purgeProjectFolders (index){
       if (index < projectFolders.length){
@@ -69,12 +69,13 @@ gulp.task('push:production-silent', function () {
        })
       }
        else {
+        console.log('finish clearing')
         return gulp.src('./dist/**/*')
-        .pipe( conn.dest( '/public_html' ) )
+        .pipe( conn.dest( '/public_html' ) ).on('end' , cb)
        }
     }
 
-    purgeProjectFolders(0);
+    return purgeProjectFolders(0);
 
 } );
 
