@@ -13,28 +13,13 @@
     padding: 0;
 
     .gallery__item {
-
       height: 600px;
       width: 600px;
       float: left;
       list-style-type: none;
       text-align: center;
-      transition: background-color 200ms ease;
-    }
-    .gallery__item--1 {
-      background-color: rgba(255, 226, 69, 0.25);
-    }
-    .gallery__item--2 {
-      background-color: rgba(120, 201, 255, 0.25);
-    }
-    .gallery__item--3 {
-      background-color: rgba(255, 128, 167, 0.25);
-    }
-    .gallery__item--4 {
-      background-color: rgba(135, 245, 140, 0.29);
-    }
-    .gallery__item--5 {
-      background-color: rgba(164, 148, 255, 0.25);
+      background-color: rgb(250, 247, 248);
+      color : #dad6d7;
     }
   }
   #gallery-controller {
