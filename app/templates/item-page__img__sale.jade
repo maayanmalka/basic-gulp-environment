@@ -1,27 +1,12 @@
 doctype html
-head
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    meta(charset='UTF-8')
-    link(rel='stylesheet', type='/text/css', href='../css/normalize.css')
-    link(rel='stylesheet', type='text/css', href='../css/styles.css')    
+html
+  head
+    include ../include/page-head-data.jade
     link(rel='stylesheet', type='text/css', href='../css/item-page__static-img.css')
     link(rel='stylesheet', href='../css/mailchimp-form.css')
     link(rel='stylesheet', href='../css/promo-share.css')
-    link(rel='icon', type='image/png', href='img/logo-bee_small.png', sizes='16x16')
-    link(<link href='https://fonts.googleapis.com/css?family=Amatic+SC' , rel='stylesheet')
-    link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Patrick+Hand', rel='stylesheet')
-
-    link(rel='stylesheet', type='text/css', href='../css/gallery-tamplate.css')
-    script(type='text/javascript', src='lib/jquery/dist/jquery.js')
-    script(type='text/javascript', src='lib/hammerjs/hammer.js')
-    script(type='text/javascript', src='../scripts/gallery-controller.js')
-
-
     block title
         title Def The Catbears
-    include ../include/jaco.jade
-    include ../include/google-analytics.jade
-    include ../include/meta-tags.jade
 
   body
     #site-wrapper
@@ -30,13 +15,7 @@ head
           // MAIN ITEM 
           .main-item 
               .main-item__gallery
-                .gallery-container
-                  ul#gallery
-                    block gallery-items
-                  #gallery-controller(onmouseover='autoSlidePause()', onmouseout='autoSlideRestart()' ) 
-                    .gallery__button.gallery__button--left
-                    .gallery__button.gallery__button--right
-                #gallery-counter
+                block gallery-img
               .main-item__content
                 h1.item--title 
                   block main-item__title
@@ -69,3 +48,4 @@ head
           include ../include/promo-share.jade
            
     include ../include/footer.jade  
+    include ../include/page-bottom-scripts.jade

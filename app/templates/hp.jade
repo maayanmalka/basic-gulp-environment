@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    include ../include/page-head-data.jade
+    link(rel='stylesheet', type='text/css', href='../css/mailchimp-form.css')
+    link(rel='stylesheet', type='text/css', href='../css/promo-share.css')
+    block title
+
+  body
+    #site-wrapper
+      #upper-site
+        //- .menu.menu-homepage
+        //-   p
+        //-     a(href='../index.html') About
+        //-   p
+        //-     a(href='../index.html') Contact
+        .header-container
+          .logo-header
+            a(href='../index.html')
+              img(src='../img/logo-header.png', alt='logo-header', style='width:152px;height:100px;')
+
+      #lower-site
+        block box7
+        block box6
+        block box5
+        block box-spacer
+        block box-spacer
+      #coast2coast--centered
+        include ../include/promo-share.jade
+  
+    include ../include/footer.jade 
+    include ../include/page-bottom-scripts.jade

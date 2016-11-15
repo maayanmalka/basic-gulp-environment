@@ -1,21 +1,12 @@
 doctype html
 html
   head
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    meta(charset='UTF-8')
-    link(rel='stylesheet', type='/text/css', href='../css/normalize.css')
-    link(rel='stylesheet', type='text/css', href='../css/styles.css')    
+    include ../include/page-head-data.jade
     link(rel='stylesheet', type='text/css', href='../css/item-page__static-img.css')
     link(rel='stylesheet', type='text/css', href='../css/mailchimp-form.css')
     link(rel='stylesheet', type='text/css', href='../css/promo-share.css')
-    link(rel='icon', type='image/png', href='img/logo-bee_small.png', sizes='16x16')
-    link(<link href='https://fonts.googleapis.com/css?family=Amatic+SC' , rel='stylesheet')
-    link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Patrick+Hand', rel='stylesheet')
     block title
         title Def The Catbears
-    include ../include/jaco.jade
-    include ../include/google-analytics.jade
-    include ../include/meta-tags.jade
 
   body
     #site-wrapper
@@ -56,3 +47,4 @@ html
       #coast2coast--centered
         include ../include/promo-share.jade
     include ../include/footer.jade  
+    include ../include/page-bottom-scripts.jade
