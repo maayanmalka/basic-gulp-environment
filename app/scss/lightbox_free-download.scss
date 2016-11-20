@@ -4,9 +4,12 @@
     background-color: rgba(255, 250, 255, 0.7);
     height : 100%;
     width : 100%;
+    top : 0;
+    left : 0;
     position: fixed;
     z-index: 9999999;
     display: none;
+    -webkit-backface-visibility: hidden;
 }
 
 .lightbox-container {
@@ -57,9 +60,11 @@
     }
 
     .lightbox--cta {
+        margin : 0 auto;
         margin-top: 40px;
-        color : black;
-          background-color: rgba(255,255,255,0.85);
+        color : #ec008c;
+        max-width : 400px;
+        background-color: rgba(255,255,255,0.9);
         &:hover {
           // color : #ec008c;
         background-color: white;
@@ -77,9 +82,23 @@
 
 @media (max-width: 720px){
   .lightbox-container {
+    margin : 0;
+    max-width: 100%;
     transform: rotate(0deg);
     -ms-transform: rotate(0deg); /* IE 9 */
     -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
-    padding : 35px;
+    padding : 40px;
+  }
+}
+
+@media(max-width: 450px) {
+  .lightbox-container {
+
+    .lightbox--title {
+        font-family: 'Amatic SC', cursive; 
+        font-size : 80px;
+        margin-bottom: 7px;
+        color : black;
+    }
   }
 }
