@@ -7,5 +7,14 @@ script(type='text/javascript', src='../scripts/lightbox-controller.js')
   .lightbox-container
     .close-x(onmousedown='lightboxClose()') +
     h1.lightbox--title Free PDF!
-    p.lightbox--p Thanks for being one of our first users, Here's the PDF you wanted free of charge :)
+    p.lightbox--p 
+      | We're happy to send your this PDF free of charge!  
+      br
+      | Thanks for being one of our first users!
     .lightbox--cta.btn.btn__primary(onmousedown='lightboxClose()') Yey Thanks!
+    p.lightbox--mini-text
+      | Your PDF should start downloading in any second. 
+      br
+      |  Having problems? Try again or 
+      a(href="mailto:catbearsapps@gmail.com?subject=My PDF won't download :( &body=Hey Catbears, I'm trying to download a PDF named ___________ and it's not working. Please help!", target='_top') Contact Us
+      | .

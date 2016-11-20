@@ -1,12 +1,19 @@
-extends ./templates/item-page__img__sale.jade
+extends ./templates/item-page__gallery__sale.jade
 
 block title
   title Cardboard Puppet Show - The Catbears
 
 
-block gallery-img
-  img(src='../img/pages/coloring-little-things.png', alt='Coloring Little Things')
-    
+block gallery-items
+  li.gallery__item.gallery__item--1 
+    img(src='../img/pages/catbears-stickers__001.png', alt='Catbears Stickers 001')
+  li.gallery__item.gallery__item--2 
+    img(src='../img/pages/catbears-stickers__002.png', alt='Catbears Stickers 002')
+  li.gallery__item.gallery__item--3
+    img(src='../img/pages/catbears-stickers__003.png', alt='Catbears Stickers 003') 
+  li.gallery__item.gallery__item--4
+    img(src='../img/pages/catbears-stickers__004.png', alt='Catbears Stickers 004')  
+     
 block main-item__title
   | Felt Catbears Animals 
 

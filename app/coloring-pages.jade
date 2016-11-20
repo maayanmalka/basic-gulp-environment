@@ -1,17 +1,25 @@
-extends ./templates/item-page__img__sale.jade
+extends ./templates/item-page__gallery__sale.jade
 
 block title
-  title Coloring Page - The Catbears
+  title 5 Coloring Pages - The Catbears
 
 
-block gallery-img
-  img(src='../img/pages/coloring-pages.png', alt='Coloring Little Things')
-    
+block gallery-items
+  li.gallery__item.gallery__item--1 
+    img(src='../img/pages/coloring-pages.png', alt='coloring-pages 001')
+  li.gallery__item.gallery__item--2 
+    img(src='../img/pages/catbears-stickers__002.png', alt='Catbears Stickers 002')
+  li.gallery__item.gallery__item--3
+    img(src='../img/pages/catbears-stickers__003.png', alt='Catbears Stickers 003') 
+  li.gallery__item.gallery__item--4
+    img(src='../img/pages/catbears-stickers__004.png', alt='Catbears Stickers 004')  
+  
+
 block main-item__title
-  | Coloring Page 
+  | 5 Coloring Pages 
 
 block main-item__price-number
-  | Free PDF
+  | $1.99
 
 block main-item__file-size 
   | 700 KB
@@ -21,16 +29,16 @@ block main-item__badges
   .info-line__badge.age__badge--2
 
 block main-item__description--p
-  | Download a free PDF and start coloring some cute Catbears! Here's what you'll need: 
+  | Download a PDF with 5 coloring pages, print it out and start coloring some cute Catbears! Here's what you'll need: 
 
 block main-item__description--ul
   li Printer
   li Color Pencils
   li Color Markers
-  li A lot of Excitment
+  li A lot of Excitment!
 
 block main-item__cta
-  a.btn.btn__primary(href='../pdf/The-Catbears-Coloring-Page.pdf' download = "The-Catbears-Coloring-Page.pdf" onClick = "ga('send', 'event', 'Button', 'Click', 'PDF-coloring-page')") Download PDF
+  a.btn.btn__primary(href='../pdf/the-catbears_5-coloring-pages.pdf' download = "the-catbears_5-coloring-pages.pdf" onClick = "ga('send', 'event', 'Button', 'Click', 'PAYED__5-coloring-pages') ; lightboxShow()") Buy $1.99
 
 block main-item__subscribe-title
   | We'll let you know when we're up

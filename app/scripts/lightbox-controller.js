@@ -14,8 +14,3 @@ lightboxClose = function () {
 	$('.lightbox').fadeOut('fast')
 }
 
-
-
-startDownload = function () {
-	
-}

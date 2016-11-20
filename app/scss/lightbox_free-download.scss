@@ -32,10 +32,10 @@
        top : 0;
        right : 0;
        margin-right: 15px;
-       color : #999;
+       color : #b2b204;
        margin-top: 4px;
        cursor:default;
-       transition: color 100ms ease-in-out;
+       transition: color 150ms ease-in-out;
        transform: rotate(45deg);
        -ms-transform: rotate(45deg); /* IE 9 */
        -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
@@ -58,15 +58,20 @@
 
     .lightbox--cta {
         margin-top: 40px;
-        background-color: white;
         color : black;
+          background-color: rgba(255,255,255,0.85);
         &:hover {
           // color : #ec008c;
-          color : white;
+        background-color: white;
           box-shadow: none;
-          background-color: black;
-          // background-color: #ec008c;
+          color: #ec008c;
         }
+    }
+
+    .lightbox--mini-text {
+      margin-top: 20px;
+      line-height: 24px;
+      font-size : 14px;
     }
 }
 
