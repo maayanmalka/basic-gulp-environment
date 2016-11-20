@@ -1,0 +1,80 @@
+//lightbox_free-download
+
+.lightbox {
+    background-color: rgba(255, 250, 255, 0.7);
+    height : 100%;
+    width : 100%;
+    position: fixed;
+    z-index: 9999999;
+    display: none;
+}
+
+.lightbox-container {
+    transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg); /* IE 9 */
+    -webkit-transform: rotate(-2deg); /* Chrome, Safari, Opera */
+    background-color: rgb(250, 255, 7);
+    max-width : 600px;
+    height : auto;
+    padding : 80px;
+    padding-top : 50px;
+    margin: 0 auto;
+    display: block;
+    margin-top : 10%;
+    text-align: center;
+    // border-radius: 8px;
+    box-shadow: 0px 2px 15px rgba(55, 55, 55, 0.2);
+    position: relative;
+
+    .close-x {
+       font-size : 40px;
+       position: absolute;
+       top : 0;
+       right : 0;
+       margin-right: 15px;
+       color : #999;
+       margin-top: 4px;
+       cursor:default;
+       transition: color 100ms ease-in-out;
+       transform: rotate(45deg);
+       -ms-transform: rotate(45deg); /* IE 9 */
+       -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+        &:hover {
+            // color : #ec008c;
+            color : black;
+        }
+    } 
+
+    .lightbox--title {
+        font-family: 'Amatic SC', cursive; 
+        font-size : 120px;
+        margin-bottom: 7px;
+        color : black;
+    }
+
+    .lightbox--p {
+      color : black;
+    }
+
+    .lightbox--cta {
+        margin-top: 40px;
+        background-color: white;
+        color : black;
+        &:hover {
+          // color : #ec008c;
+          color : white;
+          box-shadow: none;
+          background-color: black;
+          // background-color: #ec008c;
+        }
+    }
+}
+
+@media (max-width: 720px){
+  .lightbox-container {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg); /* IE 9 */
+    -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+    padding : 35px;
+  }
+}
