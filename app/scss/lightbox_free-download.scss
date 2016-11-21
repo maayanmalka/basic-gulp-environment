@@ -29,6 +29,18 @@
     box-shadow: 0px 2px 15px rgba(55, 55, 55, 0.2);
     position: relative;
 
+    .heart {
+      background-image: url("../img/heart.png");
+      height: 93px;
+      width : 76px;
+          -webkit-filter: drop-shadow(-1px 10px 2px rgba(0,0,0,0.2));
+    filter:         drop-shadow(-1px 10px 2px rgba(0,0,0,0.2)); 
+      background-repeat: no-repeat;
+      position: absolute;
+      left : 44%;
+      margin-right: 40px;
+      top : -45px;
+    }
     .close-x {
        font-size : 40px;
        position: absolute;
@@ -89,6 +101,8 @@
     -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
     padding : 40px;
   }
+
+  .heart { display: none}
 }
 
 @media(max-width: 450px) {
