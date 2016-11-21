@@ -7,15 +7,16 @@ script(type='text/javascript', src='../scripts/lightbox-controller.js')
   .lightbox-container
     .heart
     .close-x(onmousedown='lightboxClose()') +
-    h1.lightbox--title Free PDF!
-    p.lightbox--p 
-      | We're happy to send you this PDF free of charge!  
-      br
-      | Thanks for being one of our first users!
-    .lightbox--cta.btn.btn__primary(onmousedown='lightboxClose()') Yey Thanks!
-    p.lightbox--mini-text
-      | Your download should start in any second. 
-      br
-      |  Problems? Try again or 
-      a(href="mailto:catbearsapps@gmail.com?subject=My PDF won't download :( &body=Hey Catbears, I'm trying to download a PDF named ___________ and it's not working. Please help!", target='_top') Contact Us
-      | .
+    .text-container
+      h1.lightbox--title Free PDF!
+      p.lightbox--p 
+        | We're happy to send you this PDF free of charge!  
+        br
+        | Thanks for being one of our first users!
+      .lightbox--cta.btn.btn__large.btn__secondary(onmousedown='lightboxClose()') Yay Thanks!
+      p.lightbox--mini-text
+        | Your download should start in any second. 
+        br
+        |  Problems? Try again or 
+        a(href="mailto:catbearsapps@gmail.com?subject=My PDF won't download :( &body=Hey Catbears, I'm trying to download a PDF named ___________ and it's not working. Please help!", target='_top') Contact Us
+        | .

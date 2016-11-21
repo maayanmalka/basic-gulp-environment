@@ -1,4 +1,7 @@
 
+@import "./variables.scss";
+
+
 .gallery-container {
   width: 600px;
   height: 100%;
@@ -64,21 +67,19 @@
   margin-bottom: -30px;
   display: flex;
   justify-content : center;
-  // float: right;
-  // background-color: pink;
 }
 
 .gallery-counter__bubble {
   height : 10px;
   width : 10px;
-  background-color: #ddd;
+  background-color: $gray__light;
   border-radius: 100%;
   margin :  10px 6px;
   float: left;
 }
 
 .gallery-counter__bubble--selected {
-  background-color: #ec008c;
+  background-color: $catbears__primary;
 }
 
 @media(max-width: 1200px) {

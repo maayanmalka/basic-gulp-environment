@@ -1,7 +1,9 @@
 //lightbox_free-download
 
+@import "./variables.scss";
+
 .lightbox {
-    background-color: rgba(255, 250, 255, 0.7);
+    background-color: $lightbox-background;
     height : 100%;
     width : 100%;
     top : 0;
@@ -16,7 +18,7 @@
     transform: rotate(-2deg);
     -ms-transform: rotate(-2deg); /* IE 9 */
     -webkit-transform: rotate(-2deg); /* Chrome, Safari, Opera */
-    background-color: rgb(250, 255, 7);
+    background-color: $promo__yellow ;
     max-width : 600px;
     height : auto;
     padding : 80px;
@@ -33,8 +35,8 @@
       background-image: url("../img/heart.png");
       height: 93px;
       width : 76px;
-          -webkit-filter: drop-shadow(-1px 10px 2px rgba(0,0,0,0.2));
-    filter:         drop-shadow(-1px 10px 2px rgba(0,0,0,0.2)); 
+     -webkit-filter: drop-shadow(-1px 10px 2px rgba(0,0,0,0.2));
+      filter: drop-shadow(-1px 10px 2px rgba(0,0,0,0.2)); 
       background-repeat: no-repeat;
       position: absolute;
       left : 44%;
@@ -55,33 +57,36 @@
        -ms-transform: rotate(45deg); /* IE 9 */
        -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
         &:hover {
-            // color : #ec008c;
-            color : black;
+            color : $black;
         }
     } 
+
+    .text-container {
+      // transform: rotate(2deg);
+    }
 
     .lightbox--title {
         font-family: 'Amatic SC', 'Open Sans', sans-serif; 
         font-size : 120px;
         margin-bottom: 7px;
-        color : black;
+        color : $black;
     }
 
     .lightbox--p {
-      color : black;
+      color : $black;
     }
 
     .lightbox--cta {
         margin : 0 auto;
         margin-top: 40px;
-        color : #ec008c;
+        // color : $catbears__primary;
         max-width : 400px;
-        background-color: rgba(255,255,255,0.9);
+        // background-color: rgba(255,255,255,0.9);
         &:hover {
           // color : #ec008c;
-        background-color: white;
-          box-shadow: none;
-          color: #ec008c;
+        // background-color: $white;
+          // box-shadow: none;
+          // color: #ec008c;
         }
     }
 
@@ -112,7 +117,7 @@
         font-family: 'Amatic SC', 'Open Sans', sans-serif; 
         font-size : 80px;
         margin-bottom: 7px;
-        color : black;
+        color : $black;
     }
   }
 }
