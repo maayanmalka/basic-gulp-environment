@@ -16,32 +16,22 @@ block gallery-items
   
 
 block main-item__title
-  | 5 Coloring Pages 
-
-block main-item__price-number
-  | $1.99
-
-block main-item__file-size 
-  | 700 KB
-
-block main-item__badges
-  .info-line__badge.difficulty__badge--pencil
-  .info-line__badge.age__badge--2
+  | 5 Printable Coloring Pages 
 
 block main-item__description--p
-  | Download a PDF with 5 coloring pages, print it out and start coloring some cute Catbears! Here's what you'll need: 
+  | Download a PDF with 5 coloring pages, print it out and start coloring some cute Catbears!  
 
-block main-item__description--ul
-  li Printer
-  li Color Pencils
-  li Color Markers
-  li A lot of Excitment!
+block main-item__info
+  .main-item__info--list
+    ul Here's what you'll need:
+      li Printer
+      li Color Pencils
+      li Color Markers
+      li A lot of Excitment!
 
 block main-item__cta
   a.btn.btn__large.btn__primary.btn__payed(href='../pdf/5-coloring-pages_The-Catbears.pdf' download = "5-coloring-pages_The-Catbears.pdf" onClick = "ga('send', 'event', 'Button', 'Click', 'PAYED__5-coloring-pages') ; lightboxShow()") Buy $1.99
 
-block main-item__subscribe-title
-  | We'll let you know when we're up
-                  
-
+block main-item__cta--micro-text                  
+  p PDF file ・ 2MB ・ 5 Printable Pages
 

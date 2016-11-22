@@ -33,29 +33,16 @@ html
               .main-item__content
                 h1.item--title 
                   block main-item__title
-                .main-item__content--title-info-line
-                  .price.price--pdf
-                    .price__icon
-                    .price__content
-                      
-                      h2.price__content--free
-                        block main-item__price-number
-
-                      .price__content--pdf-size
-                        block main-item__file-size 
-                        
-                  .badges-container
-                    block main-item__badges
                 .main-item__description   
                     p.description--text
                       block main-item__description--p  
 
-                    ul.description--text
-                      block main-item__description--ul
-
                 .main-item__cta
                     block main-item__cta           
-                
+                    .main-item__cta--micro-text
+                        block main-item__cta--micro-text
+                    
+                block main-item__info
           // END -- MAIN ITEM
 
         #coast2coast--centered

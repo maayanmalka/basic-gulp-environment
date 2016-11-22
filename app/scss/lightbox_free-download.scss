@@ -18,7 +18,9 @@
     transform: rotate(-2deg);
     -ms-transform: rotate(-2deg); /* IE 9 */
     -webkit-transform: rotate(-2deg); /* Chrome, Safari, Opera */
-    background-color: $promo__yellow ;
+    // background-color: $promo__yellow ;
+    background-color: $white ;
+    border : solid 10px $promo__yellow;
     max-width : 600px;
     height : auto;
     padding : 80px;
@@ -48,8 +50,8 @@
        position: absolute;
        top : 0;
        right : 0;
-       margin-right: 15px;
-       color : #b2b204;
+       margin-right: 19px;
+       color : $gray__light--2;
        margin-top: 4px;
        cursor:default;
        transition: color 150ms ease-in-out;

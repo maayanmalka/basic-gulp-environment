@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 #mc_embed_signup {
   width : 100%;
 }
@@ -10,8 +12,8 @@
 .email {
   font-size: 16px;
   min-height: 30px;
-  border: 1px solid #c2c2c2;
-  background-color: #fbfbfb;
+  border: 1px solid $gray__light--2;
+  background-color: $white;
   margin: 0;
   padding: 0;
   padding-left: 16px;
@@ -22,11 +24,14 @@
   margin-top: 10px;
   margin-bottom: 10px;
   width: 100%;
+  color : $gray__medium;
   background-clip: padding-box;
-  border: 1px solid #e2e2e2;
-  transition : border 200ms ease-in-out;
+  border: 1px solid rgba(0,0,0,0.2); 
+  transition : border 120ms ease-in-out , background-color 120ms ease-in-out;
   &:focus {
-    border: 1px solid #ff0097;
+    border: 1px solid rgba(0,0,0,0.4);
+    color : $black;
+    background-color: $white;
     outline: none;
   }  
 }

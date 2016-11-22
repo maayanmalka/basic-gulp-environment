@@ -49,7 +49,7 @@ h1 {
   font-weight: 100;
 }
 h2 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
 }
 input, button, submit {
@@ -58,11 +58,11 @@ input, button, submit {
 .btn {
   cursor: pointer;
   width: 100%;
-  border : none;
+  border : none !important;
   text-align: center !important;
   display: flex !important;
   min-height: 38px;
-  color: white;
+  color: white !important;
   font-weight: 400;
   font-size : 16px;
   background-color: $catbears__primary ;
@@ -95,9 +95,9 @@ input, button, submit {
 
 .btn__primary {
   background-color: $catbears__primary;
-  transition: background-color 0.15s ease-in-out , box-shadow 0.50s ease-in-out;
+  transition: background-color 0.09s ease-in-out ;//, box-shadow 0.50s ease-in-out;
   &:hover  {
-    box-shadow: 0px 0px 15px 2px $catbears__primary--highlight;
+    // box-shadow: 0px 0px 15px 2px $catbears__primary--highlight;
   }
 }
 
@@ -187,11 +187,11 @@ input, button, submit {
 
   #site-wrapper {
     width : 100%;
-    max-width : 768px;
     margin : 0 auto;
   }
   #lower-site {
     width : 100%;
+    max-width : 768px;
     // width : 400px;
   }
   .header-container {
