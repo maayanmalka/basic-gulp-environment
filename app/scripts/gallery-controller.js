@@ -169,6 +169,7 @@ setScreensize = function () {
 function setNewGallerySizes () {
 
   if ( screensize < 1185){
+     console.log ('tablet screen - screensize')
     newMainItemSize = $('.main-item').width()
     $('.gallery__item').css('width' , newMainItemSize)
     $('.gallery__item').css('height' , newMainItemSize) 

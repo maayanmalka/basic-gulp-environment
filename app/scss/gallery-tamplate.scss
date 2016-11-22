@@ -1,6 +1,11 @@
 
 @import "./variables.scss";
 
+.main-item__gallery {
+  max-width: none;
+  max-height: none;
+}
+
 
 .gallery-container {
   width: 600px;
