@@ -55,6 +55,9 @@ h2 {
 input, button, submit {
   border: none;
 }
+.marker__blue {
+  background-color: $marker__blue;
+}
 .btn {
   cursor: pointer;
   width: 100%;

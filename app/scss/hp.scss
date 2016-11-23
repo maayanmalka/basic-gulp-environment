@@ -71,40 +71,51 @@ h1.item--title {
 }
 .age__badge--1 {
   width: 40px;
-  background: url('../img/pages/icon-age_1.png') no-repeat;
+  background: url('../img/badges/icon-age_1.png') no-repeat;
 }
 .age__badge--2 {
   width: 40px;
-  background: url('../img/pages/icon-age_2.png') no-repeat;
+  background: url('../img/badges/icon-age_2.png') no-repeat;
 }
 .age__badge--3 {
   width: 40px;
-  background: url('../img/pages/icon-age_3.png') no-repeat;
+  background: url('../img/badges/icon-age_3.png') no-repeat;
 }
 .age__badge--4 {
   width: 40px;
-  background: url('../img/pages/icon-age_4.png') no-repeat;
+  background: url('../img/badges/icon-age_4.png') no-repeat;
 }
 .age__badge--5 {
   width: 40px;
-  background: url('../img/pages/icon-age_5.png') no-repeat;
+  background: url('../img/badges/icon-age_5.png') no-repeat;
 }
 .age__badge--6 {
   width: 40px;
-  background: url('../img/pages/icon-age_6.png') no-repeat;
+  background: url('../img/badges/icon-age_6.png') no-repeat;
 }
 .difficulty__badge--pencil {
-  background: url('../img/badge_pencil.png') no-repeat;
+  background: url('../img/badges/badge_pencil.png') no-repeat;
   background-size: 100% 100%;
 }
 .difficulty__badge--scissors {
-  background: url('../img/badge_scissors.png') no-repeat;
+  background: url('../img/badges/badge_scissors.png') no-repeat;
   background-size: 100% 100%;
 }
 .badge--instagram {
-  background: url('../img/badge_instagram.png') no-repeat;
+  background: url('../img/badges/badge_instagram.png') no-repeat;
   background-size: 100% 100%;  
 }
+
+.badge--pdf-icon {
+  background: url('../img/badges/icon-pdf.png') no-repeat;
+  background-size: 100% 100%;  
+}
+
+.badge--apple {
+  background: url('../img/badges/badge_apple.png') no-repeat;
+  background-size: 100% 100%;  
+}
+
 
 @media (max-width: 1200px) {
   #upper-site {

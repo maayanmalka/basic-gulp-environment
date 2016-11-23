@@ -28,12 +28,17 @@ block main-item__info
       li Color Pencils
       li Color Markers
       li A lot of Excitment!
+    br
+    a.marker__blue(href="https://www.instagram.com/explore/tags/drawcatbears/" target="_blank") #DrawCatbears
+    | ・ Tag your works on instagram!
 
-block main-item__cta
-  a.btn.btn__large.btn__primary.btn__payed(onClick = "ga('send', 'event', 'Button', 'Click', 'PAYED__5-coloring-pages') ; lightboxInit()") Buy $1.99
 
 block main-item__cta--micro-text                  
   p PDF file ・ 2MB ・ 5 Printable Pages
 
+block main-item__cta
+  a.btn.btn__large.btn__primary.btn__payed(href='../pdf/5-coloring-pages_catbears.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__5-coloring-pages')") Download Free PDF
+
+//- $1.99 FREE - BUTTON TEST
 //- block main-item__cta
-  a.btn.btn__large.btn__primary.btn__payed(href='../pdf/5-coloring-pages_The-Catbears.pdf' download = "5-coloring-pages_The-Catbears.pdf" onClick = "ga('send', 'event', 'Button', 'Click', 'PAYED__5-coloring-pages') ; lightboxShow()") Buy $1.99
+//-   a.btn.btn__large.btn__primary.btn__payed(onClick = "ga('send', 'event', 'Button', 'Click', 'PAYED__5-coloring-pages') ; lightboxInit()") Buy $1.99
