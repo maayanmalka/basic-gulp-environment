@@ -2,6 +2,14 @@
 
 @import "./variables.scss";
 
+h2 {
+  font-size: 22px;
+}
+
+a {
+  font-weight: bold;
+}
+
 .lightbox {
     background-color: $lightbox-background;
     height : 100%;
@@ -23,7 +31,7 @@
     border : solid 10px $promo__yellow;
     max-width : 600px;
     height : auto;
-    padding : 80px;
+    padding : 60px;
     padding-top : 50px;
     margin: 0 auto;
     display: block;
@@ -81,19 +89,14 @@
     .lightbox--cta {
         margin : 0 auto;
         margin-top: 40px;
-        // color : $catbears__primary;
         max-width : 400px;
-        // background-color: rgba(255,255,255,0.9);
         &:hover {
-          // color : #ec008c;
-        // background-color: $white;
-          // box-shadow: none;
-          // color: #ec008c;
+
         }
     }
 
     .lightbox--mini-text {
-      margin-top: 20px;
+      margin-top: 12px;
       line-height: 24px;
       font-size : 14px;
     }
