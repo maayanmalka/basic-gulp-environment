@@ -27,19 +27,19 @@ a {
   color: black;
   text-decoration: none;
   transition: color 0.15s ease-in-out;
-}
-h2 {
-  text-decoration: none;
-}
-a  {
   &:visited {
     color: $black;
   }
   &:hover {
     cursor: pointer;
-    color: $catbears__primary;
+    color: $link;
   }
 }
+
+h2 {
+  text-decoration: none;
+}
+
 h1, h2, h3, h4, p, a, div {
   margin: 0;
   padding: 0;
@@ -220,7 +220,7 @@ input, button, submit {
 
 // shake logo
 
-.logo:hover {
+.shake__hover:hover {
   animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
