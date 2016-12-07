@@ -1,0 +1,47 @@
+//color-cut-paste-pages.jade
+
+extends ./templates/item-page__gallery__sale.jade
+
+block title
+  title Free Printable Color, Cut & Paste Pages - The Catbears
+
+
+block gallery-items
+  li.gallery__item.gallery__item--1 
+    img(src='../img/pages/color-cut-paste-pages__001.png', alt='coloring-pages 001')
+  li.gallery__item.gallery__item--2 
+    img(src='../img/pages/color-cut-paste-pages__002.png', alt='coloring-pages 002')
+  li.gallery__item.gallery__item--3
+    img(src='../img/pages/color-cut-paste-pages__003.png', alt='Catbears Stickers 003') 
+  //- li.gallery__item.gallery__item--4
+  //-   img(src='../img/pages/catbears-stickers__004.png', alt='Catbears Stickers 004')  
+  
+
+block main-item__title
+  | Free Printable Color, Cut & Paste Pages
+
+block main-item__description--p
+  | Download a PDF file with 4 activity pages. Each one tells a different story that your kid will have to complete by coloring, cutting and pasting. Get your printer ready start your Catbears advanture!
+
+block main-item__info
+  .main-item__info--list
+    ul Here's what you'll need:
+      li Printer
+      li A pair of Scissors
+      li Glue
+      li Coloring materials
+    br
+    | Upload and tag your works on Instagram:
+    br
+    a.marker__blue(href="https://www.instagram.com/explore/tags/drawcatbears/" target="_blank") #DrawCatbears
+
+
+block main-item__cta--micro-text                  
+  p PDF file ・ 2.4MB ・ 4 Printable Pages
+
+block main-item__cta
+  a.btn.btn__large.btn__primary.btn__payed(href='../pdf/The-Catbears-Color-Cut-Paste-Pages.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Color-Cut-Paste-Pages.pdf')") Download Free PDF
+
+//- $1.99 FREE - BUTTON TEST
+//- block main-item__cta
+//-   a.btn.btn__large.btn__primary.btn__payed(onClick = "ga('send', 'event', 'Button', 'Click', 'PAYED__5-coloring-pages') ; lightboxInit()") Buy $1.99
