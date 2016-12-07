@@ -17,6 +17,7 @@ body {
 }
  
 p {
+  color : #777;
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   line-height: 26px;
@@ -187,11 +188,16 @@ input, button, submit {
  width : 100%; 
  text-align: center;
  z-index: 9999;
+ padding-bottom: 60px;
  p {
-  color : #777;
-  font-size : 16px;
-  padding-bottom: 30px;
+  display: inline-block;
+  margin-right: 30px;
  } 
+ a {  
+  display: inline-block;
+  margin-right: 30px;
+  font-size: 18px;
+ }  
 }
 
 
