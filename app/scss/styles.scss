@@ -188,15 +188,17 @@ input, button, submit {
  width : 100%; 
  text-align: center;
  z-index: 9999;
- padding-bottom: 60px;
+ padding-bottom: 30px;
  p {
   display: inline-block;
-  margin-right: 30px;
+  margin:  0 15px;
+  margin-bottom: 20px;
  } 
  a {  
   display: inline-block;
-  margin-right: 30px;
+  margin:  0 15px;
   font-size: 18px;
+  margin-bottom: 20px;
  }  
 }
 
