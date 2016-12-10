@@ -1,9 +1,11 @@
 @import "./variables.scss";
 
+
 #footer {
   // margin-top: -60px;
 }
 .promo-item {
+  position: relative;           
   margin-top: 30px;
   text-align : center;
   width: 100%;
@@ -26,7 +28,33 @@
   }
 }
 
+
+.overlay {
+  content: "";
+  position: relative;
+  background-repeat: no-repeat; 
+  // background-color: rgba(255, 0, 0, 0.1);
+}
+
+.overlay__blinking-catbear {
+  top: 193px;
+  left: -577px;
+  width: 180px;
+  height: 210px;
+  background-image: url("../img/gifs/blinking-catbear.gif");
+}
+
+.overlay__blinking-snail {
+  top: 40px;
+  left: 520px;
+  width: 157px;
+  height: 170px;
+  // background-color: rgba(255, 0, 0, 0.1);
+  background-image: url("../img/gifs/blinking-snail.gif");
+}
+
 .subscribe-wrapper {
+  position: absolute;
   max-width: 350px;
   .subscribe-form {
     margin : 0 auto ;
@@ -72,7 +100,6 @@
   text-align: center ;
 } 
 
-
 @media(max-width: 1200px) {
   .promo-item {
     margin-top: 70px;
@@ -81,10 +108,18 @@
 
 @media(max-width: 800px) {
   .promo-item {
-    height: auto;
+    height: 350px;
     margin-top: 30px;
     margin-bottom: 50px;
     max-width: 315px;
+    margin-top: 0;
     background-image : none;
+  }
+  .subscribe-wrapper {
+    padding: 0 10px ;
+  }
+  
+  .overlay {
+    display: none;
   }
 }

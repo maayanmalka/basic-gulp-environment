@@ -1,5 +1,6 @@
 @import "./variables.scss";
 
+
 //colors
 $color_celeste_approx: #ccc;
 $white: white;
@@ -173,7 +174,7 @@ h2.price__content--free {
   width: 100%;
   color: $black;
   padding-bottom : 20px;
-  margin-bottom: 30px;
+  // margin-bottom: 30px;
 }
 .main-item__subscribe {
   padding-top: 40px;
@@ -224,7 +225,7 @@ h2.price__content--free {
     min-width : 0;
     width: 100%;
     height: auto;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     img {
       height: auto;
       width: 100%;
@@ -239,7 +240,7 @@ h2.price__content--free {
     padding-top: 20px;
   }
   .main-item__description {
-    margin-bottom: 15px;
+    // margin-bottom: 15px;
   }  
 }
 @media(max-width: 585px) {
@@ -248,7 +249,10 @@ h2.price__content--free {
     height: 90vw;
   }
   .main-item__content {
-    padding : 20px;
+    padding : 0px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom : 3px solid $gray__lightest ;
   }
 
 }
