@@ -1,9 +1,6 @@
 @import "./variables.scss";
 
 
-#footer {
-  // margin-top: -60px;
-}
 .promo-item {
   position: relative;           
   margin-top: 30px;
@@ -37,7 +34,7 @@
 }
 
 .overlay__blinking-catbear {
-  top: 193px;
+  top: 159px;
   left: -577px;
   width: 180px;
   height: 210px;
@@ -45,7 +42,7 @@
 }
 
 .overlay__blinking-snail {
-  top: 40px;
+  top: 6px;
   left: 520px;
   width: 157px;
   height: 170px;
@@ -54,7 +51,7 @@
 }
 
 .subscribe-wrapper {
-  position: absolute;
+  margin-top: -380px;
   max-width: 350px;
   .subscribe-form {
     margin : 0 auto ;
@@ -108,17 +105,19 @@
 
 @media(max-width: 800px) {
   .promo-item {
-    height: 350px;
+    height: auto;
     margin-top: 30px;
     margin-bottom: 50px;
     max-width: 315px;
     margin-top: 0;
     background-image : none;
+    // display: none;
   }
   .subscribe-wrapper {
     padding: 0 10px ;
+    // position: static;
+    margin-top: 0px;
   }
-  
   .overlay {
     display: none;
   }

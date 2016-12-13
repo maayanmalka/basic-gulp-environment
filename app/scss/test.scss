@@ -1,0 +1,32 @@
+//test.scss
+.test__parent {
+	position: relative;
+	// display: block;
+	height: 200px;
+	width: 100%;
+	background-color: rgba(0, 0, 255, 0.22);
+}
+.test-overlay {
+	// position: relative;
+	// display: block;
+	width: 100px;
+	height: 100px;
+    content: "";
+    // position: relative;
+    background-repeat: no-repeat; 
+}
+.test__img1 {
+  top: 193px;
+  left: -577px;
+  width: 180px;
+  height: 210px;
+  background-image: url("../img/gifs/blinking-catbear.gif");
+}
+.test__img2 {
+  top: 40px;
+  left: 520px;
+  width: 157px;
+  height: 170px;
+  // background-color: rgba(255, 0, 0, 0.1);
+  background-image: url("../img/gifs/blinking-snail.gif");
+}
