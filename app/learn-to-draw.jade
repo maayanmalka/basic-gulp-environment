@@ -1,0 +1,45 @@
+extends ./templates/item-page__gallery__sale.jade
+
+block title
+  title Learn To Draw - The Catbears
+
+
+block gallery-items
+  li.gallery__item.gallery__item--1 
+    img(src='../img/pages/learn-to-draw_001.png', alt='Learn To Draw by The Catbears')
+  li.gallery__item.gallery__item--2 
+    img(src='../img/pages/learn-to-draw_002.png', alt='Learn To Draw by The Catbears')
+  li.gallery__item.gallery__item--3
+    img(src='../img/pages/learn-to-draw_003.png', alt='Learn To Draw by The Catbears') 
+  //- li.gallery__item.gallery__item--4
+  //-   img(src='../img/pages/catbears-stickers__004.png', alt='Catbears Stickers 004')  
+  
+
+block main-item__title
+  | Learn To Draw 
+
+block main-item__description--p
+  | What’s the easiest way to draw a duck? what about a Panda bear? Try it! it’s super easy and fun!  
+
+block main-item__info
+  .main-item__info--list
+    ul Here's what you'll need:
+      li A Printer
+      li A Pencil
+      li An Eracer
+      li Color Markers
+    br
+    | Tag your works on Instagram:
+    br
+    a.marker__blue(href="https://www.instagram.com/explore/tags/drawcatbears/" target="_blank") #DrawCatbears
+
+
+block main-item__cta--micro-text                  
+  p PDF file ・ 700KB ・ 5 Printable Pages
+
+block main-item__cta
+  a.btn.btn__large.btn__primary.btn__payed(href='../pdf/The-Catbears-5-coloring-pages.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__5-coloring-pages')") Download Free PDF
+
+//- $1.99 FREE - BUTTON TEST
+//- block main-item__cta
+//-   a.btn.btn__large.btn__primary.btn__payed(onClick = "ga('send', 'event', 'Button', 'Click', 'PAYED__5-coloring-pages') ; lightboxInit()") Buy $1.99
