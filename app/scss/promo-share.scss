@@ -78,11 +78,13 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  opacity: 0.75;
 
-  transition: opacity 150ms ease-in-out;
+  -webkit-filter: saturate(0);
+  filter: saturate(0);
+
   &:hover {
-    opacity: 1;
+    -webkit-filter: saturate(1);
+    filter: saturate(1);
   }
 }
 

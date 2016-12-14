@@ -20,28 +20,22 @@
 }
 
 #mce-EMAIL , #mc-embedded-subscribe{
-  height : 45px;
+  height : 55px;
+  font-weight: 500;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 19px;
   margin-top: 10px;
   margin-bottom: 10px;
   width: 100%;
   background-clip: padding-box;
   border: 1px solid rgba(0,0,0,0.2); 
   transition : border 120ms ease-in-out , background-color 120ms ease-in-out;
-  &:focus {
-    border: 1px solid rgba(0,0,0,0.4);
-    color : $black;
-    background-color: $white;
-    outline: none;
-  }  
 }
 
 .email:hover {
   border: 1px solid #999;
 }
 
-.button:hover {
-  background-color: #ff7800;
-}
 .input-in-the-back {
   background-color: #f4f4f4;
 }
