@@ -1,0 +1,14 @@
+//- lightbox_subscribe.jade
+
+link(rel='stylesheet', type='text/css', href='../css/lightbox_subscribe.css')
+script(type='text/javascript', src='../scripts/lightbox-controller_subscribe.js')
+
+.lightbox
+  .lightbox-container
+    .close-x(onmousedown='lightboxClose()') +
+    .text-container
+      .logo-orange-sticker.rainbow-animation
+      p.lightbox--p Subscribe to our newsletter to get activities straight to your inbox  
+      .subscribe-form
+        include ../include/mailchimp-form.jade
+        p.lightbox--mini-text Spam free ・ Monthly email・ Cancel anytime

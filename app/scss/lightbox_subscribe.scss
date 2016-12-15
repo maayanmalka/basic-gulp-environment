@@ -1,0 +1,133 @@
+//- lightbox_subscribe.scss
+
+@import "./variables.scss";
+
+h2 {
+  font-size: 22px;
+}
+
+a {
+  font-weight: bold;
+}
+
+.lightbox {
+	margin-top : 165px;
+    width : 100%;
+    height : 500px;
+    top : 0;
+    left : 0;
+    // position: fixed;
+    position: absolute;
+    display: none; // set the display none so light box wont show when page loads.
+    -webkit-backface-visibility: hidden;
+}
+
+.lightbox-container {
+    z-index: 9999999;
+    // transform: rotate(-2deg);
+    // -ms-transform: rotate(-2deg); /* IE 9 */
+    // -webkit-transform: rotate(-2deg); /* Chrome, Safari, Opera */
+    // background-color: $promo__yellow ;
+    background-color: $white ;
+    border : solid 5px #5eec87;
+    max-width : 420px;
+    height : auto;
+    padding : 60px;
+    padding-top : 50px;
+    margin: 0 auto;
+    display: block;
+    // margin-top : 10%;
+    text-align: center;
+    // border-radius: 8px;
+    box-shadow: 0px 18px 15px rgba(55, 55, 55, 0.14);
+    // box-shadow: 0px 2px 15px rgba(55, 55, 55, 0.2);
+    position: relative;
+
+    .logo-orange-sticker {
+      background-image: url("../img/logo-orange-sticker.png");
+      width: 203px;
+      height: 144px;
+     // -webkit-filter: drop-shadow(-1px 10px 2px rgba(0,0,0,0.2));
+     //  filter: drop-shadow(-1px 10px 2px rgba(0,0,0,0.2)); 
+      background-repeat: no-repeat;
+      margin: 0 auto;
+      margin-top: -20px;
+      margin-bottom: 20px;  
+
+      // position: absolute;
+      // left : 44%;
+      // margin-right: 40px;
+      // top : -45px;
+    }
+    .close-x {
+       font-size : 40px;
+       font-weight: 100;
+       position: absolute;
+       top : 0;
+       right : 0;
+       margin-right: 19px;
+       color : $gray__light--2;
+       margin-top: 4px;
+       cursor: pointer;
+       transition: color 150ms ease-in-out;
+       transform: rotate(45deg);
+       -ms-transform: rotate(45deg); /* IE 9 */
+       -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+        &:hover {
+            color : $black;
+        }
+    } 
+
+    .subscribe-form {
+    	margin-top: 10px;
+    }
+
+    .lightbox--title {
+        font-family: 'Amatic SC', 'Open Sans', sans-serif; 
+        font-size : 120px;
+        margin-bottom: 7px;
+        color : $black;
+    }
+
+    .lightbox--p {
+      color : $black;
+    }
+
+    .lightbox--cta {
+        margin : 0 auto;
+        margin-top: 40px;
+        max-width : 400px;
+        &:hover {
+
+        }
+    }
+
+    .lightbox--mini-text {
+      margin-top: 12px;
+      line-height: 24px;
+      font-size : 13px;
+    }
+}
+
+@media (max-width: 720px){
+  .lightbox-container {
+    // margin : 0;
+    // max-width: 100%;
+    // transform: rotate(0deg);
+    // -ms-transform: rotate(0deg); /* IE 9 */
+    // -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+    // padding : 40px;
+  }
+}
+
+@media(max-width: 585px) {
+	.lightbox {
+	  // margin-top : 130px;
+}
+	.lightbox-container {
+		display: none;
+		// margin: 20px;
+		// padding:  40px 20px;
+		// height: auto;
+	}
+}

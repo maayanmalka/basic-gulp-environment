@@ -1,4 +1,4 @@
-//lightbox-controller.js
+//lightbox-controller_free-download.js
 var downloadInterval;
 var path;
 var pageName;
