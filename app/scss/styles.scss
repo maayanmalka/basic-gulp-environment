@@ -129,7 +129,6 @@ input, button, submit {
   padding : 0;
 }
 #upper-site {
-  margin-top: 13px;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -144,13 +143,15 @@ input, button, submit {
   margin-top: 25px;
   text-align: center;
   h1 {
-      font-size: 32px;
+      font-size: 16px;
       margin: 0 auto;
-      margin-top: 15px;
+      margin-top: 6px;
       font-weight: 600;
-      margin-bottom: 30px;
+      margin-bottom: 0px;
       letter-spacing: 1px;
-      font-family: 'Amatic SC', 'Open Sans', sans-serif; 
+      // font-family: 'Amatic SC', 'Open Sans', sans-serif; 
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 500;
 
     }
 }
@@ -236,7 +237,7 @@ input, button, submit {
   .header-container {
     padding: 0 30px;
     h1 {
-     font-size: 50px;
+     // font-size: 50px;
     }
   }
 
