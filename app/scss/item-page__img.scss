@@ -60,6 +60,14 @@ h2.price__content--free {
   flex-direction : column;
 }
 
+.logo-container img {
+  margin-top: 3px;
+  transform: rotate(-6deg);
+  -ms-transform: rotate(-6deg); /* IE 9 */
+  -webkit-transform: rotate(-6deg); /* Chrome, Safari, Opera */
+    // background-color: $promo__yellow ;
+}
+
 .back-btn {
   font-weight: 400;
   margin-bottom: 6px;
