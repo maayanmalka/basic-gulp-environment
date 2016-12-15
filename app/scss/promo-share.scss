@@ -27,6 +27,8 @@
 
 
 .overlay {
+  background-blend-mode: multiply;
+  mix-blend-mode: multiply;
   content: "";
   position: relative;
   background-repeat: no-repeat; 
