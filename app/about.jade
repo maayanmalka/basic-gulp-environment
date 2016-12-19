@@ -1,0 +1,64 @@
+// about.jade
+
+extends ./templates/static-page.jade
+
+link(href='https://fonts.googleapis.com/css?family=Schoolbell', rel='stylesheet')
+
+
+block title
+  title About Us - The Catbears
+
+block Hero  
+    .hero
+        .hero__overlay--container
+            .hero__logo--overlay
+            .hero__text Creativity = Making Mistakes
+
+block page-content
+   #content-container
+       .section.about-us
+            h1 About Us
+            p The Catbears is a safe environment where we are free to follow our imagination where ever it may take us. 
+            br
+            | 
+            p Our goal is to spark creative thinking using fun printable activities that encourage children to think and create their own worlds and not only follow a specific path.
+        .section.section-thumbnail
+            .thumb__img.thumb__img--left.thumb__img--activity
+            .thumb__text
+                p Each activity is but an example which give a set of tools such as coloring, cutting, saweing, cooking.. 
+        .section.section-thumbnail
+            .thumb__text
+                p Each activity is but an example which give a set of tools such as coloring, cutting, saweing, cooking..   
+            .thumb__img.thumb__img--right.thumb__img--your-own
+        .section.quote
+            h1.quote Creativity is an environment where we can make mistakes
+            p Creativity cannot be tought - every child is born with it, But it can be suppressed if we don't protect and nurture it. 
+            br
+            p We hope our little Catbears can provide this environment for children all over the world and help them nurture their little creative minds.
+        .section.section-note
+            h2 We Need Your Help
+            .section-note__text-container
+                p.strong Feedback
+                p To make the best activities for your children your feedback is key. Please share with us how your kids respond to them, what did they like doing most and was there something that bothered them.
+                .btn.btn__large.btn__primary.btn__note.btn__note--feedback Send Us Feedback
+            .separator
+            .section-note__text-container
+                p.strong Help Us Grow
+                p Share our work on social media, Help us reach more people.
+                .note__social-buttons 
+                    a.btn.btn__large.btn__primary.btn__note.btn__note--social(href='https://www.instagram.com/thecatbears/', target='_blank' onClick = "ga('send', 'event', 'Button', 'Click', 'About__instagram')")
+                        img(src='../img/promo-share/instagram.png', alt='instagram', style='width:28px;height:28px;')
+                    a.btn.btn__large.btn__primary.btn__note.btn__note--social(href='https://www.facebook.com/theCatbears/', target='_blank' onClick = "ga('send', 'event', 'Button', 'Click', 'About__facebook')")
+                        img(src='../img/promo-share/facebook.png', alt='logo-footer', style='width:28px;height:28px;')
+                    a.btn.btn__large.btn__primary.btn__note.btn__note--social(href='https://twitter.com/intent/tweet?text=Check%20out%20this%20super%20cute%20website%21%20www.catbears.com%20&source=clicktotweet&related=clicktotweet', target='_blank' onClick = "ga('send', 'event', 'Button', 'Click', 'About__tweeter')")
+                        img(src='../img/promo-share/twitter.png', alt='logo-footer', style='width:28px;height:28px;')
+        .section
+            .signature
+                h1 Thank You.
+                p Maayan Malka
+                 br
+                 | Founder of The Catbears
+
+
+
+

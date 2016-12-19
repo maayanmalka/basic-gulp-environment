@@ -1,0 +1,21 @@
+// static-page.jade
+
+doctype html
+html
+  head
+    include ../include/page-head-data.jade
+    link(rel='stylesheet', type='text/css', href='../css/styles.css')
+    link(rel='stylesheet', type='text/css', href='../css/static-page.css')
+    link(rel='stylesheet', type='text/css', href='../css/promo-share.css')
+    block title
+        title The Catbears
+
+  body
+    #site-wrapper
+      #upper-site
+        block Hero
+      #lower-site
+        block page-content
+
+    include ../include/footer.jade 
+    include ../include/page-bottom-scripts.jade
