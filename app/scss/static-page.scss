@@ -17,6 +17,9 @@
             width: 100px;
             padding: 20px;
             font-size: 20px;
+            .underline {
+                text-decoration: underline;
+            }
         }
     }
     .hero__overlay--container {
@@ -26,7 +29,7 @@
         margin-top: 25px;
         .hero__mini-text { 
             color: white;
-            font-family: 'Schoolbell', 'Open Sans', sans-serif;;
+            font-family: 'Schoolbell', 'Open Sans', sans-serif;
             text-align: center;
             font-size: 32px;
             font-weight: 600;
@@ -76,7 +79,7 @@
     }
     .quote {
         text-align: center;
-        margin-bottom: 80px;
+        margin-bottom: 30px;
     }
     .signature {
         text-align: center;
@@ -150,14 +153,12 @@
     }
     .note__social-buttons {
         .btn__note--social {
-            width: 70px;
-            height: 70px;
-            margin-right: 12px;
+            width: 57px;
+            height: 57px;
+            margin-right: 10px;
             float: left;
+            padding : 14px;
             img {
-                margin-top: 18px;
-                -webkit-filter: brightness(0) invert(1);
-                filter: brightness(0) invert(1);
             }
         }
     }

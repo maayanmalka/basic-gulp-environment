@@ -11,7 +11,8 @@ block title
 block Hero 
     .hero
         .nav
-            a.back-btn(href='../index.html') ← Back 
+           a.back-btn(href='../index.html') ← <span class="underline"> Back</span>
+
         .hero__overlay--container
             .hero__mini-text About
             .hero__logo--overlay
@@ -20,7 +21,7 @@ block Hero
 block page-content
    #content-container
        .section.about-us
-            h1 Creativity is an environment where we can make mistakes
+            h1 "Creativity" is an environment where we can make mistakes
             p The Catbears is a safe environment where we are free to follow our imagination where ever it may take us. 
             br
             | 
@@ -28,33 +29,33 @@ block page-content
         .section.section-thumbnail
             .thumb__img.thumb__img--left.thumb__img--activity
             .thumb__text
-                p Each activity is but an example which give a set of tools such as coloring, cutting, saweing, cooking.. 
+                p Each activity show an example for creating something new while practicing creation skills (such as coloring, cutting, saweing, cooking...) 
         .section.section-thumbnail
             .thumb__img.thumb__img--right.thumb__img--your-own
             .thumb__text
-                p Once they’ve practiced the example they are set off on their own advantures, to explore the limits of what they’ve learned.   
-        .section.quote
-            h1.quote Creativity is a responsibility
+                p Once they’ve practiced the example we encourage them to create something new all by themselvs. they are set off on their own advantures, to explore the limits of what they’ve learned.   
+        .section
+            h1.quote "Creativity" is a responsibility
             p Creativity cannot be tought - every child is born with it, But it can be suppressed if we don't protect and nurture it. 
             br
-            p We hope our little Catbears can provide this environment for children all over the world and help them nurture their little creative minds.
+            p We hope The Catbears can provide this environment for children all over the world and help them develop their creative minds.
         .section.section-note
             h2 We Need Your Help
             .section-note__text-container
                 p.strong Feedback
                 p To make the best activities for your children your feedback is key. Please share with us how your kids respond to them, what did they like doing most and was there something that bothered them.
-                .btn.btn__large.btn__primary.btn__note.btn__note--feedback Send Us Feedback
+                a(href="mailto:catbearsapps@gmail.com?subject=Feedback for The Catbears&body=Hey Catbears, Here's my feedback for the activity ________________ :", target='_top').btn.btn__large.btn__primary.btn__note.btn__note--feedback Send Us Feedback
             .separator
             .section-note__text-container
                 p.strong Help Us Grow
                 p Share our work on social media, Help us reach more people.
                 .note__social-buttons 
                     a.btn.btn__large.btn__primary.btn__note.btn__note--social(href='https://www.instagram.com/thecatbears/', target='_blank' onClick = "ga('send', 'event', 'Button', 'Click', 'About__instagram')")
-                        img(src='../img/promo-share/instagram.png', alt='instagram', style='width:28px;height:28px;')
+                        img(src='../img/about/instagram_white.png', alt='instagram', style='width:28px;height:28px;')
                     a.btn.btn__large.btn__primary.btn__note.btn__note--social(href='https://www.facebook.com/theCatbears/', target='_blank' onClick = "ga('send', 'event', 'Button', 'Click', 'About__facebook')")
-                        img(src='../img/promo-share/facebook.png', alt='logo-footer', style='width:28px;height:28px;')
+                        img(src='../img/about/facebook_white.png', alt='logo-footer', style='width:28px;height:28px;')
                     a.btn.btn__large.btn__primary.btn__note.btn__note--social(href='https://twitter.com/intent/tweet?text=Check%20out%20this%20super%20cute%20website%21%20www.catbears.com%20&source=clicktotweet&related=clicktotweet', target='_blank' onClick = "ga('send', 'event', 'Button', 'Click', 'About__tweeter')")
-                        img(src='../img/promo-share/twitter.png', alt='logo-footer', style='width:28px;height:28px;')
+                        img(src='../img/about/twitter_white.png', alt='logo-footer', style='width:28px;height:28px;')
         .section
             .signature
                 h1 Thank You.
