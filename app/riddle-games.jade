@@ -1,9 +1,9 @@
-//color-cut-paste-pages.jade
+//riddle-games.jade
 
 extends ./templates/item-page__gallery__sale.jade
 
 block title
-  title Free Printable Color, Cut & Paste Pages - The Catbears
+  title Riddle Games - The Catbears
 
 
 block gallery-items
@@ -15,10 +15,10 @@ block gallery-items
     img(src='../img/pages/color-cut-paste-pages__003.png', alt='Catbears Stickers 003') 
 
 block main-item__title
-  | Free Printable Color, Cut & Paste Pages
+  | Riddle Games!
 
 block main-item__description--p
-  | Download a PDF file with 4 activity pages. Each one tells a different story that your kid will have to complete by coloring, cutting and pasting. Get your printer ready start your Catbears advanture!
+  | Download a PDF file with 4 riddle games. Each one tells a different story that your child will have to complete by coloring, cutting and pasting.
 
 block main-item__info
   .main-item__info--list
@@ -27,11 +27,6 @@ block main-item__info
       li A pair of Scissors
       li Glue
       li Coloring materials
-    br
-    | Upload and tag your works on Instagram:
-    br
-    a.marker__blue(href="https://www.instagram.com/explore/tags/drawcatbears/" target="_blank") #DrawCatbears
-
 
 block main-item__cta--micro-text                  
   p PDF file ・ 2.4MB ・ 4 Printable Pages
@@ -39,6 +34,18 @@ block main-item__cta--micro-text
 block main-item__cta
   a.btn.btn__large.btn__primary.btn__payed(href='../pdf/The-Catbears-Color-Cut-Paste-Pages.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Color-Cut-Paste-Pages.pdf'); lightboxInit()") Download Free PDF
 
+block page-description
+  .page-description
+    h1 Description
+    .columns
+      .left-column
+        p 
+          | On each page there's a drawing on the left side and a question on the right. To answer the riddle your child will have to color, cut and paste the answers drawings below the question.
+          br
+          br
+          | The best part is that there's no right or wrong answer. This is a fun game to play that encourage creative thinking, and develop story telling skills. 
+      .right-column 
+         img(src='../img/description-imgs/riddle__001.png', alt='Coloring Page by The Catbears') 
 //- $1.99 FREE - BUTTON TEST
 //- block main-item__cta
 //-   a.btn.btn__large.btn__primary.btn__payed(onClick = "ga('send', 'event', 'Button', 'Click', 'PAYED__5-coloring-pages') ; lightboxInit()") Buy $1.99

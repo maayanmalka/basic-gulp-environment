@@ -1,7 +1,7 @@
 extends ./templates/item-page__gallery__sale.jade
 
 block title
-  title Learn To Draw - The Catbears
+  title Learn To Draw A Catbear - The Catbears
 
 
 block gallery-items
@@ -16,7 +16,7 @@ block gallery-items
   
 
 block main-item__title
-  | Learn To Draw 
+  | Learn To Draw A Catbear 
 
 block main-item__description--p
   | What’s the easiest way to draw a duck? what about a Panda bear? Try it! it’s super easy and fun! 
@@ -29,11 +29,6 @@ block main-item__info
       li A Pencil
       li An Eracer
       li Color Markers
-    br
-    | Tag your works on Instagram:
-    br
-    a.marker__blue(href="https://www.instagram.com/explore/tags/drawcatbears/" target="_blank") #DrawCatbears
-
 
 block main-item__cta--micro-text                  
   p PDF file ・ 700KB ・ 5 Printable Pages
@@ -41,6 +36,24 @@ block main-item__cta--micro-text
 block main-item__cta
   a.btn.btn__large.btn__primary.btn__payed(href='../pdf/The-Catbears-Learn-To-Draw.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Learn-To-Draw') ; lightboxInit()" ) Download Free PDF
 
+block page-description
+  .page-description
+     h1 Description
+     .columns
+       .left-column
+          p 
+           | Learning the basics of illustration in a fun and educational way. 
+           br
+           | We start by learning the basic shapes (circle, pear, banana), the child see how we use these as our "building blocks" for each of the illustrations.
+           br
+           br
+           | After practicing a few examples he's asked to try and invent a Catbear by himself, choosing a building block shape and then drawing the finished illustration. 
+           br
+           br
+           | This is a great activity that combines learning a skill that will help him in his future drawings and help him express himself, with sparking his creative thinking when he creates a new Catbear all by himself.
+       .right-column     
+         iframe.video-square(src='https://www.youtube.com/embed/DQiAIpuLQIE?rel=0&showinfo=0', frameborder='0', allowfullscreen='')
+  
 //- $1.99 FREE - BUTTON TEST
 //- block main-item__cta
 //-   a.btn.btn__large.btn__primary.btn__payed(onClick = "ga('send', 'event', 'Button', 'Click', 'PAYED__5-coloring-pages') ; lightboxInit()") Buy $1.99

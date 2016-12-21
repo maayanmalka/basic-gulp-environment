@@ -3,7 +3,7 @@
 extends ./templates/item-page__gallery__sale.jade
 
 block title
-  title Coloring Book - A Tiny Little Duck Got In Really Big Trouble - The Catbears
+  title DIY Coloring Book - A Tiny Little Duck Got In Really Big Trouble - The Catbears
 
 
 block gallery-items
@@ -20,35 +20,59 @@ block gallery-items
   
 
 block main-item__title
-  | Coloring Book - A Tiny Little Duck Got In Really Big Trouble
+  | DIY Coloring Book - A Tiny Little Duck Got In Really Big Trouble
 
 block main-item__description--p
-  | This DIY coloring book tells the story of a little duck that didn't want to go to school. To help him you'll have to write and draw a new ending for the story.  
-  br 
-  br
-  | When you're done coloring you'll have to cut & glue each of the pages to make your very own coloring book.   
-
+  | This DIY coloring book is perfect for a group of children. Color, cut and glue the pages together and even even write a new ending to the story!  
+  
 block main-item__info
   .main-item__info--list
-    br
-    p Tip: This activity great also as a group activity since it includes a PDF with 28 printable coloring pages. 
-    br
     ul Here's what you'll need:
       li a Printer
       li Coloring materials
       li A pair of Scissors
       li Glue
-    br
-    | Tag your finished book on Instagram:
-    br
-    a.marker__blue(href="https://www.instagram.com/explore/tags/atinylittleduckgotinreallybigtrouble/" target="_blank") #aTinyLittleDuckGotInReallyBigTrouble
-
 
 block main-item__cta--micro-text                  
   p PDF file ・ 4.7MB ・ 28 Printable Pages
 
 block main-item__cta
   a.btn.btn__large.btn__primary.btn__payed(href='../pdf/The_Catbears-a_Tiny_Little_Duck_Got_In_Really_Big_Trouble-Coloring_Book.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__book_duck-in-trouble'); lightboxInit()") Download Free PDF
+
+block page-description
+  .page-description
+    h1 Description
+    .columns
+      .left-column
+        p 
+         | This activity is perfect for 
+         strong a group of kids. 
+         | it includes 28 coloring pages which they'll need to cut and paste to create a real book by themselves. 
+         br
+         br 
+         | The book tells the story of a little duck who doesn't want to go to school, his parents - a red fox and a panda bear, think school is the best thing for him and they decide to drive him to school even though he refuses to go.
+         br
+         br
+         | The story has a sad ending and the children are asked to find a better ending to the story. This activity gives them an chance to express how they feel on a very close subject - being told to do something they don't want to do. They are given an opportunity to think of a solution together and sound their voices by practicing their discussion skills and team work. 
+         br
+         br
+         | Once decided on the right ending for the story, the last pages of the book are empty for them to write, draw and color their new ending.
+         br
+         br
+         | This activity focuses on team work, problem solving and empathy. Working together can be a difficult task, it's important to develop this skill from a young age.
+         br
+         br
+      .right-column 
+         img(src='../img/description-imgs/description__coloring-book_duck-in-trouble_000.png', alt='Coloring Page by The Catbears')    
+         img(src='../img/description-imgs/description__coloring-book_duck-in-trouble_001.png', alt='Coloring Page by The Catbears')
+
+block please-share__text
+  | Please share your book and the ending you made with the Catbears community on Instagram:     
+block please-share__cta  
+  a.marker__blue(href="https://www.instagram.com/explore/tags/atinylittleduckgotinreallybigtrouble/" target="_blank") #aTinyLittleDuckGotInReallyBigTrouble    
+
+
+      //- .video <iframe class="youtube-video" src="https://www.youtube.com/embed/DQiAIpuLQIE?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> 
 
 //- $1.99 FREE - BUTTON TEST
 //- block main-item__cta

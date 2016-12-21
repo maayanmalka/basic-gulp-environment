@@ -10,10 +10,7 @@ block gallery-items
   li.gallery__item.gallery__item--2 
     img(src='../img/pages/coloring-pages__002.png', alt='Coloring Page by The Catbears')
   li.gallery__item.gallery__item--3
-    img(src='../img/pages/coloring-pages__003.png', alt='Coloring Page by The Catbears') 
-  //- li.gallery__item.gallery__item--4
-  //-   img(src='../img/pages/catbears-stickers__004.png', alt='Catbears Stickers 004')  
-  
+    img(src='../img/pages/coloring-pages__003.png', alt='Coloring Page by The Catbears')   
 
 block main-item__title
   | 5 Printable Coloring Pages 
@@ -27,17 +24,25 @@ block main-item__info
       li Printer
       li Coloring materials
       li A lot of excitement!
-    br
-    | Tag your works on Instagram:
-    br
-    a.marker__blue(href="https://www.instagram.com/explore/tags/drawcatbears/" target="_blank") #DrawCatbears
-
 
 block main-item__cta--micro-text                  
   p PDF file ・ 2MB ・ 5 Printable Pages
 
 block main-item__cta
   a.btn.btn__large.btn__primary.btn__payed(href='../pdf/The-Catbears-5-coloring-pages.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__5-coloring-pages'); lightboxInit()") Download Free PDF
+
+block page-description
+  .page-description
+    h1 Description
+      .columns
+        .left-column
+          p 
+            | In every page there's something funny and un-expected - Can you find what it is?
+            br
+            br
+            | Unlike most coloring pages, these ones are drawn freehand, which means there are no perfect vector shapes or curves. This child will feel at ease when coloring outside the lines, and give him more room to express himself.
+        .right-column     
+           img(src='../img/description-imgs/coloring__001.png', alt='Coloring Page by The Catbears')
 
 //- $1.99 FREE - BUTTON TEST
 //- block main-item__cta
