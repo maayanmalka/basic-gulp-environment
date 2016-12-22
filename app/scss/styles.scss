@@ -24,16 +24,35 @@ p {
 }
 a {
   cursor:default;
-  color: black;
+  color: $link;
   text-decoration: none;
   transition: color 0.15s ease-in-out;
+  &:visited {
+    color: $link;
+  }
+  &:hover {
+    cursor: pointer;
+    color: $link__hover;
+  }
+}
+
+.dark-link {
+  color: $black;
   &:visited {
     color: $black;
   }
   &:hover {
     cursor: pointer;
-    color: $link;
+    color: $link__hover;
   }
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.centered {
+  text-align: center;
 }
 
 h2 {
