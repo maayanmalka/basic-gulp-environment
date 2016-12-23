@@ -1,17 +1,17 @@
 //lightbox-controller_subscribe.js
 
-lightboxInit = function(){
+lightboxInit = function(className){
 	if (!isUserSubscribed()){
-		lightboxShow();
+		lightboxShow(className);
 	}
 }
 
 
-lightboxShow = function (){
-  $('.lightbox').fadeIn('fast')
+lightboxShow = function (className){
+  $('.lightbox' + '__' + className).fadeIn('fast')
 }
 
-lightboxClose = function () {
-	$('.lightbox').fadeOut('fast')
+lightboxClose = function (className) {
+	$('.lightbox' + '__' + className).fadeOut('fast')
 }
 
