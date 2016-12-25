@@ -39,19 +39,6 @@ h2.price__content--free {
   color : $gray__medium;
   border-top: 1px solid $gray__light;
   margin-bottom: 35px;
-  ul {
-    padding-left: 5px;
-    list-style: none;
-    line-height: 40px;
-  }
-  li {
-    line-height: 24px;
-    &:before {
-      padding-right: 15px;
-      content: '\2022';
-      color: $color_mountain_mist_approx;
-    }
-  }
 }
 
 .logo-container {

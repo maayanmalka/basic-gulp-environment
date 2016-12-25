@@ -348,3 +348,32 @@ input, button, submit {
     }
 }
     // END - RAINBOW ANIMATION
+
+ul, ol, li {
+  font-size : 18px;
+  line-height: 24px;
+  color : $gray__medium;
+}
+
+ol {
+  padding-left: 20px;
+  margin-bottom: 35px;
+}
+
+ul.bullet {
+  padding-left: 5px;
+  list-style: none;
+  line-height: 40px;
+  margin-bottom: 35px;
+}
+li.bullet {
+  &:before {
+    padding-right: 15px;
+    content: '\2022';
+  }
+}
+
+p.bullet {
+  margin-top: 6px;
+  margin-left : -20px;
+}
