@@ -208,13 +208,17 @@ h2.price__content--free {
     align-items : flex-start;
     // border-bottom: 1px solid $gray__lightest;
     // margin-bottom: 50px;
-    img , .video-square {
+    img , .video , .video-square {
        max-width : 500px;
        margin : 0 auto;
        margin-bottom: 25px;
+       border-radius: 10px;
     }
     img {
-      border-radius: 10px;
+    }
+    .video {
+      width : 100%;
+      min-height: 280px;
     }
     .video-square {
       width: 500px;
