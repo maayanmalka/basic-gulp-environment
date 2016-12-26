@@ -16,6 +16,7 @@ var autoSlideTimer;
 var autoSlidingToRight;
 var hoverGallery;
 var pressedGallery;
+var galleryItemMarginLeft;
 
 test = function () {
   alert ('test function')
@@ -166,13 +167,14 @@ setScreensize = function () {
   // console.log ("screensize " + screensize)
 }
 
+
 function setNewGallerySizes () {
 
   if ( screensize < 1185){
-     console.log ('tablet screen - screensize')
+     // console.log ('tablet screen - screensize')
     newMainItemSize = $('.main-item').width()
     $('.gallery__item').css('width' , newMainItemSize)
-    $('.gallery__item').css('height' , newMainItemSize) 
+    $('.gallery__item').css('height' , newMainItemSize)
   }
   else {
    newMainItemSize = 600
@@ -183,6 +185,8 @@ function setNewGallerySizes () {
   galleryItemAndSpacer = $('.gallery__item').width() + spacer;
   galleryWidth = (galleryItemAndSpacer * numOfSlides) + (spacer * numOfSlides);
   $gallery.css("width" , galleryWidth )
+  galleryItemMarginLeft = (moveToSlide * galleryItemAndSpacer)
+  $gallery.css("margin-left" , galleryItemMarginLeft * (-1))
 }
 
 
