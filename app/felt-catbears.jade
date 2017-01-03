@@ -5,6 +5,7 @@ block title
 
 
 block gallery-img
+  a(href='../pdf/The-Catbears-5-coloring-pages.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__5-coloring-pages'); lightboxInit('subscribe')")
     img(src='../img/pages/felt-catbears__001.png', alt='Coloring Page by The Catbears')
 
 block main-item__title
@@ -32,13 +33,24 @@ block page-description
     h1 Description
     .columns
       .left-column
-        p 
-          | Here are 3 Catbears you can make from felt - A fox, a duck and a panda bear. 
-          br
-          br
-          | To make a felt Catbear simply print out the pages, cut the shapes and glue them on felt sheets in different colors. Then cut around the shapes again and assemble the Catbear's parts together. 
-      //- .right-column 
-      //-    img(src='../img/description-imgs/riddle__001.png', alt='Coloring Page by The Catbears') 
-//- $1.99 FREE - BUTTON TEST
-//- block main-item__cta
-//-   a.btn.btn__large.btn__primary.btn__payed(onClick = "ga('send', 'event', 'Button', 'Click', 'PAYED__5-coloring-pages') ; lightboxInit()") Buy $1.99
+        p Here are 3 Catbears you can make using felt, A fox, a duck and a panda bear. 
+        | 
+        br
+        strong 
+          h2 To make a felt Catbear:
+        ol
+          li Print out the pages
+          li Cut around the shapes
+          li Glue the shapes on colorful felt sheets
+          li Cut the shapes again this time exactly on the lines.
+          li Assemble and glue the parts together to create your felt Catbear.
+        p
+          | This is a really fun activity that focuses on the Cutting skill. your kids will love creating a felt Catbear by themselves.
+      .right-column      
+         iframe.video(src='https://www.youtube.com/embed/C-VCCDoCjdc?rel=0&;showinfo=0', frameborder='0', allowfullscreen='')
+         img(src='../img/description-imgs/description__felt_001.png', alt='Felt Catbears by The Catbears')
+
+//- block share-banner__text
+//-   //- | Share your book and the ending you've made with the Catbears community on Instagram:     
+//- block share-banner__cta  
+//-   //- a.marker__blue(href="https://www.instagram.com/explore/tags/atinylittleduckgotinreallybigtrouble/" target="_blank") #aTinyLittleDuckGotInReallyBigTrouble    
