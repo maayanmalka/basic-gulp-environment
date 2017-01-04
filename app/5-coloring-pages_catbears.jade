@@ -1,16 +1,19 @@
-extends ./templates/item-page__gallery__sale.jade
+extends ./templates/item-page__img.jade
 
 block title
   title 5 Coloring Pages - The Catbears
 
+block gallery-img
+  a(href='../pdf/The-Catbears-5-coloring-pages.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__5-coloring-pages'); lightboxInit('subscribe')")
+    img(src='../img/pages/coloring-pages__000.png', alt='Coloring Page by The Catbears')
 
-block gallery-items
-  li.gallery__item.gallery__item--1 
-    img(src='../img/pages/coloring-pages__001.png', alt='Coloring Page by The Catbears')
-  li.gallery__item.gallery__item--2 
-    img(src='../img/pages/coloring-pages__002.png', alt='Coloring Page by The Catbears')
-  li.gallery__item.gallery__item--3
-    img(src='../img/pages/coloring-pages__003.png', alt='Coloring Page by The Catbears')   
+//- block gallery-items
+//-   li.gallery__item.gallery__item--1 
+//-     img(src='../img/pages/coloring-pages__001.png', alt='Coloring Page by The Catbears')
+//-   li.gallery__item.gallery__item--2 
+//-     img(src='../img/pages/coloring-pages__002.png', alt='Coloring Page by The Catbears')
+//-   li.gallery__item.gallery__item--3
+//-     img(src='../img/pages/coloring-pages__003.png', alt='Coloring Page by The Catbears')   
 
 block main-item__title
   | Printable Coloring Pages 
@@ -29,7 +32,7 @@ block main-item__cta--micro-text
   p PDF file ・ 2MB ・ 5 Printable Pages
 
 block main-item__cta
-  a.btn.btn__large.btn__primary.btn__payed(href='../pdf/The-Catbears-5-coloring-pages.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__5-coloring-pages'); lightboxInit('subscribe')") Download Free PDF
+  a.btn.btn__large.btn__primary.btn__payed(href='../pdf/The-Catbears-5-coloring-pages.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__5-coloring-pages'); lightboxInit('subscribe')") PRINT
 
 block page-description
   .page-description

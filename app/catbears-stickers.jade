@@ -1,14 +1,18 @@
-extends ./templates/item-page__gallery__sale.jade
+extends ./templates/item-page__img.jade
 
 block title
   title Catbears Stickers - The Catbears
 
+block gallery-img
+  a(href='../pdf/The-Catbears-Stickers.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__Catbears-Stickers'); lightboxInit('subscribe')")
+    img(src='../img/pages/catbears-stickers__000.png', alt='Stickers by The Catbears')
 
-block gallery-items
-  li.gallery__item.gallery__item--1 
-    img(src='../img/pages/catbears-stickers__001.png', alt='Catbears Stickers 001')
-  li.gallery__item.gallery__item--2 
-    img(src='../img/pages/catbears-stickers__002.png', alt='Catbears Stickers 002')
+
+//- block gallery-items
+//-   li.gallery__item.gallery__item--1 
+//-     img(src='../img/pages/catbears-stickers__001.png', alt='Catbears Stickers 001')
+//-   li.gallery__item.gallery__item--2 
+//-     img(src='../img/pages/catbears-stickers__002.png', alt='Catbears Stickers 002')
  
 block main-item__title
   | DIY Catbears Stickers
@@ -17,7 +21,7 @@ block main-item__description--p
   | Making your own Catbears stickers is realy easy - just print them on <strong>Sticker Paper</strong>, cut around with scissors and you're good to stick!  
 
 block main-item__cta
-  a.btn.btn__large.btn__primary(href='../pdf/The-Catbears-Stickers.pdf' target="_blank"  onClick = "ga('send', 'event', 'Button', 'Click', 'PDF-print-stickers'); lightboxInit('subscribe')") Download FREE PDF
+  a.btn.btn__large.btn__primary(href='../pdf/The-Catbears-Stickers.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Catbears-Stickers'); lightboxInit('subscribe')") PRINT
 
 block main-item__cta--micro-text                  
   p PDF file ・ 1MB ・ 1 Printable Page

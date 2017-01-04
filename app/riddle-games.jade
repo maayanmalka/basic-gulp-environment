@@ -1,18 +1,23 @@
 //riddle-games.jade
 
-extends ./templates/item-page__gallery__sale.jade
+extends ./templates/item-page__img.jade
 
 block title
   title Riddle Games - The Catbears
 
+block gallery-img
+  a(href='../pdf/The-Catbears-Riddle-Games.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__Riddle-Games'); lightboxInit('subscribe')") 
+    img(src='../img/pages/riddle-games__000.png', alt='Riddle Games by The Catbears')
 
-block gallery-items
-  li.gallery__item.gallery__item--1 
-    img(src='../img/pages/color-cut-paste-pages__001.png', alt='coloring-pages 001')
-  li.gallery__item.gallery__item--2 
-    img(src='../img/pages/color-cut-paste-pages__002.png', alt='coloring-pages 002')
-  li.gallery__item.gallery__item--3
-    img(src='../img/pages/color-cut-paste-pages__003.png', alt='Catbears Stickers 003') 
+
+
+//- block gallery-items
+//-   li.gallery__item.gallery__item--1 
+//-     img(src='../img/pages/color-cut-paste-pages__001.png', alt='coloring-pages 001')
+//-   li.gallery__item.gallery__item--2 
+//-     img(src='../img/pages/color-cut-paste-pages__002.png', alt='coloring-pages 002')
+//-   li.gallery__item.gallery__item--3
+//-     img(src='../img/pages/color-cut-paste-pages__003.png', alt='Catbears Stickers 003') 
 
 block main-item__title
   | Riddle Games!
@@ -32,7 +37,7 @@ block main-item__cta--micro-text
   p PDF file ・ 2.4MB ・ 4 Printable Pages
 
 block main-item__cta
-  a.btn.btn__large.btn__primary.btn__payed(href='../pdf/The-Catbears-Riddle-Games.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__The-Catbears-Riddle-Games.pdf'); lightboxInit('subscribe')") Download Free PDF
+  a.btn.btn__large.btn__primary.btn__payed(href='../pdf/The-Catbears-Riddle-Games.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Riddle-Games'); lightboxInit('subscribe')") PRINT
 
 block page-description
   .page-description
