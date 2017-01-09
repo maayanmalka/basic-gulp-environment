@@ -1,0 +1,57 @@
+extends ./templates/item-page__img.jade
+
+block title
+  title Finger Puppets - The Catbears
+
+
+block gallery-img
+  a(href='../pdf/The-Catbears_Finger-Puppets.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__Finger-Puppets'); lightboxInit('subscribe')")
+    img(src='../img/pages/finger-puppets.png', alt='Finger Puppets by The Catbears')
+
+block main-item__title
+  | Finger Puppets 
+
+block main-item__description--p
+  | Print these 2 instruction pages to make Finger Catbear Puppets!  
+
+block main-item__info
+  .main-item__info--list
+    ul.bullet Here's what you'll need:
+      li.bullet Printer
+      li.bullet Coloring materials
+      li.bullet A pair of scissors
+      li.bullet Glue
+      li.bullet Thin Cardboard (cereal box)
+
+block main-item__cta--micro-text                  
+  p PDF file ・ 35KB ・ 2 Printable Pages
+
+block main-item__cta
+  a.btn.btn__large.btn__primary.btn__payed(href='../pdf/The-Catbears_Finger-Puppets.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Finger-Puppets'); lightboxInit('subscribe')") PRINT
+
+
+block page-description
+  .page-description
+    h1 Description
+    .columns
+      .left-column
+        p Show us your groovy dance moves with finger Catbear puppets! 
+        | 
+        br
+        strong 
+          h2 To make Finger Catbear Puppets:
+        ol
+          li Print and color the pages
+          li Use glue to paste it on thin cardboard (like cereal box)
+          li Cut the shapes, glue the parts together
+          li Cut 2 finger holes in each puppet
+          li Place your fingers inside the holes
+          li Put on some music and start dancing!
+      //- .right-column      
+      //-    iframe.video(src='https://www.youtube.com/embed/C-VCCDoCjdc?rel=0&;showinfo=0', frameborder='0', allowfullscreen='')
+      //-    img(src='../img/description-imgs/description__felt_001.png', alt='Felt Catbears by The Catbears')
+
+//- block share-banner__text
+//-   //- | Share your book and the ending you've made with the Catbears community on Instagram:     
+//- block share-banner__cta  
+//-   //- a.marker__blue(href="https://www.instagram.com/explore/tags/atinylittleduckgotinreallybigtrouble/" target="_blank") #aTinyLittleDuckGotInReallyBigTrouble    

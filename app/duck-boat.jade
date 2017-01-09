@@ -1,0 +1,54 @@
+extends ./templates/item-page__img.jade
+
+block title
+  title Pop Ups - Ducky on a boat - The Catbears
+
+block gallery-img
+  a(href='../pdf/The-Catbears_Duck-and-Boat.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__Duck-and-Boat'); lightboxInit('subscribe')")
+    img(src='../img/pages/duck-boat.png', alt='Duck on boat by The Catbears')
+
+block main-item__title
+  | Pop Ups - Ducky on a boat
+
+block main-item__description--p
+  | A simple popup of our little ducky sailing on a boat
+
+block main-item__info
+  .main-item__info--list
+    ul.bullet Here's what you'll need:
+      li.bullet Printer
+      li.bullet Coloring materials
+      li.bullet A pair of scissors
+      li.bullet Glue
+      li.bullet Thin Cardboard (cereal box) 
+
+block main-item__cta--micro-text                  
+  p PDF file ・ 300KB ・ 1 Printable Page
+
+block main-item__cta
+  a.btn.btn__large.btn__primary.btn__payed(href='../pdf/The-Catbears_Duck-and-Boat.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Duck-and-Boat'); lightboxInit('subscribe')") PRINT
+
+block page-description
+  .page-description
+    h1 Description
+      .columns
+        .left-column
+          p Your first paper pop up! it's so simple and fun!
+          | 
+          br
+          strong 
+            h2 To make a ducky on a boat pop up:
+          ol
+            li Print and color the page
+            li Use glue to paste it on thin cardboard (like cereal box)
+            li Cut the boat, duck and fish
+            li Fold the lines 90 degrees
+            li Use glue to stick ducky to the boat (from the inside of the boat)
+            li Your popup is complete!
+      //- .right-column      
+      //-    iframe.video(src='https://www.youtube.com/embed/C-VCCDoCjdc?rel=0&;showinfo=0', frameborder='0', allowfullscreen='')
+      //-    img(src='../img/description-imgs/description__felt_001.png', alt='Felt Catbears by The Catbears')
+
+//- $1.99 FREE - BUTTON TEST
+//- block main-item__cta
+//-   a.btn.btn__large.btn__primary.btn__payed(onClick = "ga('send', 'event', 'Button', 'Click', 'PAYED__5-coloring-pages') ; lightboxInit()") Buy $1.99
