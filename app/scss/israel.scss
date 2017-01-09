@@ -1,0 +1,33 @@
+// israel.scss
+
+body {
+	direction: rtl;
+	font-family: 'Varela Round', sans-serif;
+}
+
+.promo-item .subscribe-wrapper h2  {
+	font-family: 'Amatica SC', cursive;
+}
+
+.promo-item .subscribe-wrapper {
+	font-size : 18px;
+	// font-family: 'Varela Round', sans-serif;
+
+}
+
+.header-container h1 {
+	font-family: 'Amatica SC', cursive;
+	// font-family: 'Varela Round', sans-serif;
+	// font-family: 'Miriam Libre', sans-serif;
+	font-weight: 600;
+	font-size: 30px;
+}
+
+#mce-EMAIL {
+	direction: ltr;
+}
+
+#mc-embedded-subscribe {
+	font-size: 28px !important;
+	padding-bottom : 5px;
+}

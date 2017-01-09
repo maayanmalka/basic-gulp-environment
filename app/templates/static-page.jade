@@ -7,6 +7,8 @@ html
     link(rel='stylesheet', type='text/css', href='../css/styles.css')
     link(rel='stylesheet', type='text/css', href='../css/static-page.css')
     link(rel='stylesheet', type='text/css', href='../css/promo-share.css')
+    block head
+
     block title
         title The Catbears
 
@@ -16,6 +18,6 @@ html
         block Hero
       #lower-site
         block page-content
-
-    include ../include/footer.jade 
-    include ../include/page-bottom-scripts.jade
+    block footer
+      include ../include/footer.jade 
+      include ../include/page-bottom-scripts.jade
