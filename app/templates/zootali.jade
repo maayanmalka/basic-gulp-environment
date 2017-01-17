@@ -1,0 +1,42 @@
+doctype html
+html
+  head
+    include ../include/page-head-data.jade
+    link(rel='stylesheet', type='text/css', href='../css/hp.css')
+    link(rel='stylesheet', type='text/css', href='../css/israel.css')
+    link(rel='stylesheet', type='text/css', href='../css/mailchimp-form.css')
+    link(rel='stylesheet', type='text/css', href='../css/promo-share.css')
+    link(href='https://fonts.googleapis.com/css?family=Amatica+SC|Varela+Round', rel='stylesheet')
+
+    block title
+
+  body
+    #site-wrapper
+      #upper-site
+        .header-container
+          .logo-header
+            a.logo(href='../zootali')
+              img(src='../img/logo-header.png', alt='logo-header', style='width:152px;height:100px;')
+          h1 פעילויות להדפסה
+        
+        block zootali-invitation
+
+
+      #lower-site
+        block felt-catbears
+        block catbears-stickers
+        block finger-puppets
+        //- block instagram
+        //- block learn-to-draw
+        //- block coloring-book-duck
+        //- block duck-boat
+        //- block coloring-pages
+        //- block riddle-games
+        //- block iMessage-stickers
+        block box-spacer
+        block box-spacer
+      #coast2coast--centered
+        include ../include/promo-share--israel.jade
+  
+    include ../include/footer--israel.jade 
+    include ../include/page-bottom-scripts.jade
