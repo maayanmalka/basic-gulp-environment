@@ -35,7 +35,7 @@ body {
 .zootali-invitation {
 	width: 100%;
 	max-width: 1200px;
-	padding : 0 50px ;
+	// padding : 0 50px ;
 	margin: 0 auto ;
 	text-align: center;
 	margin-bottom: 90px;
@@ -45,17 +45,29 @@ body {
 .zootali-invitation img {
 	width: 100%;
 	max-width: 1200px;
-	padding : 0 50px ;
+	// padding : 0 50px ;
 	margin: 10px auto 0px;
 	text-align: center;
 }
 
-
-.zootali-invitation img , .zootali-invitation h3  {
-transform: rotate(-3.5deg);
-  -ms-transform: rotate(-3.5deg); /* IE 9 */
-  -webkit-transform: rotate(-3.5deg); /* Chrome, Safari, Opera */
+.print-zootali-invitation  {
+	margin-top: -50px;
 }
+
+.mobile-img {
+	display: none;
+}
+
+
+#lower-site h2 {
+	font-size: 24px;
+}
+
+// .zootali-invitation img , .zootali-invitation h3  {
+// transform: rotate(-3.5deg);
+//   -ms-transform: rotate(-3.5deg); /* IE 9 */
+//   -webkit-transform: rotate(-3.5deg); /* Chrome, Safari, Opera */
+// }
 
 .logo-container {
   display: flex;
@@ -72,12 +84,26 @@ transform: rotate(-3.5deg);
 
 @media(max-width: 1200px) {
 	.zootali-invitation img {
-		padding : 0 20px ;
+		// padding : 0 20px ;
 	}
 }
 
 @media(max-width: 580px) {
 	.zootali-invitation img {
 		padding : 0px ;
+	}
+
+	.mobile-img {
+		display: block;
+	}
+	.desktop-img {
+		display: none;
+	}
+
+	#lower-site {
+		margin-bottom: 40px;
+	}
+	.subscribe-wrapper h2 {
+		display: none;
 	}
 }
