@@ -3,6 +3,8 @@ html
   head
     include ../include/page-head-data.jade
     link(rel='stylesheet', type='text/css', href='../css/hp.css')
+    link(rel='stylesheet', type='text/css', href='../css/hero.css')
+    link(rel='stylesheet', type='text/css', href='../css/grid.css')  
     link(rel='stylesheet', type='text/css', href='../css/mailchimp-form.css')
     link(rel='stylesheet', type='text/css', href='../css/promo-share.css')
     block title
@@ -20,9 +22,10 @@ html
             a.logo(href='../')
               img(src='../img/logo-header.png', alt='logo-header', style='width:152px;height:100px;')
           h1 Printable Activities 
+      
+      block hero
 
-
-      #lower-site
+      #grid
         block duck-boat
         block finger-puppets
         block felt-catbears

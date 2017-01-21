@@ -175,7 +175,7 @@ input, button, submit {
   display: flex;
 }
 
-#lower-site, #coast2coast--centered {
+#coast2coast--centered {
   display: -webkit-flex; /* NEW */
   display: flex;
   -webkit-flex-wrap: wrap; /* NEW */
@@ -185,11 +185,6 @@ input, button, submit {
   margin: 0 auto;
 }
 
-#lower-site {
-  width: 1190px;
-  min-height: 500px;
-  padding : 0 20px;
-}
 
 #coast2coast--centered {
   width: 100%;
@@ -224,19 +219,10 @@ input, button, submit {
     width : 100%;
     margin : 0 auto;
   }
-  #lower-site {
-    width : 100%;
-    max-width : 768px;
-    // width : 400px;
-  }
   .header-container {
     text-align: center;
     margin-bottom: 8px;
     margin-top: 0;
-  }
-
-  #lower-site--centered {
-    text-align: center;
   }
 }
 
@@ -247,9 +233,6 @@ input, button, submit {
   line-height: 26px;
 }
 
-  #lower-site {
-    width : 100%;
-  }
   .header-container {
     padding: 0 30px;
     h1 {
