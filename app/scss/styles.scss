@@ -176,22 +176,10 @@ input, button, submit {
 }
 
 #coast2coast--centered {
-  display: -webkit-flex; /* NEW */
-  display: flex;
-  -webkit-flex-wrap: wrap; /* NEW */
-  flex-wrap: wrap;
-  justify-content: space-around;
-  z-index: 9999;
   margin: 0 auto;
-}
-
-
-#coast2coast--centered {
   width: 100%;
-  text-align: center;
-  align-items : center;
+  display: block;
 }
-
 
 #footer {
  width : 100%; 
