@@ -20,11 +20,11 @@ html
     //- include ../include/lightbox_free-download.jade
     include ../include/lightbox_subscribe.jade
     #site-wrapper
-        #hero
+        #site-layot
           include ../include/nav__inner-page_only-logo.jade
-          // MAIN ITEM 
-          .main-item 
-              .main-item__gallery
+          // HERO 
+          .hero 
+              .hero__gallery
                 .gallery-container
                   block gallery-img
                   ul#gallery
@@ -33,20 +33,20 @@ html
                     .gallery__button.gallery__button--left
                     .gallery__button.gallery__button--right
                 #gallery-counter
-              .main-item__content
+              .hero__content
                 h1.item--title 
-                  block main-item__title
-                .main-item__description   
+                  block hero__title
+                .hero__description   
                     p.description--text
-                      block main-item__description--p  
+                      block hero__description--p  
 
-                .main-item__cta
-                    block main-item__cta           
-                    .main-item__cta--micro-text
-                        block main-item__cta--micro-text
+                .hero__cta
+                    block hero__cta           
+                    .hero__cta--micro-text
+                        block hero__cta--micro-text
                     
-                block main-item__info
-          // END -- MAIN ITEM
+                block hero__info
+          // END -- HERO
           block page-description
           block instructions
           .share-banner

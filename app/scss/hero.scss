@@ -3,22 +3,16 @@
 @import "./variables.scss";
 $url_0: url(../img/pages/icon-pdf.png);
 
-#hero {
+#site-layot {
   display: block;
   width: 1190px;
   min-height: 500px;
   padding : 0 20px;
-
-  display: -webkit-flex; /* NEW */
-  display: flex;
-  -webkit-flex-wrap: wrap; /* NEW */
-  flex-wrap: wrap;
-  justify-content: space-around;
   z-index: 9999;
   margin: 0 auto;
 }
 
-.main-item__info--list {
+.hero__info--list {
   font-size : 18px;
   color : $gray__medium;
   border-top: 1px solid $gray__light;
@@ -31,7 +25,7 @@ $url_0: url(../img/pages/icon-pdf.png);
   max-height: 600px;
 }
 
-.main-item {
+.hero {
   display: flex;
   width: 100%;
   height: auto;
@@ -40,7 +34,7 @@ $url_0: url(../img/pages/icon-pdf.png);
   justify-content: space-between;
   margin-bottom: 60px;
 }
-.main-item__gallery {
+.hero__gallery {
   height: 600px;
   min-width: 600px;
 
@@ -49,7 +43,7 @@ $url_0: url(../img/pages/icon-pdf.png);
     height : 100%;
   }
 }
-.main-item__content {
+.hero__content {
   display: flex;
   padding-top: 13px;
   flex-direction: column;
@@ -59,7 +53,7 @@ $url_0: url(../img/pages/icon-pdf.png);
   padding : 35px 35px 0 35px;
   height : auto;
 }
-.main-item__content--title-info-line {
+.hero__content--title-info-line {
   display: flex;
   flex-direction: row;
   height: 74px;
@@ -113,19 +107,19 @@ $url_0: url(../img/pages/icon-pdf.png);
   width: 52px;
   float: right;
 }
-.main-item__description {
+.hero__description {
   width: 100%;
   color: $black;
   padding-bottom : 20px;
 }
-.main-item__subscribe {
+.hero__subscribe {
   padding-top: 40px;
 }
-.main-item__subscribe--title {
+.hero__subscribe--title {
   padding-bottom: 13px;
 }
 
-.main-item__cta {
+.hero__cta {
   width: 100%;
   text-align: center;
   padding-bottom : 35px;
@@ -190,15 +184,15 @@ $url_0: url(../img/pages/icon-pdf.png);
 }
 
 @media(max-width: 1200px) {
-  #hero {
+  #site-layot {
     width : 100%;
     max-width : 768px;
     // width : 400px;
   }
-  #hero--centered {
+  #site-layot--centered {
     text-align: center;
   }
-  .main-item {
+  .hero {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -207,7 +201,7 @@ $url_0: url(../img/pages/icon-pdf.png);
     margin-bottom: 0;
 
   }
-  .main-item__gallery {
+  .hero__gallery {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -224,13 +218,13 @@ $url_0: url(../img/pages/icon-pdf.png);
       // max-height: 450px;
     }
   }
-  .main-item__content {
+  .hero__content {
     width: 100%;
     margin: 0;
     margin-bottom: 40px;
     padding-top: 20px;
   }
-  .main-item__description {
+  .hero__description {
     // margin-bottom: 15px;
   }  
 
@@ -249,10 +243,10 @@ $url_0: url(../img/pages/icon-pdf.png);
 
 @media(max-width: 585px) {
 
-  #hero {
+  #site-layot {
     width : 100%;
   }
-  .main-item__content {
+  .hero__content {
     padding : 0px;
     margin-bottom: 20px;
     border: none;

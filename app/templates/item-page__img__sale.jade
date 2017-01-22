@@ -12,39 +12,39 @@ html
   body
     include ../include/lightbox_subscribe.jade
     #site-wrapper
-        #hero
+        #site-layot
           include ../include/nav__inner-page_only-logo.jade
-          // MAIN ITEM 
-          .main-item 
-              .main-item__gallery
+          // HERO 
+          .hero 
+              .hero__gallery
                 block gallery-img
-              .main-item__content
+              .hero__content
                 h1.item--title 
-                  block main-item__title
-                .main-item__content--title-info-line
+                  block hero__title
+                .hero__content--title-info-line
                   .price.price--pdf
                     .price__icon
                     .price__content
                       
                       h2.price__content--free
-                        block main-item__price-number
+                        block hero__price-number
 
                       .price__content--pdf-size
-                        block main-item__file-size 
+                        block hero__file-size 
                         
                   .badges-container
-                    block main-item__badges
-                .main-item__description   
+                    block hero__badges
+                .hero__description   
                     p.description--text
-                      block main-item__description--p  
+                      block hero__description--p  
 
                     ul.description--text
-                      block main-item__description--ul
+                      block hero__description--ul
 
-                .main-item__cta
-                    block main-item__cta           
+                .hero__cta
+                    block hero__cta           
                 
-          // END -- MAIN ITEM
+          // END -- HERO
 
         #coast2coast--centered
           include ../include/promo-share.jade

@@ -1,33 +1,33 @@
-.main-item
-  .main-item__gallery
+.hero
+  .hero__gallery
     img(src='../img/pages/cardboard-puppetshow_large.png', alt='cardboard-puppetshow', style='width:638px;height:638px;')
-  .main-item__content
+  .hero__content
     h1.item--title 
-      block main-item__title
-    .main-item__content--title-info-line
+      block hero__title
+    .hero__content--title-info-line
       .price.price--pdf
         .price__icon
         .price__content
-          block main-item__price-number
+          block hero__price-number
             h2.price__content--free def Price number
-          block main-item__file-size 
+          block hero__file-size 
             .price__content--pdf-size def size of file
       .badges-container
-        block main-item__badges
+        block hero__badges
           .info-line__badge.difficulty__badge--scissors
           .info-line__badge.age__badge
-    .main-item__content--description
-      block main-item__description--p
+    .hero__content--description
+      block hero__description--p
         p.description--text
           | def description p
-      block main-item__description--ul
+      block hero__description--ul
         ul.description--text
           li def 1
           li def 2
           li def 3
           li def 4
-    .main-item__content--cta
-      block main-item__cta-title
+    .hero__content--cta
+      block hero__cta-title
         h3.cta-title Send this PDF to my mailbox
       
 
