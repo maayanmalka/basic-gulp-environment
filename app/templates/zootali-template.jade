@@ -2,6 +2,7 @@ doctype html
 html
   head
     include ../include/page-head-data.jade
+    link(rel='stylesheet', type='text/css', href='../css/hero.css')
     link(rel='stylesheet', type='text/css', href='../css/hp.css')
     link(rel='stylesheet', type='text/css', href='../css/grid.css')
     link(rel='stylesheet', type='text/css', href='../css/israel.css')
@@ -23,7 +24,7 @@ html
         block zootali-invitation
 
 
-      #hero
+      #grid
         block forest
         block felt-catbears
         block catbears-stickers
@@ -37,8 +38,8 @@ html
         //- block iMessage-stickers
         block box-spacer
         block box-spacer
-      #coast2coast--centered
-        include ../include/promo-share--israel.jade
+    #coast2coast--centered
+      include ../include/promo-share--israel.jade
   
     include ../include/footer--israel.jade 
     include ../include/page-bottom-scripts.jade
