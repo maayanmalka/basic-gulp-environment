@@ -1,7 +1,7 @@
 // static-page.scss
 
-.hero {
-      background-image: url('../img/about/hero-poster.png');
+.poster {
+      background-image: url('../img/about/poster-bg.png');
       width: 100%;
       height: 609px;
       background-repeat: no-repeat;
@@ -22,12 +22,12 @@
             }
         }
     }
-    .hero__overlay--container {
+    .poster__overlay--container {
         margin: 0 auto;
         padding: 20px;
         max-width: 400px;
         margin-top: 25px;
-        .hero__mini-text { 
+        .poster__mini-text { 
             color: white;
             font-family: 'Schoolbell', 'Open Sans', sans-serif;
             text-align: center;
@@ -38,8 +38,8 @@
             margin-right: 200px; 
             padding-left: 20px;    
         }
-        .hero__logo--overlay {
-            background-image: url('../img/about/hero-logo.png');    
+        .poster__logo--overlay {
+            background-image: url('../img/about/poster-logo.png');    
             max-width: 359px;
             height: 250px;
             margin: 0 auto;
@@ -47,7 +47,7 @@
             background-repeat: no-repeat;
             background-position: center; 
         }
-        .hero__text {
+        .poster__text {
             font-family: 'Schoolbell', 'Open Sans', sans-serif;;
             font-size: 35px;
             color: white;
