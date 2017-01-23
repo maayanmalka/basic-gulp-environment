@@ -1,18 +1,82 @@
-///// HERO
+@import "./variables.scss";
+
+
+h1 {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 13px;
+  // font-family: 'Amatic SC', 'Open Sans', sans-serif; 
+  font-family: 'Open Sans', sans-serif; 
+}
+h2.price__content--free {
+  font-size: 25px;
+  color: $gray__medium;
+  font-weight: 600;
+  margin-top: -2px;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction : column;
+}
+
+.logo-container img {
+  margin-top: 3px;
+  transform: rotate(-6deg);
+  -ms-transform: rotate(-6deg); /* IE 9 */
+  -webkit-transform: rotate(-6deg); /* Chrome, Safari, Opera */
+    // background-color: $promo__yellow ;
+}
+
+.back-btn {
+  font-weight: 400;
+  margin-bottom: 6px;
+  font-size: 15px;
+  max-width : 65px;
+}
+#page-navigation {
+  width : 100%;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: space-between;
+  margin-top: 10px;
+}
+
+
+
+
+.share-banner {
+  // border : 3px solid #d7f7ff;
+  margin : 0 auto;
+  padding : 35px 35px;
+  background-color: #f3fdff;
+  margin-bottom: 50px;
+  text-align: center;
+} 
+
+
+@media(max-width: 1200px) {
+
+  #page-navigation {
+    padding-left : 0;
+  }
+
+  .back-btn {
+    display: none;
+  }
+  
+}
+
+
+
+///// page-item
 
 @import "./variables.scss";
 $url_0: url(../img/pages/icon-pdf.png);
 
-#site-layot {
-  display: block;
-  width: 1190px;
-  min-height: 500px;
-  padding : 0 20px;
-  z-index: 9999;
-  margin: 0 auto;
-}
-
-.hero__info--list {
+.page-item__info--list {
   font-size : 18px;
   color : $gray__medium;
   border-top: 1px solid $gray__light;
@@ -25,7 +89,7 @@ $url_0: url(../img/pages/icon-pdf.png);
   max-height: 600px;
 }
 
-.hero {
+.page-item {
   display: flex;
   width: 100%;
   height: auto;
@@ -34,16 +98,17 @@ $url_0: url(../img/pages/icon-pdf.png);
   justify-content: space-between;
   margin-bottom: 60px;
 }
-.hero__gallery {
+.page-item__gallery {
   height: 600px;
   min-width: 600px;
 
   img , .gallery__item {
     width : 100%;
     height : 100%;
+    border-radius: 10px;
   }
 }
-.hero__content {
+.page-item__content {
   display: flex;
   padding-top: 13px;
   flex-direction: column;
@@ -53,7 +118,7 @@ $url_0: url(../img/pages/icon-pdf.png);
   padding : 35px 35px 0 35px;
   height : auto;
 }
-.hero__content--title-info-line {
+.page-item__content--title-info-line {
   display: flex;
   flex-direction: row;
   height: 74px;
@@ -107,19 +172,19 @@ $url_0: url(../img/pages/icon-pdf.png);
   width: 52px;
   float: right;
 }
-.hero__description {
+.page-item__description {
   width: 100%;
   color: $black;
   padding-bottom : 20px;
 }
-.hero__subscribe {
+.page-item__subscribe {
   padding-top: 40px;
 }
-.hero__subscribe--title {
+.page-item__subscribe--title {
   padding-bottom: 13px;
 }
 
-.hero__cta {
+.page-item__cta {
   width: 100%;
   text-align: center;
   padding-bottom : 35px;
@@ -184,15 +249,8 @@ $url_0: url(../img/pages/icon-pdf.png);
 }
 
 @media(max-width: 1200px) {
-  #site-layot {
-    width : 100%;
-    max-width : 768px;
-    // width : 400px;
-  }
-  #site-layot--centered {
-    text-align: center;
-  }
-  .hero {
+
+  .page-item {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -201,7 +259,7 @@ $url_0: url(../img/pages/icon-pdf.png);
     margin-bottom: 0;
 
   }
-  .hero__gallery {
+  .page-item__gallery {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -218,13 +276,13 @@ $url_0: url(../img/pages/icon-pdf.png);
       // max-height: 450px;
     }
   }
-  .hero__content {
+  .page-item__content {
     width: 100%;
     margin: 0;
     margin-bottom: 40px;
     padding-top: 20px;
   }
-  .hero__description {
+  .page-item__description {
     // margin-bottom: 15px;
   }  
 
@@ -242,11 +300,7 @@ $url_0: url(../img/pages/icon-pdf.png);
 }
 
 @media(max-width: 585px) {
-
-  #site-layot {
-    width : 100%;
-  }
-  .hero__content {
+  .page-item__content {
     padding : 0px;
     margin-bottom: 20px;
     border: none;
@@ -261,7 +315,10 @@ $url_0: url(../img/pages/icon-pdf.png);
     height: auto;
     width: 100%;
   }
+  .share-banner {
+    margin-bottom: 0;
+  }
 }
 
 
-///// END HERO
+///// END page-item

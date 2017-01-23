@@ -1,6 +1,9 @@
 // variables.scss
 // rgb(3,161,254);
 //colors
+$catbears__red : #e93832;
+$catbears__orange: #ffa71d;
+$catbears__skyblue: #24befb;
 
 $black: black;
 $white: white;
@@ -11,9 +14,11 @@ $gray__default: #999;
 $gray__medium: #777;
 $gray__dark: #444;
 
-$catbears__primary: #3bd768;
-$catbears__primary--hover: #30e464;
-$catbears__primary--active: #3bd768;
+$catbears__primary: $catbears__skyblue;
+// $catbears__primary: #3bd768;
+$catbears__primary--hover: $catbears__orange;
+// $catbears__primary--hover: #30e464;
+$catbears__primary--active: $catbears__red;
 $catbears__primary--disabled: #eee;
 $catbears__primary--highlight : rgba(48, 228, 100, 0.42);
 
@@ -22,8 +27,8 @@ $catbears__secondary--hover: #30e464;
 $catbears__secondary--active: #30e464;
 $catbears__secondary--disabled: #eee;
 
-$link : blue;
-$link__hover : #0081ff; 
+$link : $catbears__skyblue;
+$link__hover : blue; 
 $link__light : blue;
 
 $promo__yellow : #ffff07;
@@ -32,3 +37,4 @@ $marker__yellow : #ffffd8;
 $marker__blue : #d7f7ff;
 // $lightbox-background : rgba(255, 250, 255, 0.7);
 $lightbox-background : rgba(0, 40, 0, 0.3);
+

@@ -3,6 +3,7 @@
 //  make a centered div, position the gifs next to it
 
 .promo-item {
+  overflow: hidden;
   position: relative;           
   text-align : center;
   width: 100%;
@@ -14,6 +15,7 @@
   // background-color: rgba(255, 192, 203, 0.46); //pink;
   h2 {
     font-family: 'Amatic SC', 'Open Sans', sans-serif;
+    font-family: 'Schoolbell', 'Open Sans', sans-serif;
     font-weight: 100;
     font-size : 60px;
     margin-bottom: 7px;
@@ -113,27 +115,21 @@
 
 @media(max-width: 1200px) {
   .promo-item {
-    margin-top: 70px;
+    padding : 0 15px;
+    // margin-top: 70px;
   }
 }
 
-@media(max-width: 800px) {
+@media(max-width: 700px) {
   .promo-item {
-    height: auto;
-    margin: 0 auto;
-    margin-bottom: 140px;
-    margin-top: 40px;
-    max-width: 315px;
-    // background-image : none;
   }
   .subscribe-wrapper {
-    padding: 0 10px ;
-    // position: static;
-    margin-top: 0px;
-  }
-  .overlay {
-    display: none;
   }
 }
 
-
+@media (max-width: 585px){
+  .promo-item {
+  }
+  .subscribe-wrapper {
+  }
+}

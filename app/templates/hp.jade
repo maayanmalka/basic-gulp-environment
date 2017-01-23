@@ -3,29 +3,42 @@ html
   head
     include ../include/page-head-data.jade
     link(rel='stylesheet', type='text/css', href='../css/hp.css')
-    link(rel='stylesheet', type='text/css', href='../css/hero.css')
+    link(rel='stylesheet', type='text/css', href='../css/poster.css')
     link(rel='stylesheet', type='text/css', href='../css/grid.css')  
     link(rel='stylesheet', type='text/css', href='../css/mailchimp-form.css')
     link(rel='stylesheet', type='text/css', href='../css/promo-share.css')
+    link(href='https://fonts.googleapis.com/css?family=Schoolbell', rel='stylesheet')
+
     block title
 
   body
     #site-wrapper
       #upper-site
+        .poster
+            block poster-bg
+            .overlay-container  
+                .grid-layot
+                    .poster-nav
+                      .nav-container  
+                          a.nav-item(href="../about.html") ABOUT
+                          a.nav-item(href="mailto:catbearsteam@gmail.com?subject=Hey There Catbears!&body=Dear Catbears,", target='_top') CONTACT
+                          a.scroll-to-signup.btn__nav.nav-item SIGN UP
+                    block poster-content
+
         //- .menu.menu-homepage
         //-   p
         //-     a(href='../index.html') About
         //-   p
         //-     a(href='../index.html') Contact
-        .header-container
-          .logo-header
-            a.logo(href='../')
-              img(src='../img/logo-header.png', alt='logo-header', style='width:152px;height:100px;')
-          h1 Printable Activities 
+        //- .header-container
+        //-   .logo-header
+        //-     a.logo(href='../')
+        //-       img(src='../img/logo-header.png', alt='logo-header', style='width:152px;height:100px;')
+        //-   h1 Printable Activities 
       
-      block hero
-        
-      #grid
+      .grid-layot
+        block grid-title
+          
         block duck-boat
         block finger-puppets
         block felt-catbears
@@ -35,7 +48,7 @@ html
         block learn-to-draw
         block riddle-games
         block coloring-book-duck
-        block iMessage-stickers
+        //- block iMessage-stickers
         block box-spacer
         block box-spacer
     #coast2coast--centered

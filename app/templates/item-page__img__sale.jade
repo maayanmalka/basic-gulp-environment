@@ -2,8 +2,7 @@ doctype html
 html
   head
     include ../include/page-head-data.jade
-    link(rel='stylesheet', type='text/css', href='../css/item-page__img.css')
-    link(rel='stylesheet', type='text/css', href='../css/hero.css')
+    link(rel='stylesheet', type='text/css', href='../css/item-page.css')
     link(rel='stylesheet', type='text/css', href='../css/mailchimp-form.css')
     link(rel='stylesheet', type='text/css', href='../css/promo-share.css')
     block title
@@ -12,39 +11,39 @@ html
   body
     include ../include/lightbox_subscribe.jade
     #site-wrapper
-        #site-layot
+        .site-layot
           include ../include/nav__inner-page_only-logo.jade
-          // HERO 
-          .hero 
-              .hero__gallery
+          // page-item 
+          .page-item 
+              .page-item__gallery
                 block gallery-img
-              .hero__content
+              .page-item__content
                 h1.item--title 
-                  block hero__title
-                .hero__content--title-info-line
+                  block page-item__title
+                .page-item__content--title-info-line
                   .price.price--pdf
                     .price__icon
                     .price__content
                       
                       h2.price__content--free
-                        block hero__price-number
+                        block page-item__price-number
 
                       .price__content--pdf-size
-                        block hero__file-size 
+                        block page-item__file-size 
                         
                   .badges-container
-                    block hero__badges
-                .hero__description   
+                    block page-item__badges
+                .page-item__description   
                     p.description--text
-                      block hero__description--p  
+                      block page-item__description--p  
 
                     ul.description--text
-                      block hero__description--ul
+                      block page-item__description--ul
 
-                .hero__cta
-                    block hero__cta           
+                .page-item__cta
+                    block page-item__cta           
                 
-          // END -- HERO
+          // END -- page-item
 
         #coast2coast--centered
           include ../include/promo-share.jade

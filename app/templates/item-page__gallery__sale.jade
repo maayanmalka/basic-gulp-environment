@@ -2,8 +2,7 @@ doctype html
 html
   head   
     include ../include/page-head-data.jade
-    link(rel='stylesheet', type='text/css', href='../css/item-page__img.css')
-    link(rel='stylesheet', type='text/css', href='../css/hero.css')  
+    link(rel='stylesheet', type='text/css', href='../css/item-page.css')
     link(rel='stylesheet', type='text/css', href='../css/mailchimp-form.css')
     link(rel='stylesheet', type='text/css', href='../css/promo-share.css')
 
@@ -20,11 +19,11 @@ html
     //- include ../include/lightbox_free-download.jade
     include ../include/lightbox_subscribe.jade
     #site-wrapper
-        #site-layot
+        .site-layot
           include ../include/nav__inner-page_only-logo.jade
-          // HERO 
-          .hero 
-              .hero__gallery
+          // page-item 
+          .page-item 
+              .page-item__gallery
                 .gallery-container
                   block gallery-img
                   ul#gallery
@@ -33,20 +32,20 @@ html
                     .gallery__button.gallery__button--left
                     .gallery__button.gallery__button--right
                 #gallery-counter
-              .hero__content
+              .page-item__content
                 h1.item--title 
-                  block hero__title
-                .hero__description   
+                  block page-item__title
+                .page-item__description   
                     p.description--text
-                      block hero__description--p  
+                      block page-item__description--p  
 
-                .hero__cta
-                    block hero__cta           
-                    .hero__cta--micro-text
-                        block hero__cta--micro-text
+                .page-item__cta
+                    block page-item__cta           
+                    .page-item__cta--micro-text
+                        block page-item__cta--micro-text
                     
-                block hero__info
-          // END -- HERO
+                block page-item__info
+          // END -- page-item
           block page-description
           block instructions
           .share-banner
