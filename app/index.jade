@@ -20,8 +20,8 @@ block poster-content
             span.slogan-word.color--skyblue Learn    
         p.poster-p Welcome to The Catbears! Here you can find lots of fun printable activities for your kids, simply print them out and start crafting!
         .buttons-container
-            .btn.btn__buttons-container.btn__large.btn__primary.btn__sign-up.scroll-to-signup Sign Up
-            a.btn.btn__buttons-container.btn__large.btn__secondary.btn__learn-more(href="../about.html") Learn More
+            .btn.btn__buttons-container.btn__large.btn__primary.btn__sign-up.scroll-to-signup(onClick = "ga('send', 'event', 'Button', 'Click', 'POSTER__BTN__SignUp')") Sign Up
+            a.btn.btn__buttons-container.btn__large.btn__secondary.btn__learn-more(href="../about.html" onClick = "ga('send', 'event', 'Button', 'Click', 'POSTER__BTN__LearnMore')") Learn More
     .column
       .column--right
         .poster-thumb.rotate-scale-on-hover
