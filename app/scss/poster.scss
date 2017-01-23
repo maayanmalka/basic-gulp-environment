@@ -77,7 +77,7 @@
 	 	max-height: 40px;
 		.nav-item {
 		 	color : white;
-			padding : 10px 30px;
+			padding : 10px 20px;
 			margin-left: 20px;
 			max-height: 30px ;
 			opacity: 0.9;
@@ -87,7 +87,8 @@
 			}
 		}
 	    .btn__nav {
-	      margin-left: 40px;
+	      margin-left: 30px;
+	      padding : 10px 30px;
 	  	  border : 1px solid rgba(255,255,255,0.5);
 	    }
 	 }
@@ -173,13 +174,21 @@
 		font-size: 19px;
 	}
     .poster-nav {
-    	padding-top: 25px;
-    	margin-bottom: 120px;
-		.nav-container  {
-			float: none;
-			width : 400px;
-			margin: 0 auto;
+	  padding-top: 25px;
+	  margin-bottom: 140px;
+	  .nav-container  {
+		// float: right;
+		width : 300px;
+		margin: 0 auto;
+		padding-right: 25px;
+		.nav-item {
+			margin-left: 0;
+			padding : 8px 20px;
 		}
+		.btn__nav {
+			margin-left: 10px;
+		}
+	  }
 	}
   }
 }
@@ -217,23 +226,6 @@
 	.column {
 		padding: 0;
 	}
-    .poster-nav {
-	  padding-top: 25px;
-	  margin-bottom: 140px;
-	  .nav-container  {
-		// float: right;
-		// background-color: yellow;
-		margin: 0 auto;
-		width : 290px;
-		// padding-right: 15px;
-		.nav-item {
-			margin-left: 0;
-			padding : 8px 20px;
-		}
-		.btn__nav {
-			margin-left: 10px;
-		}
-	  }
-	}
+
   }
 }
