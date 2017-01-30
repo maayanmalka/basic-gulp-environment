@@ -18,7 +18,7 @@ block poster-content
             span.slogan-word.color--red Print  
             span.slogan-word.color--orange Make  
             span.slogan-word.color--skyblue Learn    
-        p.poster-p Welcome to The Catbears! Here you can find lots of fun printable activities for your kids, simply print them out and start crafting!
+        p.poster-p Welcome to The Catbears! Here you can find lots of fun printable activities for your kids!
         .buttons-container
             .btn.btn__buttons-container.btn__large.btn__primary.btn__sign-up.scroll-to-signup(onClick = "ga('send', 'event', 'Button', 'Click', 'POSTER__BTN__SignUp')") Sign Up
             a.btn.btn__buttons-container.btn__large.btn__secondary.btn__learn-more(href="../about.html" onClick = "ga('send', 'event', 'Button', 'Click', 'POSTER__BTN__LearnMore')") Learn More
@@ -32,11 +32,19 @@ block poster-content
 //- grid
 block grid-title
   .grid-title
-    h1 
-      span.color--red Try 
-      span.color--orange Our 
-      span.color--skyblue Activities
-    h2 Grab your scissors, grab your glue! Let’s get crafty! 
+    //- h1 Try Our Activities
+    //-   span.color--red Try 
+    //-   span.color--orange Our 
+    //-   span.color--skyblue Activities
+    h1 Grab your 
+      span.color--red scissors
+      | , grab your 
+      span.color--orange glue
+      | , Let’s get 
+      span.color--skyblue crafty
+      | ! 
+
+    
 block duck-boat
   .box
     a(href='duck-boat.html')

@@ -20,9 +20,9 @@ html
                 .grid-layot
                     .poster-nav
                       .nav-container  
-                          a.nav-item(href="../about.html") ABOUT
-                          a.nav-item(href="mailto:catbearsteam@gmail.com?subject=Hey There Catbears!&body=Dear Catbears,", target='_top') CONTACT
-                          a.scroll-to-signup.btn__nav.nav-item SIGN UP
+                          a.nav-item(href="../about.html" onClick = "ga('send', 'event', 'Button', 'Click', 'POSTER__Nav__About')") ABOUT
+                          a.nav-item(href="mailto:catbearsteam@gmail.com?subject=Hey There Catbears!&body=Dear Catbears,", target='_top' onClick = "ga('send', 'event', 'Button', 'Click', 'POSTER__Nav__Contact')") CONTACT
+                          a.scroll-to-signup.btn__nav.nav-item(onClick = "ga('send', 'event', 'Button', 'Click', 'POSTER__Nav__SignUp')") SIGN UP
                     block poster-content
 
         //- .menu.menu-homepage
