@@ -1,0 +1,56 @@
+//- maker-kit
+
+extends ./templates/item-page__img.jade
+
+block title
+  title Pop Ups - Ducky on a boat - The Catbears
+
+block gallery-img
+  a(href='../pdf/The-Catbears_Maker-Kit.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__Maker-Kit'); lightboxInit('subscribe')")
+    img(src='../img/pages/maker-kit.png', alt='Maker Kit by The Catbears')
+
+block page-item__title
+  | Catbears Maker Kit
+
+block page-item__description--p
+  | With your craft tools at your side, nothing can stop you! make your very own maker kit using felt and glue! 
+
+block page-item__info
+  .page-item__info--list
+    ul.bullet Here's what you'll need:
+      li.bullet Printer
+      li.bullet Colorful felt sheets
+      li.bullet A pair of scissors
+      li.bullet Glue
+      li.bullet Velcro tape
+
+block page-item__cta--micro-text                  
+  p PDF file ・ 620KB ・ 4 Printable Page
+
+block page-item__cta
+  a.btn.btn__large.btn__primary.btn__payed(href='../pdf/The-Catbears_Maker-Kit.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Maker-Kit'); lightboxInit('subscribe')") PRINT
+
+block page-description
+  .page-description
+    h1 Description
+      .columns
+        .left-column
+          p A real maker needs a maker kit, to keep his crafting tools ready for action!  
+          | 
+          br
+          //- strong 
+            //- h2 To make a maker kit:
+          //- ol
+            //- li Print the 4 activity pages
+            //- li Cut the shapes of 
+            //- li Cut the boat, duck and fish
+            //- li Fold the lines 90 degrees
+            //- li Use glue to stick ducky to the boat (from the inside of the boat)
+            //- li Your popup is complete!
+      //- .right-column      
+      //-    iframe.video(src='https://www.youtube.com/embed/C-VCCDoCjdc?rel=0&;showinfo=0', frameborder='0', allowfullscreen='')
+      //-    img(src='../img/description-imgs/description__felt_001.png', alt='Felt Catbears by The Catbears')
+
+//- $1.99 FREE - BUTTON TEST
+//- block page-item__cta
+//-   a.btn.btn__large.btn__primary.btn__payed(onClick = "ga('send', 'event', 'Button', 'Click', 'PAYED__5-coloring-pages') ; lightboxInit()") Buy $1.99

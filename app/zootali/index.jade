@@ -19,13 +19,22 @@ block zootali-invitation
     a(href="tel:054-2198988" target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__zootali-invitation')")
       img(src='../img/zootali/zootali-invitation_mobile.png', alt='zootali-invitation by The Catbears') 
 
-      
+block greeting-card
+  .box
+    a(href='../pdf/The-Catbears_Greeting-Card.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Zootali__TUMB__Greeting-Card')")
+      .image-container
+        img(src="../img/thumbs/thumb_greeting-card.png", alt="Greeting Card Fox & Duck - by The Catbears")
+        a.badge-on-thumb.badge--youtube-icon(href='https://www.youtube.com/watch?v=zL8m4A6l8zI' target="_blank")
+      h2 כרטיס ברכה 
+      p 2 דפי פעילות להדפסה ・ PDF חינם 
+
+
 block maker-kit
   .box
     a(href='../pdf/The-Catbears_Maker-Kit.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Zootali__TUMB__Maker-Kit')")
       .image-container
         img(src="../img/thumbs/thumb_catbears-maker-kit.gif", alt="Maker-Kit by The Catbears")
-        .badge-on-thumb.badge--pdf-icon
+        //- .badge-on-thumb.badge--pdf-icon
       h2 ערכת יצירה מלֶבֶד
       p 4 דפי פעילות להדפסה ・ PDF חינם
 
@@ -35,7 +44,7 @@ block forest
     a(href='../pdf/The-Catbears_Forest.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Zootali__TUMB__Forest')")
       .image-container
         img(src="../img/thumbs/thumb_forest.png", alt="Forest by The Catbears")
-        .badge-on-thumb.badge--pdf-icon
+        //- .badge-on-thumb.badge--pdf-icon
       h2 יער מלֶבֶד
       p 3 דפי פעילות להדפסה ・ PDF חינם
 
@@ -46,7 +55,7 @@ block forest
 //-     a(href='duck-boat.html')
 //-       .image-container
 //-         img(src="../img/thumbs/thumb_duck-boat.png", alt="Paper Duck and Boat - The Catbears")
-//-         .badge-on-thumb.badge--pdf-icon
+        .badge-on-thumb.badge--pdf-icon
 //-       h2 פופ אפ - ברווזי על סירה
 //-       p דף פעילות אחד להדפסה ・ PDF חינם
 
@@ -55,7 +64,7 @@ block finger-puppets
     a(href='../pdf/The-Catbears_Finger-Puppets.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Zootali__TUMB__Finger-Puppets')")
       .image-container
         img(src="../img/thumbs/thumb_finger-puppets.png", alt="Finger Puppets by The Catbears")
-        .badge-on-thumb.badge--pdf-icon
+        //- .badge-on-thumb.badge--pdf-icon
       h2 בובות אצבע מנייר
       p 2 דפי פעילות להדפסה ・ PDF חינם
 
@@ -65,7 +74,7 @@ block finger-puppets
 //-     a(href='ranni-coloring-page.html')
 //-       .image-container
 //-         img(src="../img/thumbs/thumb_ranni-color-page.png", alt="Ranni's Red Ballon - A Coloring page by The Catbears")
-//-         .badge-on-thumb.badge--pdf-icon
+        .badge-on-thumb.badge--pdf-icon
 //-       h2 הבלון האדום של רני
 //-       p דף פעילות אחד להדפסה ・ PDF חינם
 
@@ -74,7 +83,7 @@ block felt-catbears
     a(href='../pdf/The-Catbears_Make-Felt-Catbears.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Zootali__TUMB__felt-catbears')")
       .image-container
         img(src='../img/thumbs/thumb_felt-catbears.png', alt='Make Felt Catbears')
-        .badge-on-thumb.badge--pdf-icon
+        a.badge-on-thumb.badge--youtube-icon(href='https://www.youtube.com/watch?v=C-VCCDoCjdc' target="_blank")
       h2 קֵטְבֶּרְז מלֶבֶד
       p 3 דפי פעילות להדפסה ・ PDF חינם
 
@@ -84,7 +93,7 @@ block felt-catbears
 //-     a(href='coloring-book_duck-in-trouble.html')
 //-       .image-container
 //-         img(src='../img/thumbs/thumb_duck-in-trouble.png', alt='Coloring book by The Catbears')
-//-         .badge-on-thumb.badge--pdf-icon
+        .badge-on-thumb.badge--pdf-icon
 //-       h2 ספר צביעה - עשה זאת בעצמך
 //-       p 28 דפי פעילות להדפסה ・ PDF חינם
 //- block riddle-games
@@ -92,7 +101,7 @@ block felt-catbears
 //-     a(href='riddle-games.html')
 //-       .image-container
 //-         img(src='../img/thumbs/thumb_riddle-games.png', alt='riddle-games by The Catbears')
-//-         .badge-on-thumb.badge--pdf-icon
+        .badge-on-thumb.badge--pdf-icon
 //-       h2 משחקי חידה
 //-       p 4 דפי פעילות להדפסה ・ PDF חינם
 
@@ -101,7 +110,7 @@ block felt-catbears
 //-     a(href='5-coloring-pages_catbears.html')
 //-       .image-container
 //-         img(src='../img/thumbs/thumb_coloring-pages.png', alt='5-coloring-pages')
-//-         .badge-on-thumb.badge--pdf-icon
+        .badge-on-thumb.badge--pdf-icon
 //-         //- .badge-on-thumb.difficulty__badge--pencil
 //-       h2 דפי צביעה
 //-       p 5 דפי פעילות להדפסה ・ PDF חינם
@@ -112,18 +121,19 @@ block felt-catbears
 //-     a(href='learn-to-draw.html')
 //-       .image-container
 //-         img(src='../img/thumbs/thumb_learn-to-draw.png', alt='Learn To Draw - The Catbears')
-//-         .badge-on-thumb.badge--pdf-icon
+        .badge-on-thumb.badge--pdf-icon
 //-         //- .badge-on-thumb.difficulty__badge--pencil
 //-       h2 איך מציירים קטבר
 //-       p 5 דפי פעילות להדפסה ・ PDF חינם
 //-       //- p $1.99
+
 
 block iMessage-stickers
   .box
     a(href='https://itunes.apple.com/us/app/fox-duck-by-the-catbears/id1158843136?ls=1&mt=8#' target="_blank" onclick = "ga('send', 'event', 'Button', 'Click', 'FREE__Zootali__TUMB__iMessage-stickers')" )
       .image-container
         img(src='../img/thumb_ios-stickers.png', alt='Fox & Duck iMessage Stickers by The Catbears')
-        .badge-on-thumb.badge--apple
+        //- .badge-on-thumb.badge--apple
       h2 סטיקרים ל-iMessage 
       p חינם באפ-סטור 
 
@@ -132,7 +142,7 @@ block society6
     a(href='https://society6.com/thecatbears' target="_blank"  onclick = "ga('send', 'event', 'Button', 'Click', 'thumb_s6')")
       .image-container
         img(src='../img/society6.gif', alt='The Catbears on Society6')
-        .badge-on-thumb.badge--s6
+        //- .badge-on-thumb.badge--s6
       h2 Catbears Store
       p The Catbears on Society6
 
@@ -141,7 +151,7 @@ block catbears-stickers
     a(href='../pdf/The-Catbears-Stickers.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Zootali__TUMB__Catbears-Stickers')")
       .image-container
         img(src='../img/thumbs/thumb_stickers.png', alt='catbears stickers')
-        .badge-on-thumb.badge--pdf-icon
+        //- .badge-on-thumb.badge--pdf-icon
         //- .badge-on-thumb.difficulty__badge--scissors
       h2 סטיקרים של הָקֵטְבֶּרְז
       p דף פעילות להדפסה ・ PDF חינם
@@ -151,7 +161,7 @@ block instagram
     a(href='https://www.instagram.com/thecatbears/' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Zootali__TUMB__instagram')")
       .image-container
         img(src='../img/thumb_instagram-page.png', alt='Catbears on Instagram')
-        .badge-on-thumb.badge--instagram
+        //- .badge-on-thumb.badge--instagram
       h2 הָקֵטְבֶּרְז באינסטגרם
       p בקרו בדף האינסטגרם שלנו
 

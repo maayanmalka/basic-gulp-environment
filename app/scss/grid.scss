@@ -43,13 +43,13 @@
   height : 100%;
   float : left ; 
   // border : 1px yellow solid;
-  padding-top : 30px;
-  padding-bottom :0px;
+  // padding-top : 4px;
+  // padding-bottom :0px;
   text-align: center;
-  &:hover {
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
+  // &:hover {
+  //   padding-top: 2px;
+  //   padding-bottom: 2px;
+  // }
   .box-text-container {
     width: 100%;
     height: 100px;
@@ -96,13 +96,21 @@
 
   -webkit-filter: saturate(0.85);
   filter: saturate(0.85);
-  transition : box-shadow 50ms ease-in-out;
-  &:hover {
-    border: 1px solid #e2e2e2;
-    -webkit-filter: saturate(1);
-    filter: saturate(1);
-    box-shadow: 0px 2px 15px rgba(55, 55, 55, 0.1);
-  }
+  margin-top : 10px;
+  text-align: center;
+  transition : margin-top 100ms ease-in-out , margin-bottom 100ms ease-in-out , transform 100ms ease-in-out;
+    &:hover {
+      // margin-top: 5px;
+      // margin-bottom: 5px;
+      transform: scale(1.04);
+    }
+  // transition : box-shadow 50ms ease-in-out;
+  // &:hover {
+  //   border: 1px solid #e2e2e2;
+  //   -webkit-filter: saturate(1);
+  //   filter: saturate(1);
+  //   box-shadow: 0px 2px 15px rgba(55, 55, 55, 0.1);
+  // }
 }
 .badge-on-thumb {
   position: absolute;
@@ -151,6 +159,11 @@
 
 .badge--pdf-icon {
   background: url('../img/badges/icon-pdf.png') no-repeat;
+  background-size: 100% 100%;  
+}
+
+.badge--youtube-icon {
+  background: url('../img/badges/badge_youtube.png') no-repeat;
   background-size: 100% 100%;  
 }
 
@@ -247,6 +260,11 @@
     max-height: inherit;
     width: 100% ;
     height: auto;
+    &:hover {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
   }
 
 }
+
