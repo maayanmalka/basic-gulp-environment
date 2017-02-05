@@ -1,11 +1,16 @@
 // static-page.scss
 
-.nav-item__signup , .nav-item__about{
-    display: none;
+.sticky-nav__logo , .nav-item__signup , .nav-item__about {
+    display: none !important;
 }
 
+.nav-item__contact {
+    right : 10px !important;
+}
 .nav-item__home {
     display: block !important;
+    width : 120px;
+    left : 0;
 }
 
 .poster {
