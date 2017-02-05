@@ -2,42 +2,61 @@
 
 .sticky-nav {
 	position: absolute;
-	top : 40px;
-	right: 70px;
+	top:0;
 	z-index: 9999999;
 	color : white;
 	text-align: center;
 	margin: 0 auto;
+	width : 100%;
+	min-height: 100px;
+	// background-color: rgba(255,255,255,0.2);
+
 	.sticky-nav__items {
+		position: relative;
 		padding : 12px;
-		width : auto;
-		margin: 0 auto;
-		// background-color: rgba(255,255,255,0.2);
 		.nav-item {
+			position: absolute;
+			top: 10;
 			color: white;
     	    font-size : 25px;
     	    text-align: center;
  	        font-family: 'Schoolbell', 'Open Sans', sans-serif;
 	        text-shadow: 2px 2px 9px rgba(0,0,0,0.6);
 			margin: 10px 20px;
-			float: left;
 			&:hover {
 				text-decoration: underline;
 			}
 		}
+		.sticky-nav__logo {
+			left : 0;
+		}
 		.nav-item__about {
+			right: 300px;
 	        transform: rotate(-7deg);
 	        -ms-transform: rotate(-7deg); /* IE 9 */
 	        -webkit-transform: rotate(-7deg); /* Chrome, Safari, Opera */
 		}
+		.nav-item__home {
+			display: none;
+			right: 300px;
+	        transform: rotate(0deg);
+	        -ms-transform: rotate(0deg); /* IE 9 */
+	        -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+		}
 		.nav-item__contact {
+			right: 170px;
 	        transform: rotate(4deg);
 	        -ms-transform: rotate(4deg); /* IE 9 */
 	        -webkit-transform: rotate(4deg); /* Chrome, Safari, Opera */
 			 display: block;
 		}
 		.nav-item__signup {
-			background-image: url("../img/svg/sketchy-btn.svg");
+			width : 140px;
+			height: 70px;
+			right: 0;
+			margin-top: -2px;
+			padding-top: 17px;
+			background: url("../img/svg/sketchy-btn.svg") no-repeat;
 		    background-size: 140px 70px;
 		    fill : blue;
 		}

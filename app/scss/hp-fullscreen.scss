@@ -4,13 +4,14 @@
 
 .poster-fullscreen {
   position: relative;
-  background-color: black;
+  // background-color: black;
   // width: 100%;
   // height: 100vh;
   overflow : hidden;
   margin-bottom: 50px;
   .poster-fullscreen__bg-img{
      position: absolute;
+     z-index: 0;
      top: 0;
      left: 0;
      width: 100%;
@@ -18,6 +19,9 @@
      background: url('../img/hp/hp-fullscreen-bg.png') center top no-repeat;      
   }
   #player {
+    display: none;
+     top: 0;
+     left: 0;
      position: absolute;
      z-index: 1;
   }
@@ -45,9 +49,10 @@
   .fullscreen__obj--cta {
     bottom: 20px;
     left: 40px;
-    width: 350px;
+    max-width: 688px;
     z-index: 100;
     h1 {
+      font-size: 78px;
       color: white;
       text-align: center;
       font-family: 'Schoolbell', 'Open Sans', sans-serif;

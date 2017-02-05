@@ -1,5 +1,13 @@
 // static-page.scss
 
+.nav-item__signup , .nav-item__about{
+    display: none;
+}
+
+.nav-item__home {
+    display: block !important;
+}
+
 .poster {
       background-image: url('../img/about/poster-bg.png');
       width: 100%;

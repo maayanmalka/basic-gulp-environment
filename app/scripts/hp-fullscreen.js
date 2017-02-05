@@ -2,15 +2,39 @@
 
 // - google API
 
+var videoPlaying = "C-VCCDoCjdc"; // greeting card
+// var playlist = 'PLQdt0d06hISY0p7YaAbQMHfK72gVgE4j2' // the catbears playlist
+// C-VCCDoCjdc; // felt catbears
+// zL8m4A6l8zI; // greeting card
+// aXO59eNjhoc; // DIY book duck in trouble
+// aoiGNe4_5uI; // graffity
+
+var videoCounter = 0;
+var videoArr = ['C-VCCDoCjdc', 'zL8m4A6l8zI' , 'aXO59eNjhoc'];
+
+function chooseNextVideo () {
+	if (videoCounter == videoArr.length){ 
+		videoCounter = 0
+	}
+	videoPlaying = videoArr[videoCounter];
+	videoCounter++;
+	// console.log ('current Video ::: ' + videoPlaying)
+
+	return videoPlaying;
+};
+
+
 var tag = document.createElement('script');
 
 var player;
+var playerStartTimer;
+var playerStarted = false;
 
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
       height: '390',
       width: '640',
-      videoId: 'C-VCCDoCjdc',
+      videoId: videoPlaying,
       playerVars: {
         'autoplay': 1,
         'controls': 0,
@@ -19,19 +43,24 @@ function onYouTubeIframeAPIReady() {
         'showinfo': 0,
         'loop': 1,
         'mute': 1,
-        'start': 135,
-        'end': 110
-,       'playlist': 'C-VCCDoCjdc'
+        'startSeconds': 5,
+        // 'suggestedQuality': 'large',
+        'end': 110,
+        'playlist': videoPlaying
       },
-      videoId: 'C-VCCDoCjdc',
+      videoId: videoPlaying,
         events: {
             'onReady': onPlayerReady,
+            'onPlayerStateChange' : onPlayerStateChange
         }
     });
 }
 function onPlayerReady(event) {
     event.target.mute();
+    // $('#player').fadeIn(2400);
     $('#text').fadeIn(400);
+    player.setPlaybackQuality('hd720');
+    checkPlayerState();
     // player.setPlaybackRate(2);
     player.addEventListener ('onStageChange' , onPlayerStateChange)
     //why this?  Well, if you want to overlay text on top of your video, you
@@ -45,6 +74,33 @@ function onPlayerStateChange (event) {
 		alert ('video buffering!')
 	}
 }
+
+
+function checkPlayerState (){
+	if (!playerStarted){
+	  playerStartTimer = setInterval( function (){
+	    if (player.getPlayerState() == 1) {
+	    	console.log("video started!!!!")
+	    	// clearInterval(playerStarted)
+	    	// chooseNextVideo();
+	    	$('#player').fadeIn(400);
+	    }
+	    else{
+	    	if (player.getPlayerState() == 3) {
+	    		console.log("video buffering !!!!")
+		    	$('#player').hide();	
+	    	}else{
+	    		console.log("video NOT started !!!!")
+	    	}
+	    }
+	 	
+	  	
+
+	} , 1000);
+   }
+
+}
+
 //this pauses the video when it's out of view, just wrap your video in .m-//video
 // $(window).scroll(function() {
 //    var hT = $('.m-video').height(),
