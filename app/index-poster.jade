@@ -1,52 +1,34 @@
-extends ./templates/hp-fullscreen.jade
+extends ./templates/hp-poster.jade
 
 block title
   title The Catbears - Printable Activities
 
 //- poster
 
-block poster-fullscreen
-  .poster-fullscreen
-    #player
-    //- .poster-fullscreen__bg-img
-    //- iframe.poster-fullscreen__video(src='https://www.youtube.com/embed/C-VCCDoCjdc?rel=0&;showinfo=0&frameborder=0&controls=0&fs=1&loop=1&autoplay=1&playlist=C-VCCDoCjdc&modestbranding=1&enablejsapi=1&playerapiid=ytplayer')
-      
-    .fullscreen__obj
-      .player-blocker
-      .fullscreen__obj--logo 
-        img(src="../img/hp/hp-logo__dark.png", alt="The Catbears Logo") 
-      .fullscreen__obj--cta
-        h1 Roll your sleeves and let's get started!
-        img.arrow(src="../img/hp/arrow-cta.png", alt="The Catbears arrow icon") 
-      .fullscreen__obj--stickers 
-        img(src="../img/hp/stickers.png", alt="Stickers - The Catbears") 
-      .fullscreen__obj--try-this-activity  
-    //- .column
-    //-   .column--left
-    //-     .poster-logo
-    //-       img(src="../img/hp/hp-logo.png", alt="The Catbears Logo")
-    //-       h1.slogan-line 
-    //-         span.slogan-word.color--red Print  
-    //-         span.slogan-word.color--orange Make  
-    //-         span.slogan-word.color--skyblue Learn    
-    //-     p.poster-p Welcome to The Catbears! Here you can find lots of fun printable activities for your kids!
-    //-     .buttons-container
-    //-         .btn.btn__buttons-container.btn__large.btn__primary.btn__sign-up.scroll-to-signup(onClick = "ga('send', 'event', 'Button', 'Click', 'POSTER__BTN__SignUp')") Sign Up
-    //-         a.btn.btn__buttons-container.btn__large.btn__secondary.btn__learn-more(href="../about.html" onClick = "ga('send', 'event', 'Button', 'Click', 'POSTER__BTN__LearnMore')") Learn More
-    //- .column
-    //-   .column--right
-    //-     .poster-thumb.rotate-scale-on-hover
-    //-       iframe.poster-thumb--vid(src='https://www.youtube.com/embed/C-VCCDoCjdc?rel=0&;showinfo=0', frameborder='0', allowfullscreen='')
-    //-       //- img.poster-thumb--play-btn(src="../img/hp/vid-play-btn.png", alt="play button - The Catbears")
-    //-     a(href='felt-catbears.html')
-    //-      .micro-text Try This Activity
+block poster-bg
+    img.center-img(src="../img/hp/poster-bg.png", alt="The Catbears" align="middle")
 
-
-
-//- ---- END POSTER FULL SCREEN ---- // 
-
-
-
+block poster-content
+  .poster-content  
+    .column
+      .column--left
+        .poster-logo
+          img(src="../img/hp/hp-logo.png", alt="The Catbears Logo")
+          h1.slogan-line 
+            span.slogan-word.color--red Print  
+            span.slogan-word.color--orange Make  
+            span.slogan-word.color--skyblue Learn    
+        p.poster-p Welcome to The Catbears! Here you can find lots of fun printable activities for your kids!
+        .buttons-container
+            .btn.btn__buttons-container.btn__large.btn__primary.btn__sign-up.scroll-to-signup(onClick = "ga('send', 'event', 'Button', 'Click', 'POSTER__BTN__SignUp')") Sign Up
+            a.btn.btn__buttons-container.btn__large.btn__secondary.btn__learn-more(href="../about.html" onClick = "ga('send', 'event', 'Button', 'Click', 'POSTER__BTN__LearnMore')") Learn More
+    .column
+      .column--right
+        .poster-thumb.rotate-scale-on-hover
+          iframe.poster-thumb--vid(src='https://www.youtube.com/embed/C-VCCDoCjdc?rel=0&;showinfo=0', frameborder='0', allowfullscreen='')
+          //- img.poster-thumb--play-btn(src="../img/hp/vid-play-btn.png", alt="play button - The Catbears")
+        a(href='felt-catbears.html')
+         .micro-text Try This Activity
 //- grid
 block grid-title
   .grid-title

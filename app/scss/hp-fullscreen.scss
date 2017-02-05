@@ -1,0 +1,78 @@
+// hp-fullscreen.scss
+
+@import "./variables.scss";
+
+.poster-fullscreen {
+  position: relative;
+  background-color: black;
+  // width: 100%;
+  // height: 100vh;
+  overflow : hidden;
+  margin-bottom: 50px;
+  .poster-fullscreen__bg-img{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: url('../img/hp/hp-fullscreen-bg.png') center top no-repeat;      
+  }
+  #player {
+     position: absolute;
+     z-index: 1;
+  }
+  .fullscreen__obj--logo , .fullscreen__obj--cta , .fullscreen__obj--stickers {
+     position: absolute;
+     z-index: 10;
+  }
+  .player-blocker {
+    position: absolute;
+    z-index: 2;
+    // width: 100%;
+    // height: 100%;
+    opacity: 0;
+    background-color : white;
+  }
+  .fullscreen__obj--logo  {
+     top: 12px;
+     left: 10px;
+     z-index: 1000;
+  }
+  .fullscreen__obj--stickers {
+     bottom: -5px;
+     right: 0;
+  }
+  .fullscreen__obj--cta {
+    bottom: 20px;
+    left: 40px;
+    width: 350px;
+    z-index: 100;
+    h1 {
+      color: white;
+      text-align: center;
+      font-family: 'Schoolbell', 'Open Sans', sans-serif;
+      transform: rotate(-9deg);
+     -ms-transform: rotate(-9deg); /* IE 9 */
+     -webkit-transform: rotate(-9deg); /* Chrome, Safari, Opera */
+      text-shadow: 2px 2px 9px rgba(0,0,0,0.6);
+      float: left;
+    }
+    .arrow {
+      float: right;
+    }
+
+  }
+}
+
+@media (max-width: 1200px) {
+
+}
+
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:landscape) {
+}
+

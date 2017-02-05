@@ -1,0 +1,9 @@
+//- sticky-nav.jade
+link(rel='stylesheet', type='text/css', href='../css/sticky-nav.css')
+
+.sticky-nav
+	.sticky-nav__items
+		//- h1 🎈
+		a.nav-item.nav-item__about(href="../about.html" onClick = "ga('send', 'event', 'Button', 'Click', 'POSTER__Nav__About')") About
+		a.nav-item.nav-item__contact(href="mailto:catbearsteam@gmail.com?subject=Hey There Catbears!&body=Dear Catbears,", target='_top' onClick = "ga('send', 'event', 'Button', 'Click', 'POSTER__Nav__Contact')") Contact
+		a.scroll-to-signup.nav-item.nav-item__signup(onClick = "ga('send', 'event', 'Button', 'Click', 'POSTER__Nav__SignUp')") SIGN UP

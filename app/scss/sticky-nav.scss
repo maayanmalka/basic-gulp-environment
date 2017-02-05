@@ -1,0 +1,45 @@
+// sticky-nav.scss
+
+.sticky-nav {
+	position: absolute;
+	top : 40px;
+	right: 70px;
+	z-index: 9999999;
+	color : white;
+	text-align: center;
+	margin: 0 auto;
+	.sticky-nav__items {
+		padding : 12px;
+		width : auto;
+		margin: 0 auto;
+		// background-color: rgba(255,255,255,0.2);
+		.nav-item {
+			color: white;
+    	    font-size : 25px;
+    	    text-align: center;
+ 	        font-family: 'Schoolbell', 'Open Sans', sans-serif;
+	        text-shadow: 2px 2px 9px rgba(0,0,0,0.6);
+			margin: 10px 20px;
+			float: left;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		.nav-item__about {
+	        transform: rotate(-7deg);
+	        -ms-transform: rotate(-7deg); /* IE 9 */
+	        -webkit-transform: rotate(-7deg); /* Chrome, Safari, Opera */
+		}
+		.nav-item__contact {
+	        transform: rotate(4deg);
+	        -ms-transform: rotate(4deg); /* IE 9 */
+	        -webkit-transform: rotate(4deg); /* Chrome, Safari, Opera */
+			 display: block;
+		}
+		.nav-item__signup {
+			background-image: url("../img/svg/sketchy-btn.svg");
+		    background-size: 140px 70px;
+		    fill : blue;
+		}
+	}
+}
