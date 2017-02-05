@@ -32,8 +32,8 @@ var playerStarted = false;
 
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
-      height: '390',
-      width: '640',
+      // height: '390',
+      // width: '640',
       videoId: videoPlaying,
       playerVars: {
         'autoplay': 1,
@@ -192,7 +192,7 @@ function sizeVideoSize(){
     video = $('#player');
     video.css({"width": screenWidth});
     video.css({"height": screenWidth / videoRatio});
-	
+	// video.css({"text-align": "left"});
 	horizontalPoster = screenRatio > videoRatio;
 
 	if (horizontalPoster) {
