@@ -28,7 +28,12 @@
 			}
 		}
 		.sticky-nav__logo {
-			left : 0;
+			left : 20px;
+			position: absolute;
+			width : 345px;
+  	   	    height : 296px;
+  	   	    background: url('../img/hp/hp-logo__dark.png') center top no-repeat;
+
 		}
 		.nav-item__about {
 			right: 300px;
@@ -58,7 +63,44 @@
 			padding-top: 17px;
 			background: url("../img/svg/sketchy-btn.svg") no-repeat;
 		    background-size: 140px 70px;
-		    fill : blue;
 		}
+	}
+}
+
+
+// hp-logo__dark__ipad.png
+
+
+
+@media (max-width : 1024px){
+  .sticky-nav {
+	.sticky-nav__items {
+	   .nav-item {
+	   }	
+  	   .sticky-nav__logo {
+  	   	  display: block;
+  	   	  position: default;
+  	   	  left : 0;
+  	   	  // margin-top : 60px;
+  	   	  width : 202px;
+  	   	  height : 176px;
+  	   	  background: url('../img/hp/hp-logo__dark__ipad.png') center top no-repeat;
+
+		 	// top : 100px;
+		 	// right : 50% !important;
+		}	
+    }
+  } 
+}	
+
+
+@media (max-width : 650px){
+	
+	.nav-item__about , .nav-item__contact  {
+		display: none !important;
+	}
+
+	.sticky-nav .sticky-nav__items .nav-item__signup {
+		padding-top: 20px;
 	}
 }

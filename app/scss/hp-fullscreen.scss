@@ -4,7 +4,7 @@
 
 .poster-fullscreen {
   position: relative;
-  // background-color: black;
+  background-color: black;
   // width: 100%;
   // height: 100vh;
   overflow : hidden;
@@ -12,11 +12,10 @@
   .poster-fullscreen__bg-img{
      position: absolute;
      z-index: 0;
-     top: 0;
-     left: 0;
      width: 100%;
      height: 100%;
-     background: url('../img/hp/hp-fullscreen-bg.png') center top no-repeat;      
+     background: url('../img/hp/hp-fullscreen-bg.jpg') center top no-repeat;      
+     text-align:center;
   }
   #player {
     display: none;
@@ -24,6 +23,12 @@
      left: 0;
      position: absolute;
      z-index: 1;
+  }
+  .fullscreen__obj {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
   }
   .fullscreen__obj--logo , .fullscreen__obj--cta , .fullscreen__obj--stickers {
      position: absolute;
@@ -60,10 +65,13 @@
      -ms-transform: rotate(-9deg); /* IE 9 */
      -webkit-transform: rotate(-9deg); /* Chrome, Safari, Opera */
       text-shadow: 2px 2px 9px rgba(0,0,0,0.6);
-      float: left;
     }
     .arrow {
       float: right;
+      width : 99px;
+      height : 103px;
+      background: url('../img/hp/arrow-cta.png') center top no-repeat;
+
     }
 
   }
@@ -73,6 +81,51 @@
 
 }
 
+@media (max-width : 1024px){
+.poster-fullscreen {
+    max-height: 1024px;
+    margin-bottom: 20px;
+   .poster-fullscreen__bg-img {
+       background-size: auto 100% ;
+    }
+  
+    .fullscreen__obj--stickers {
+      display: none
+    }
+
+    .fullscreen__obj--cta {
+      max-width: 300px;
+      padding : 0 20px;
+      left : 0;
+      right: 0;
+      margin: 0 auto;
+      // background-color: blue;
+      text-align: center;
+      h1 {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg); /* IE 9 */
+        -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+        font-size: 30px ;
+        float: none;
+        margin-bottom: 4px;
+      }
+      .arrow {
+        float: none;
+        width : 25px;
+        height : 42px;
+        margin : 0 auto;
+        background: url('../img/hp/arrow-cta__ipad.png') no-repeat;
+
+      }
+    }
+    #player {
+      display: none !important;
+    }
+  }
+}
+
+@media (max-width : 545px){
+}
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
 
