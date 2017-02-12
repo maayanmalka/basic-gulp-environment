@@ -6,8 +6,10 @@ block title
   title DIY Greeting Card - The Catbears
 
 block gallery-img
-  a(href='../pdf/The-Catbears_Greeting-Card.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__Greeting-Card'); lightboxInit('subscribe')")
-    img(src='../img/pages/greeting-card.png', alt='Greeting-Card by The Catbears')
+  iframe.video(src='https://www.youtube.com/embed/zL8m4A6l8zI?rel=0&;showinfo=0', frameborder='0', allowfullscreen='')
+
+  //- a(href='../pdf/The-Catbears_Greeting-Card.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__Greeting-Card'); lightboxInit('subscribe')")
+  //-   img(src='../img/pages/greeting-card.png', alt='Greeting-Card by The Catbears')
 
 block page-item__title
   | DIY Greeting Card
@@ -57,10 +59,8 @@ block page-description
             //- li Your popup is complete!
 
         .right-column      
-           iframe.video(src='https://www.youtube.com/embed/zL8m4A6l8zI?rel=0&;showinfo=0', frameborder='0', allowfullscreen='')
-           //- img(src='../img/description-imgs/description__coloring-book_duck-in-trouble_001.png', alt='Coloring Page by The Catbears')
-      //-    img(src='../img/description-imgs/description__felt_001.png', alt='Felt Catbears by The Catbears')
-
+           img(src='../img/pages/greeting-card.png', alt='Greeting-Card by The Catbears')
+            
 //- $1.99 FREE - BUTTON TEST
 //- block page-item__cta
 //-   a.btn.btn__large.btn__primary.btn__payed(onClick = "ga('send', 'event', 'Button', 'Click', 'PAYED__5-coloring-pages') ; lightboxInit()") Buy $1.99

@@ -1,26 +1,28 @@
 //- coloring-book_duck-in-trouble.jade
 
-extends ./templates/item-page__gallery__sale.jade
+extends ./templates/item-page__img.jade
 
 block title
   title DIY Coloring Book - A Tiny Little Duck Got In Really Big Trouble - The Catbears
 
+block gallery-img
+  iframe.video(src='https://www.youtube.com/embed/aXO59eNjhoc?rel=0&showinfo=0', frameborder='0', allowfullscreen='')
 
-block gallery-items
-  li.gallery__item.gallery__item--1 
-    img(src='../img/pages/coloring-book_duck-in-trouble_001.png', alt='Coloring Book by The Catbears')
-  li.gallery__item.gallery__item--2 
-    img(src='../img/pages/coloring-book_duck-in-trouble_002.png', alt='Coloring Book by The Catbears')
-  li.gallery__item.gallery__item--3
-    img(src='../img/pages/coloring-book_duck-in-trouble_003.png', alt='Coloring Book by The Catbears') 
-  li.gallery__item.gallery__item--4
-    img(src='../img/pages/coloring-book_duck-in-trouble_004.png', alt='Coloring Book by The Catbears')    
-  li.gallery__item.gallery__item--5
-    img(src='../img/pages/coloring-book_duck-in-trouble_005.png', alt='Coloring Book by The Catbears')  
+//- block gallery-items
+  //- li.gallery__item.gallery__item--1 
+  //-   img(src='../img/pages/coloring-book_duck-in-trouble_001.png', alt='Coloring Book by The Catbears')
+  //- li.gallery__item.gallery__item--2 
+  //-   img(src='../img/pages/coloring-book_duck-in-trouble_002.png', alt='Coloring Book by The Catbears')
+  //- li.gallery__item.gallery__item--3
+  //-   img(src='../img/pages/coloring-book_duck-in-trouble_003.png', alt='Coloring Book by The Catbears') 
+  //- li.gallery__item.gallery__item--4
+  //-   img(src='../img/pages/coloring-book_duck-in-trouble_004.png', alt='Coloring Book by The Catbears')    
+  //- li.gallery__item.gallery__item--5
+  //-   img(src='../img/pages/coloring-book_duck-in-trouble_005.png', alt='Coloring Book by The Catbears')  
   
 
 block page-item__title
-  | DIY Coloring Book - A Tiny Little Duck Got In Really Big Trouble
+  | DIY Coloring Book
 
 block page-item__description--p
   | This DIY coloring book is perfect for a group of children. Color, cut and glue the pages together and even even write a new ending to the story!  
@@ -28,7 +30,6 @@ block page-item__description--p
 block page-item__info
   .page-item__info--list
     ul.bullet Here's what you'll need:
-      li.bullet a Printer
       li.bullet Coloring materials
       li.bullet A pair of Scissors
       li.bullet Glue
@@ -72,8 +73,8 @@ block page-description
          br
          br
       .right-column
-         iframe.video(src='https://www.youtube.com/embed/aXO59eNjhoc?rel=0&showinfo=0', frameborder='0', allowfullscreen='')
-       
+         //- iframe.video(src='https://www.youtube.com/embed/aXO59eNjhoc?rel=0&showinfo=0', frameborder='0', allowfullscreen='')
+         img(src='../img/pages/coloring-book_duck-in-trouble_001.png', alt='DIY Coloring Book by The Catbears')
          //- img(src='../img/description-imgs/description__coloring-book_duck-in-trouble_000.png', alt='Coloring Page by The Catbears')    
          img(src='../img/description-imgs/description__coloring-book_duck-in-trouble_001.png', alt='Coloring Page by The Catbears')
 
