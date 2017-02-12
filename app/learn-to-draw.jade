@@ -1,16 +1,19 @@
-extends ./templates/item-page__gallery__sale.jade
+extends ./templates/item-page__img.jade
 
 block title
   title Learn To Draw A Catbear - The Catbears
 
 
-block gallery-items
-  li.gallery__item.gallery__item--1 
-    img(src='../img/pages/learn-to-draw_001.png', alt='Learn To Draw by The Catbears')
-  li.gallery__item.gallery__item--2 
-    img(src='../img/pages/learn-to-draw_002.png', alt='Learn To Draw by The Catbears')
-  li.gallery__item.gallery__item--3
-    img(src='../img/pages/learn-to-draw_003.png', alt='Learn To Draw by The Catbears') 
+block gallery-img
+  iframe.video-square(src='https://www.youtube.com/embed/DQiAIpuLQIE?rel=0&showinfo=0', frameborder='0', allowfullscreen='')
+
+//- block gallery-items
+//-   li.gallery__item.gallery__item--1 
+//-     img(src='../img/pages/learn-to-draw_001.png', alt='Learn To Draw by The Catbears')
+//-   li.gallery__item.gallery__item--2 
+//-     img(src='../img/pages/learn-to-draw_002.png', alt='Learn To Draw by The Catbears')
+//-   li.gallery__item.gallery__item--3
+//-     img(src='../img/pages/learn-to-draw_003.png', alt='Learn To Draw by The Catbears') 
   //- li.gallery__item.gallery__item--4
   //-   img(src='../img/pages/catbears-stickers__004.png', alt='Catbears Stickers 004')  
   
@@ -51,8 +54,9 @@ block page-description
            br
            br
            | This is a great activity that combines learning a skill that will help him in his future drawings and help him express himself, with sparking his creative thinking when he creates a new Catbear all by himself.
-       .right-column     
-         iframe.video-square(src='https://www.youtube.com/embed/DQiAIpuLQIE?rel=0&showinfo=0', frameborder='0', allowfullscreen='')
+       .right-column
+         img(src='../img/pages/learn-to-draw_001.png', alt='Learn To Draw by The Catbears')     
+         //- iframe.video-square(src='https://www.youtube.com/embed/DQiAIpuLQIE?rel=0&showinfo=0', frameborder='0', allowfullscreen='')
   
 //- $1.99 FREE - BUTTON TEST
 //- block page-item__cta

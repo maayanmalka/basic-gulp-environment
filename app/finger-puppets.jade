@@ -5,7 +5,8 @@ block title
 
 
 block gallery-img
-  a(href='../pdf/The-Catbears_Finger-Puppets.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__Finger-Puppets'); lightboxInit('subscribe')")
+  .img-fit-container
+    a(href='../pdf/The-Catbears_Finger-Puppets.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__Finger-Puppets'); lightboxInit('subscribe')")
     img(src='../img/pages/finger-puppets.png', alt='Finger Puppets by The Catbears')
 
 block page-item__title
@@ -17,7 +18,6 @@ block page-item__description--p
 block page-item__info
   .page-item__info--list
     ul.bullet Here's what you'll need:
-      li.bullet Printer
       li.bullet Coloring materials
       li.bullet A pair of scissors
       li.bullet Glue

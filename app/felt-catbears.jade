@@ -3,10 +3,11 @@ extends ./templates/item-page__img.jade
 block title
   title Felt Catbears - The Catbears
 
-
 block gallery-img
-  a(href='../pdf/The-Catbears_Make-Felt-Catbears.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__felt-catbears'); lightboxInit('subscribe')")
-    img(src='../img/pages/felt-catbears__001.png', alt='Felt Catbears by The Catbears')
+  iframe.video(src='https://www.youtube.com/embed/C-VCCDoCjdc?rel=0&;showinfo=0', frameborder='0', allowfullscreen='')
+//- block gallery-img
+//-   a(href='../pdf/The-Catbears_Make-Felt-Catbears.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__felt-catbears'); lightboxInit('subscribe')")
+//-     img(src='../img/pages/felt-catbears__001.png', alt='Felt Catbears by The Catbears')
 
 block page-item__title
   | Make Felt Catbears 
@@ -39,7 +40,7 @@ block page-description
         br
         strong 
           h2 To make a felt Catbear:
-        .howitworks
+        //- .howitworks
            img(src="../img/hp/how-it-works.png", alt="How it works - by The Catbears")  
         ol
           li Print out the pages
@@ -50,7 +51,7 @@ block page-description
         p
           | This is a really fun activity that focuses on the Cutting skill. your kids will love creating a felt Catbear by themselves.
       .right-column      
-         iframe.video(src='https://www.youtube.com/embed/C-VCCDoCjdc?rel=0&;showinfo=0', frameborder='0', allowfullscreen='')
+         //- iframe.video(src='https://www.youtube.com/embed/C-VCCDoCjdc?rel=0&;showinfo=0', frameborder='0', allowfullscreen='')
          img(src='../img/description-imgs/description__felt_001.png', alt='Felt Catbears by The Catbears')
 
 //- block share-banner__text
