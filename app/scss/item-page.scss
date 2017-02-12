@@ -90,6 +90,29 @@ h2.price__content--free {
 @import "./variables.scss";
 $url_0: url(../img/pages/icon-pdf.png);
 
+.page-item {
+  // display: flex;
+  width: 100%;
+  height: auto;
+  min-height: 600px;
+  max-width: 977px;
+  // flex-direction: row;
+  // justify-content: space-between;
+  margin : 0 auto;
+  margin-bottom: 60px;
+}
+.page-item__gallery {
+  max-height: 470px;
+  max-width: 470px;
+  float: left;
+
+  img , .gallery__item {
+    width : 100%;
+    height : 100%;
+    border-radius: 10px;
+  }
+}
+
 .page-item__info--list {
   font-size : 18px;
   color : $gray__medium;
@@ -103,31 +126,15 @@ $url_0: url(../img/pages/icon-pdf.png);
   max-height: 600px;
 }
 
-.page-item {
-  display: flex;
-  width: 100%;
-  height: auto;
-  min-height: 600px;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 60px;
-}
-.page-item__gallery {
-  height: 600px;
-  min-width: 600px;
 
-  img , .gallery__item {
-    width : 100%;
-    height : 100%;
-    border-radius: 10px;
-  }
-}
 .page-item__content {
-  display: flex;
+  float: right;
+  // display: flex;
   padding-top: 13px;
-  flex-direction: column;
-  margin-left: 50px;
+  // flex-direction: column;
+  // margin-left: 50px;
   width: 100%;
+  max-width: 470px;
   border : 3px solid $gray__lightest ;
   padding : 35px 35px 0 35px;
   height : auto;
