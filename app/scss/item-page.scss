@@ -9,7 +9,6 @@ h1 {
   font-size: 28px;
   font-weight: 500;
   margin-bottom: 13px;
-  // font-family: 'Amatic SC', 'Open Sans', sans-serif; 
   font-family: 'Open Sans', sans-serif; 
 }
 h2.price__content--free {
@@ -148,7 +147,6 @@ $url_0: url(../img/pages/icon-pdf.png);
     justify-content : space-between;
 
     img , .video , .video-square {
-       // max-width : 500px;
        width: 100%;
        margin : 0 auto;
        margin-bottom: 25px;
@@ -168,9 +166,6 @@ $url_0: url(../img/pages/icon-pdf.png);
   }
 
   .left-column , .right-column{
-    // max-width: 45%;
-    // display: flex;
-    // flex-direction : column;
     margin-bottom: 50px;
     float: left;
   }
@@ -186,6 +181,11 @@ $url_0: url(../img/pages/icon-pdf.png);
 .video .youtube-video{
     margin: 0 auto;
     border : 1px solid #e2e2e2;
+}
+@media(max-width: 1024px) { //ipad patch to work with flexbox
+   .page-item__gallery{
+    max-width: 482px;
+   }
 }
 
 @media(max-width: 960px) {
@@ -210,7 +210,6 @@ $url_0: url(../img/pages/icon-pdf.png);
     width: 100%;
     min-width: 0;
     margin: 0;
-    // height: auto;
   }
   .page-item__gallery {
     height: 300px;
@@ -255,84 +254,3 @@ $url_0: url(../img/pages/icon-pdf.png);
 
 
 
-
-
-
-
-
-
-
-// @media(max-width: 1200px) {
-
-//   .page-item {
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: flex-start;
-//     height: auto;
-//     width: 100%;
-//     margin-bottom: 0;
-
-//   }
-//   .page-item__gallery {
-//     flex-direction: column;
-//     justify-content: flex-start;
-//     align-items: center;
-//     // max-width: 535px;
-//     // max-height: 535px;
-//     min-width : 0;
-//     width: 100%;
-//     height: auto;
-//     margin-bottom: 10px;
-//     img {
-//       height: auto;
-//       width: 100%;
-//       // max-width: 450px;
-//       // max-height: 450px;
-//     }
-//   }
-//   .page-item__content {
-//     width: 100%;
-//     margin: 0;
-//     margin-bottom: 40px;
-//     padding-top: 20px;
-//   }
-//   .page-item__description {
-//     // margin-bottom: 15px;
-//   }  
-
-
-//   .page-description {
-//     .columns {
-//       flex-direction : column;
-//       width: 100%;
-//     }
-//     .right-column, .left-column {
-//       min-width: 100%;
-//     }
-//   }
-
-// }
-
-// @media(max-width: 585px) {
-//   .page-item__content {
-//     padding : 0px;
-//     margin-bottom: 20px;
-//     border: none;
-//     border-bottom : 1px solid $gray__lightest ;
-//   }
-//   .page-description .columns img {
-//     max-width: 370px;
-//     width: 100%;
-//   }
-//   .page-description .columns .video-square {
-//     width: 370px;
-//     height: auto;
-//     width: 100%;
-//   }
-//   .share-banner {
-//     margin-bottom: 0;
-//   }
-// }
-
-
-// ///// END page-item
