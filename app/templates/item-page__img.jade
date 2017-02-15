@@ -6,7 +6,13 @@ html
     link(rel='stylesheet', type='text/css', href='../css/mailchimp-form.css')
     link(rel='stylesheet', type='text/css', href='../css/promo-share.css')
 
-    //- script(type='text/javascript', src='../scripts/img-fit--JS.js') 
+    // GALLERY STUFF  
+    //- link(rel='stylesheet', type='text/css', href='../css/gallery-tamplate.css')
+    script(type='text/javascript', src='lib/jquery/dist/jquery.js')
+    script(type='text/javascript', src='lib/hammerjs/hammer.js')
+    script(type='text/javascript', src='../scripts/gallery-print-pages_controller.js')
+
+
 
     block title
         title Def The Catbears
@@ -18,8 +24,8 @@ html
         include ../include/nav__inner-page_only-logo.jade
         // page-item 
         .page-item 
-            .page-item__gallery
-              block gallery-img
+            .page-item__main-img
+               block main-img
             .page-item__content
                 h1.item--title 
                   block page-item__title
@@ -28,7 +34,17 @@ html
                       block page-item__description--p  
 
                 .page-item__cta
-                    block page-item__cta           
+                    block page-item__cta  
+
+                  .gallery-container
+                    .gallery-wrapper
+                      ul#gallery
+                        block gallery-items
+                    #gallery-controller(onmouseover='autoSlidePause()', onmouseout='autoSlideRestart()') 
+                      .gallery__button.gallery__button--left
+                      .gallery__button.gallery__button--right
+                      .page-fade_right  
+                  //- #gallery-counter         
                     //- .page-item__cta--micro-text
                         block page-item__cta--micro-text
                     
