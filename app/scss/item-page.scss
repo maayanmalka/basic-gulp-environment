@@ -11,6 +11,8 @@ h1 {
   margin-bottom: 13px;
   font-family: 'Open Sans', sans-serif; 
 }
+
+
 h2.price__content--free {
   font-size: 25px;
   color: $gray__medium;
@@ -72,7 +74,7 @@ $url_0: url(../img/pages/icon-pdf.png);
   max-width: 770px;
   width: 100%;
   float: left;
-  margin-right: -2px;
+  margin-right: 0px;
   z-index: 1400;
   iframe {
     width : 100%;
@@ -84,7 +86,7 @@ $url_0: url(../img/pages/icon-pdf.png);
     overflow: hidden;
     position: relative;
   }
-  img { // , .gallery__item {
+  img { 
     display: block;
     position: absolute;
     width : 100%;
@@ -198,12 +200,12 @@ $url_0: url(../img/pages/icon-pdf.png);
     z-index: 0;
     padding : 15px 0px 0 0px;
     border : none;
-    border-bottom: 3px solid $gray__lightest ;
-
   }
   .page-item {
     display: block;
-    margin-bottom : 25px;
+    padding-bottom : 65px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid $gray__lightest ;
   }
   .page-item__main-img , .page-item__content {
     max-width: 100%;
@@ -216,7 +218,7 @@ $url_0: url(../img/pages/icon-pdf.png);
     
     .img-fit-container {
     }
-    img { // , .gallery__item {
+    img { 
       display: block;
       position: absolute;
       height : auto;
@@ -274,35 +276,56 @@ $url_0: url(../img/pages/icon-pdf.png);
   // border : 1px solid orange;
   .gallery-wrapper{
     overflow: hidden;
-  
+
     #gallery {
-      height: auto;
       margin: 0;
       padding: 0;
       margin-top: 15px;
       padding-top: 5px;
-      margin-left: -4px;
+      margin-left: 0px;
       width : 100%;
-      height: 400px;
+      height: 500px;
 
       .gallery__item {
-        height: 160px;
-        width: 114px;
+        height: 155px;
+        width: 112px;
         float: left;
         list-style-type: none;
         text-align: center;
+        position: relative;
+        border : 2px solid $gray__light;
+        box-shadow: 0px 2px 2px 1px rgba(00, 00, 00, 0.04);
+        &:hover {
+          border : 2px solid $catbears__primary;
+          &:after { 
+           position: absolute;
+           top: 95px;
+           left: 10px;
+           width: 52px;
+           height: 52px;
+           z-index: 999999;
+           content: "";
+           background: url('../img/icons/icon_print.png') center left 7% no-repeat;      
+             // border : 1px solid $catbears__primary;
+          }
+        }
+        
       }
     }
+
+
+
   }
   #gallery-controller {
     width : 100%;
-    height: 400px;
+    height: 0; 
     position: absolute;
     top: 0;
     left : 0;
-    
+    // background-color: rgba(23,45,66,0.4);
+
     .gallery__button {
-    
+      cursor: pointer;
       position: absolute;
       top:75px;
       height: 45px;
@@ -311,7 +334,7 @@ $url_0: url(../img/pages/icon-pdf.png);
       z-index: 99999;
       transition : opacity 150ms ease-in-out;
       &:hover , &:active {
-        opacity: 0.7;
+        // opacity: 0.7;
       }
       &:focus , &:visited {
         opacity: 0.9;
@@ -337,6 +360,23 @@ $url_0: url(../img/pages/icon-pdf.png);
 
   }
 }
+
+.static-gallery #gallery {
+  display: flex;
+  justify-content : space-around;
+  width: 100% !important;
+  margin: 0 auto ;
+  .gallery__item {
+  }
+}
+
+.static-gallery {
+  .page-fade_right , .gallery__button {
+    display: none;
+  }
+}
+
+
 #gallery-counter {
   width: auto;
   height: 32px;
@@ -365,9 +405,27 @@ $url_0: url(../img/pages/icon-pdf.png);
   }
 }
 
-@media(max-width: 768px) {
-  .gallery__button {
-    // display: none;
+@media(max-width: 960px) {
+  .gallery-container {
+    .gallery-wrapper {
+    }
+    #gallery-controller {
+      .gallery__button {
+        top: 190px;
+        }
+      .gallery__button--left {
+        left: 0px;
+      }    
+      .gallery__button--right {
+        right: 0px;
+      }
+    }
+  }
+  .static-gallery #gallery{
+    // background-color: red;
+  }
+  .static-gallery {
+    margin-bottom : -45px ;
   }
 }
 

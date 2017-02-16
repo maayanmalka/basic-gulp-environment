@@ -4,28 +4,35 @@ block title
   title Learn To Draw A Catbear - The Catbears
 
 
-block gallery-img
+block main-img
   iframe.video-square(src='https://www.youtube.com/embed/DQiAIpuLQIE?rel=0&showinfo=0', frameborder='0', allowfullscreen='')
 
-//- block gallery-items
-//-   li.gallery__item.gallery__item--1 
-//-     img(src='../img/pages/learn-to-draw_001.png', alt='Learn To Draw by The Catbears')
-//-   li.gallery__item.gallery__item--2 
-//-     img(src='../img/pages/learn-to-draw_002.png', alt='Learn To Draw by The Catbears')
-//-   li.gallery__item.gallery__item--3
-//-     img(src='../img/pages/learn-to-draw_003.png', alt='Learn To Draw by The Catbears') 
-  //- li.gallery__item.gallery__item--4
-  //-   img(src='../img/pages/catbears-stickers__004.png', alt='Catbears Stickers 004')  
-  
+
+block gallery-items
+  a(href='../pdf/The-Catbears-Learn-To-Draw.pdf#page=1' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__Learn-To-Draw'); lightboxInit('subscribe')") 
+    li.gallery__item.gallery__item--1
+      img(src='../img/pages/learn-to-draw/page_001.png', alt='Activity Page by The Catbears')
+  a(href='../pdf/The-Catbears-Learn-To-Draw.pdf#page=2' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__Learn-To-Draw'); lightboxInit('subscribe')") 
+    li.gallery__item.gallery__item--1 
+      img(src='../img/pages/learn-to-draw/page_002.png', alt='Activity Page by The Catbears')
+  a(href='../pdf/The-Catbears-Learn-To-Draw.pdf#page=3' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__Learn-To-Draw'); lightboxInit('subscribe')") 
+    li.gallery__item.gallery__item--1 
+      img(src='../img/pages/learn-to-draw/page_003.png', alt='Activity Page by The Catbears')
+  a(href='../pdf/The-Catbears-Learn-To-Draw.pdf#page=4' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__Learn-To-Draw'); lightboxInit('subscribe')") 
+    li.gallery__item.gallery__item--1 
+      img(src='../img/pages/learn-to-draw/page_004.png', alt='Activity Page by The Catbears')
+  a(href='../pdf/The-Catbears-Learn-To-Draw.pdf#page=5' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__Learn-To-Draw'); lightboxInit('subscribe')") 
+    li.gallery__item.gallery__item--1 
+      img(src='../img/pages/learn-to-draw/page_005.png', alt='Activity Page by The Catbears')
+
 
 block page-item__title
   | Learn To Draw A Catbear 
 
 block page-item__description--p
-  | What’s the easiest way to draw a duck? what about a Panda bear? Try it! it’s super easy and fun! 
- 
+  | What’s the easiest way to draw a duck? what about a Panda bear? Try it yourself! 
 
-block page-item__info
+//- block page-item__info
   .page-item__info--list
     ul.bullet Here's what you'll need:
       li.bullet A Pencil

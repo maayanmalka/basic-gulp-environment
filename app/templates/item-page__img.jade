@@ -23,7 +23,7 @@ html
       .site-layot
         include ../include/nav__inner-page_only-logo.jade
         // page-item 
-        .page-item 
+        .page-item(onmouseover='autoSlidePause()', onmouseout='autoSlideRestart()')
             .page-item__main-img
                block main-img
             .page-item__content
@@ -40,7 +40,7 @@ html
                     .gallery-wrapper
                       ul#gallery
                         block gallery-items
-                    #gallery-controller(onmouseover='autoSlidePause()', onmouseout='autoSlideRestart()') 
+                    #gallery-controller 
                       .gallery__button.gallery__button--left
                       .gallery__button.gallery__button--right
                       .page-fade_right  

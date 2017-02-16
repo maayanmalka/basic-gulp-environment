@@ -3,11 +3,23 @@ extends ./templates/item-page__img.jade
 block title
   title Felt Catbears - The Catbears
 
-block gallery-img
+block main-img
   iframe.video(src='https://www.youtube.com/embed/C-VCCDoCjdc?rel=0&;showinfo=0', frameborder='0', allowfullscreen='')
 //- block gallery-img
 //-   a(href='../pdf/The-Catbears_Make-Felt-Catbears.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__felt-catbears'); lightboxInit('subscribe')")
 //-     img(src='../img/pages/felt-catbears__001.png', alt='Felt Catbears by The Catbears')
+
+block gallery-items
+  a(href='../pdf/The-Catbears_Make-Felt-Catbears.pdf#page=1' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__Felt-Catbears'); lightboxInit('subscribe')") 
+    li.gallery__item.gallery__item--1
+      img(src='../img/pages/felt-catbears/page_001.png', alt='Coloring Page by The Catbears')
+  a(href='../pdf/The-Catbears_Make-Felt-Catbears.pdf#page=2' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__Felt-Catbears'); lightboxInit('subscribe')") 
+    li.gallery__item.gallery__item--1 
+      img(src='../img/pages/felt-catbears/page_002.png', alt='Coloring Book by The Catbears')
+  a(href='../pdf/The-Catbears_Make-Felt-Catbears.pdf#page=3' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__Felt-Catbears'); lightboxInit('subscribe')") 
+    li.gallery__item.gallery__item--1 
+      img(src='../img/pages/felt-catbears/page_003.png', alt='Coloring Book by The Catbears')
+
 
 block page-item__title
   | Make Felt Catbears 
@@ -15,7 +27,7 @@ block page-item__title
 block page-item__description--p
   | Print these 3 instruction pages to make Catbears from Felt!  
 
-block page-item__info
+//- block page-item__info
   .page-item__info--list
     ul.bullet Here's what you'll need:
       li.bullet A pair of scissors
@@ -25,7 +37,7 @@ block page-item__cta--micro-text
   p PDF file ・ 500KB ・ 3 Printable Pages
 
 block page-item__cta
-  a.btn.btn__icon.btn__large.btn__primary.btn__payed(href='../pdf/The-Catbears_Make-Felt-Catbears.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__felt-catbears'); lightboxInit('subscribe')") PRINT
+  a.btn.btn__icon.btn__large.btn__primary.btn__payed(href='../pdf/The-Catbears_Make-Felt-Catbears.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__felt-catbears'); lightboxInit('subscribe')") PRINT (3)
     .btn__icon--printer
 
 

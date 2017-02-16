@@ -4,10 +4,18 @@ block title
   title Finger Puppets - The Catbears
 
 
-block gallery-img
+block main-img
   .img-fit-container
     a(href='../pdf/The-Catbears_Finger-Puppets.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__Finger-Puppets'); lightboxInit('subscribe')")
     img(src='../img/pages/finger-puppets.png', alt='Finger Puppets by The Catbears')
+
+block gallery-items
+  a(href='../pdf/The-Catbears_Finger-Puppets.pdf#page=1' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__Finger-Puppets'); lightboxInit('subscribe')")
+    li.gallery__item.gallery__item--1
+      img(src='../img/pages/finger-puppets/page_001.png', alt='Activity Page by The Catbears')
+  a(href='../pdf/The-Catbears_Finger-Puppets.pdf#page=2' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__Finger-Puppets'); lightboxInit('subscribe')")
+    li.gallery__item.gallery__item--1 
+      img(src='../img/pages/finger-puppets/page_002.png', alt='Activity Page by The Catbears')
 
 block page-item__title
   | Finger Puppets 
@@ -15,7 +23,7 @@ block page-item__title
 block page-item__description--p
   | Print these 2 instruction pages to make Finger Catbear Puppets!  
 
-block page-item__info
+//- block page-item__info
   .page-item__info--list
     ul.bullet Here's what you'll need:
       li.bullet Coloring materials
@@ -27,7 +35,7 @@ block page-item__cta--micro-text
   p PDF file ・ 35KB ・ 2 Printable Pages
 
 block page-item__cta
-  a.btn.btn__icon.btn__large.btn__primary.btn__payed(href='../pdf/The-Catbears_Finger-Puppets.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Finger-Puppets'); lightboxInit('subscribe')") PRINT
+  a.btn.btn__icon.btn__large.btn__primary.btn__payed(href='../pdf/The-Catbears_Finger-Puppets.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Finger-Puppets'); lightboxInit('subscribe')") PRINT (2)
     .btn__icon--printer
 
 block page-description

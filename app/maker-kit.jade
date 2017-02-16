@@ -5,10 +5,24 @@ extends ./templates/item-page__img.jade
 block title
   title Maker Kit - The Catbears
 
-block gallery-img
+block main-img
   a(href='../pdf/The-Catbears_Maker-Kit.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__Maker-Kit'); lightboxInit('subscribe')")
     .img-fit-container
       img(src='../img/pages/maker-kit.png', alt='Maker Kit by The Catbears')
+
+block gallery-items
+  a(href='../pdf/The-Catbears_Maker-Kit.pdf#page=1' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__Maker-Kit'); lightboxInit('subscribe')")
+    li.gallery__item.gallery__item--1
+      img(src='../img/pages/maker-kit/page_001.png', alt='Activity Page by The Catbears')
+  a(href='../pdf/The-Catbears_Maker-Kit.pdf#page=2' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__Maker-Kit'); lightboxInit('subscribe')")
+    li.gallery__item.gallery__item--1 
+      img(src='../img/pages/maker-kit/page_002.png', alt='Activity Page by The Catbears')
+  a(href='../pdf/The-Catbears_Maker-Kit.pdf#page=3' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__Maker-Kit'); lightboxInit('subscribe')")
+    li.gallery__item.gallery__item--1 
+      img(src='../img/pages/maker-kit/page_003.png', alt='Activity Page by The Catbears')
+  a(href='../pdf/The-Catbears_Maker-Kit.pdf#page=4' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__Maker-Kit'); lightboxInit('subscribe')")
+    li.gallery__item.gallery__item--1 
+      img(src='../img/pages/maker-kit/page_004.png', alt='Activity Page by The Catbears')
 
 block page-item__title
   | Catbears Maker Kit
@@ -16,7 +30,7 @@ block page-item__title
 block page-item__description--p
   | Make your very own maker kit using felt, glue and velcro tape! 
 
-block page-item__info
+//- block page-item__info
   .page-item__info--list
     ul.bullet Here's what you'll need:
       li.bullet Colorful felt sheets
@@ -28,7 +42,7 @@ block page-item__cta--micro-text
   p PDF file ・ 620KB ・ 4 Printable Page
 
 block page-item__cta
-  a.btn.btn__icon.btn__large.btn__primary.btn__payed(href='../pdf/The-Catbears_Maker-Kit.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Maker-Kit'); lightboxInit('subscribe')") PRINT
+  a.btn.btn__icon.btn__large.btn__primary.btn__payed(href='../pdf/The-Catbears_Maker-Kit.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Maker-Kit'); lightboxInit('subscribe')") PRINT (4)
     .btn__icon--printer
 block page-description
   .page-description

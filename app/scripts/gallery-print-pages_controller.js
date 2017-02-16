@@ -1,5 +1,7 @@
 var autoSlide = false;
-var autoSlideTimer = 5000;
+var autoSlideMin = 7000;
+var autoSlideMax = 9000;
+var autoSlideTimer = getRandomInteger(autoSlideMin,autoSlideMax)
 var autoSlidingToRight = true;
 var autoSlidePaused = false;
     
@@ -8,21 +10,23 @@ var $galleryBtnRight;
 var $galleryBtnLeft;
 var galleryWidth;
 var numOfSlides;
-var currentSlide = 0;
-var speed = 450;
+var currentGalleryJumpNum = 0;
+var speed = 200;
 var spacer = 13;
 var autoSlideInterval;
 var galleryItemAndSpacer;
 var $counter;
 var screensize;
 var staticGallery = false;
-var bounceRate = 12; //reaching the end of the gallery - bounceRate
+var bounceRate = 20; //reaching the end of the gallery - bounceRate
+var bounceSpeed = 110;
 
 var autoSetJumpNum = true;
-var checkPossibleSlide = 0;
-var slideJumpNum = 3; // number of slides being jumped when moving right / left
-var moveToSlide;
+var numOfNextSlides = 0;
+var numOfSlidesFitGallery = 3; // number of slides being jumped when moving right / left
+var currentSlideNum;
 var howManyFitInContainer;
+var numOfSlidesToSlide;
 
 test = function () {
   alert ('test function')
@@ -39,15 +43,15 @@ $(document).ready(function() {
 
   setScreensize();
   setNewGallerySizes();
-  setSlideJumpNum();
-  moveToSlide = slideJumpNum;
+  setnumOfSlidesFitGallery();
+  currentSlideNum = numOfSlidesFitGallery;
 
   $( window ).resize(function() {
     setScreensize();
     setNewGallerySizes();
-    setSlideJumpNum();
-    moveToSlide = moveToSlide + slideJumpNum;
-    console.log('slideJumpNum  ' + slideJumpNum );
+    setnumOfSlidesFitGallery();
+    currentSlideNum = currentSlideNum + numOfSlidesFitGallery;
+    console.log('numOfSlidesFitGallery  ' + numOfSlidesFitGallery );
   });
 });
 
@@ -58,41 +62,47 @@ setScreensize = function () {
 
 
 function setNewGallerySizes () {
-  galleryItemAndSpacer = $galleryItem.width() + spacer;
+  galleryItemAndSpacer = $galleryItem.outerWidth() + spacer;
   galleryWidth = (galleryItemAndSpacer * numOfSlides) + (spacer * numOfSlides);
   $gallery.css("width" , galleryWidth )
 }
 
 
 
-function gallerySildeRight () {
-
-  
+function gallerySlideRight () {
 
   if (!staticGallery){
-
-    checkPossibleSlide = numOfSlides - moveToSlide;
+    numOfNextSlides = numOfSlides - currentSlideNum;
     
-    if (checkPossibleSlide > 0){
-      moveToSlide = (moveToSlide + slideJumpNum);
-
+    if (numOfNextSlides >= 0){
+      currentSlideNum = (currentSlideNum + numOfSlidesFitGallery);
+      
+      // currentSlideNum can't be larger then numOfSlides 
+      if (currentSlideNum > numOfSlides) {
+        currentSlideNum = numOfSlides
+      }
       // check if we should fadeOut $pageFadeRight
-      if (numOfSlides - moveToSlide <= 0){
+      if (numOfSlides - currentSlideNum <= 0){
         $pageFadeRight.fadeOut(250);
       }
 
-      $gallery.animate({'margin-left' : '-=' + galleryItemAndSpacer * slideJumpNum} , speed, function (){
-        currentSlide = ( currentSlide + slideJumpNum ) % numOfSlides ;
-        updateBubble(currentSlide);
+      if (numOfNextSlides >= numOfSlidesFitGallery){
+        numOfSlidesToSlide = numOfSlidesFitGallery     
+      }else {
+        numOfSlidesToSlide = numOfNextSlides
+      }
+      // console.log ('numOfSlidesToSlide = ' + numOfSlidesToSlide)
+
+      $gallery.animate({'margin-left' : '-=' + galleryItemAndSpacer * numOfSlidesToSlide} , speed, function (){
+        currentGalleryJumpNum = ( currentGalleryJumpNum + numOfSlidesToSlide ) % numOfSlides ;
+        updateBubble(currentGalleryJumpNum);
         
       })
     }
+    // console.log ('currentSlideNum = ' + currentSlideNum)
 
-    console.log ('checkPossibleSlide = ' + checkPossibleSlide);
-    console.log ('moveToSlide = ' + moveToSlide);
     // bounce right
-    if (currentSlide >= numOfSlides - slideJumpNum){
-      // alert ("bounceRight")
+    if (currentGalleryJumpNum >= numOfSlides - numOfSlidesFitGallery){
       bounceRight();
     }
 
@@ -101,22 +111,41 @@ function gallerySildeRight () {
 
 function gallerySildeLeft () {
   if (!staticGallery){
-    if (moveToSlide > 0 + slideJumpNum ){
-      moveToSlide = (moveToSlide - slideJumpNum) % numOfSlides ;
+
+    numOfNextSlides = currentSlideNum - numOfSlidesFitGallery ;
+    console.log ('currentSlideNum = ' + currentSlideNum);
+    console.log ('numOfNextSlides = ' + numOfNextSlides);
+
+    if (numOfNextSlides > 0 ){
+      currentSlideNum = (currentSlideNum - numOfSlidesFitGallery) % numOfSlides ;
+      
+      // currentSlideNum can't be smaller then numOfSlidesFitGallery 
+      if (currentSlideNum < numOfSlidesFitGallery) {
+        currentSlideNum = numOfSlidesFitGallery
+      }
 
       // check if we should fadeIn $pageFadeRight
-      if (numOfSlides - moveToSlide > 0){
+      if (numOfSlides - currentSlideNum > 0){
         $pageFadeRight.fadeIn(650);
       }
 
-      $gallery.animate({'margin-left' : '+=' + galleryItemAndSpacer * slideJumpNum} , speed, function (){
-          currentSlide = ( currentSlide - slideJumpNum ) % numOfSlides ;
-          updateBubble(currentSlide)
+      if (numOfNextSlides >= numOfSlidesFitGallery){
+        numOfSlidesToSlide = numOfSlidesFitGallery     
+      }else {
+        numOfSlidesToSlide = numOfNextSlides
+      }
+      console.log ('numOfSlidesToSlide = ' + numOfSlidesToSlide)
+
+
+
+      $gallery.animate({'margin-left' : '+=' + galleryItemAndSpacer * numOfSlidesToSlide} , speed, function (){
+          currentGalleryJumpNum = ( currentGalleryJumpNum - numOfSlidesToSlide ) % numOfSlides ;
+          updateBubble(currentGalleryJumpNum)
         })
 
     }
 
-    if ( currentSlide === 0 ){
+    if ( currentGalleryJumpNum === 0 ){
       bounceLeft();
     }
   }
@@ -124,14 +153,14 @@ function gallerySildeLeft () {
 
 function bounceRight () {
   $gallery
-  .animate({'margin-left' : '-=' + bounceRate} , 100)
-  .animate({'margin-left' : '+=' + bounceRate} , 100)
+  .animate({'margin-left' : '-=' + bounceRate} , bounceSpeed)
+  .animate({'margin-left' : '+=' + bounceRate} , bounceSpeed)
 };
 
 function bounceLeft () {
   $gallery
-  .animate({'margin-left' : '+=' + bounceRate} , 100)
-  .animate({'margin-left' : '-=' + bounceRate} , 100)
+  .animate({'margin-left' : '+=' + bounceRate} , bounceSpeed)
+  .animate({'margin-left' : '-=' + bounceRate} , bounceSpeed)
 };
 
 
@@ -139,22 +168,30 @@ function bounceLeft () {
 
 
 // -- 
+ // function bounceHint () {
+ //  bounceRight()
+ // }
 
  autoSlideON = function () {
       // console.log('Auto Slide ON')
 
-      if ( currentSlide === 0 ){
+      if ( currentGalleryJumpNum === 0 ){
         autoSlidingToRight = true;
       }
-      if ( currentSlide === numOfSlides -1 ){
+      if ( currentSlideNum === numOfSlides ){
         autoSlidingToRight = false;
       }
 
       if(!autoSlidePaused){
         if (autoSlidingToRight){
-          gallerySildeRight ();
+          autoSlideTimer = getRandomInteger(autoSlideMin,autoSlideMax)
+          console.log ('autoSlideTimer = ' + autoSlideTimer)
+          bounceLeft()
+          bounceLeft()
+          // gallerySlideRight ();
         }else{
-          gallerySildeLeft ();
+          // gallerySildeLeft ();
+          // bounceLeft()
         }
       }
     }
@@ -180,6 +217,7 @@ autoSlidePauseRestart = function () {
 
 autoSlideInit = function() {
   if (autoSlide) {
+    clearInterval(autoSlideInterval)
     autoSlideInterval = setInterval( autoSlideON , autoSlideTimer);
   }
 };
@@ -209,7 +247,7 @@ function setBubbleCounter () {
   for (var i=0 ; i < numOfSlides ; i++){
     var thisBubble = createCounterBubble (i);
   }
-  updateBubble(currentSlide)
+  updateBubble(currentGalleryJumpNum)
 
   if (numOfSlides == 1){
     SingleImageGallery = true;
@@ -233,45 +271,58 @@ function galleryInit () {
     autoSlideInit();
 
     $galleryBtnRight.click( function (){
-      gallerySildeRight ();
+      gallerySlideRight ();
     })
     
     $galleryBtnLeft.click( function (){
       gallerySildeLeft ();
     })
 
-  //configure hammer.js
-  var galleryTouchElement = document.getElementById('gallery-controller');
-  var galleryTouchControl = new Hammer(galleryTouchElement);
+  // //configure hammer.js
+  // var galleryTouchElement = document.getElementById('gallery-controller');
+  // var galleryTouchControl = new Hammer(galleryTouchElement);
 
-  // listen to events...
-  galleryTouchControl.on("swipeleft swipeup ", function(){
-    gallerySildeRight();
-    autoSlidePauseRestart();
-  } );
-  galleryTouchControl.on("swiperight swipeup ", function(){
-    gallerySildeLeft();
-    autoSlidePauseRestart();
-    }
-  );
+  // // listen to events...
+  // galleryTouchControl.on("swipeleft swipeup ", function(){
+  //   gallerySlideRight();
+  //   autoSlidePauseRestart();
+  // } );
+  // galleryTouchControl.on("swiperight swipeup ", function(){
+  //   gallerySildeLeft();
+  //   autoSlidePauseRestart();
+  //   }
+  // );
+
+  // // tap on a gallery item
+  // var galleryItemTouchElement = document.getElementById('gallery__item');
+  // var galleryItemTouchControl = new Hammer(galleryItemTouchElement);
+  
+  // // listen to events...
+  // galleryTouchControl.on("tap", function(){
+  //   alert ('tap on gallery item') 
+  // } );
+
+
 };
 
+function getRandomInteger(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
+}
 
-function setSlideJumpNum () {
+
+function setnumOfSlidesFitGallery () {
   if (autoSetJumpNum) {
     howManyFitInContainer = [$('.gallery-container').width() + spacer] / galleryItemAndSpacer ;
-    slideJumpNum = Math.floor(howManyFitInContainer);
+    numOfSlidesFitGallery = Math.floor(howManyFitInContainer);
 
-    if (slideJumpNum >= numOfSlides){
+    if (numOfSlidesFitGallery >= numOfSlides){
       staticGallery = true;
-      $galleryBtnRight.hide();
-      $galleryBtnLeft.hide();
-      $pageFadeRight.hide();
+      $('.gallery-container').addClass('static-gallery')
     }else {
       staticGallery = false;
-      $galleryBtnRight.show();
-      $galleryBtnLeft.show();
-      $pageFadeRight.show();
+      $('.gallery-container').removeClass('static-gallery')
     }
   }
 };
