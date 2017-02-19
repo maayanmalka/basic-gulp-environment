@@ -166,12 +166,13 @@
     }
     .note__social-buttons {
         .btn__note--social {
-            width: 57px;
-            height: 57px;
             margin-right: 10px;
+            padding : 7px;
+            max-width: 60px;
             float: left;
-            padding : 14px;
             img {
+                width: 57px;
+                height: 57px;
             }
         }
     }
