@@ -5,17 +5,18 @@ block title
 
 
 block main-img
-  .img-fit-container
-    a(href='../pdf/The-Catbears_Finger-Puppets.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__Finger-Puppets'); lightboxInit('subscribe')")
-    img(src='../img/pages/finger-puppets.png', alt='Finger Puppets by The Catbears')
+  - var pageName = 'Finger-Puppets'
+  a(href='../pdf/The-Catbears_#{pageName}' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__#{pageName}'); lightboxInit('subscribe')")
+    .img-fit-container
+      img(src='../img/pages/#{pageName}.png', alt='#{pageName} by The Catbears')
 
 block gallery-items
-  a(href='../pdf/The-Catbears_Finger-Puppets.pdf#page=1' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__Finger-Puppets'); lightboxInit('subscribe')")
-    li.gallery__item.gallery__item--1
-      img(src='../img/pages/finger-puppets/page_001.png', alt='Activity Page by The Catbears')
-  a(href='../pdf/The-Catbears_Finger-Puppets.pdf#page=2' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__Finger-Puppets'); lightboxInit('subscribe')")
-    li.gallery__item.gallery__item--1 
-      img(src='../img/pages/finger-puppets/page_002.png', alt='Activity Page by The Catbears')
+  - var pageName = 'Finger-Puppets'
+  - var numberOfPages = 2
+  - for (var i = 1; i <= +numberOfPages; i++)
+      a(href='../pdf/The-Catbears_#{pageName}.pdf#page=#{i}' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__#{pageName}'); lightboxInit('subscribe')") 
+        li.gallery__item.gallery__item--1 
+          img(src='../img/pages/#{pageName}/page_#{i}.png', alt='Activity Page by The Catbears')
 
 block page-item__title
   | Finger Puppets 
@@ -35,7 +36,9 @@ block page-item__cta--micro-text
   p PDF file ・ 35KB ・ 2 Printable Pages
 
 block page-item__cta
-  a.btn.btn__icon.btn__large.btn__primary.btn__payed(href='../pdf/The-Catbears_Finger-Puppets.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Finger-Puppets'); lightboxInit('subscribe')") PRINT (2)
+  - var pageName = 'Finger-Puppets'
+  - var numberOfPages = 2
+  a.btn.btn__icon.btn__large.btn__primary(href='../pdf/The-Catbears_#{pageName}.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Catbears-Stickers'); lightboxInit('subscribe')") PRINT (#{numberOfPages})
     .btn__icon--printer
 
 block page-description

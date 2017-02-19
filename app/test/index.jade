@@ -1,0 +1,17 @@
+// test.jade
+
+- var pageName = 'DIY-book-duck-in-trouble'
+- var numberOfPages = 28
+
+- for (var i = 1; i <= +numberOfPages; i++)
+   a(href='../pdf/The_Catbears-#{pageName}#page=#{i}' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__#{pageName}'); lightboxInit('subscribe')") #{i}
+     li.gallery__item.gallery__item--1 
+        img(src='../img/pages/#{pageName}/page_#{i}.png', alt='Activity Page by The Catbears')
+
+//- a(href='../pdf/The_Catbears-a_Tiny_Little_Duck_Got_In_Really_Big_Trouble-Coloring_Book.pdf#page=1' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__DIY-book-duck-in-trouble'); lightboxInit('subscribe')") PDF
+
+//- div(id=headid)    
+//-   h1 #{page}
+//-   img(src=imgsrc)
+//- div(id=page)
+//-   include templates

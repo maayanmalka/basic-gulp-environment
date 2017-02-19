@@ -23,10 +23,12 @@ html
       .site-layot
         include ../include/nav__inner-page_only-logo.jade
         // page-item 
+        include ../include/pinterestBtn.jade
         .page-item(onmouseover='autoSlidePause()', onmouseout='autoSlideRestart()')
             .page-item__main-img
                block main-img
             .page-item__content
+
                 h1.item--title 
                   block page-item__title
                 .page-item__description   

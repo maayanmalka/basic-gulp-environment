@@ -4,28 +4,18 @@ block title
   title 5 Coloring Pages - The Catbears
 
 block main-img
-  a(href='../pdf/The-Catbears-5-coloring-pages.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__5-coloring-pages'); lightboxInit('subscribe')")
+  - var pageName = 'Coloring-Pages'
+  a(href='../pdf/The-Catbears_#{pageName}' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__#{pageName}'); lightboxInit('subscribe')")
     .img-fit-container
-      img(src='../img/pages/coloring-pages__000.png', alt='Coloring Page by The Catbears')
+      img(src='../img/pages/#{pageName}.png', alt='#{pageName} by The Catbears')
 
 block gallery-items
-  a(href='../pdf/The-Catbears-5-coloring-pages.pdf#page=1' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__Coloring-Pages'); lightboxInit('subscribe')")
-    li.gallery__item.gallery__item--1
-      img(src='../img/pages/coloring-pages/page_001.png', alt='Activity Page by The Catbears')
-  a(href='../pdf/The-Catbears-5-coloring-pages.pdf#page=2' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__Coloring-Pages'); lightboxInit('subscribe')")
-    li.gallery__item.gallery__item--1 
-      img(src='../img/pages/coloring-pages/page_002.png', alt='Activity Page by The Catbears')
-  a(href='../pdf/The-Catbears-5-coloring-pages.pdf#page=3' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__Coloring-Pages'); lightboxInit('subscribe')")
-    li.gallery__item.gallery__item--1 
-      img(src='../img/pages/coloring-pages/page_003.png', alt='Activity Page by The Catbears')
-  a(href='../pdf/The-Catbears-5-coloring-pages.pdf#page=4' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__Coloring-Pages'); lightboxInit('subscribe')")
-    li.gallery__item.gallery__item--1 
-      img(src='../img/pages/coloring-pages/page_004.png', alt='Activity Page by The Catbears')
-  a(href='../pdf/The-Catbears-5-coloring-pages.pdf#page=5' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__Coloring-Pages'); lightboxInit('subscribe')")
-    li.gallery__item.gallery__item--1 
-      img(src='../img/pages/coloring-pages/page_005.png', alt='Activity Page by The Catbears')
-
- 
+  - var pageName = 'Coloring-Pages'
+  - var numberOfPages = 5
+  - for (var i = 1; i <= +numberOfPages; i++)
+      a(href='../pdf/The-Catbears_#{pageName}.pdf#page=#{i}' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__#{pageName}'); lightboxInit('subscribe')") 
+        li.gallery__item.gallery__item--1 
+          img(src='../img/pages/#{pageName}/page_#{i}.png', alt='Activity Page by The Catbears')
 
 block page-item__title
   | Printable Coloring Pages 
@@ -44,7 +34,10 @@ block page-item__cta--micro-text
   p PDF file ・ 2MB ・ 5 Printable Pages
 
 block page-item__cta
-  a.btn.btn__large.btn__primary.btn__payed(href='../pdf/The-Catbears-5-coloring-pages.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__5-coloring-pages'); lightboxInit('subscribe')") PRINT (5)
+  - var pageName = 'Coloring-Pages'
+  - var numberOfPages = 5
+  a.btn.btn__icon.btn__large.btn__primary(href='../pdf/The-Catbears_#{pageName}.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Catbears-Stickers'); lightboxInit('subscribe')") PRINT (#{numberOfPages})
+    .btn__icon--printer
 
 block page-description
   .page-description

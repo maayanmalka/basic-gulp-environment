@@ -427,3 +427,50 @@ p.bullet {
 .color--skyblue {
   color : $catbears__skyblue;
 }
+
+
+// Pinterest Btn
+
+.pinterestBtnContainer {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: block;
+  .pinterestBtn {
+    width: 50px;
+    position: absolute;
+    right: -11px;
+    top : 12px;
+    width: auto;
+    height: auto;
+      z-index: 99999;
+    img {
+    }
+  }
+}
+
+
+// saturation hover
+
+.saturateOnHover {
+  -webkit-filter: saturate(0.85);
+  filter: saturate(0.85);
+  transition : filter 100ms ease-in-out , -webkit-filter 100ms ease-in-out , margin-top 100ms ease-in-out , margin-bottom 100ms ease-in-out , transform 100ms ease-in-out;
+
+  &:hover {
+    -webkit-filter: saturate(1);
+    filter: saturate(1);
+  }
+}
+
+
+.unSaturateOnHover {
+  -webkit-filter: saturate(1);
+  filter: saturate(1);
+  transition : filter 100ms ease-in-out , -webkit-filter 100ms ease-in-out , margin-top 100ms ease-in-out , margin-bottom 100ms ease-in-out , transform 100ms ease-in-out;
+
+  &:hover {
+    -webkit-filter: saturate(0.85);
+    filter: saturate(0.85);
+  }
+}

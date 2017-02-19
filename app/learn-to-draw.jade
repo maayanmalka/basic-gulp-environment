@@ -9,21 +9,12 @@ block main-img
 
 
 block gallery-items
-  a(href='../pdf/The-Catbears-Learn-To-Draw.pdf#page=1' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__Learn-To-Draw'); lightboxInit('subscribe')") 
-    li.gallery__item.gallery__item--1
-      img(src='../img/pages/learn-to-draw/page_001.png', alt='Activity Page by The Catbears')
-  a(href='../pdf/The-Catbears-Learn-To-Draw.pdf#page=2' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__Learn-To-Draw'); lightboxInit('subscribe')") 
-    li.gallery__item.gallery__item--1 
-      img(src='../img/pages/learn-to-draw/page_002.png', alt='Activity Page by The Catbears')
-  a(href='../pdf/The-Catbears-Learn-To-Draw.pdf#page=3' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__Learn-To-Draw'); lightboxInit('subscribe')") 
-    li.gallery__item.gallery__item--1 
-      img(src='../img/pages/learn-to-draw/page_003.png', alt='Activity Page by The Catbears')
-  a(href='../pdf/The-Catbears-Learn-To-Draw.pdf#page=4' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__Learn-To-Draw'); lightboxInit('subscribe')") 
-    li.gallery__item.gallery__item--1 
-      img(src='../img/pages/learn-to-draw/page_004.png', alt='Activity Page by The Catbears')
-  a(href='../pdf/The-Catbears-Learn-To-Draw.pdf#page=5' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__Learn-To-Draw'); lightboxInit('subscribe')") 
-    li.gallery__item.gallery__item--1 
-      img(src='../img/pages/learn-to-draw/page_005.png', alt='Activity Page by The Catbears')
+  - var pageName = 'Learn-To-Draw'
+  - var numberOfPages = 5
+  - for (var i = 1; i <= +numberOfPages; i++)
+      a(href='../pdf/The-Catbears_#{pageName}.pdf#page=#{i}' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__#{pageName}'); lightboxInit('subscribe')") 
+        li.gallery__item.gallery__item--1 
+          img(src='../img/pages/#{pageName}/page_#{i}.png', alt='Activity Page by The Catbears')
 
 
 block page-item__title
@@ -43,8 +34,11 @@ block page-item__cta--micro-text
   p PDF file ・ 700KB ・ 5 Printable Pages
 
 block page-item__cta
-  a.btn.btn__icon.btn__large.btn__primary.btn__payed(href='../pdf/The-Catbears-Learn-To-Draw.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Learn-To-Draw') ; lightboxInit('subscribe')" ) PRINT
+  - var pageName = 'Learn-To-Draw'
+  - var numberOfPages = 5
+  a.btn.btn__icon.btn__large.btn__primary(href='../pdf/The-Catbears_#{pageName}.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Catbears-Stickers'); lightboxInit('subscribe')") PRINT (#{numberOfPages})
     .btn__icon--printer
+
 block page-description
   .page-description
      h1 Description

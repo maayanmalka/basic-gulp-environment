@@ -6,23 +6,18 @@ block title
   title Maker Kit - The Catbears
 
 block main-img
-  a(href='../pdf/The-Catbears_Maker-Kit.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__Maker-Kit'); lightboxInit('subscribe')")
+  - var pageName = 'Maker-Kit'
+  a(href='../pdf/The-Catbears_#{pageName}' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__#{pageName}'); lightboxInit('subscribe')")
     .img-fit-container
-      img(src='../img/pages/maker-kit.png', alt='Maker Kit by The Catbears')
+      img(src='../img/pages/#{pageName}.png', alt='#{pageName} by The Catbears')
 
 block gallery-items
-  a(href='../pdf/The-Catbears_Maker-Kit.pdf#page=1' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__Maker-Kit'); lightboxInit('subscribe')")
-    li.gallery__item.gallery__item--1
-      img(src='../img/pages/maker-kit/page_001.png', alt='Activity Page by The Catbears')
-  a(href='../pdf/The-Catbears_Maker-Kit.pdf#page=2' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__Maker-Kit'); lightboxInit('subscribe')")
-    li.gallery__item.gallery__item--1 
-      img(src='../img/pages/maker-kit/page_002.png', alt='Activity Page by The Catbears')
-  a(href='../pdf/The-Catbears_Maker-Kit.pdf#page=3' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__Maker-Kit'); lightboxInit('subscribe')")
-    li.gallery__item.gallery__item--1 
-      img(src='../img/pages/maker-kit/page_003.png', alt='Activity Page by The Catbears')
-  a(href='../pdf/The-Catbears_Maker-Kit.pdf#page=4' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__Maker-Kit'); lightboxInit('subscribe')")
-    li.gallery__item.gallery__item--1 
-      img(src='../img/pages/maker-kit/page_004.png', alt='Activity Page by The Catbears')
+  - var pageName = 'Maker-Kit'
+  - var numberOfPages = 4
+  - for (var i = 1; i <= +numberOfPages; i++)
+      a(href='../pdf/The-Catbears_#{pageName}.pdf#page=#{i}' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__#{pageName}'); lightboxInit('subscribe')") 
+        li.gallery__item.gallery__item--1 
+          img(src='../img/pages/#{pageName}/page_#{i}.png', alt='Activity Page by The Catbears')
 
 block page-item__title
   | Catbears Maker Kit
@@ -42,8 +37,11 @@ block page-item__cta--micro-text
   p PDF file ・ 620KB ・ 4 Printable Page
 
 block page-item__cta
-  a.btn.btn__icon.btn__large.btn__primary.btn__payed(href='../pdf/The-Catbears_Maker-Kit.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Maker-Kit'); lightboxInit('subscribe')") PRINT (4)
+  - var pageName = 'Maker-Kit'
+  - var numberOfPages = 4
+  a.btn.btn__icon.btn__large.btn__primary(href='../pdf/The-Catbears_#{pageName}.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Catbears-Stickers'); lightboxInit('subscribe')") PRINT (#{numberOfPages})
     .btn__icon--printer
+
 block page-description
   .page-description
     h1 Description

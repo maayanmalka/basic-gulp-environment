@@ -3,22 +3,22 @@ extends ./templates/item-page__img.jade
 block title
   title Catbears Stickers - The Catbears
 
+
 block main-img
-  a(href='../pdf/The-Catbears-Stickers.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__Catbears-Stickers'); lightboxInit('subscribe')")
+  - var pageName = 'Stickers'
+  a(href='../pdf/The-Catbears_#{pageName}' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__#{pageName}'); lightboxInit('subscribe')")
     .img-fit-container
-      img(src='../img/pages/catbears-stickers__000.png', alt='Stickers by The Catbears')
+      img(src='../img/pages/#{pageName}.png', alt='#{pageName} by The Catbears')
 
 block gallery-items
-  a(href='../pdf/The-Catbears-Stickers.pdf#page=1' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__Catbears-Stickers'); lightboxInit('subscribe')")
-    li.gallery__item.gallery__item--1
-      img(src='../img/pages/catbears-stickers/page_001.png', alt='Activity Page by The Catbears')
+  - var pageName = 'Stickers'
+  - var numberOfPages = 1
+  - for (var i = 1; i <= +numberOfPages; i++)
+      a(href='../pdf/The-Catbears_#{pageName}.pdf#page=#{i}' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__#{pageName}'); lightboxInit('subscribe')") 
+        li.gallery__item.gallery__item--1 
+          img(src='../img/pages/#{pageName}/page_#{i}.png', alt='Activity Page by The Catbears')
 
-//- block gallery-items
-//-   li.gallery__item.gallery__item--1 
-//-     img(src='../img/pages/catbears-stickers__001.png', alt='Catbears Stickers 001')
-//-   li.gallery__item.gallery__item--2 
-//-     img(src='../img/pages/catbears-stickers__002.png', alt='Catbears Stickers 002')
- 
+
 block page-item__title
   | DIY Catbears Stickers
 
@@ -26,8 +26,11 @@ block page-item__description--p
   | Make your own Catbears stickers! Print them on <strong>Sticker Paper</strong> and you're good to stick!  
 
 block page-item__cta
-  a.btn.btn__icon.btn__large.btn__primary(href='../pdf/The-Catbears-Stickers.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Catbears-Stickers'); lightboxInit('subscribe')") PRINT (1)
+  - var pageName = 'Stickers'
+  - var numberOfPages = 1
+  a.btn.btn__icon.btn__large.btn__primary(href='../pdf/The-Catbears_#{pageName}.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Catbears-Stickers'); lightboxInit('subscribe')") PRINT (#{numberOfPages})
     .btn__icon--printer
+      
 block page-item__cta--micro-text                  
   p PDF file ・ 1MB ・ 1 Printable Page
 
