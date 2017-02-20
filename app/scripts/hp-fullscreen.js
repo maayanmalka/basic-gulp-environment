@@ -2,22 +2,28 @@
 
 // - google API
 
-var videoPlaying = "C-VCCDoCjdc"; // greeting card
+var videoPlaying = "C-VCCDoCjdc";
 // var playlist = 'PLQdt0d06hISY0p7YaAbQMHfK72gVgE4j2' // the catbears playlist
 // C-VCCDoCjdc; // felt catbears
 // zL8m4A6l8zI; // greeting card
 // aXO59eNjhoc; // DIY book duck in trouble
 // aoiGNe4_5uI; // graffity
 
-var videoCounter = 0;
-var videoArr = ['C-VCCDoCjdc', 'zL8m4A6l8zI' , 'aXO59eNjhoc'];
+var vidFeltCatbears = 'C-VCCDoCjdc';
+var vidGreetingCard = "zL8m4A6l8zI";
+var vidDIYBook = 'aXO59eNjhoc' ;
+var vidGraffity = 'aoiGNe4_5uI' ;
+
+
+var videoArr = [vidFeltCatbears, vidGreetingCard , vidDIYBook];
+var videoCounter = videoArr.length;
 
 function chooseNextVideo () {
-	if (videoCounter == videoArr.length){ 
+  videoPlaying = videoArr[videoCounter];
+  videoCounter++;
+	if (videoCounter > videoArr.length){ 
 		videoCounter = 0
 	}
-	videoPlaying = videoArr[videoCounter];
-	videoCounter++;
 	// console.log ('current Video ::: ' + videoPlaying)
 
 	return videoPlaying;
@@ -34,21 +40,22 @@ function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
       // height: '390',
       // width: '640',
-      videoId: videoPlaying,
+      videoId: chooseNextVideo(),
       playerVars: {
         'autoplay': 1,
         'controls': 0,
         'autohide': 1,
         'wmode': 'opaque',
         'showinfo': 0,
+        'speed' : 2,
         'loop': 1,
         'mute': 1,
-        'startSeconds': 5,
+        'startSeconds': 500,
         // 'suggestedQuality': 'large',
         'end': 110,
-        'playlist': videoPlaying
+        'playlist': chooseNextVideo()
       },
-      videoId: videoPlaying,
+      videoId: chooseNextVideo(),
         events: {
             'onReady': onPlayerReady,
             'onPlayerStateChange' : onPlayerStateChange
@@ -80,17 +87,17 @@ function checkPlayerState (){
 	if (!playerStarted){
 	  playerStartTimer = setInterval( function (){
 	    if (player.getPlayerState() == 1) {
-	    	console.log("video started!!!!")
+	    	// console.log("video started!!!!")
 	    	// clearInterval(playerStarted)
 	    	// chooseNextVideo();
 	    	$('#player').fadeIn(400);
 	    }
 	    else{
 	    	if (player.getPlayerState() == 3) {
-	    		console.log("video buffering !!!!")
+	    		// console.log("video buffering !!!!")
 		    	$('#player').hide();	
 	    	}else{
-	    		console.log("video NOT started !!!!")
+	    		// console.log("video NOT started !!!!")
 	    	}
 	    }
 	 	
