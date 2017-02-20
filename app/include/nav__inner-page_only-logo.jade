@@ -1,8 +1,11 @@
+
+
 #page-navigation
     .logo-container 
         //- a.back-btn(href='../index.html') ← Back 
         a.shake__hover(href='../')
             img(src='../img/logo-header.png', alt='logo-header', style='width:110px;height:74px;')
+        a.scroll-to-signup.nav-item.nav-item__signup(onClick = "ga('send', 'event', 'Button', 'Click', 'Nav__SignUp')") Join Us
         
     //- .menu
       //- p

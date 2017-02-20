@@ -2,11 +2,12 @@
 link(rel='stylesheet', type='text/css', href='../css/sticky-nav.css')
 
 .sticky-nav
-	.sticky-nav__items
-		a.shake__hover.sticky-nav__logo(href="../" onClick = "ga('send', 'event', 'Button', 'Click', 'Nav__Logo')")
-			//- img(src="../img/hp/hp-logo__dark.png", alt="The Catbears Logo")
-		//- h1 🎈
-		a.nav-item.nav-item__about(href="../about.html" onClick = "ga('send', 'event', 'Button', 'Click', 'Nav__About')") About
-		a.nav-item.nav-item__home(href="../" onClick = "ga('send', 'event', 'Button', 'Click', 'Nav__Home')") ← Home
-		a.nav-item.nav-item__contact(href="mailto:catbearsteam@gmail.com?subject=Hey There Catbears!&body=Dear Catbears,", target='_top' onClick = "ga('send', 'event', 'Button', 'Click', 'Nav__Contact')") Contact
-		a.scroll-to-signup.nav-item.nav-item__signup(onClick = "ga('send', 'event', 'Button', 'Click', 'Nav__SignUp')") SIGN UP
+    .sticky-nav__items
+        a.shake__hover.sticky-nav__logo.sticky-nav__logo--large(href="../" onClick = "ga('send', 'event', 'Button', 'Click', 'Nav__Logo--large')")
+            
+        a.shake__hover.sticky-nav__logo.sticky-nav__logo--small(href="../" onClick = "ga('send', 'event', 'Button', 'Click', 'Nav__Logo--small')")
+
+        a.nav-item.nav-item__about(href="../about.html" onClick = "ga('send', 'event', 'Button', 'Click', 'Nav__About')") About
+        a.nav-item.nav-item__home(href="../" onClick = "ga('send', 'event', 'Button', 'Click', 'Nav__Home')") ← Home
+        a.nav-item.nav-item__contact(href="mailto:catbearsteam@gmail.com?subject=Hey There Catbears!&body=Dear Catbears,", target='_top' onClick = "ga('send', 'event', 'Button', 'Click', 'Nav__Contact')") Contact
+        a.scroll-to-signup.nav-item.nav-item__signup(onClick = "ga('send', 'event', 'Button', 'Click', 'Nav__SignUp')") Join Us

@@ -20,28 +20,44 @@ h2.price__content--free {
   // margin-top: -2px;
 }
 
-.logo-container {
-  display: flex;
-  flex-direction : column;
-}
+// .logo-container {
+//   float: left;
+//   width: 100%;
+//   background-color: orange;
+//   // display: flex;
+//   // flex-direction : column;
+//   .nav-item {http://localhost:3000/
+//     float: right;
+//     border : 2px red solid;
+//   }
+// }
 
-.logo-container img {
-  margin-top: 3px;
-  transform: rotate(-6deg);
-  -ms-transform: rotate(-6deg); /* IE 9 */
-  -webkit-transform: rotate(-6deg); /* Chrome, Safari, Opera */
-}
+.sticky-nav {
+  background-color: rgba(255,255,255,0.94);
+  height: 84px ;
+  box-shadow: 0px 5px 7px rgba(255,255,255,0.4);
+  position: fixed !important;
 
-#page-navigation {
-  width : 100%;
-  margin-bottom: 15px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: space-between;
-  margin-top: 10px;
-}
+  .sticky-nav__items {
+  max-width: 1330px;
+  margin: 0 auto;
 
+    .sticky-nav__logo--large {
+      display: none;
+    }
+
+    .sticky-nav__logo--small {
+      display: block !important;
+    }
+    .nav-item {
+      text-shadow: none !important;
+    }
+    .nav-item__contact , .nav-item__about {
+      color : #401908 !important;
+      display: none !important;
+    }
+  }
+}
 
 
 .share-banner {
@@ -68,6 +84,8 @@ $url_0: url(../img/pages/icon-pdf.png);
   float: left;
   display: flex;
   justify-content: space-between;
+  margin-top: 90px;
+  position: relative;
 }
 .page-item__main-img {
   height: 432px;
@@ -238,7 +256,18 @@ $url_0: url(../img/pages/icon-pdf.png);
       }
     }
   }
+
+  .sticky-nav .sticky-nav__items {
+    .sticky-nav__logo--small {
+      left : 10px !important;
+    } 
+    .nav-item__signup {
+      right : 0px !important;
+      margin : 0 !important;
+    }
+  }
 }
+
 
 
 @media(max-width: 480px) {

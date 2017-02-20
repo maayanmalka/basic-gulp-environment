@@ -19,16 +19,16 @@ html
 
   body
     include ../include/lightbox_subscribe.jade
+    include ../include/sticky-nav.jade
     #site-wrapper
       .site-layot
-        include ../include/nav__inner-page_only-logo.jade
+        //- include ../include/nav__inner-page_only-logo.jade
         // page-item 
-        include ../include/pinterestBtn.jade
         .page-item(onmouseover='autoSlidePause()', onmouseout='autoSlideRestart()')
+            include ../include/pinterestBtn.jade
             .page-item__main-img
                block main-img
             .page-item__content
-
                 h1.item--title 
                   block page-item__title
                 .page-item__description   
