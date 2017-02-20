@@ -76,7 +76,7 @@ function onPlayerReady(event) {
 }
 
 function onPlayerStateChange (event) {
-	console.log ('STATE CHANGE')
+	// console.log ('STATE CHANGE')
 	if (event.data == YT.PlayerState.BUFFERING){
 		alert ('video buffering!')
 	}
@@ -87,7 +87,7 @@ function checkPlayerState (){
 	if (!playerStarted){
 	  playerStartTimer = setInterval( function (){
 	    if (player.getPlayerState() == 1) {
-	    	// console.log("video started!!!!")
+	    	console.log("video started!!!!")
 	    	// clearInterval(playerStarted)
 	    	// chooseNextVideo();
 	    	$('#player').fadeIn(400);
@@ -171,11 +171,11 @@ function setScreenSizes () {
   screenWidth = document.documentElement.clientWidth;
   screenHeight = document.documentElement.clientHeight;
 
-  console.log ("screenWidth = " + screenWidth);
-  console.log ("screenHeight = " + screenHeight);
+  // console.log ("screenWidth = " + screenWidth);
+  // console.log ("screenHeight = " + screenHeight);
 
   screenRatio = screenWidth / screenHeight 
-  console.log ("Ratio = " + screenRatio)
+  // console.log ("Ratio = " + screenRatio)
 }
 
 function setPosterSize () {
@@ -203,11 +203,11 @@ function sizeVideoSize(){
 	horizontalPoster = screenRatio > videoRatio;
 
 	if (horizontalPoster) {
-		console.log ("H.P")
+		// console.log ("H.P")
 		// video.css({"height": videoHeight * videoWidth/aspectRatio });
 
 	}else{
-		console.log ("V.P");
+		// console.log ("V.P");
 		video.css({"height": screenHeight});
 		video.css({"width": screenHeight * videoRatio });
 		// video.css("width" : videoWidth * 2);

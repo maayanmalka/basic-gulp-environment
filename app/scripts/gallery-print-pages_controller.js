@@ -54,7 +54,7 @@ $(document).ready(function() {
 
     currentSlideNum = numOfSlidesFitGallery + currentGalleryJumpNum;  
 
-    console.log('numOfSlidesFitGallery  ' + numOfSlidesFitGallery );
+    // console.log('numOfSlidesFitGallery  ' + numOfSlidesFitGallery );
   });
 });
 
@@ -115,8 +115,8 @@ function gallerySildeLeft () {
   if (!staticGallery){
 
     numOfNextSlides = currentSlideNum - numOfSlidesFitGallery ;
-    console.log ('currentSlideNum = ' + currentSlideNum);
-    console.log ('numOfNextSlides = ' + numOfNextSlides);
+    // console.log ('currentSlideNum = ' + currentSlideNum);
+    // console.log ('numOfNextSlides = ' + numOfNextSlides);
 
     if (numOfNextSlides > 0 ){
       currentSlideNum = (currentSlideNum - numOfSlidesFitGallery) % numOfSlides ;
@@ -136,7 +136,7 @@ function gallerySildeLeft () {
       }else {
         numOfSlidesToSlide = numOfNextSlides
       }
-      console.log ('numOfSlidesToSlide = ' + numOfSlidesToSlide)
+      // console.log ('numOfSlidesToSlide = ' + numOfSlidesToSlide)
 
 
 
@@ -187,7 +187,7 @@ function bounceLeft () {
       if(!autoSlidePaused){
         if (autoSlidingToRight){
           autoSlideTimer = getRandomInteger(autoSlideMin,autoSlideMax)
-          console.log ('autoSlideTimer = ' + autoSlideTimer)
+          // console.log ('autoSlideTimer = ' + autoSlideTimer)
           bounceLeft()
           bounceLeft()
           // gallerySlideRight ();
