@@ -87,7 +87,7 @@ function checkPlayerState (){
 	if (!playerStarted){
 	  playerStartTimer = setInterval( function (){
 	    if (player.getPlayerState() == 1) {
-	    	console.log("video started!!!!")
+	    	// console.log("video started!!!!")
 	    	// clearInterval(playerStarted)
 	    	// chooseNextVideo();
 	    	$('#player').fadeIn(400);

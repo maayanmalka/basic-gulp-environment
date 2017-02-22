@@ -32,28 +32,23 @@ h2.price__content--free {
 //   }
 // }
 
-.sticky-nav {
-  background-color: rgba(255,255,255,0.94);
-  height: 84px ;
-  box-shadow: 0px 5px 7px rgba(255,255,255,0.4);
-  position: fixed !important;
+.navigation {
 
-  .sticky-nav__items {
+  .navigation__items {
   max-width: 1330px;
   margin: 0 auto;
 
-    .sticky-nav__logo--large {
+    .navigation__logo--large {
       display: none;
     }
 
-    .sticky-nav__logo--small {
+    .navigation__logo--small {
       display: block !important;
     }
     .nav-item {
       text-shadow: none !important;
     }
     .nav-item__contact , .nav-item__about {
-      color : #401908 !important;
       display: none !important;
     }
   }
@@ -261,14 +256,10 @@ $url_0: url(../img/pages/icon-pdf.png);
     }
   }
 
-  .sticky-nav .sticky-nav__items {
-    .sticky-nav__logo--small {
+  .navigation .navigation__items {
+    .navigation__logo--small {
       left : 10px !important;
     } 
-    .nav-item__signup {
-      right : 0px !important;
-      margin : 0 !important;
-    }
   }
 }
 

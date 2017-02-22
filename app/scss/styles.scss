@@ -9,6 +9,7 @@ CATBEARS ORANGE : #ff9231*/
 }
 
 body {
+  margin-top: 400px;
   font-family: 'Open Sans', sans-serif;
   margin: 0 auto;
   padding: 0;
@@ -105,6 +106,13 @@ input, button, submit {
   // display: flex !important;
   // justify-content: center !important;
   // align-content: center !important;
+  
+  // noMarkup
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none; 
+
   min-height: 38px;
   color: white;
   font-weight: 400;
@@ -477,4 +485,15 @@ p.bullet {
     -webkit-filter: saturate(0.85);
     filter: saturate(0.85);
   }
+}
+
+.sticky {
+  position: fixed !important;
+}
+
+.noMarkup {
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none; 
 }
