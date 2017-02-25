@@ -2,31 +2,92 @@
 
 // - google API
 
-var videoPlaying = "C-VCCDoCjdc";
+
 // var playlist = 'PLQdt0d06hISY0p7YaAbQMHfK72gVgE4j2' // the catbears playlist
 // C-VCCDoCjdc; // felt catbears
 // zL8m4A6l8zI; // greeting card
 // aXO59eNjhoc; // DIY book duck in trouble
 // aoiGNe4_5uI; // graffity
+var playlistCatbears = 'PLQdt0d06hISY0p7YaAbQMHfK72gVgE4j2';
 
 var vidFeltCatbears = 'C-VCCDoCjdc';
 var vidGreetingCard = "zL8m4A6l8zI";
 var vidDIYBook = 'aXO59eNjhoc' ;
 var vidGraffity = 'aoiGNe4_5uI' ;
+var vidSpooky = 'xHfo_iMOd7Q';
+var vidSunrise = '0RltQ1HO6F8';
+var vidFoxChristmas = 'zSRkKOG873Q';
 
+var videoPlaying = vidFoxChristmas;
 
-var videoArr = [vidFeltCatbears, vidGreetingCard , vidDIYBook];
-var videoCounter = videoArr.length;
+// var videoArr = [vidSpooky, vidSunrise, vidFoxChristmas, vidFeltCatbears, vidGreetingCard , vidDIYBook];
+var videoArr = [
+                 {
+                  'name' : vidFeltCatbears ,
+                  'startTime' : 2 ,
+                  'endTime' : 50
+                 },
+                 {
+                  'name' : vidSpooky ,
+                  'startTime' : 17 ,
+                  'endTime' : 25
+                 },
+                 {
+                  'name' : vidSunrise ,
+                  'startTime' : 27 ,
+                  'endTime' : 40
+                 }, 
+                 {
+                  'name' : vidFoxChristmas ,
+                  'startTime' : 10 ,
+                  'endTime' : 30
+                 },
+                 {
+                  'name' : vidGreetingCard ,
+                  'startTime' : 23 ,
+                  'endTime' : 53
+                 }, 
+                 {
+                  'name' : vidDIYBook ,
+                  'startTime' : 31 ,
+                  'endTime' : 56
+                 }
+               ];
+// var videoArr = [vidGraffity, vidFoxChristmas];
+var videoCounter = 0;
 
 function chooseNextVideo () {
-  videoPlaying = videoArr[videoCounter];
-  videoCounter++;
-	if (videoCounter > videoArr.length){ 
-		videoCounter = 0
-	}
-	// console.log ('current Video ::: ' + videoPlaying)
 
-	return videoPlaying;
+  // console.log ('video playing - ' + videoPlaying)
+  if (videoCounter > videoArr.length - 1){ 
+    videoCounter = 0
+  }
+  videoPlaying = videoArr[videoCounter].name;
+  console.log ('videoCounter : ' + videoCounter)
+
+  player.loadVideoById({
+           'videoId': videoPlaying,
+           // 'startSeconds' : videoArr[videoCounter].startTime ,
+           // 'endSeconds' : videoArr[videoCounter].endTime + 5  ,
+           'suggestedQuality': 'large'});
+
+            // set timer for vid to end by fading out - this way we bypass the youtube loading time :)
+            // var timer = videoArr[videoCounter].startTime;
+            // var limit = videoArr[videoCounter].endTime;
+            // endVidTimer = setInterval( function (){    
+            //   timer ++;
+            //   console.log('timer = ' + timer)
+            //   if (timer >= limit){
+            //     clearInterval(endVidTimer);
+            //     console.log('timer  DONE ')
+            //     $('#player').fadeOut() 
+            //   }    
+
+            // } , 1000);
+
+
+  videoCounter++;
+  // return videoPlaying;
 };
 
 
@@ -35,76 +96,114 @@ var tag = document.createElement('script');
 var player;
 var playerStartTimer;
 var playerStarted = false;
+var endVidTimer;
+var videoSelected = false;
 
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
       // height: '390',
       // width: '640',
-      videoId: chooseNextVideo(),
+      // videoId: videoPlaying,
       playerVars: {
         'autoplay': 1,
         'controls': 0,
         'autohide': 1,
         'wmode': 'opaque',
         'showinfo': 0,
-        'speed' : 2,
         'loop': 1,
         'mute': 1,
         'startSeconds': 500,
-        // 'suggestedQuality': 'large',
-        'end': 110,
-        'playlist': chooseNextVideo()
+        'suggestedQuality': 'large',
+        'end': 110
+        // 'playlist': videoPlaying
       },
-      videoId: chooseNextVideo(),
-        events: {
-            'onReady': onPlayerReady,
-            'onPlayerStateChange' : onPlayerStateChange
-        }
+  
+      videoId: videoPlaying,
+      
+      events: {
+          'onReady': onPlayerReady,
+          'onStateChange' : onPlayerStateChange
+          // 'onPlayerStateChange' : onPlayerStateChange
+      }
     });
 }
 function onPlayerReady(event) {
+    chooseNextVideo();
+
     event.target.mute();
     // $('#player').fadeIn(2400);
+    // player.setPlaybackRate(2); // SPEED
+    
     $('#text').fadeIn(400);
     player.setPlaybackQuality('hd720');
     checkPlayerState();
-    // player.setPlaybackRate(2);
-    player.addEventListener ('onStageChange' , onPlayerStateChange)
+
+    // player.addEventListener ('onStageChange' , onPlayerStateChange(event))
     //why this?  Well, if you want to overlay text on top of your video, you
     //will have to fade it in once your video has loaded in order for this
     //to work in Safari, or your will get an origin error.
 }
 
 function onPlayerStateChange (event) {
+
+  // YT.PlayerState.ENDED
+  // YT.PlayerState.PLAYING
+  // YT.PlayerState.PAUSED
+  // YT.PlayerState.BUFFERING
+  // YT.PlayerState.CUED
+
 	// console.log ('STATE CHANGE')
-	if (event.data == YT.PlayerState.BUFFERING){
-		alert ('video buffering!')
-	}
+  // console.log('State is:', event.data);
+  if (event.data == -1){
+    console.log ('UNSTARTED')
+
+    // $('#player').fadeOut();  
+  }
+
+  if (event.data == YT.PlayerState.BUFFERING){
+    console.log ('BUFFERING')
+    $('#player').fadeOut()
+  }
+
+  if (event.data == YT.PlayerState.PLAYING) {
+    $('#player').fadeIn(400)
+    console.log('PLAYING')
+  }
+  
+  if (event.data == YT.PlayerState.ENDED){
+    $('#player').fadeOut();  
+    console.log ('ENDED')
+    chooseNextVideo();
+  }
+
+  // if (event.data == 5){
+  //   console.log ('CUED')
+  //   // $('#player').fadeOut();  
+  // }
 }
 
 
 function checkPlayerState (){
-	if (!playerStarted){
-	  playerStartTimer = setInterval( function (){
-	    if (player.getPlayerState() == 1) {
-	    	// console.log("video started!!!!")
-	    	// clearInterval(playerStarted)
-	    	// chooseNextVideo();
-	    	$('#player').fadeIn(400);
-	    }
-	    else{
-	    	if (player.getPlayerState() == 3) {
-	    		// console.log("video buffering !!!!")
-		    	$('#player').hide();	
-	    	}else{
-	    		// console.log("video NOT started !!!!")
-	    	}
-	    }
+	// if (!playerStarted){
+	//   playerStartTimer = setInterval( function (){
+	//     if (player.getPlayerState() == 1) {
+	//     	console.log("video started!!!!")
+	//     	// clearInterval(playerStarted)
+	//     	$('#player').fadeIn(400);
+	//     }
+	//     else{
+	//     	if (player.getPlayerState() == 3) {
+	//     		// console.log("video buffering !!!!")
+	// 	    	$('#player').hide();	
+	//     	}else{
+	//     		// console.log("video NOT started !!!!")
+	//     	}
+	//     }
 	 	
 	  	
 
-	} , 1000);
-   }
+	// } , 1000);
+ //   }
 
 }
 
