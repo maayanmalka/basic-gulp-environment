@@ -57,9 +57,10 @@
     height: 100px;
      h2 {
       margin-top: 5px;
-      letter-spacing: 2px;
-      // font-weight: 100;
-      font-family: 'Schoolbell', 'Open Sans', sans-serif;
+      // letter-spacing: 2px;
+      // font-family: 'Schoolbell', 'Open Sans', sans-serif;
+      font-family:  'Open Sans', sans-serif;
+      font-weight: 500;
      }
      p {
       margin-top: 0px; 
@@ -255,7 +256,7 @@
           // display: none;
         }
         p {
-          display: none;
+          // display: none;
         }
       }
       .badge-on-thumb {
@@ -289,4 +290,15 @@
       margin: 0 auto;
       padding: 0 15px;
   }
+
+    .box .box-text-container {
+      h2 {
+        font-size: 13px;
+        line-height: 23px;
+      }
+      p {
+        font-size: 11px;
+        line-height: 21px;
+      }
+    }
 }

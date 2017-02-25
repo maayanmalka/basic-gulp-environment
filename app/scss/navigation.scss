@@ -63,20 +63,20 @@
 			}
 		}
 		.nav-item__about {
-			right: 250px;
+			right: 340px;
 	        transform: rotate(-7deg);
 	        -ms-transform: rotate(-7deg); /* IE 9 */
 	        -webkit-transform: rotate(-7deg); /* Chrome, Safari, Opera */
 		}
 		.nav-item__home {
 			display: none;
-			right: 250px;
+			right: 340px;
 	        transform: rotate(0deg);
 	        -ms-transform: rotate(0deg); /* IE 9 */
 	        -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
 		}
 		.nav-item__contact {
-			right: 130px;
+			right: 220px;
 	        transform: rotate(4deg);
 	        -ms-transform: rotate(4deg); /* IE 9 */
 	        -webkit-transform: rotate(4deg); /* Chrome, Safari, Opera */
@@ -86,8 +86,9 @@
 			width : 114px;
 			height: 139px;
 			right: 0px;
-			margin-right: 5px;
+			margin-right: 55px;
 			top: -70px;
+			transform: scale(1.4);
 			padding-top: 78px;
 			background: url("../img/icons/pull-btn.png") no-repeat;
 		    background-size: 114px 139px;
@@ -119,6 +120,8 @@
 	   }	
   	   .navigation__logo--large {
   	   	  width : 202px;
+  	   	  left : 0;
+  	   	  top: -8px ;
   	   	  height : 176px;
   	   	  background: url('../img/hp/hp-logo__dark__ipad.png') center top no-repeat;
 		}	
@@ -134,8 +137,8 @@
 	}
 
 	.nav-item__signup {
-	  transform: scale(0.84);
+	  transform: scale(1) !important;
 	  right: 0 !important;
-	  margin-right: 0 !important;
+	  margin-right: 27px !important;
 	}
 }
