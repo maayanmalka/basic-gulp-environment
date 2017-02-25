@@ -55,6 +55,8 @@ var videoArr = [
                ];
 // var videoArr = [vidGraffity, vidFoxChristmas];
 var videoCounter = 0;
+var vidDuration;
+
 
 function chooseNextVideo () {
 
@@ -66,24 +68,41 @@ function chooseNextVideo () {
   console.log ('videoCounter : ' + videoCounter)
 
   player.loadVideoById({
-           'videoId': videoPlaying,
-           // 'startSeconds' : videoArr[videoCounter].startTime ,
-           // 'endSeconds' : videoArr[videoCounter].endTime + 5  ,
-           'suggestedQuality': 'large'});
+   'videoId': videoPlaying,
+   // 'startSeconds' : videoArr[videoCounter].startTime ,
+   // 'endSeconds' : videoArr[videoCounter].endTime + 5  ,
+     'suggestedQuality': 'large'
+  });
+  // set timer for vid to end by fading out - this way we bypass the youtube loading time :)
+  // var timer = 0;
+  // var limit = vidDuration - 3;
 
-            // set timer for vid to end by fading out - this way we bypass the youtube loading time :)
-            // var timer = videoArr[videoCounter].startTime;
-            // var limit = videoArr[videoCounter].endTime;
-            // endVidTimer = setInterval( function (){    
-            //   timer ++;
-            //   console.log('timer = ' + timer)
-            //   if (timer >= limit){
-            //     clearInterval(endVidTimer);
-            //     console.log('timer  DONE ')
-            //     $('#player').fadeOut() 
-            //   }    
+  // endVidTimer = setInterval( function (){
 
-            // } , 1000);
+  //   timer ++;
+  //   console.log('timer = ' + timer + ' / ' + limit)
+  //   if (timer >= limit){
+  //     clearInterval(endVidTimer);
+  //     console.log('timer  DONE ')
+  //     $('#player').fadeOut() 
+  //   }    
+
+  // } , 1000);
+
+
+  // set timer for vid to end by fading out - this way we bypass the youtube loading time :)
+  // var timer = videoArr[videoCounter].startTime;
+  // var limit = videoArr[videoCounter].endTime;
+  // endVidTimer = setInterval( function (){    
+  //   timer ++;
+  //   console.log('timer = ' + timer)
+  //   if (timer >= limit){
+  //     clearInterval(endVidTimer);
+  //     console.log('timer  DONE ')
+  //     $('#player').fadeOut() 
+  //   }    
+
+  // } , 1000);
 
 
   videoCounter++;
@@ -123,7 +142,6 @@ function onYouTubeIframeAPIReady() {
       events: {
           'onReady': onPlayerReady,
           'onStateChange' : onPlayerStateChange
-          // 'onPlayerStateChange' : onPlayerStateChange
       }
     });
 }
@@ -168,6 +186,8 @@ function onPlayerStateChange (event) {
   if (event.data == YT.PlayerState.PLAYING) {
     $('#player').fadeIn(400)
     console.log('PLAYING')
+
+    // vidDuration = player.getDuration()
   }
   
   if (event.data == YT.PlayerState.ENDED){

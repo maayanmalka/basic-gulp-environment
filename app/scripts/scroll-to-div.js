@@ -5,12 +5,29 @@ $(document).ready(function() {
 var isScrolling = false;
 
 function scrollToForm () {
-	var $btn = $('.scroll-to-signup'); 
-	$btn.click(function() {
+	var $btnJoinUs = $('.scroll-to-signup'); 
+	var $btnFullscreenObjCta = $('.scroll-to-grid-layout'); 
+
+
+	$btnJoinUs.click(function() {
 	  if (!isScrolling){
 	  	isScrolling = true;
 		var $container = $('html,body');
 		var $scrollto =  $(".subscribe-wrapper");
+		var scrollDistance = $scrollto.offset().top - $container.offset().top + $container.scrollTop();
+		    $container.animate({
+		        scrollTop: scrollDistance},
+		        'slow', function () {
+		    	isScrolling = false;
+		    });
+   	  }	
+	});
+
+	$btnFullscreenObjCta.click(function() {
+	  if (!isScrolling){
+	  	isScrolling = true;
+		var $container = $('html,body');
+		var $scrollto =  $(".grid-layot");
 		var scrollDistance = $scrollto.offset().top - $container.offset().top + $container.scrollTop();
 		    $container.animate({
 		        scrollTop: scrollDistance},
