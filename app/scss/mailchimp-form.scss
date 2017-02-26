@@ -1,8 +1,10 @@
 @import "./variables.scss";
 
+
 #mc_embed_signup {
   width : 100%;
 }
+
 
 #mc-embedded-subscribe, .clear , .clear input {
   -webkit-appearance: none !important;
@@ -16,21 +18,24 @@
   background-color: $white;
   margin: 0;
   padding: 0;
-  padding-left: 16px;
+  padding-left: 16px !important;
+}
+
+#mc_embed_signup form{
+  padding: 0 !important;
 }
 
 #mce-EMAIL , #mc-embedded-subscribe{
   height : 55px;
-  font-weight: 500;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 19px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 0 !important;
+  margin-top: 10px !important;
+  margin-bottom: 6px !important;
   width: 100%;
   background-clip: padding-box;
-  border: 1px solid rgba(0,0,0,0.2); 
+  border-radius: 0 !important;
   transition : border 120ms ease-in-out , background-color 120ms ease-in-out;
 }
+
 
 .email:hover {
   border: 1px solid #999;
@@ -44,8 +49,78 @@
 
 .mc-field-group {
   display: flex;
-  width : 100%;
+  width : 100% !important;
+  font-size: 20px !important;
+  padding: 0 !important;
   label {
     display: none;
+  }
+}
+
+#mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+  position: absolute;
+  // border : 1px solid blue;
+  background-color: white !important;
+  margin : 0 !important;
+  padding : 0 !important;
+  width: auto;
+  max-height: 10px !important;
+  bottom : -85px;
+  border-radius: 0 !important;
+  text-align: center !important;
+  width: 100%;
+}
+
+#mce-success-response , #mce-error-response {
+  position: absolute;
+  top : 20px;
+  left: 0;
+  padding : 0 !important;
+  margin : 0 !important;
+  width: 100% !important;
+  background-color: white !important;
+  border : 1px solid white !important;
+  width: 100% !important;
+  padding : 20px !important;
+  padding-top : 45px !important;
+  height : auto;
+  top : -35px !important; 
+  z-index: 999 !important;
+  color : #12c763 !important;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500 !important;
+  &:before {
+    display: block;
+    content: '';
+    z-index: -1 !important;
+    position: absolute;
+    top : -50px;
+    padding-top: 40px !important;
+    height: 230px;
+    width: 100%;
+    background-color: white;
+    width: 103%;
+    margin : 0;
+    padding: 0;
+    left: -4px;
+    border : 2px solid white;
+    font-size: 24px;
+    font-weight: 600 !important;
+    content: "Thank You!" !important;
+    color : #12c763 !important;
+    // content: "boris!" !important;
+  }
+  &:after {
+    display: block;
+    float: left;
+    width: 100%;
+  }
+}
+
+#mce-error-response {
+  color : black !important;
+  &:before {
+    content: '' !important;
   }
 }
