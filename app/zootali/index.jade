@@ -33,7 +33,7 @@ block greeting-card
     a(href='../pdf/The-Catbears_Greeting-Card.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Zootali__TUMB__Greeting-Card')")
       .image-container
         img(src="../img/thumbs/thumb_greeting-card.png", alt="Greeting Card Fox & Duck - by The Catbears")
-        a.badge-on-thumb.badge--youtube-icon(href='https://www.youtube.com/watch?v=zL8m4A6l8zI' target="_blank")
+        //- a.badge-on-thumb.badge--youtube-icon(href='https://www.youtube.com/watch?v=zL8m4A6l8zI' target="_blank")
       h2 כרטיס ברכה 
       p 2 דפי פעילות להדפסה ・ PDF חינם 
 
@@ -100,7 +100,7 @@ block felt-catbears
     a(href='../pdf/The-Catbears_Make-Felt-Catbears.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Zootali__TUMB__felt-catbears')")
       .image-container
         img(src='../img/thumbs/thumb_felt-catbears.png', alt='Make Felt Catbears')
-        a.badge-on-thumb.badge--youtube-icon(href='https://www.youtube.com/watch?v=C-VCCDoCjdc' target="_blank")
+        //- a.badge-on-thumb.badge--youtube-icon(href='https://www.youtube.com/watch?v=C-VCCDoCjdc' target="_blank")
       h2 קֵטְבֶּרְז מלֶבֶד
       p 3 דפי פעילות להדפסה ・ PDF חינם
 
@@ -144,6 +144,8 @@ block felt-catbears
 //-       p 5 דפי פעילות להדפסה ・ PDF חינם
 //-       //- p $1.99
 
+block grid-title
+  h1.vidBox-title סרטוני הדרכה 
 
 block iMessage-stickers
   .box
@@ -172,6 +174,24 @@ block catbears-stickers
         //- .badge-on-thumb.difficulty__badge--scissors
       h2 סטיקרים של הָקֵטְבֶּרְז
       p דף פעילות להדפסה ・ PDF חינם
+
+block vidBox-felt-catbears
+  .box
+    .image-container
+      iframe.video(src='https://www.youtube.com/embed/C-VCCDoCjdc?rel=0&;showinfo=0', frameborder='0', allowfullscreen='')
+      p קֵטְבֶּרְז מלֶבֶד
+
+block vidBox-greeting-card
+  .box
+    .image-container
+      iframe.video(src='https://www.youtube.com/embed/zL8m4A6l8zI?rel=0&;showinfo=0', frameborder='0', allowfullscreen='')
+      p כרטיס ברכה
+
+block vidBox-spooky
+  .box
+    .image-container
+      iframe.video(src='https://www.youtube.com/embed/xHfo_iMOd7Q?rel=0&;showinfo=0', frameborder='0', allowfullscreen='')
+      p ספוקי השדון
 
 block instagram
   .box
