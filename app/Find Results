@@ -1,0 +1,1442 @@
+Searching 64 files for "make today"
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\index.jade:
+   29    .grid-title
+   30      h1
+   31:       span.comic.color--skyblue What will you make today?
+   32      //-   span.color--red Try 
+   33      //-   span.color--orange Our 
+
+1 match in 1 file
+
+
+Searching 64 files for "will you make"
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\index.jade:
+   16        
+   17        h1.fullscreen__title.noMarkup 
+   18:         | What will you make 
+   19          |
+   20          .rainbow-animation.color--skyblue today?
+   ..
+   29    .grid-title
+   30      h1
+   31:       span.comic.color--skyblue What will you make today?
+   32      //-   span.color--red Try 
+   33      //-   span.color--orange Our 
+
+2 matches in 1 file
+
+
+Searching 64 files for "__skyblue"
+
+0 matches
+
+Searching 64 files for "catbears"
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\5-coloring-pages_catbears.jade:
+    2  
+    3  block title
+    4:   title 5 Coloring Pages - The Catbears
+    5  
+    6  block main-img
+    7    - var pageName = 'Coloring-Pages'
+    8:   a(href='../pdf/The-Catbears_#{pageName}' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__#{pageName}'); lightboxInit('subscribe')")
+    9      .img-fit-container
+   10:       img(src='../img/pages/#{pageName}.png', alt='#{pageName} by The Catbears')
+   11  
+   12  block gallery-items
+   ..
+   14    - var numberOfPages = 5
+   15    - for (var i = 1; i <= +numberOfPages; i++)
+   16:       a(href='../pdf/The-Catbears_#{pageName}.pdf#page=#{i}' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__#{pageName}'); lightboxInit('subscribe')") 
+   17          li.gallery__item.gallery__item--1 
+   18:           img(src='../img/pages/#{pageName}/page_#{i}.png', alt='Activity Page by The Catbears')
+   19  
+   20  block page-item__title
+   ..
+   22  
+   23  block page-item__description--p
+   24:   | Download a PDF with 5 coloring pages, print it out and start coloring some cute Catbears!  
+   25  
+   26  //- block page-item__info
+   ..
+   37    - var pageName = 'Coloring-Pages'
+   38    - var numberOfPages = 5
+   39:   a.btn.btn__icon.btn__large.btn__primary(href='../pdf/The-Catbears_#{pageName}.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Catbears-Stickers'); lightboxInit('subscribe')") PRINT (#{numberOfPages})
+   40      .btn__icon--printer
+   41  
+   ..
+   51              | Unlike most coloring pages, these ones are drawn freehand, which means there are no perfect vector shapes or curves. Your child will feel at ease when coloring outside the lines, giving more room for self expression.
+   52          .right-column     
+   53:            img(src='../img/description-imgs/coloring__001.png', alt='Coloring Page by The Catbears')
+   54  
+   55  //- $1.99 FREE - BUTTON TEST
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\about.jade:
+    7  
+    8  block title
+    9:   title About Us - The Catbears
+   10  
+   11  block poster 
+   ..
+   24                strong Creativity 
+   25                | - an Environment Where We Can Make Mistakes
+   26:             p The Catbears is a safe environment where we are free to follow our imagination where ever it may take us. 
+   27              br
+   28              | 
+   ..
+   51                    a.bold(href="../") Try our activities 
+   52                    | and share with us how your kids responed to them - what did they like doing most and was there something that bothered them.
+   53:                 a(href="mailto:catbearsteam@gmail.com?subject=Feedback for The Catbears&body=Hey Catbears, Here's my feedback for the activity ________________ :", target='_top').btn.btn__large.btn__primary.btn__note.btn__note--feedback Send Us Feedback
+   54              .separator
+   55              .section-note__text-container
+   ..
+   57                  p Share our work on social media, Help us reach more people.
+   58                  .note__social-buttons 
+   59:                     a.btn.btn__large.btn__primary.btn__note.btn__note--social(href='https://www.instagram.com/thecatbears/', target='_blank' onClick = "ga('send', 'event', 'Button', 'Click', 'About__instagram')") 
+   60                        img(src='../img/about/instagram_white.png', alt='instagram', style='width:28px;height:28px;')
+   61:                     a.btn.btn__large.btn__primary.btn__note.btn__note--social(href='https://www.facebook.com/theCatbears/', target='_blank' onClick = "ga('send', 'event', 'Button', 'Click', 'About__facebook')")
+   62                          img(src='../img/about/facebook_white.png', alt='logo-footer', style='width:28px;height:28px;')
+   63:                     a.btn.btn__large.btn__primary.btn__note.btn__note--social(href='https://twitter.com/intent/tweet?text=Check%20out%20this%20super%20cute%20website%21%20www.catbears.com%20&source=clicktotweet&related=clicktotweet', target='_blank' onClick = "ga('send', 'event', 'Button', 'Click', 'About__tweeter')")
+   64                          img(src='../img/about/twitter_white.png', alt='logo-footer', style='width:28px;height:28px;')
+   65          .section
+   ..
+   69              p We are a small group of artists and educators, we strongly believe creativity cannot be tought - every child is born with it, But it can be suppressed if we don't protect and nurture it. 
+   70              br
+   71:             p We hope our Catbears can provide this environment for children all over the world and help them develop their creative minds.
+   72          .section
+   73              .signature
+   74                  h1 Thank You.
+   75:                 p The Catbears Team
+   76  
+   77  
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\catbears-stickers.jade:
+    2  
+    3  block title
+    4:   title Catbears Stickers - The Catbears
+    5  
+    6  
+    7  block main-img
+    8    - var pageName = 'Stickers'
+    9:   a(href='../pdf/The-Catbears_#{pageName}' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__#{pageName}'); lightboxInit('subscribe')")
+   10      .img-fit-container
+   11:       img(src='../img/pages/#{pageName}.png', alt='#{pageName} by The Catbears')
+   12  
+   13  block gallery-items
+   ..
+   15    - var numberOfPages = 1
+   16    - for (var i = 1; i <= +numberOfPages; i++)
+   17:       a(href='../pdf/The-Catbears_#{pageName}.pdf#page=#{i}' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__#{pageName}'); lightboxInit('subscribe')") 
+   18          li.gallery__item.gallery__item--1 
+   19:           img(src='../img/pages/#{pageName}/page_#{i}.png', alt='Activity Page by The Catbears')
+   20  
+   21  
+   22  block page-item__title
+   23:   | DIY Catbears Stickers
+   24  
+   25  block page-item__description--p
+   26:   | Make your own Catbears stickers! Print them on <strong>Sticker Paper</strong> and you're good to stick!  
+   27  
+   28  block page-item__cta
+   29    - var pageName = 'Stickers'
+   30    - var numberOfPages = 1
+   31:   a.btn.btn__icon.btn__large.btn__primary(href='../pdf/The-Catbears_#{pageName}.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Catbears-Stickers'); lightboxInit('subscribe')") PRINT (#{numberOfPages})
+   32      .btn__icon--printer
+   33        
+   ..
+   58            br
+   59            br 
+   60:           | In this activity your kids will only need to cut around the stickers and practice their cutting skills to make colorful Catbears stickers which they can stick on everything! What fun! 
+   61            br
+   62            br
+   63            | It's a simple fun activity that brings a real sense of accomplishment - They created a real sticker pack all by themselves.
+   64        .right-column 
+   65:          img(src='../img/description-imgs/catbears-stickers__001.png', alt='DIY Stickers by The Catbears') 
+   66  
+   67  
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\coloring-book_duck-in-trouble.jade:
+    3  
+    4  block title
+    5:   title DIY Coloring Book - A Tiny Little Duck Got In Really Big Trouble - The Catbears
+    6  
+    7  block main-img
+    .
+   12    - var numberOfPages = 28
+   13    - for (var i = 1; i <= +numberOfPages; i++)
+   14:       a(href='../pdf/The-Catbears_#{pageName}.pdf#page=#{i}' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__#{pageName}'); lightboxInit('subscribe')") 
+   15          li.gallery__item.gallery__item--1 
+   16:           img(src='../img/pages/#{pageName}/page_#{i}.png', alt='Activity Page by The Catbears')
+   17  
+   18  block page-item__title
+   ..
+   40    - var pageName = 'DIY-book-duck-in-trouble'
+   41    - var numberOfPages = 28
+   42:   a.btn.btn__icon.btn__large.btn__primary(href='../pdf/The-Catbears_#{pageName}.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Catbears-Stickers'); lightboxInit('subscribe')") PRINT (#{numberOfPages})
+   43      .btn__icon--printer
+   44  
+   ..
+   77        .right-column
+   78           //- iframe.video(src='https://www.youtube.com/embed/aXO59eNjhoc?rel=0&showinfo=0', frameborder='0', allowfullscreen='')
+   79:          img(src='../img/description-imgs/coloring-book_duck-in-trouble_003.png', alt='DIY Coloring Book by The Catbears')
+   80:          //- img(src='../img/description-imgs/description__coloring-book_duck-in-trouble_000.png', alt='Coloring Page by The Catbears')    
+   81:          img(src='../img/description-imgs/description__coloring-book_duck-in-trouble_001.png', alt='Coloring Page by The Catbears')
+   82  
+   83  block share-banner__text
+   84:   | Share your new ending with the Catbears community on Instagram:     
+   85  block share-banner__cta  
+   86    a.marker__blue(href="https://www.instagram.com/explore/tags/atinylittleduckgotinreallybigtrouble/" target="_blank") #aTinyLittleDuckGotInReallyBigTrouble    
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\coloring-little-things.jade:
+    2  
+    3  block title
+    4:   title Cardboard Puppet Show - The Catbears
+    5  
+    6  
+    7  block gallery-items
+    8    li.gallery__item.gallery__item--1 
+    9:     img(src='../img/pages/catbears-stickers__001.png', alt='Catbears Stickers 001')
+   10    li.gallery__item.gallery__item--2 
+   11:     img(src='../img/pages/catbears-stickers__002.png', alt='Catbears Stickers 002')
+   12    li.gallery__item.gallery__item--3
+   13:     img(src='../img/pages/catbears-stickers__003.png', alt='Catbears Stickers 003') 
+   14    li.gallery__item.gallery__item--4
+   15:     img(src='../img/pages/catbears-stickers__004.png', alt='Catbears Stickers 004')  
+   16       
+   17  block page-item__title
+   18:   | Felt Catbears Animals 
+   19  
+   20  block page-item__price-number
+   ..
+   29  
+   30  block page-item__description--p
+   31:   | Felt is a great material for making your ideas come to life, and it's perfect for Catbears animals! let's get started!
+   32  
+   33  block page-item__description--ul
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\duck-boat.jade:
+    2  
+    3  block title
+    4:   title Pop Ups - Ducky on a boat - The Catbears
+    5  
+    6  block gallery-img
+    7    .img-fit-container
+    8:     a(href='../pdf/The-Catbears_Duck-and-Boat.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__Duck-and-Boat'); lightboxInit('subscribe')")
+    9:     img(src='../img/pages/duck-boat.png', alt='Duck on boat by The Catbears')
+   10  
+   11  block page-item__title
+   ..
+   27  
+   28  block page-item__cta
+   29:   a.btn.btn__large.btn__icon.btn__primary.btn__payed(href='../pdf/The-Catbears_Duck-and-Boat.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Duck-and-Boat'); lightboxInit('subscribe')") PRINT
+   30      .btn__icon--printer
+   31  
+   ..
+   49        //- .right-column      
+   50        //-    iframe.video(src='https://www.youtube.com/embed/C-VCCDoCjdc?rel=0&;showinfo=0', frameborder='0', allowfullscreen='')
+   51:       //-    img(src='../img/description-imgs/description__felt_001.png', alt='Felt Catbears by The Catbears')
+   52  
+   53  //- $1.99 FREE - BUTTON TEST
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\felt-catbears.jade:
+    2  
+    3  block title
+    4:   title Felt Catbears - The Catbears
+    5  
+    6  //- block main-img
+    7      //- iframe.video(src='https://www.youtube.com/embed/C-VCCDoCjdc?rel=0&;showinfo=0', frameborder='0', allowfullscreen='')
+    8  block main-img
+    9:   - var pageName = 'Felt-Catbears'
+   10:   a(href='../pdf/The-Catbears_#{pageName}.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__#{pageName}'); lightboxInit('subscribe')")
+   11      .img-fit-container
+   12:       img(src='../img/pages/#{pageName}.png', alt='#{pageName} by The Catbears')
+   13  
+   14  block gallery-items
+   15:   - var pageName = 'Felt-Catbears'
+   16    - var numberOfPages = 3
+   17    - for (var i = 1; i <= +numberOfPages; i++)
+   18:       a(href='../pdf/The-Catbears_#{pageName}.pdf#page=#{i}' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__#{pageName}'); lightboxInit('subscribe')") 
+   19          li.gallery__item.gallery__item--1 
+   20:           img(src='../img/pages/#{pageName}/page_#{i}.png', alt='Activity Page by The Catbears')
+   21  
+   22  
+   23  block page-item__title
+   24:   | Make Felt Catbears 
+   25  
+   26  block page-item__description--p
+   27:   | Print these 3 instruction pages to make Catbears from Felt!  
+   28  
+   29  //- block page-item__info
+   ..
+   37  
+   38  block page-item__cta
+   39:   - var pageName = 'Felt-Catbears'
+   40    - var numberOfPages = 3
+   41:   a.btn.btn__icon.btn__large.btn__primary(href='../pdf/The-Catbears_#{pageName}.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Catbears-Stickers'); lightboxInit('subscribe')") PRINT (#{numberOfPages})
+   42      .btn__icon--printer
+   43  
+   ..
+   50      .columns
+   51        .left-column
+   52:         p Here are 3 Catbears you can make using felt: A Fox, a Duck and a Panda bear. 
+   53          | 
+   54          br
+   ..
+   57            h2 To make a felt Catbear:
+   58          //- .howitworks
+   59:            img(src="../img/hp/how-it-works.png", alt="How it works - by The Catbears")  
+   60          ol
+   61            li Print out the pages
+   ..
+   67            | This is a really fun activity that focuses on the Cutting skill. your kids will love creating a felt Catbear by themselves.
+   68        .right-column
+   69:           img(src='../img/description-imgs/The-Catbears_Felt-Catbears.png', alt='Felt Catbears by The Catbears')
+   70  
+   71  //- block share-banner__text
+   72: //-   //- | Share your book and the ending you've made with the Catbears community on Instagram:     
+   73  //- block share-banner__cta  
+   74  //-   //- a.marker__blue(href="https://www.instagram.com/explore/tags/atinylittleduckgotinreallybigtrouble/" target="_blank") #aTinyLittleDuckGotInReallyBigTrouble    
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\finger-puppets.jade:
+    2  
+    3  block title
+    4:   title Finger Puppets - The Catbears
+    5  
+    6  
+    7  block main-img
+    8    - var pageName = 'Finger-Puppets'
+    9:   a(href='../pdf/The-Catbears_#{pageName}' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__#{pageName}'); lightboxInit('subscribe')")
+   10      .img-fit-container
+   11:       img(src='../img/pages/#{pageName}.png', alt='#{pageName} by The Catbears')
+   12  
+   13  block gallery-items
+   ..
+   15    - var numberOfPages = 2
+   16    - for (var i = 1; i <= +numberOfPages; i++)
+   17:       a(href='../pdf/The-Catbears_#{pageName}.pdf#page=#{i}' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__#{pageName}'); lightboxInit('subscribe')") 
+   18          li.gallery__item.gallery__item--1 
+   19:           img(src='../img/pages/#{pageName}/page_#{i}.png', alt='Activity Page by The Catbears')
+   20  
+   21  block page-item__title
+   ..
+   39    - var pageName = 'Finger-Puppets'
+   40    - var numberOfPages = 2
+   41:   a.btn.btn__icon.btn__large.btn__primary(href='../pdf/The-Catbears_#{pageName}.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Catbears-Stickers'); lightboxInit('subscribe')") PRINT (#{numberOfPages})
+   42      .btn__icon--printer
+   43  
+   ..
+   61        //- .right-column      
+   62        //-    iframe.video(src='https://www.youtube.com/embed/C-VCCDoCjdc?rel=0&;showinfo=0', frameborder='0', allowfullscreen='')
+   63:       //-    img(src='../img/description-imgs/description__felt_001.png', alt='Felt Catbears by The Catbears')
+   64  
+   65  //- block share-banner__text
+   66: //-   //- | Share your book and the ending you've made with the Catbears community on Instagram:     
+   67  //- block share-banner__cta  
+   68  //-   //- a.marker__blue(href="https://www.instagram.com/explore/tags/atinylittleduckgotinreallybigtrouble/" target="_blank") #aTinyLittleDuckGotInReallyBigTrouble    
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\greeting-card.jade:
+    4  
+    5  block title
+    6:   title DIY Greeting Card - The Catbears
+    7  
+    8  block main-img
+    .
+   13    - var numberOfPages = 2
+   14    - for (var i = 1; i <= +numberOfPages; i++)
+   15:       a(href='../pdf/The-Catbears_#{pageName}.pdf#page=#{i}' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__#{pageName}'); lightboxInit('subscribe')") 
+   16          li.gallery__item.gallery__item--1 
+   17:           img(src='../img/pages/#{pageName}/page_#{i}.png', alt='Activity Page by The Catbears')
+   18  
+   19  block page-item__title
+   ..
+   36    - var pageName = 'Greeting-Card'
+   37    - var numberOfPages = 2
+   38:   a.btn.btn__icon.btn__large.btn__primary(href='../pdf/The-Catbears_#{pageName}.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Catbears-Stickers'); lightboxInit('subscribe')") PRINT (#{numberOfPages})
+   39      .btn__icon--printer
+   40  
+   ..
+   68  
+   69          .right-column      
+   70:            img(src='../img/description-imgs/greeting-card.png', alt='Greeting-Card by The Catbears') 
+   71              
+   72  //- $1.99 FREE - BUTTON TEST
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\index-poster.jade:
+    2  
+    3  block title
+    4:   title The Catbears - Printable Activities
+    5  
+    6  //- poster
+    7  
+    8  block poster-bg
+    9:     img.center-img(src="../img/hp/poster-bg.png", alt="The Catbears" align="middle")
+   10  
+   11  block poster-content
+   ..
+   14        .column--left
+   15          .poster-logo
+   16:           img(src="../img/hp/hp-logo.png", alt="The Catbears Logo")
+   17            h1.slogan-line 
+   18              span.slogan-word.color--red Print  
+   19              span.slogan-word.color--orange Make  
+   20              span.slogan-word.color--skyblue Learn    
+   21:         p.poster-p Welcome to The Catbears! Here you can find lots of fun printable activities for your kids!
+   22          .buttons-container
+   23              .btn.btn__buttons-container.btn__large.btn__primary.btn__sign-up.scroll-to-signup(onClick = "ga('send', 'event', 'Button', 'Click', 'POSTER__BTN__SignUp')") Sign Up
+   ..
+   27          .poster-thumb.rotate-scale-on-hover
+   28            iframe.poster-thumb--vid(src='https://www.youtube.com/embed/C-VCCDoCjdc?rel=0&;showinfo=0', frameborder='0', allowfullscreen='')
+   29:           //- img.poster-thumb--play-btn(src="../img/hp/vid-play-btn.png", alt="play button - The Catbears")
+   30:         a(href='felt-catbears.html')
+   31           .micro-text Try This Activity
+   32  //- grid
+   ..
+   50      a(href='greeting-card.html')
+   51        .image-container
+   52:         img(src="../img/thumbs/thumb_greeting-card.png", alt="Greeting Card Fox & Duck - by The Catbears")
+   53          //- .badge-on-thumb.badge--pdf-icon
+   54        .box-text-container
+   ..
+   61      a(href='maker-kit.html')
+   62        .image-container
+   63:         img(src="../img/thumbs/thumb_catbears-maker-kit.gif", alt="Maker-Kit by The Catbears")
+   64          //- .badge-on-thumb.badge--pdf-icon
+   65        .box-text-container  
+   66:         h2 Catbears Maker Kit
+   67          p Free PDF ・ 4 Printable Page
+   68  
+   ..
+   72      a(href='duck-boat.html')
+   73        .image-container
+   74:         img(src="../img/thumbs/thumb_duck-boat.png", alt="Paper Duck and Boat - The Catbears")
+   75          //- .badge-on-thumb.badge--pdf-icon
+   76        .box-text-container
+   ..
+   82      a(href='finger-puppets.html')
+   83        .image-container
+   84:         img(src="../img/thumbs/thumb_finger-puppets.png", alt="Finger Puppets by The Catbears")
+   85          //- .badge-on-thumb.badge--pdf-icon
+   86        .box-text-container
+   ..
+   92      a(href='ranni-coloring-page.html')
+   93        .image-container
+   94:         img(src="../img/thumbs/thumb_ranni-color-page.png", alt="Ranni's Red Ballon - A Coloring page by The Catbears")
+   95          //- .badge-on-thumb.badge--pdf-icon
+   96        .box-text-container
+   ..
+   98          p Free PDF ・ 1 Printable Page
+   99  
+  100: block felt-catbears
+  101    .box
+  102:     a(href='felt-catbears.html')
+  103        .image-container
+  104:         img(src='../img/thumbs/thumb_felt-catbears.png', alt='Make Felt Catbears')
+  105          //- .badge-on-thumb.badge--pdf-icon
+  106        .box-text-container
+  107:        h2 Felt Catbears
+  108         p Free PDF ・  3 Printable Pages
+  109  
+  ...
+  113      a(href='coloring-book_duck-in-trouble.html')
+  114        .image-container
+  115:         img(src='../img/thumbs/thumb_coloring-book_duck-in-trouble.gif', alt='Coloring book by The Catbears')
+  116          //- .badge-on-thumb.badge--pdf-icon
+  117        .box-text-container
+  ...
+  123      a(href='riddle-games.html')
+  124        .image-container
+  125:         img(src='../img/thumbs/thumb_riddle-games.png', alt='riddle-games by The Catbears')
+  126          //- .badge-on-thumb.badge--pdf-icon
+  127        .box-text-container
+  ...
+  131  block coloring-pages
+  132    .box
+  133:     a(href='5-coloring-pages_catbears.html')
+  134        .image-container
+  135          img(src='../img/thumbs/thumb_coloring-pages.png', alt='5-coloring-pages')
+  ...
+  145      a(href='learn-to-draw.html')
+  146        .image-container
+  147:         img(src='../img/thumbs/thumb_learn-to-draw.png', alt='Learn To Draw - The Catbears')
+  148          //- .badge-on-thumb.badge--pdf-icon
+  149          //- .badge-on-thumb.difficulty__badge--pencil
+  ...
+  157      a(href='ios-stickers.html')
+  158        .image-container
+  159:         img(src='../img/thumb_ios-stickers.png', alt='Fox & Duck iMessage Stickers by The Catbears')
+  160          //- .badge-on-thumb.badge--apple
+  161        .box-text-container
+  ...
+  165  block society6
+  166    .box
+  167:     a(href='https://society6.com/thecatbears' target="_blank"  onclick = "ga('send', 'event', 'Button', 'Click', 'thumb_s6')")
+  168        .image-container
+  169:         img(src='../img/society6.gif', alt='The Catbears on Society6')
+  170          .badge-on-thumb.badge--s6
+  171        .box-text-container
+  172:         h2 Catbears Store
+  173:         p The Catbears o  n Society6
+  174  
+  175: block catbears-stickers
+  176    .box.box3
+  177:     a(href='catbears-stickers.html')
+  178        .image-container
+  179:         img(src='../img/thumbs/thumb_stickers.png', alt='catbears stickers')
+  180          //- .badge-on-thumb.badge--pdf-icon
+  181          //- .badge-on-thumb.difficulty__badge--scissors
+  ...
+  186  block instagram
+  187    .box
+  188:     a(href='https://www.instagram.com/thecatbears/' target="_blank" onclick = "ga('send', 'event', 'Button', 'Click', 'thumb_instagram')")
+  189        .image-container
+  190:         img(src='../img/thumb_instagram-page.png', alt='Catbears on Instagram')
+  191          .badge-on-thumb.badge--instagram
+  192        .box-text-container
+  193:         h2 The Catbears on Instagram
+  194          p Check out our Instagram profile
+  195  
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\index.jade:
+    2  
+    3  block title
+    4:   title The Catbears - Printable Activities
+    5  
+    6  
+    .
+   13        .player-blocker
+   14        //- .fullscreen__obj--logo 
+   15:         //- img(src="../img/hp/hp-logo__dark.png", alt="The Catbears Logo") 
+   16        
+   17        h1.fullscreen__title.noMarkup What will you make 
+   ..
+   21          .arrow
+   22        //- .fullscreen__obj--stickers 
+   23:         img(src="../img/hp/stickers.png", alt="Stickers - The Catbears") 
+   24        //- .fullscreen__obj--try-this-activity  
+   25  
+   ..
+   45      a(href='greeting-card.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__Greeting-Card')")
+   46        .image-container
+   47:         img(src="../img/thumbs/thumb_greeting-card.png", alt="Greeting Card Fox & Duck - by The Catbears")
+   48          .badge-on-thumb-container
+   49            .badge-on-thumb.badge--scissors-icon
+   ..
+   60      a(href='maker-kit.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__maker-kit')")
+   61        .image-container
+   62:         img(src="../img/thumbs/thumb_maker-kit.png", alt="Maker-Kit by The Catbears")
+   63          .badge-on-thumb-container
+   64            .badge-on-thumb.badge--scissors-icon
+   ..
+   68          a(href='maker-kit.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb-LINK__Learn-how__maker-kit')") Learn how
+   69          |  | 
+   70:         a(href='felt-catbears.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb-LINK__Download__maker-kit')") Download pdf
+   71  
+   72  
+   ..
+   76      a(href='duck-boat.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__duck-boat')")
+   77        .image-container
+   78:         img(src="../img/thumbs/thumb_duck-boat.png", alt="Paper Duck and Boat - The Catbears")
+   79          //- .badge-on-thumb.badge--pdf-icon
+   80        .box-text-container
+   ..
+   86      a(href='finger-puppets.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__finger-puppets')")
+   87        .image-container
+   88:         img(src="../img/thumbs/thumb_finger-puppets.png", alt="Finger Puppets by The Catbears")
+   89          //- .badge-on-thumb.badge--pdf-icon
+   90        .box-text-container
+   ..
+   96      a(href='ranni-coloring-page.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__ranni-coloring-page')")
+   97        .image-container
+   98:         img(src="../img/thumbs/thumb_ranni-color-page.png", alt="Ranni's Red Ballon - A Coloring page by The Catbears")
+   99          //- .badge-on-thumb.badge--pdf-icon
+  100        .box-text-container
+  ...
+  104  block make-a-fox
+  105    .box
+  106:     a(href='felt-catbears.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__felt-catbears')")
+  107        .image-container
+  108:         img(src='../img/thumbs/thumb_felt-catbears.png', alt='Make Felt Catbears')
+  109          .badge-on-thumb-container
+  110            .badge-on-thumb.badge--scissors-icon
+  ...
+  112      .box-text-container
+  113        h2 Make a Fox
+  114:       a(href='felt-catbears.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb-LINK__Learn-how__felt-catbears')") Learn how
+  115        |  | 
+  116:       a(href='felt-catbears.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb-LINK__Download__felt-catbears')") Download pdf
+  117  
+  118  
+  ...
+  121      a(href='coloring-book_duck-in-trouble.html')
+  122        .image-container
+  123:         img(src='../img/thumbs/thumb_coloring-book_duck-in-trouble.gif', alt='Coloring book by The Catbears' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__coloring-book-duck')")
+  124          //- .badge-on-thumb.badge--pdf-icon
+  125        .box-text-container
+  ...
+  131      a(href='riddle-games.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__riddle-games')")
+  132        .image-container
+  133:         img(src='../img/thumbs/thumb_riddle-games.png', alt='riddle-games by The Catbears')
+  134          //- .badge-on-thumb.badge--pdf-icon
+  135        .box-text-container
+  ...
+  139  block coloring-pages
+  140    .box
+  141:     a(href='5-coloring-pages_catbears.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__coloring-pages')")
+  142        .image-container
+  143          img(src='../img/thumbs/thumb_coloring-pages.png', alt='5-coloring-pages')
+  ...
+  146      .box-text-container
+  147          h2 a Greeting Card
+  148:         a(href='5-coloring-pages_catbears.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb-LINK__Learn-how__coloring-pages')") Learn how
+  149          |  | 
+  150:         a(href='5-coloring-pages_catbears.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb-LINK__Download__coloring-pages')") Download pdf
+  151  
+  152  block learn-to-draw
+  ...
+  154      a(href='learn-to-draw.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__learn-to-draw')")
+  155        .image-container
+  156:         img(src='../img/thumbs/thumb_learn-to-draw.png', alt='Learn To Draw - The Catbears')
+  157          .badge-on-thumb-container
+  158            .badge-on-thumb.badge--pencil-icon  
+  ...
+  166      a(href='ios-stickers.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__iMessage-stickers')")
+  167        .image-container
+  168:         img(src='../img/thumb_ios-stickers.png', alt='Fox & Duck iMessage Stickers by The Catbears')
+  169          //- .badge-on-thumb.badge--apple
+  170        .box-text-container
+  ...
+  174  block society6
+  175    .box
+  176:     a(href='https://society6.com/thecatbears' target="_blank"  onclick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__s6')")
+  177        .image-container
+  178:         img(src='../img/society6.gif', alt='The Catbears on Society6')
+  179          .badge-on-thumb.badge--s6
+  180        .box-text-container
+  181:         h2 Catbears Store
+  182:         p The Catbears o  n Society6
+  183  
+  184: block catbears-stickers
+  185    .box.box3
+  186:     a(href='catbears-stickers.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__catbears-stickers')")
+  187        .image-container
+  188:         img(src='../img/thumbs/thumb_stickers.png', alt='catbears stickers')
+  189          .badge-on-thumb-container
+  190            .badge-on-thumb.badge--scissors-icon
+  191      .box-text-container
+  192:         h2 Catbears Stickers
+  193:         a(href='catbears-stickers.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb-LINK__Learn-how__catbears-stickers')") Learn how
+  194          |  | 
+  195:         a(href='catbears-stickers.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb-LINK__Download__catbears-stickers')") Download pdf
+  196  
+  197  block instagram
+  198    .box
+  199:     a(href='https://www.instagram.com/thecatbears/' target="_blank" onclick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__instagram')")
+  200        .image-container
+  201:         img(src='../img/thumb_instagram-page.png', alt='Catbears on Instagram')
+  202          .badge-on-thumb.badge--instagram
+  203        .box-text-container
+  204:         h2 The Catbears on Instagram
+  205          p Check out our Instagram profile
+  206  
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\instagram-page.jade:
+    2  
+    3  block title
+    4:   title Catbears Stickers - The Catbears
+    5  
+    6  
+    .
+    9      
+   10  block page-item__title
+   11:   | Catbears on Instagram
+   12  
+   13  block page-item__description--p
+   14:   | Want to see more Catbears? Check out our Instagram page! it's full of cuteness and fun! Don't forget to follow us and share our page with your friends ❤ 
+   15  
+   16  
+   17  block page-item__cta
+   18:   a.btn.btn__large.btn__primary(href='https://www.instagram.com/thecatbears/' target="_blank" onclick = "ga('send', 'event', 'Button', 'Click', 'instagram'); lightboxInit('subscribe')") Visit Instagram
+   19  
+   20  block page-item__subscribe-title
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\ios-stickers.jade:
+    2  
+    3  block title
+    4:   title Fox & Duck Stickers for iMessage - The Catbears
+    5  
+    6  
+    7  block main-img
+    8    .img-fit-container
+    9:     a(href='https://itunes.apple.com/us/app/fox-duck-by-the-catbears/id1158843136?ls=1&mt=8#' target="_blank" onclick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__ios-stickers_Fox-and-Duck'); lightboxInit('subscribe')")
+   10:         img(src='../img/pages/ios-stickers.png', alt='iOS Stickers Fox and Duck by The Catbears')
+   11      
+   12  block page-item__title
+   ..
+   17  
+   18  block page-item__cta
+   19:   a.btn.btn__large.btn__primary(href='https://itunes.apple.com/us/app/fox-duck-by-the-catbears/id1158843136?ls=1&mt=8#' target="_blank" onclick = "ga('send', 'event', 'Button', 'Click', 'ios-stickers_Fox-and-Duck'); lightboxInit('subscribe')") Fox & Duck Stickers
+   20  
+   21  block page-item__subscribe-title
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\israel.jade:
+    2  
+    3  block title
+    4:   title The Catbears - Printable Activities
+    5  
+    6  block page-item
+    .
+   12      a(href='duck-boat.html')
+   13        .image-container
+   14:         img(src="../img/thumbs/thumb_duck-boat.png", alt="Paper Duck and Boat - The Catbears")
+   15          .badge-on-thumb.badge--pdf-icon
+   16        h2 פופ אפ - ברווזי על סירה
+   ..
+   21      a(href='finger-puppets.html')
+   22        .image-container
+   23:         img(src="../img/thumbs/thumb_finger-puppets.png", alt="Finger Puppets by The Catbears")
+   24          .badge-on-thumb.badge--pdf-icon
+   25        h2 בובות אצבע מנייר
+   ..
+   30      a(href='ranni-coloring-page.html')
+   31        .image-container
+   32:         img(src="../img/thumbs/thumb_ranni-color-page.png", alt="Ranni's Red Ballon - A Coloring page by The Catbears")
+   33          .badge-on-thumb.badge--pdf-icon
+   34        h2 הבלון האדום של רני
+   35        p דף פעילות אחד להדפסה ・ PDF חינם
+   36  
+   37: block felt-catbears
+   38    .box
+   39:     a(href='felt-catbears.html')
+   40        .image-container
+   41:         img(src='../img/thumbs/thumb_felt-catbears.png', alt='Make Felt Catbears')
+   42          .badge-on-thumb.badge--pdf-icon
+   43        h2 קטברז מלבד
+   ..
+   49      a(href='coloring-book_duck-in-trouble.html')
+   50        .image-container
+   51:         img(src='../img/thumbs/thumb_duck-in-trouble.png', alt='Coloring book by The Catbears')
+   52          .badge-on-thumb.badge--pdf-icon
+   53        h2 ספר צביעה - עשה זאת בעצמך
+   ..
+   57      a(href='riddle-games.html')
+   58        .image-container
+   59:         img(src='../img/thumbs/thumb_riddle-games.png', alt='riddle-games by The Catbears')
+   60          .badge-on-thumb.badge--pdf-icon
+   61        h2 משחקי חידה
+   ..
+   64  block coloring-pages
+   65    .box
+   66:     a(href='5-coloring-pages_catbears.html')
+   67        .image-container
+   68          img(src='../img/thumbs/thumb_coloring-pages.png', alt='5-coloring-pages')
+   ..
+   77      a(href='learn-to-draw.html')
+   78        .image-container
+   79:         img(src='../img/thumbs/thumb_learn-to-draw.png', alt='Learn To Draw - The Catbears')
+   80          .badge-on-thumb.badge--pdf-icon
+   81          //- .badge-on-thumb.difficulty__badge--pencil
+   ..
+   88      a(href='ios-stickers.html')
+   89        .image-container
+   90:         img(src='../img/thumb_ios-stickers.png', alt='Fox & Duck iMessage Stickers by The Catbears')
+   91          .badge-on-thumb.badge--apple
+   92        h2 סטיקרים ל-iMessage 
+   ..
+   95  block society6
+   96    .box
+   97:     a(href='https://society6.com/thecatbears' target="_blank"  onclick = "ga('send', 'event', 'Button', 'Click', 'thumb_s6')")
+   98        .image-container
+   99:         img(src='../img/society6.gif', alt='The Catbears on Society6')
+  100          .badge-on-thumb.badge--s6
+  101:       h2 Catbears Store
+  102:       p The Catbears on Society6
+  103  
+  104: block catbears-stickers
+  105    .box.box3
+  106:     a(href='catbears-stickers.html')
+  107        .image-container
+  108:         img(src='../img/thumbs/thumb_stickers.png', alt='catbears stickers')
+  109          .badge-on-thumb.badge--pdf-icon
+  110          //- .badge-on-thumb.difficulty__badge--scissors
+  ...
+  114  block instagram
+  115    .box
+  116:     a(href='https://www.instagram.com/thecatbears/' target="_blank" onclick = "ga('send', 'event', 'Button', 'Click', 'thumb_instagram')")
+  117        .image-container
+  118:         img(src='../img/thumb_instagram-page.png', alt='Catbears on Instagram')
+  119          .badge-on-thumb.badge--instagram
+  120:       h2 The Catbears on Instagram
+  121        p Check out our Instagram profile
+  122  
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\learn-to-draw.jade:
+    2  
+    3  block title
+    4:   title Learn To Draw A Catbear - The Catbears
+    5  
+    6  
+    .
+   13    - var numberOfPages = 5
+   14    - for (var i = 1; i <= +numberOfPages; i++)
+   15:       a(href='../pdf/The-Catbears_#{pageName}.pdf#page=#{i}' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__#{pageName}'); lightboxInit('subscribe')") 
+   16          li.gallery__item.gallery__item--1 
+   17:           img(src='../img/pages/#{pageName}/page_#{i}.png', alt='Activity Page by The Catbears')
+   18  
+   19  
+   ..
+   37    - var pageName = 'Learn-To-Draw'
+   38    - var numberOfPages = 5
+   39:   a.btn.btn__icon.btn__large.btn__primary(href='../pdf/The-Catbears_#{pageName}.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Catbears-Stickers'); lightboxInit('subscribe')") PRINT (#{numberOfPages})
+   40      .btn__icon--printer
+   41  
+   ..
+   56             | This is a great activity that combines learning a skill that will help him in his future drawings and help him express himself, with sparking his creative thinking when he creates a new Catbear all by himself.
+   57         .right-column
+   58:          img(src='../img/pages/Learn-To-Draw.png', alt='Learn To Draw by The Catbears')     
+   59           //- iframe.video-square(src='https://www.youtube.com/embed/DQiAIpuLQIE?rel=0&showinfo=0', frameborder='0', allowfullscreen='')
+   60    
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\letters.jade:
+    2  
+    3  block title
+    4:   title Let's Draw Some Letters - The Catbears
+    5  
+    6  
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\maker-kit.jade:
+    4  
+    5  block title
+    6:   title Maker Kit - The Catbears
+    7  
+    8  block main-img
+    9    - var pageName = 'Maker-Kit'
+   10:   a(href='../pdf/The-Catbears_#{pageName}.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__#{pageName}'); lightboxInit('subscribe')")
+   11      .img-fit-container
+   12:       img(src='../img/pages/#{pageName}.png', alt='#{pageName} by The Catbears')
+   13  
+   14  block gallery-items
+   ..
+   16    - var numberOfPages = 4
+   17    - for (var i = 1; i <= +numberOfPages; i++)
+   18:       a(href='../pdf/The-Catbears_#{pageName}.pdf#page=#{i}' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__#{pageName}'); lightboxInit('subscribe')") 
+   19          li.gallery__item.gallery__item--1 
+   20:           img(src='../img/pages/#{pageName}/page_#{i}.png', alt='Activity Page by The Catbears')
+   21  
+   22  block page-item__title
+   23:   | Catbears Maker Kit
+   24  
+   25  block page-item__description--p
+   ..
+   40    - var pageName = 'Maker-Kit'
+   41    - var numberOfPages = 4
+   42:   a.btn.btn__icon.btn__large.btn__primary(href='../pdf/The-Catbears_#{pageName}.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Catbears-Stickers'); lightboxInit('subscribe')") PRINT (#{numberOfPages})
+   43      .btn__icon--printer
+   44  
+   ..
+   62            br
+   63          .right-column
+   64:           img(src='../img/description-imgs/The-Catbears_Maker-Kit.png', alt='Maker Kit by The Catbears')
+   65  
+   66  //- $1.99 FREE - BUTTON TEST
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\puppet-show.jade:
+    2  
+    3  block title
+    4:   title Cardboard Puppet Show - The Catbears
+    5  
+    6  block gallery-img
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\ranni-coloring-page.jade:
+    2  
+    3  block title
+    4:   title Ranni's Red Ballon - The Catbears
+    5  
+    6  block gallery-img
+    7    .img-fit-container
+    8:     a(href='../pdf/The-Catbears_Ranni-Coloring-Page.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__ranni'); lightboxInit('subscribe')")
+    9:       img(src='../img/pages/ranni-coloring-page__001.png', alt="Ranni's Coloring Page by The Catbears")
+   10  
+   11  
+   ..
+   28  
+   29  block page-item__cta
+   30:   a.btn.btn__icon.btn__large.btn__primary.btn__payed(href='../pdf/The-Catbears_Ranni-Coloring-Page.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__ranni'); lightboxInit('subscribe')") Print
+   31      .btn__icon--printer
+   32  
+   ..
+   59  
+   60        .right-column 
+   61:          img(src='../img/description-imgs/ranni.jpg', alt='Rannis wish The Catbears') 
+   62  
+   63  
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\riddle-games.jade:
+    4  
+    5  block title
+    6:   title Riddle Games - The Catbears
+    7  
+    8  block gallery-img
+    9:   a(href='../pdf/The-Catbears-Riddle-Games.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__Riddle-Games'); lightboxInit('subscribe')") 
+   10:     img(src='../img/pages/riddle-games__000.png', alt='Riddle Games by The Catbears')
+   11  
+   12  
+   ..
+   18  //-     img(src='../img/pages/color-cut-paste-pages__002.png', alt='coloring-pages 002')
+   19  //-   li.gallery__item.gallery__item--3
+   20: //-     img(src='../img/pages/color-cut-paste-pages__003.png', alt='Catbears Stickers 003') 
+   21  
+   22  block page-item__title
+   ..
+   38  
+   39  block page-item__cta
+   40:   a.btn.btn__icon.btn__large.btn__primary.btn__payed(href='../pdf/The-Catbears-Riddle-Games.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Riddle-Games'); lightboxInit('subscribe')") PRINT
+   41      .btn__icon--printer
+   42  block page-description
+   ..
+   51            | The best part is that there's no right or wrong answer. This is a fun game to play that encourage creative thinking, and develop story telling skills. 
+   52        .right-column 
+   53:          img(src='../img/description-imgs/riddle__001.png', alt='Coloring Page by The Catbears') 
+   54  //- $1.99 FREE - BUTTON TEST
+   55  //- block page-item__cta
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\strawberry.jade:
+    6  
+    7  block title
+    8:   title Strawberry Graffiti - The Catbears
+    9  
+   10  
+   ..
+   18    //-       div(style=' background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;')
+   19    //-         p(style=' color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;')
+   20:   //-         a(href='https://www.instagram.com/p/BJZ58Zvh09U/', style=' color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;', target='_blank') A video posted by The Catbears (@thecatbears)
+   21    //-         |  on 
+   22    //-         time(style=' font-family:Arial,sans-serif; font-size:14px; line-height:17px;', datetime='2016-08-22T08:46:08+00:00') Aug 22, 2016 at 1:46am PDT
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\strawberrygraffiti.jade:
+    2  
+    3  block title
+    4:   title Strawberry Graffiti - The Catbears
+    5  
+    6  
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\include\footer--israel.jade:
+    3    //- a.dark-link(href="../israel") בית
+    4    //- a.dark-link(href="../israel/about.html") עלינו
+    5:   //- a.dark-link(href="mailto:catbearsteam@gmail.com?subject=Hey There Catbears!&body=Dear Catbears,", target='_top') צור קשר
+    6:   p.copyright The Catbears © 2017
+    7  
+    8    
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\include\footer.jade:
+    3    a.dark-link(href="../") Home
+    4    a.dark-link(href="../about.html") About
+    5:   a.dark-link(href="mailto:catbearsteam@gmail.com?subject=Hey There Catbears!&body=Dear Catbears,", target='_top') Contact Us
+    6:   p.copyright The Catbears © 2017
+    7  
+    8    
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\include\join-us.jade:
+    6      .overlay.overlay__blinking-snail
+    7    .subscribe-wrapper
+    8:     h2.color--skyblue Join The Catbears
+    9      //- h2 Spam Free Notifications!
+   10      p Get our updates and never miss our newest activities.
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\include\lightbox_free-download.jade:
+   21            a(onClick = "ga('send', 'event', 'Button', 'Click', 'TRY-AGAIN__5-coloring-pages') ; lightboxInit()") Try again
+   22            |  or 
+   23:           a(href="mailto:catbearsteam@gmail.com?subject=My PDF won't download :( &body=Hey Catbears, I'm trying to download a PDF named ___________ and it's not working. Please help!", target='_top') Contact Us
+   24            | .
+   25  
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\include\mailchimp-form--israel.jade:
+    1  // Begin MailChimp Signup Form
+    2  #mc_embed_signup
+    3:   form#mc-embedded-subscribe-form.validate(action='//thecatbears.us14.list-manage.com/subscribe/post?u=a7426f90aa46ed0d3d13700af&amp;id=88d04ef728', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+    4      #mc_embed_signup_scroll.horizontal-form
+    5        .mc-field-group
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\include\mailchimp-form.jade:
+    8    We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+    9  #mc_embed_signup
+   10:   form#mc-embedded-subscribe-form.validate(action='//thecatbears.us14.list-manage.com/subscribe/post?u=a7426f90aa46ed0d3d13700af&id=759f0584e8', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+   11      #mc_embed_signup_scroll
+   12        .indicates-required
+   ..
+   30  //- // Begin MailChimp Signup Form
+   31  //- #mc_embed_signup
+   32: //-   form#mc-embedded-subscribe-form.validate(action='//thecatbears.us14.list-manage.com/subscribe/post?u=a7426f90aa46ed0d3d13700af&id=759f0584e8', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+   33  //-     #mc_embed_signup_scroll.horizontal-form
+   34  //-       .mc-field-group
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\include\mailchimp-form_improved.jade:
+    8    We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+    9  #mc_embed_signup
+   10:   form#mc-embedded-subscribe-form.validate(action='//thecatbears.us14.list-manage.com/subscribe/post?u=a7426f90aa46ed0d3d13700af&id=759f0584e8', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+   11      #mc_embed_signup_scroll
+   12        .indicates-required
+   ..
+   30  //- // Begin MailChimp Signup Form
+   31  //- #mc_embed_signup
+   32: //-   form#mc-embedded-subscribe-form.validate(action='//thecatbears.us14.list-manage.com/subscribe/post?u=a7426f90aa46ed0d3d13700af&id=759f0584e8', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+   33  //-     #mc_embed_signup_scroll.horizontal-form
+   34  //-       .mc-field-group
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\include\main-item.jade:
+   36        // Begin MailChimp Signup Form
+   37        #mc_embed_signup
+   38:         form#mc-embedded-subscribe-form.validate(action='//thecatbears.us14.list-manage.com/subscribe/post?u=a7426f90aa46ed0d3d13700af&id=759f0584e8', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+   39            #mc_embed_signup_scroll.vertical-form
+   40              .mc-field-group
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\include\meta-tags.jade:
+    1  //meta tags
+    2: // The Catbears is a great place to find kids activities and inspiration. Download a PDF filled with step-by-step crafts tips and start creating something fun and special.
+    3  
+    4  
+    5: <meta name="description" content="The Catbears is a great place to find fun activities with Printable PDFs filled with step-by-step craft tips and DIY projects for kids and parents.">
+    6  
+    7  
+    8  <meta name="robots" content="noodp">
+    9  <meta property="og:type" content="website">
+   10: <meta property="og:title" content="The Catbears - Kids Activities">
+   11  <meta property="og:description" content="Fun Learning Activities for Kids">
+   12: <meta property="og:url" content="http://catbears.com/">
+   13: <meta property="og:site_name" content="The Catbears - Kids Activities">
+   14: <meta property="og:image" content="http://catbears/img/share-img/thecatbears-logo.png">
+   15  <meta name="twitter:card" content="summary_large_image">
+   16: <meta name="twitter:description" content="The Catbears is a great place to find fun activities with Printable PDFs filled with step-by-step craft tips and DIY projects for kids and parents.">
+   17: <meta name="twitter:title" content="The Catbears - Kids Activities, Tips &amp; Tricks">
+   18: <meta name="twitter:site" content="@thecatbears">
+   19: <meta name="twitter:image" content="http://catbears/img/share-img/thecatbears-logo.png">
+   20  
+   21: <link rel="canonical" href="http://catbears.com/">
+   22  <meta property="og:locale" content="en_US">
+   23  
+   24: <script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"http:\/\/catbears.com\/","name":"The Catbears - Kids Activities","potentialAction":{"@type":"SearchAction","target":"http:\/\/catbears.com\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+   25  
+   26: <script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Organization","url":"http:\/\/catbears.com\/","sameAs":["http:\/\/facebook.com\/thecatbears","http:\/\/instagram.com\/thecatbears","http:\/\/youtube.com\/thecatbears","http:\/\/pinterest.com\/thecatbears","https:\/\/twitter.com\/4thecatbears"],"@id":"#organization","name":"The Catbears - Kids Activities","logo":"http:\/\/catbears.com\/img\/share-img\/thecatbears-logo.jpg"}</script>
+   27  
+   28  
+   ..
+   30  //- <meta name="google-site-verification" content="YaTWJEurfw2KCw8bUuXx-u4iDcbP7zVDSBNnjwgNTdE">
+   31   
+   32: <meta name="keywords" content="craft, kids activities, kids, diy, pdf, printable, pdfs, instant download, do it yourself, toddler, all ages, inspiration, kids create, puppets, pattern, scissors, coloring, coloring book, coloring pages, artsy, art, pre-school, speach therapy, kindergarten, crayons, sketch, doodle, catbears, cat, bear, fox, duck, ">
+   33  
+   34  include ../include/s6-banner.jade	
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\include\navigation.jade:
+   11          a.nav-item.nav-item__about(href="../about.html" onClick = "ga('send', 'event', 'Button', 'Click', 'Nav__About')") About
+   12          a.nav-item.nav-item__home(href="../" onClick = "ga('send', 'event', 'Button', 'Click', 'Nav__Home')") ← Home
+   13:         a.nav-item.nav-item__contact(href="mailto:catbearsteam@gmail.com?subject=Hey There Catbears!&body=Dear Catbears,", target='_top' onClick = "ga('send', 'event', 'Button', 'Click', 'Nav__Contact')") Contact
+   14          a.scroll-to-signup.nav-item.nav-item__signup.sticky(onClick = "ga('send', 'event', 'Button', 'Click', 'Nav__SignUp')") Join Us
+   15  
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\include\s6-banner.jade:
+    3  //- script(type='text/javascript').
+    4  //-   <!--
+    5: //-   s6_user = "thecatbears";
+    6  //-   s6_format = "250X250";
+    7  //-   //-->
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\include\share-icons.jade:
+    1  .share__wrapper
+    2:   a.share__button--icon(href='https://www.instagram.com/thecatbears/', target='_blank' onClick = "ga('send', 'event', 'Button', 'Click', 'promo-share_instagram')")
+    3      img(src='../img/promo-share/instagram.png', alt='instagram', style='width:28px;height:28px;')
+    4:   a.share__button--icon(href='https://www.facebook.com/theCatbears/', target='_blank' onClick = "ga('send', 'event', 'Button', 'Click', 'promo-share_facebook')")
+    5      img(src='../img/promo-share/facebook.png', alt='logo-footer', style='width:28px;height:28px;')
+    6:   a.share__button--icon(href='https://twitter.com/intent/tweet?text=Check%20out%20this%20super%20cute%20website%21%20www.catbears.com%20&source=clicktotweet&related=clicktotweet', target='_blank' onClick = "ga('send', 'event', 'Button', 'Click', 'promo-share_tweeter')")
+    7      img(src='../img/promo-share/twitter.png', alt='logo-footer', style='width:28px;height:28px;')
+    8:   a.share__button--icon(href='mailto:?subject=look at this website&body=Hey, I found this cute website and thought you might like it: www.catbears.com', target='_top' onClick = "ga('send', 'event', 'Button', 'Click', 'promo-share_email')")
+    9      img(src='../img/promo-share/mail.png', alt='logo-footer', style='width:28px;height:28px;')
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\israel\about.jade:
+   10  
+   11  block title
+   12:   title עלינו - The Catbears
+   13  
+   14  block poster 
+   ..
+   49                    a.bold(href="../israel") נסו את הפעילויות שלנו 
+   50                    | וכתבו לנו איך הילדים הגיבו לפעילויות - מה הם הכי אהבו, והאם היה משהו שהפריע או שעמם אותם.
+   51:                 a(href="mailto:catbearsteam@gmail.com?subject=Feedback for The Catbears&body=Hey Catbears, Here's my feedback for the activity ________________ :", target='_top').btn.btn__large.btn__primary.btn__note.btn__note--feedback שלחו לנו פידבק
+   52              .separator
+   53              .section-note__text-container
+   ..
+   55                  p שתפו את הקטברז ברשתות חברתיות, עזרו לנו להגיע לקהל גדול יותר של אנשים.
+   56                  .note__social-buttons 
+   57:                     a.btn.btn__large.btn__primary.btn__note.btn__note--social(href='https://www.instagram.com/thecatbears/', target='_blank' onClick = "ga('send', 'event', 'Button', 'Click', 'About__instagram')")
+   58                          img(src='../img/about/instagram_white.png', alt='instagram', style='width:28px;height:28px;')
+   59:                     a.btn.btn__large.btn__primary.btn__note.btn__note--social(href='https://www.facebook.com/theCatbears/', target='_blank' onClick = "ga('send', 'event', 'Button', 'Click', 'About__facebook')")
+   60                          img(src='../img/about/facebook_white.png', alt='logo-footer', style='width:28px;height:28px;')
+   61:                     a.btn.btn__large.btn__primary.btn__note.btn__note--social(href='https://twitter.com/intent/tweet?text=Check%20out%20this%20super%20cute%20website%21%20www.catbears.com%20&source=clicktotweet&related=clicktotweet', target='_blank' onClick = "ga('send', 'event', 'Button', 'Click', 'About__tweeter')")
+   62                          img(src='../img/about/twitter_white.png', alt='logo-footer', style='width:28px;height:28px;')
+   63          .section
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\israel\index.jade:
+    2  
+    3  block title
+    4:   title The Catbears - Printable Activities
+    5  
+    6  block duck-boat
+    .
+    8      a(href='duck-boat.html')
+    9        .image-container
+   10:         img(src="../img/thumbs/thumb_duck-boat.png", alt="Paper Duck and Boat - The Catbears")
+   11          .badge-on-thumb.badge--pdf-icon
+   12        h2 פופ אפ - ברווזי על סירה
+   ..
+   17      a(href='finger-puppets.html')
+   18        .image-container
+   19:         img(src="../img/thumbs/thumb_finger-puppets.png", alt="Finger Puppets by The Catbears")
+   20          .badge-on-thumb.badge--pdf-icon
+   21        h2 בובות אצבע מנייר
+   ..
+   26      a(href='ranni-coloring-page.html')
+   27        .image-container
+   28:         img(src="../img/thumbs/thumb_ranni-color-page.png", alt="Ranni's Red Ballon - A Coloring page by The Catbears")
+   29          .badge-on-thumb.badge--pdf-icon
+   30        h2 הבלון האדום של רני
+   31        p דף פעילות אחד להדפסה ・ PDF חינם
+   32  
+   33: block felt-catbears
+   34    .box
+   35:     a(href='felt-catbears.html')
+   36        .image-container
+   37:         img(src='../img/thumbs/thumb_felt-catbears.png', alt='Make Felt Catbears')
+   38          .badge-on-thumb.badge--pdf-icon
+   39        h2 קטברז מלבד
+   ..
+   45      a(href='coloring-book_duck-in-trouble.html')
+   46        .image-container
+   47:         img(src='../img/thumbs/thumb_duck-in-trouble.png', alt='Coloring book by The Catbears')
+   48          .badge-on-thumb.badge--pdf-icon
+   49        h2 ספר צביעה - עשה זאת בעצמך
+   ..
+   53      a(href='riddle-games.html')
+   54        .image-container
+   55:         img(src='../img/thumbs/thumb_riddle-games.png', alt='riddle-games by The Catbears')
+   56          .badge-on-thumb.badge--pdf-icon
+   57        h2 משחקי חידה
+   ..
+   60  block coloring-pages
+   61    .box
+   62:     a(href='5-coloring-pages_catbears.html')
+   63        .image-container
+   64          img(src='../img/thumbs/thumb_coloring-pages.png', alt='5-coloring-pages')
+   ..
+   73      a(href='learn-to-draw.html')
+   74        .image-container
+   75:         img(src='../img/thumbs/thumb_learn-to-draw.png', alt='Learn To Draw - The Catbears')
+   76          .badge-on-thumb.badge--pdf-icon
+   77          //- .badge-on-thumb.difficulty__badge--pencil
+   ..
+   84      a(href='ios-stickers.html')
+   85        .image-container
+   86:         img(src='../img/thumb_ios-stickers.png', alt='Fox & Duck iMessage Stickers by The Catbears')
+   87          .badge-on-thumb.badge--apple
+   88        h2 סטיקרים ל-iMessage 
+   ..
+   91  block society6
+   92    .box
+   93:     a(href='https://society6.com/thecatbears' target="_blank"  onclick = "ga('send', 'event', 'Button', 'Click', 'thumb_s6')")
+   94        .image-container
+   95:         img(src='../img/society6.gif', alt='The Catbears on Society6')
+   96          .badge-on-thumb.badge--s6
+   97:       h2 Catbears Store
+   98:       p The Catbears on Society6
+   99  
+  100: block catbears-stickers
+  101    .box.box3
+  102:     a(href='catbears-stickers.html')
+  103        .image-container
+  104:         img(src='../img/thumbs/thumb_stickers.png', alt='catbears stickers')
+  105          .badge-on-thumb.badge--pdf-icon
+  106          //- .badge-on-thumb.difficulty__badge--scissors
+  ...
+  110  block instagram
+  111    .box
+  112:     a(href='https://www.instagram.com/thecatbears/' target="_blank" onclick = "ga('send', 'event', 'Button', 'Click', 'thumb_instagram')")
+  113        .image-container
+  114:         img(src='../img/thumb_instagram-page.png', alt='Catbears on Instagram')
+  115          .badge-on-thumb.badge--instagram
+  116:       h2 The Catbears on Instagram
+  117        p Check out our Instagram profile
+  118  
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\templates\hp-fullscreen.jade:
+   27          block maker-kit  
+   28          block greeting-card
+   29:         block catbears-stickers
+   30          block coloring-pages
+   31          block learn-to-draw
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\templates\hp-israel.jade:
+   31          block ranni
+   32          block finger-puppets
+   33:         block felt-catbears
+   34:         block catbears-stickers
+   35          block coloring-pages
+   36          block learn-to-draw
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\templates\hp-poster.jade:
+   22                        .nav-container  
+   23                            a.nav-item(href="../about.html" onClick = "ga('send', 'event', 'Button', 'Click', 'POSTER__Nav__About')") ABOUT
+   24:                           a.nav-item(href="mailto:catbearsteam@gmail.com?subject=Hey There Catbears!&body=Dear Catbears,", target='_top' onClick = "ga('send', 'event', 'Button', 'Click', 'POSTER__Nav__Contact')") CONTACT
+   25                            a.scroll-to-signup.btn__nav.nav-item(onClick = "ga('send', 'event', 'Button', 'Click', 'POSTER__Nav__SignUp')") SIGN UP
+   26                      block poster-content
+   ..
+   43          //- block duck-boat
+   44          block finger-puppets
+   45:         block felt-catbears
+   46          //- block ranni
+   47:         block catbears-stickers
+   48          block coloring-pages
+   49          block coloring-book-duck
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\templates\item-page__gallery__sale.jade:
+   14      
+   15      block title
+   16:         title The Catbears
+   17  
+   18    body
+   ..
+   53                 | Tag your works on Instagram with   
+   54               block share-banner__cta
+   55:                a.marker__blue(href="https://www.instagram.com/explore/tags/drawcatbears/" target="_blank") #DrawCatbears 
+   56          #coast2coast--centered
+   57            include ../include/join-us.jade
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\templates\item-page__img.jade:
+   17  
+   18      block title
+   19:         title Def The Catbears
+   20  
+   21    body
+   ..
+   60                 | Tag your works on Instagram with   
+   61               block share-banner__cta
+   62:                a.marker__blue(href="https://www.instagram.com/explore/tags/drawcatbears/" target="_blank") #DrawCatbears 
+   63        #coast2coast--centered
+   64          include ../include/join-us.jade
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\templates\item-page__img__sale.jade:
+    7      link(rel='stylesheet', type='text/css', href='../css/join-us.css')
+    8      block title
+    9:         title Def The Catbears
+   10  
+   11    body
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\templates\static-page.jade:
+   12  
+   13      block title
+   14:         title The Catbears
+   15  
+   16    body
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\templates\zootali-template.jade:
+   30          block greeting-card
+   31          //- block forest
+   32:         block felt-catbears
+   33:         block catbears-stickers
+   34          //- block finger-puppets
+   35          //- block instagram
+   ..
+   42          
+   43          block grid-title
+   44:         block vidBox-felt-catbears
+   45          block vidBox-greeting-card
+   46          block vidBox-spooky
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\ux\index.jade:
+    7      link(rel='stylesheet', type='text/css', href='../css/ux.css')
+    8  
+    9:   title UX by The Catbears
+   10  
+   11    body
+   12:     img(src='../img/ux/hp-thecatbears.png', alt='HP ux by The Catbears')
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\ux2\index.jade:
+    5      link(rel='stylesheet', type='text/css', href='../css/ux.css')
+    6  
+    7:   title UX by The Catbears
+    8  
+    9    body
+   10:     img(src='../img/ux/hp-thecatbears_002.png', alt='HP ux by The Catbears')
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\app\zootali\index_xxxxx.jade:
+    5  
+    6  block title
+    7:   title The Catbears - Printable Activities
+    8  
+    9  
+   10  block zootali-invitation
+   11    .zootali-invitation.desktop-img
+   12:     a(href='../pdf/The-Catbears_ZooTali_Art-Workshop.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__zootali-invitation')")
+   13:       img(src='../img/zootali/zootali-invitation.jpg', alt='zootali-invitation by The Catbears')
+   14        .print-zootali-invitation  
+   15          h1 ☟  
+   ..
+   18    .zootali-invitation.mobile-img
+   19      a(href="tel:054-2198988" target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__zootali-invitation')")
+   20:       img(src='../img/zootali/zootali-invitation_mobile.jpg', alt='zootali-invitation by The Catbears') 
+   21  
+   22  block spooky
+   23    .box
+   24:     a(href='../pdf/The-Catbears_Spooky-KiraKira.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Zootali__TUMB__Spooky')")
+   25        .image-container
+   26:         img(src="../img/thumbs/thumb_spooky.png", alt="Spooky - by The Catbears")
+   27          //- a.badge-on-thumb.badge--youtube-icon(href='https://www.youtube.com/watch?v=zL8m4A6l8zI' target="_blank")
+   28        h2 ספוקי השדון 
+   ..
+   31  block greeting-card
+   32    .box
+   33:     a(href='../pdf/The-Catbears_Greeting-Card.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Zootali__TUMB__Greeting-Card')")
+   34        .image-container
+   35:         img(src="../img/thumbs/thumb_greeting-card.png", alt="Greeting Card Fox & Duck - by The Catbears")
+   36          //- a.badge-on-thumb.badge--youtube-icon(href='https://www.youtube.com/watch?v=zL8m4A6l8zI' target="_blank")
+   37        h2 כרטיס ברכה 
+   ..
+   41  block maker-kit
+   42    .box
+   43:     a(href='../pdf/The-Catbears_Maker-Kit.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Zootali__TUMB__Maker-Kit')")
+   44        .image-container
+   45:         img(src="../img/thumbs/thumb_maker-kit_002.gif", alt="Maker-Kit by The Catbears")
+   46          //- .badge-on-thumb.badge--pdf-icon
+   47        h2 ערכת יצירה מלֶבֶד
+   ..
+   51  block forest
+   52    .box
+   53:     a(href='../pdf/The-Catbears_Forest.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Zootali__TUMB__Forest')")
+   54        .image-container
+   55:         img(src="../img/thumbs/thumb_forest.png", alt="Forest by The Catbears")
+   56          //- .badge-on-thumb.badge--pdf-icon
+   57        h2 יער מלֶבֶד
+   ..
+   60  block maker-box
+   61    .box
+   62:     a(href='../pdf/The-Catbears_Maker-Box.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Zootali__TUMB__Maker-Box')")
+   63        .image-container
+   64:         img(src="../img/thumbs/thumb_maker-box.png", alt="Maker Box by The Catbears")
+   65          //- .badge-on-thumb.badge--pdf-icon
+   66        h2 קופסת יוצר
+   ..
+   72  //-     a(href='duck-boat.html')
+   73  //-       .image-container
+   74: //-         img(src="../img/thumbs/thumb_duck-boat.png", alt="Paper Duck and Boat - The Catbears")
+   75          .badge-on-thumb.badge--pdf-icon
+   76  //-       h2 פופ אפ - ברווזי על סירה
+   ..
+   79  block finger-puppets
+   80    .box
+   81:     a(href='../pdf/The-Catbears_Finger-Puppets.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Zootali__TUMB__Finger-Puppets')")
+   82        .image-container
+   83:         img(src="../img/thumbs/thumb_finger-puppets.png", alt="Finger Puppets by The Catbears")
+   84          //- .badge-on-thumb.badge--pdf-icon
+   85        h2 בובות אצבע מנייר
+   ..
+   91  //-     a(href='ranni-coloring-page.html')
+   92  //-       .image-container
+   93: //-         img(src="../img/thumbs/thumb_ranni-color-page.png", alt="Ranni's Red Ballon - A Coloring page by The Catbears")
+   94          .badge-on-thumb.badge--pdf-icon
+   95  //-       h2 הבלון האדום של רני
+   96  //-       p דף פעילות אחד להדפסה ・ PDF חינם
+   97  
+   98: block felt-catbears
+   99    .box
+  100:     a(href='../pdf/The-Catbears_Make-Felt-Catbears.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Zootali__TUMB__felt-catbears')")
+  101        .image-container
+  102:         img(src='../img/thumbs/thumb_felt-catbears.png', alt='Make Felt Catbears')
+  103          //- a.badge-on-thumb.badge--youtube-icon(href='https://www.youtube.com/watch?v=C-VCCDoCjdc' target="_blank")
+  104        h2 קֵטְבֶּרְז מלֶבֶד
+  ...
+  110  //-     a(href='coloring-book_duck-in-trouble.html')
+  111  //-       .image-container
+  112: //-         img(src='../img/thumbs/thumb_duck-in-trouble.png', alt='Coloring book by The Catbears')
+  113          .badge-on-thumb.badge--pdf-icon
+  114  //-       h2 ספר צביעה - עשה זאת בעצמך
+  ...
+  118  //-     a(href='riddle-games.html')
+  119  //-       .image-container
+  120: //-         img(src='../img/thumbs/thumb_riddle-games.png', alt='riddle-games by The Catbears')
+  121          .badge-on-thumb.badge--pdf-icon
+  122  //-       h2 משחקי חידה
+  ...
+  125  //- block coloring-pages
+  126  //-   .box
+  127: //-     a(href='5-coloring-pages_catbears.html')
+  128  //-       .image-container
+  129  //-         img(src='../img/thumbs/thumb_coloring-pages.png', alt='5-coloring-pages')
+  ...
+  138  //-     a(href='learn-to-draw.html')
+  139  //-       .image-container
+  140: //-         img(src='../img/thumbs/thumb_learn-to-draw.png', alt='Learn To Draw - The Catbears')
+  141          .badge-on-thumb.badge--pdf-icon
+  142  //-         //- .badge-on-thumb.difficulty__badge--pencil
+  ...
+  150  block iMessage-stickers
+  151    .box
+  152:     a(href='https://itunes.apple.com/us/app/fox-duck-by-the-catbears/id1158843136?ls=1&mt=8#' target="_blank" onclick = "ga('send', 'event', 'Button', 'Click', 'FREE__Zootali__TUMB__iMessage-stickers')" )
+  153        .image-container
+  154:         img(src='../img/thumb_ios-stickers.png', alt='Fox & Duck iMessage Stickers by The Catbears')
+  155          //- .badge-on-thumb.badge--apple
+  156        h2 סטיקרים ל-iMessage 
+  ...
+  159  block society6
+  160    .box
+  161:     a(href='https://society6.com/thecatbears' target="_blank"  onclick = "ga('send', 'event', 'Button', 'Click', 'thumb_s6')")
+  162        .image-container
+  163:         img(src='../img/society6.gif', alt='The Catbears on Society6')
+  164          //- .badge-on-thumb.badge--s6
+  165:       h2 Catbears Store
+  166:       p The Catbears on Society6
+  167  
+  168: block catbears-stickers
+  169    .box.box3
+  170:     a(href='../pdf/The-Catbears-Stickers.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Zootali__TUMB__Catbears-Stickers')")
+  171        .image-container
+  172:         img(src='../img/thumbs/thumb_stickers.png', alt='catbears stickers')
+  173          //- .badge-on-thumb.badge--pdf-icon
+  174          //- .badge-on-thumb.difficulty__badge--scissors
+  ...
+  176        p דף פעילות להדפסה ・ PDF חינם
+  177  
+  178: block vidBox-felt-catbears
+  179    .box
+  180      .image-container
+  ...
+  196  block instagram
+  197    .box
+  198:     a(href='https://www.instagram.com/thecatbears/' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Zootali__TUMB__instagram')")
+  199        .image-container
+  200:         img(src='../img/thumb_instagram-page.png', alt='Catbears on Instagram')
+  201          //- .badge-on-thumb.badge--instagram
+  202        h2 הָקֵטְבֶּרְז באינסטגרם
+
+C:\Users\ASUS-PC\Google Drive - Maayan Malka\THE CATBEARS\6 WEBSITE\CODE\thecatbears\archive\index.jade:
+    7      link(rel='icon', type='image/png', href='img/logo-bee_small.png', sizes='16x16')
+    8      link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Patrick+Hand', rel='stylesheet')
+    9:     title The Catbears
+   10    body
+   11      #site-wrapper
+   ..
+   24              // Begin MailChimp Signup Form
+   25              #mc_embed_signup 
+   26:               form#mc-embedded-subscribe-form.validate(action='//thecatbears.us14.list-manage.com/subscribe/post?u=a7426f90aa46ed0d3d13700af&id=759f0584e8', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+   27                  #mc_embed_signup_scroll.horizontal-form
+   28                    .mc-field-group
+   ..
+   72                img(src='img/thumb_felt.png', alt='thumb_felt', style='width:336px;height:336px;')
+   73                .badge.badge-scissors
+   74:             h2 Make Felt Catbears
+   75              p Felt is a great material for making your ideas come to life.
+   76          .box.box6
+
+382 matches across 48 files
+
+
+Searching 64 files for "$catbears"
+
+0 matches
