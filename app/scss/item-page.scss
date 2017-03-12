@@ -102,8 +102,8 @@ $url_0: url(../img/pages/icon-pdf.png);
   img { 
     display: block;
     position: absolute;
-    width : 100%;
-    height : auto;
+    height : 100%;
+    width  : auto;
     top:-100%; left:0; right: 0; bottom:-100%;
     margin: auto;
   }
@@ -239,8 +239,8 @@ $url_0: url(../img/pages/icon-pdf.png);
     img { 
       display: block;
       position: absolute;
-      height : auto;
-      width : 100%;
+      width : auto;
+      height : 100% ;
       top: 0; left:-100%; right: -100%; bottom:0;
       margin: auto;
     }
@@ -299,6 +299,7 @@ $url_0: url(../img/pages/icon-pdf.png);
   // border : 1px solid orange;
   .gallery-wrapper{
     overflow: hidden;
+    max-height: 185px;
 
     #gallery {
       margin: 0;

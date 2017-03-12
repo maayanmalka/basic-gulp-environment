@@ -3,8 +3,13 @@ extends ./templates/item-page__img.jade
 block title
   title Felt Catbears - The Catbears
 
+//- block main-img
+    //- iframe.video(src='https://www.youtube.com/embed/C-VCCDoCjdc?rel=0&;showinfo=0', frameborder='0', allowfullscreen='')
 block main-img
-    iframe.video(src='https://www.youtube.com/embed/C-VCCDoCjdc?rel=0&;showinfo=0', frameborder='0', allowfullscreen='')
+  - var pageName = 'Felt-Catbears'
+  a(href='../pdf/The-Catbears_#{pageName}.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__#{pageName}'); lightboxInit('subscribe')")
+    .img-fit-container
+      img(src='../img/pages/#{pageName}.png', alt='#{pageName} by The Catbears')
 
 block gallery-items
   - var pageName = 'Felt-Catbears'
@@ -41,12 +46,13 @@ block page-item__cta
 block page-description
 
   .page-description
-    h1 Description
+    h1 Instructions
     .columns
       .left-column
         p Here are 3 Catbears you can make using felt: A Fox, a Duck and a Panda bear. 
         | 
         br
+        iframe.video(src='https://www.youtube.com/embed/C-VCCDoCjdc?rel=0&;showinfo=0', frameborder='0', allowfullscreen='')  
         strong 
           h2 To make a felt Catbear:
         //- .howitworks
