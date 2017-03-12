@@ -23,6 +23,11 @@ var videoPlaying = vidFoxChristmas;
 // var videoArr = [vidSpooky, vidSunrise, vidFoxChristmas, vidFeltCatbears, vidGreetingCard , vidDIYBook];
 var videoArr = [
                  {
+                  'name' : vidSunrise ,
+                  'startTime' : 27 ,
+                  'endTime' : 40
+                 },
+                 {
                   'name' : vidFeltCatbears ,
                   'startTime' : 2 ,
                   'endTime' : 50
@@ -32,11 +37,7 @@ var videoArr = [
                   'startTime' : 17 ,
                   'endTime' : 25
                  },
-                 {
-                  'name' : vidSunrise ,
-                  'startTime' : 27 ,
-                  'endTime' : 40
-                 }, 
+                  
                  {
                   'name' : vidFoxChristmas ,
                   'startTime' : 10 ,
@@ -273,6 +274,9 @@ var screenRatio;
 var poster
 var blocker
 
+var posterHeight;
+// var posterMinHeight;
+
 
 $(document).ready(function(){
     setScreenSizes();
@@ -290,22 +294,31 @@ function setScreenSizes () {
   screenWidth = document.documentElement.clientWidth;
   screenHeight = document.documentElement.clientHeight;
 
+  // posterMinHeight = 480;
+  posterHeight = screenHeight / 2;
+  
+  // posterHeight = if(screenHeight / 2 > 480){
+  //   return screenHeight / 2
+  // };else {
+  //   return 480;
+  // }
+
   // console.log ("screenWidth = " + screenWidth);
   // console.log ("screenHeight = " + screenHeight);
 
-  screenRatio = screenWidth / screenHeight 
+  screenRatio = screenWidth / posterHeight 
   // console.log ("Ratio = " + screenRatio)
 }
 
 function setPosterSize () {
 	poster = $('.poster-fullscreen');
 	poster.css({"width": screenWidth});
-	poster.css({"height": screenHeight});
-
+	poster.css({"height": posterHeight});
+  // poster.css({"margin-bottom" : '60'});
   	//prevent pressing the pause button
-  	blocker = $('.player-blocker')
+  blocker = $('.player-blocker')
 	blocker.css({"width" : screenWidth})
-	blocker.css({"height" : screenHeight})
+	blocker.css({"height" : posterHeight})
 }
 
 function sizeVideoSize(){
@@ -327,8 +340,8 @@ function sizeVideoSize(){
 
 	}else{
 		// console.log ("V.P");
-		video.css({"height": screenHeight});
-		video.css({"width": screenHeight * videoRatio });
+		video.css({"height": posterHeight});
+		video.css({"width": posterHeight * videoRatio });
 		// video.css("width" : videoWidth * 2);
 	}
 
