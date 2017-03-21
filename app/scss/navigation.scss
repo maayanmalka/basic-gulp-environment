@@ -48,11 +48,13 @@
 			position: absolute;
 			// top: 5px;
 			color: white;
-    	    font-size : 25px;
+    	    font-size : 15px;
     	    text-align: center;
- 	        font-family: 'Schoolbell', 'Open Sans', sans-serif;
-	        font-weight: 100;
-	        text-shadow: 2px 2px 9px rgba(0,0,0,0.6);
+ 	        // font-family: 'Schoolbell', 'Open Sans', sans-serif;
+	        font-family: 'helvetica' , 'Arial', sans-serif;
+	        text-transform: uppercase;
+	        font-weight: 600;
+	        // text-shadow: 2px 2px 9px rgba(0,0,0,0.6);
 			margin: 6px 20px 12px;
 
 			// background-color: red;
@@ -64,41 +66,36 @@
 		}
 		.nav-item__about {
 			right: 340px;
-	        transform: rotate(-7deg);
-	        -ms-transform: rotate(-7deg); /* IE 9 */
-	        -webkit-transform: rotate(-7deg); /* Chrome, Safari, Opera */
 		}
 		.nav-item__home {
 			display: none;
 			right: 340px;
-	        transform: rotate(0deg);
-	        -ms-transform: rotate(0deg); /* IE 9 */
-	        -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
 		}
 		.nav-item__contact {
 			right: 220px;
-	        transform: rotate(4deg);
-	        -ms-transform: rotate(4deg); /* IE 9 */
-	        -webkit-transform: rotate(4deg); /* Chrome, Safari, Opera */
-			 display: block;
+     		display: block;
 		}
 		.nav-item__signup {
-			width : 114px;
-			height: 139px;
+			width : 184px;
+			height: 217px;
 			right: 0px;
-			margin-right: 55px;
-			top: -70px;
-			transform: scale(1.4);
-			padding-top: 78px;
+			top: -115px;
+			padding-top: 130px;
 			background: url("../img/icons/pull-btn.png") no-repeat;
-		    background-size: 114px 139px;
-		    
-		     transition : top 80ms ease-in-out;
+		    background-size: 184px 217px;
+     	    transition : top 80ms ease-in-out;
+		    p {
+		    	color: white;
+		    	width : 100px;
+		    	margin: 0 auto;
+		    	line-height: 20px;
+		    	font-size : 15px;
+		    }
 		    &:hover {
-		    	top: -65px;
+		    	top: -110px;
 		    }
 		    &:active {
-			    top: -25px;	
+			    top: -75px;	
 		    }
 		}
 	}
@@ -131,14 +128,16 @@
 
 
 @media (max-width : 650px){
-	
-	.nav-item__about , .nav-item__contact  {
-		display: none !important;
-	}
+	.navigation .navigation__items {
+		.nav-item__about , .nav-item__contact  {
+			display: none;
+		}
+		.nav-item__signup {
+		  transform : scale(0.7);
+		  margin-right: -50px;
+		  top: -120px;
+		}
+		
+	}	
 
-	.nav-item__signup {
-	  transform: scale(1) !important;
-	  right: 0 !important;
-	  margin-right: 27px !important;
-	}
 }

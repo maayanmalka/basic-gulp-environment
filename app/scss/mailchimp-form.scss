@@ -14,7 +14,7 @@
 .email {
   font-size: 16px;
   min-height: 30px;
-  border: 1px solid $gray__light--2;
+  border: 1px solid $catbears__primary !important;
   background-color: $white;
   margin: 0;
   padding: 0;
@@ -26,7 +26,7 @@
 }
 
 #mce-EMAIL , #mc-embedded-subscribe{
-  height : 55px;
+  height : 46px;
   margin: 0 !important;
   margin-top: 10px !important;
   margin-bottom: 6px !important;
@@ -60,7 +60,6 @@
 #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
   position: absolute;
   // border : 1px solid blue;
-  background-color: white !important;
   margin : 0 !important;
   padding : 0 !important;
   width: auto;
@@ -69,6 +68,7 @@
   border-radius: 0 !important;
   text-align: center !important;
   width: 100%;
+  background-color: white !important;
 }
 
 #mce-success-response , #mce-error-response {

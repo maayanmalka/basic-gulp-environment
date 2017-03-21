@@ -3,6 +3,7 @@
 //  make a centered div, position the gifs next to it
 
 .promo-item {
+  padding: 80px 16px 0;
   overflow: hidden;
   position: relative;           
   text-align : center;
@@ -11,16 +12,23 @@
   z-index: 9999;
   background-image: url("../img/footer/footer-bg-img.png");
   background-position: center; 
-  background-repeat: no-repeat;  
+  background-repeat: no-repeat; 
+
   // background-color: rgba(255, 192, 203, 0.46); //pink;
   h2 {
-    font-family: 'Amatic SC', 'Open Sans', sans-serif;
-    font-family: 'Schoolbell', 'Open Sans', sans-serif;
-    font-weight: 100;
-    font-size : 60px;
-    margin-bottom: 7px;
-    // color : #ec008c;
-    margin-bottom: 20px;
+    // font-family: 'Amatic SC', 'Open Sans', sans-serif;
+    // font-family: 'Schoolbell', 'Open Sans', sans-serif;
+    font-weight: 600;
+    height: 80px;
+    padding-top: 20px;
+    font-size : 22px;
+    color : white;
+    background-color: $catbears__primary;
+    margin-bottom: 30px;
+  }
+  p {
+    margin-bottom: 20px; 
+    color: $catbears__primary;
   }
   .overlay-container {
     // overlay items located in relation to this container
@@ -36,7 +44,11 @@
   }
 }
 
-
+.foot-note {
+  max-width: 500px;
+  padding: 20px 16px 0;
+  margin: 0 auto; 
+}
 .overlay {
   background-blend-mode: multiply;
   mix-blend-mode: multiply;
@@ -64,13 +76,17 @@
 }
 
 .subscribe-wrapper {
-  padding-top: 70px;
-  max-width: 350px;
+  padding-bottom: 30px;
+  max-width: 650px;
   margin : 0 auto ;
+  border : 3px solid $catbears__primary;
+  background-color: white;
+  border-radius: 6px; 
   .subscribe-form {
     margin : 0 auto ;
     margin-top: 15px;
     max-width: 340px;
+    padding: 0 16px;
   }
 }
 
@@ -115,7 +131,7 @@
 
 @media(max-width: 1200px) {
   .promo-item {
-    padding : 0 15px;
+    // padding : 0 15px;
     // margin-top: 70px;
   }
 }
@@ -129,6 +145,11 @@
 
 @media (max-width: 585px){
   .promo-item {
+    padding-top: 10px;
+    h2 {
+      font-size: 16px;
+      height: 70px;
+    }
   }
   .subscribe-wrapper {
   }

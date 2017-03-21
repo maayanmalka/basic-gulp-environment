@@ -6,203 +6,201 @@ block title
 
 block poster-fullscreen
   .poster-fullscreen
-    .poster-bottom
     .poster-fullscreen__bg-img
-    #player
-    .fullscreen__obj
-      .player-blocker
-      //- .fullscreen__obj--logo 
-        //- img(src="../img/hp/hp-logo__dark.png", alt="The Catbears Logo") 
-      
-      h1.fullscreen__title.noMarkup What will you make 
-        span.rainbow-animation.color--skyblue today?
-         
-      a.fullscreen__obj--cta.scroll-to-grid-layout 
-        .arrow
-      //- .fullscreen__obj--stickers 
-        img(src="../img/hp/stickers.png", alt="Stickers - The Catbears") 
-      //- .fullscreen__obj--try-this-activity  
+    .layout-850px
+      .fullscreen__content-container
+        .fullscreen__logo
+        h1.fullscreen__title.noMarkup Craft Something Awesome 
+      .fullscreen__object
+        .fullscreen__object--img
+    .poster-bottom
 
+block about-catbears
+  p.about-catbears 
+    strong Welcome to The Catbears! 
+    | We’re helping kids develop their creativity and make their imagination come to life. Try one of our craft projects!
+    br
+    br  
+    strong Our goal 
+    | is to spark creative thinking using fun printable activities that encourage children to think and create their own worlds. Why printables? When technology is taking such a big part of our lives we feel it's important to get kids in and out of the digital world.
 
 block grid-title
   .grid-title
-    h1
-      span.comic.color--skyblue What will you make today?
-    //-   span.color--red Try 
-    //-   span.color--orange Our 
-    //-   span.color--skyblue Activities
-    //- h1 Grab your 
-      span.comic.color--red Scissors
-      | , grab your 
-      span.comic.color--orange Glue
-      | , Let’s get 
-      span.comic.color--skyblue Crafty
-      | ! 
+    h1 Explore Our Projects
+    .title-underline
 
+
+
+
+
+
+//------------ GRID BOXES ----
 
 block greeting-card
   .box
     a(href='greeting-card.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__Greeting-Card')")
       .image-container
         img(src="../img/thumbs/thumb_greeting-card.png", alt="Greeting Card Fox & Duck - by The Catbears")
-        .badge-on-thumb-container
-          .badge-on-thumb.badge--scissors-icon
-          .badge-on-thumb.badge--glue-icon
-    .box-text-container
-        h2 a Greeting Card
-        a(href='greeting-card.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb-LINK__Learn-how__greeting-card')") Learn how
-        |  | 
-        a(href='greeting-card.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb-LINK__Download__greeting-card')") Download pdf
+        .thumb-overlay-container
+          //- .badge-on-thumb.badge--scissors-icon
+          //- .badge-on-thumb.badge--glue-icon
+          .box-text-container
+            h2 DIY Greeting Card
+            p Make
 
+block sunset
+  .box
+    a(href='sunset.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__sunset')")
+      .image-container
+        img(src="../img/thumbs/thumb_sunset.png", alt="Greeting Card Fox & Duck - by The Catbears")
+        .thumb-overlay-container
+          //- .badge-on-thumb.badge--scissors-icon
+          //- .badge-on-thumb.badge--glue-icon
+          .box-text-container
+            h2 Paper Sunset
+            p Make
 
 block maker-kit
   .box
     a(href='maker-kit.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__maker-kit')")
       .image-container
         img(src="../img/thumbs/thumb_maker-kit.png", alt="Maker-Kit by The Catbears")
-        .badge-on-thumb-container
-          .badge-on-thumb.badge--scissors-icon
-          .badge-on-thumb.badge--glue-icon
-    .box-text-container
-        h2 a Maker Kit
-        a(href='maker-kit.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb-LINK__Learn-how__maker-kit')") Learn how
-        |  | 
-        a(href='felt-catbears.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb-LINK__Download__maker-kit')") Download pdf
+        .thumb-overlay-container
+          //- .badge-on-thumb.badge--scissors-icon
+          //- .badge-on-thumb.badge--glue-icon
+          .box-text-container
+            h2 Maker Kit
+            p Make
 
 
-
-block duck-boat
-  .box
-    a(href='duck-boat.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__duck-boat')")
-      .image-container
-        img(src="../img/thumbs/thumb_duck-boat.png", alt="Paper Duck and Boat - The Catbears")
-        //- .badge-on-thumb.badge--pdf-icon
-      .box-text-container
-        h2 Pop Ups - Ducky on a boat
-        p Free PDF ・ 1 Printable Page
-
-block finger-puppets
-  .box
-    a(href='finger-puppets.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__finger-puppets')")
-      .image-container
-        img(src="../img/thumbs/thumb_finger-puppets.png", alt="Finger Puppets by The Catbears")
-        //- .badge-on-thumb.badge--pdf-icon
-      .box-text-container
-        h2 Finger Paper Puppets
-        p Free PDF ・ 2 Printable Page
-
-block ranni
-  .box
-    a(href='ranni-coloring-page.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__ranni-coloring-page')")
-      .image-container
-        img(src="../img/thumbs/thumb_ranni-color-page.png", alt="Ranni's Red Ballon - A Coloring page by The Catbears")
-        //- .badge-on-thumb.badge--pdf-icon
-      .box-text-container
-        h2 Ranni's Red Ballon - Coloring Page
-        p Free PDF ・ 1 Printable Page
 
 block make-a-fox
   .box
     a(href='felt-catbears.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__felt-catbears')")
       .image-container
         img(src='../img/thumbs/thumb_felt-catbears.png', alt='Make Felt Catbears')
-        .badge-on-thumb-container
-          .badge-on-thumb.badge--scissors-icon
-          .badge-on-thumb.badge--glue-icon
-    .box-text-container
-      h2 Make a Fox
-      a(href='felt-catbears.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb-LINK__Learn-how__felt-catbears')") Learn how
-      |  | 
-      a(href='felt-catbears.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb-LINK__Download__felt-catbears')") Download pdf
-
-
-block coloring-book-duck
-  .box
-    a(href='coloring-book_duck-in-trouble.html')
-      .image-container
-        img(src='../img/thumbs/thumb_coloring-book_duck-in-trouble.gif', alt='Coloring book by The Catbears' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__coloring-book-duck')")
-        //- .badge-on-thumb.badge--pdf-icon
-      .box-text-container
-        h2 DIY Coloring Book
-        p Free PDF ・ 28 Printable Pages
-
-block riddle-games
-  .box
-    a(href='riddle-games.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__riddle-games')")
-      .image-container
-        img(src='../img/thumbs/thumb_riddle-games.png', alt='riddle-games by The Catbears')
-        //- .badge-on-thumb.badge--pdf-icon
-      .box-text-container
-        h2 Riddle Games
-        p Free PDF ・  4 Printable Pages
+        .thumb-overlay-container
+          //- .badge-on-thumb.badge--scissors-icon
+          //- .badge-on-thumb.badge--glue-icon
+          .box-text-container
+            h2 Felt Catbears
+            p Make
 
 block coloring-pages
   .box
     a(href='5-coloring-pages_catbears.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__coloring-pages')")
       .image-container
         img(src='../img/thumbs/thumb_coloring-pages.png', alt='5-coloring-pages')
-        .badge-on-thumb-container
-          .badge-on-thumb.badge--crayon-icon  
-    .box-text-container
-        h2 a Greeting Card
-        a(href='5-coloring-pages_catbears.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb-LINK__Learn-how__coloring-pages')") Learn how
-        |  | 
-        a(href='5-coloring-pages_catbears.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb-LINK__Download__coloring-pages')") Download pdf
+        .thumb-overlay-container
+          //- .badge-on-thumb.badge--crayon-icon  
+          .box-text-container
+            h2 Coloring Pages
+            p Color
+//- block duck-boat
+//-   .box
+//-     a(href='duck-boat.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__duck-boat')")
+//-       .image-container
+//-         img(src="../img/thumbs/thumb_duck-boat.png", alt="Paper Duck and Boat - The Catbears")
+//-         //- .badge-on-thumb.badge--pdf-icon
+//-       .box-text-container
+//-         h2 Pop Ups - Ducky on a boat
+//-         p Free PDF ・ 1 Printable Page
 
-block learn-to-draw
-  .box
-    a(href='learn-to-draw.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__learn-to-draw')")
-      .image-container
-        img(src='../img/thumbs/thumb_learn-to-draw.png', alt='Learn To Draw - The Catbears')
-        .badge-on-thumb-container
-          .badge-on-thumb.badge--pencil-icon  
-    .box-text-container
-        h2 Draw a Duck
-        a(href='learn-to-draw.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb-LINK__Learn-how__learn-to-draw')") Learn how
-        |  | 
-        a(href='learn-to-draw.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb-LINK__Download__learn-to-draw')") Download pdf
-block iMessage-stickers
-  .box
-    a(href='ios-stickers.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__iMessage-stickers')")
-      .image-container
-        img(src='../img/thumb_ios-stickers.png', alt='Fox & Duck iMessage Stickers by The Catbears')
-        //- .badge-on-thumb.badge--apple
-      .box-text-container
-        h2 Free Stickers for iMessage 
-        p Free on the Apple App Store 
 
-block society6
-  .box
-    a(href='https://society6.com/thecatbears' target="_blank"  onclick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__s6')")
-      .image-container
-        img(src='../img/society6.gif', alt='The Catbears on Society6')
-        .badge-on-thumb.badge--s6
-      .box-text-container
-        h2 Catbears Store
-        p The Catbears o  n Society6
 
-block catbears-stickers
-  .box.box3
-    a(href='catbears-stickers.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__catbears-stickers')")
-      .image-container
-        img(src='../img/thumbs/thumb_stickers.png', alt='catbears stickers')
-        .badge-on-thumb-container
-          .badge-on-thumb.badge--scissors-icon
-    .box-text-container
-        h2 Catbears Stickers
-        a(href='catbears-stickers.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb-LINK__Learn-how__catbears-stickers')") Learn how
-        |  | 
-        a(href='catbears-stickers.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb-LINK__Download__catbears-stickers')") Download pdf
+//- block finger-puppets
+//-   .box
+//-     a(href='finger-puppets.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__finger-puppets')")
+//-       .image-container
+//-         img(src="../img/thumbs/thumb_finger-puppets.png", alt="Finger Puppets by The Catbears")
+//-         //- .badge-on-thumb.badge--pdf-icon
+//-       .box-text-container
+//-         h2 Finger Paper Puppets
+//-         p Free PDF ・ 2 Printable Page
 
-block instagram
-  .box
-    a(href='https://www.instagram.com/thecatbears/' target="_blank" onclick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__instagram')")
-      .image-container
-        img(src='../img/thumb_instagram-page.png', alt='Catbears on Instagram')
-        .badge-on-thumb.badge--instagram
-      .box-text-container
-        h2 The Catbears on Instagram
-        p Check out our Instagram profile
+//- block ranni
+//-   .box
+//-     a(href='ranni-coloring-page.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__ranni-coloring-page')")
+//-       .image-container
+//-         img(src="../img/thumbs/thumb_ranni-color-page.png", alt="Ranni's Red Ballon - A Coloring page by The Catbears")
+//-         //- .badge-on-thumb.badge--pdf-icon
+//-       .box-text-container
+//-         h2 Ranni's Red Ballon - Coloring Page
+//-         p Free PDF ・ 1 Printable Page
+
+//- block coloring-book-duck
+//-   .box
+//-     a(href='coloring-book_duck-in-trouble.html')
+//-       .image-container
+//-         img(src='../img/thumbs/thumb_coloring-book_duck-in-trouble.gif', alt='Coloring book by The Catbears' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__coloring-book-duck')")
+//-         //- .badge-on-thumb.badge--pdf-icon
+//-       .box-text-container
+//-         h2 DIY Coloring Book
+//-         p Free PDF ・ 28 Printable Pages
+
+//- block riddle-games
+//-   .box
+//-     a(href='riddle-games.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__riddle-games')")
+//-       .image-container
+//-         img(src='../img/thumbs/thumb_riddle-games.png', alt='riddle-games by The Catbears')
+//-         //- .badge-on-thumb.badge--pdf-icon
+//-       .box-text-container
+//-         h2 Riddle Games
+//-         p Free PDF ・  4 Printable Pages
+
+
+
+//- block learn-to-draw
+//-   .box
+//-     a(href='learn-to-draw.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__learn-to-draw')")
+//-       .image-container
+//-         img(src='../img/thumbs/thumb_learn-to-draw.png', alt='Learn To Draw - The Catbears')
+//-         .thumb-overlay-container
+//-           .badge-on-thumb.badge--pencil-icon  
+//-           .box-text-container
+//-             h2 Draw a Duck
+//-             a(href='learn-to-draw.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb-LINK__Learn-how__learn-to-draw')") Make
+
+//- block iMessage-stickers
+//-   .box
+//-     a(href='ios-stickers.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__iMessage-stickers')")
+//-       .image-container
+//-         img(src='../img/thumb_ios-stickers.png', alt='Fox & Duck iMessage Stickers by The Catbears')
+//-         //- .badge-on-thumb.badge--apple
+//-       .box-text-container
+//-         h2 Free Stickers for iMessage 
+//-         p Free on the Apple App Store 
+
+//- block society6
+//-   .box
+//-     a(href='https://society6.com/thecatbears' target="_blank"  onclick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__s6')")
+//-       .image-container
+//-         img(src='../img/society6.gif', alt='The Catbears on Society6')
+//-         .badge-on-thumb.badge--s6
+//-       .box-text-container
+//-         h2 Catbears Store
+//-         p The Catbears o  n Society6
+
+//- block catbears-stickers
+//-   .box.box3
+//-     a(href='catbears-stickers.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__catbears-stickers')")
+//-       .image-container
+//-         img(src='../img/thumbs/thumb_stickers.png', alt='catbears stickers')
+//-         .thumb-overlay-container
+//-           .badge-on-thumb.badge--scissors-icon
+//-           .box-text-container
+//-               h2 Catbears Stickers
+//-               a(href='catbears-stickers.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb-LINK__Learn-how__catbears-stickers')") Make
+
+//- block instagram
+//-   .box
+//-     a(href='https://www.instagram.com/thecatbears/' target="_blank" onclick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__instagram')")
+//-       .image-container
+//-         img(src='../img/thumb_instagram-page.png', alt='Catbears on Instagram')
+//-         .badge-on-thumb.badge--instagram
+//-       .box-text-container
+//-         h2 The Catbears on Instagram
+//-         p Check out our Instagram profile
 
 block box-spacer
   .box.box-spacer
