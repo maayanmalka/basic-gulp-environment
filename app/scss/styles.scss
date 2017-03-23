@@ -386,6 +386,38 @@ input, button, submit {
     }
     }
 }
+
+
+.rainbow-animation-slow {
+
+      -webkit-animation-name: rainbow; /* Safari 4.0 - 8.0 */
+      -webkit-animation: rainbow 100s infinite; /* Safari 4.0 - 8.0 */
+      animation-name: rainbow;
+      animation: rainbow 100s infinite;
+    /* Safari 4.0 - 8.0 */
+    @-webkit-keyframes rainbow {
+        from {  
+          -webkit-filter: hue-rotate(0deg);
+        filter: hue-rotate(0deg);
+        }
+      to {
+        -webkit-filter: hue-rotate(359deg);
+        filter: hue-rotate(359deg);
+    }
+    }
+
+    /* Standard syntax */
+    @keyframes rainbow {
+      from {  
+        -webkit-filter: hue-rotate(0deg);
+        filter: hue-rotate(0deg);
+      }
+      to {
+        -webkit-filter: hue-rotate(360deg);
+        filter: hue-rotate(360deg);
+    }
+    }
+}
     // END - RAINBOW ANIMATION
 
 ul, ol, li {
