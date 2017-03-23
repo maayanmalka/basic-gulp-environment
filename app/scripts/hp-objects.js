@@ -23,7 +23,14 @@ $(document).ready(function(){
 	posterObjects = $('.fullscreen__object--img');
 	showObjNum = 1;
 
+	// load images to cash
+	for (var i = 0; i < objectsTotal ; i++){
+	  	posterObjects.css("background-image" , ['url("../img/hp/' + objects[i] + '")']);
+	}
+
 	setInterval('cycleImages()', 5000);
+
+
 
 });
 
