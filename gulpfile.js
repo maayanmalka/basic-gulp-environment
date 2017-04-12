@@ -22,7 +22,7 @@ gulp.task("bower-files", function(){
 // VINILE FTP
 var ftp = require( 'vinyl-ftp' );
 var conn = ftp.create( {
-    host:     'ftpes://catbears.com',
+    host:     'catbears.com',
     user:     'catbears',
     password: 'HB3g0yj24i'
 } );
