@@ -10,6 +10,8 @@
   font-size: 16px;
   margin-top: 30px;
   margin-bottom: 50px;
+  max-width: 600px;
+  // background-color: red;
 }
 
 .grid-title {
@@ -34,6 +36,7 @@
 
 // 3 items in row
 .flex-grid {
+  max-width: 900px;
   display: flex;
   justify-content : space-around;
   flex-wrap: wrap;
@@ -226,27 +229,31 @@
 }
 
 @media (max-width: 1024px){
+  .flex-grid {
+    margin-bottom: 40px;
+  }
   .box {
     // margin-bottom: 20%;
     margin-left: 7px;
     margin-right: 7px;
-    
+    width: 45%;
+
     .thumb-overlay-container {
       position: static;
       z-index: 999;
       width: 100%;
       height: 30px;
       border-radius: 0;
-      text-align: center;
       background-color: transparent;
       opacity: 1;
       &:hover {
         opacity: 1;
       }
       .box-text-container {
-        // bottom: 0px;
-        margin-bottom: -120px;
-        // top : 0;
+        bottom: 0px;
+        margin-bottom: 0px;
+        padding : 0;
+        text-align: left;
         h2 {
           padding: 0;
           margin: 0;

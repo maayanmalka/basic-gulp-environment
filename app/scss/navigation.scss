@@ -78,11 +78,12 @@
 		.nav-item__signup {
 			width : 184px;
 			height: 217px;
-			right: 0px;
+			right : -50px;
 			top: -115px;
 			padding-top: 130px;
 			background: url("../img/icons/pull-btn.png") no-repeat;
 		    background-size: 184px 217px;
+		    // background-color: rgba(0,0,0,0.1);
      	    transition : top 80ms ease-in-out;
 		    p {
 		    	color: white;

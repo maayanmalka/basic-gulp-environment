@@ -19,8 +19,19 @@ html
     include ../include/navigation.jade
     #site-wrapper
       #upper-site
-        block poster-fullscreen
- 
+        .poster-fullscreen
+          .poster-fullscreen__bg-img
+          .layout-850px
+            .fullscreen__content-container
+              .fullscreen__logo
+              h1.fullscreen__title.noMarkup Craft Something Awesome 
+              h2 New DIY Projects To Your Mailbox!
+              .subscribe-form.horizontal-form
+                include ../include/mailchimp-form.jade
+                //- p.micro-text.foot-note * We will only ever email you about Catbears, and we promise to do it as little as possilbe, Cross our hears, Spam’s the worst.
+            .fullscreen__object
+              .fullscreen__object--img
+          .poster-bottom
       .layout-850px.flex-grid.hp-grid
         block about-catbears
         block grid-title

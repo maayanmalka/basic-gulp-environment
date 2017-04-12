@@ -13,7 +13,8 @@ body {
   font-family: 'Open Sans', sans-serif;
   margin: 0 auto;
   padding: 0;
-  background-color: $catbears__primary;
+  // background-color: $catbears__primary;
+  background-color: $white;
   overflow-x: hidden;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
@@ -547,11 +548,12 @@ p.bullet {
 
 .layout-850px {
   position: relative;
-  max-width : 850px;
+  max-width : 1124px;
   padding : 0 50px;
   height : 100%;
   margin : 0 auto;
   z-index: 10;
+  // background-color: blue;
 }
 
 @media (max-width: 1200px) {
@@ -560,5 +562,93 @@ p.bullet {
 @media (max-width: 500px) {
   .layout-850px {
     padding: 0 16px;
+  }
+}
+
+// HORIZONTAL FORM
+@media (min-width: 1024px) and (max-width: 3000px) {
+  .horizontal-form {
+    max-width: 450px;
+    width: 100%;
+    margin: 0 !important;
+    padding : 0 !important;
+
+    #mc_embed_signup_scroll {
+      display: flex;
+      position: relative;
+      justify-content: space-between !important;
+      align-items: space-between !important;
+      margin: 0 !important;
+      padding : 0 !important;
+      width: 100% !important;
+      // background-color: blue;
+      #mce-EMAIL  {
+        // background-color: orange !important;
+        width: 100% !important;
+        margin: 0 !important;
+        height : 70px;
+        border-radius: 8px !important;
+        border: none !important;
+      }
+      .mc-field-group {
+        position: absolute;
+        min-width: 100% !important;
+        width: 100% !important;
+        .mce_inline_error {
+          // color : blue !important;
+          bottom : -55px !important;
+          min-height : 40px !important;
+          padding-top: 10px !important;
+        } 
+      }
+    }
+
+    .clear {
+    }
+
+    #mc-embedded-subscribe {
+      position: absolute;
+      max-width: 150px;
+      // width: 150px;
+      margin: 0 !important;
+      padding: 0 !important;
+      // background-color: black;
+      right : 8px;
+      top: 10px;
+      height : 50px;
+      border-radius: 4px !important;
+    }
+    .micro-text.foot-note {
+      color: white;
+      padding: 0;
+      margin-top: 10px; 
+      color : red;
+      opacity: 0.75;
+    }
+  } 
+}
+
+@media (max-width: 1024px) {
+  .horizontal-form {
+    max-width: 390px;
+    margin: 0 auto;
+    #mc_embed_signup_scroll {
+      // background-color: blue;
+      #mce-EMAIL  {
+        // background-color: orange !important;
+        width: 100% !important;
+        margin: 0 !important;
+        height : 60px;
+        // border-radius: 8px !important;
+        margin-bottom: 6px !important;
+        border: none !important;
+      }
+    }
+  }
+  #mc-embedded-subscribe {
+    // background-color: black;
+    height : 60px !important;
+    border-radius: 8px !important;
+    // background-color: #5f2929;
   }
 }
