@@ -5,15 +5,20 @@ block title
 
 block main-img
   - var pageName = 'Coloring-Pages'
-  a(href='../pdf/The-Catbears_#{pageName}' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__#{pageName}'); lightboxInit('subscribe')")
+  - var url = "https://www.etsy.com/il-en/listing/519018519/5-coloring-pages-cute-catbears-inside?ref=related-3"
+
+
+  a(href='#{url}' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'Etsy__IMG__#{pageName}'); lightboxInit('subscribe')")
     .img-fit-container
       img(src='../img/pages/#{pageName}.png', alt='#{pageName} by The Catbears')
 
 block gallery-items
   - var pageName = 'Coloring-Pages'
   - var numberOfPages = 5
+  - var url = "https://www.etsy.com/il-en/listing/519018519/5-coloring-pages-cute-catbears-inside?ref=related-3"
+  
   - for (var i = 1; i <= +numberOfPages; i++)
-      a(href='../pdf/The-Catbears_#{pageName}.pdf#page=#{i}' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__#{pageName}'); lightboxInit('subscribe')") 
+      a(href='#{url}' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__#{pageName}'); lightboxInit('subscribe')") 
         li.gallery__item.gallery__item--1 
           img(src='../img/pages/#{pageName}/page_#{i}.png', alt='Activity Page by The Catbears')
 
@@ -36,7 +41,8 @@ block page-item__cta--micro-text
 block page-item__cta
   - var pageName = 'Coloring-Pages'
   - var numberOfPages = 5
-  a.btn.btn__icon.btn__large.btn__primary(href='../pdf/The-Catbears_#{pageName}.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Catbears-Stickers'); lightboxInit('subscribe')") PRINT (#{numberOfPages})
+  a.btn.btn__icon.btn__large.btn__primary(href='https://www.etsy.com/il-en/listing/519018519/5-coloring-pages-cute-catbears-inside?ref=related-3' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'ETSY__Coloring-Pages'); lightboxInit('subscribe')") Shop On Etsy
+  //- a.btn.btn__icon.btn__large.btn__primary(href='../pdf/The-Catbears_#{pageName}.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Catbears-Stickers'); lightboxInit('subscribe')") PRINT (#{numberOfPages})
     .btn__icon--printer
 
 block page-description

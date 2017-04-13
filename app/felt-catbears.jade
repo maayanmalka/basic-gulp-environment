@@ -7,15 +7,15 @@ block title
     //- iframe.video(src='https://www.youtube.com/embed/C-VCCDoCjdc?rel=0&;showinfo=0', frameborder='0', allowfullscreen='')
 block main-img
   - var pageName = 'Felt-Catbears'
-  a(href='../pdf/The-Catbears_#{pageName}.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__IMG__#{pageName}'); lightboxInit('subscribe')")
-    .img-fit-container
-      img(src='../img/pages/#{pageName}.png', alt='#{pageName} by The Catbears')
+  iframe.video(src='https://www.youtube.com/embed/C-VCCDoCjdc?rel=0&;showinfo=0', frameborder='0', allowfullscreen='')  
 
 block gallery-items
   - var pageName = 'Felt-Catbears'
   - var numberOfPages = 3
+  - var url = "https://www.etsy.com/il-en/listing/507066130/make-a-fox-duck-and-panda-bear-2d?ref=shop_home_active_2"
+
   - for (var i = 1; i <= +numberOfPages; i++)
-      a(href='../pdf/The-Catbears_#{pageName}.pdf#page=#{i}' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__#{pageName}'); lightboxInit('subscribe')") 
+      a(href='#{url}' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__#{pageName}'); lightboxInit('subscribe')") 
         li.gallery__item.gallery__item--1 
           img(src='../img/pages/#{pageName}/page_#{i}.png', alt='Activity Page by The Catbears')
 
@@ -38,7 +38,10 @@ block page-item__cta--micro-text
 block page-item__cta
   - var pageName = 'Felt-Catbears'
   - var numberOfPages = 3
-  a.btn.btn__icon.btn__large.btn__primary(href='../pdf/The-Catbears_#{pageName}.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Catbears-Stickers'); lightboxInit('subscribe')") PRINT (#{numberOfPages})
+  - var url = "https://www.etsy.com/il-en/listing/507066130/make-a-fox-duck-and-panda-bear-2d?ref=shop_home_active_2"
+
+  a.btn.btn__icon.btn__large.btn__primary(href='#{url}' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'ETSY__Felt-Catbears'); lightboxInit('subscribe')") Shop On Etsy
+  //- a.btn.btn__icon.btn__large.btn__primary(href='../pdf/The-Catbears_#{pageName}.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Catbears-Stickers'); lightboxInit('subscribe')") PRINT (#{numberOfPages})
     .btn__icon--printer
 
 
@@ -50,9 +53,7 @@ block page-description
     .columns
       .left-column
         p Here are 3 Catbears you can make using felt: A Fox, a Duck and a Panda bear. 
-        | 
-        br
-        iframe.video(src='https://www.youtube.com/embed/C-VCCDoCjdc?rel=0&;showinfo=0', frameborder='0', allowfullscreen='')  
+        //- iframe.video(src='https://www.youtube.com/embed/C-VCCDoCjdc?rel=0&;showinfo=0', frameborder='0', allowfullscreen='')  
         strong 
           h2 To make a felt Catbear:
         //- .howitworks
@@ -65,6 +66,7 @@ block page-description
           li Assemble and glue the parts together to create your felt Catbear.
         p
           | This is a really fun activity that focuses on the Cutting skill. your kids will love creating a felt Catbear by themselves.
+        img(src='../img/pages/#{pageName}.png', alt='#{pageName} by The Catbears')  
       .right-column
           img(src='../img/description-imgs/The-Catbears_Felt-Catbears.png', alt='Felt Catbears by The Catbears')
 

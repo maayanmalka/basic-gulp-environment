@@ -11,11 +11,16 @@ block main-img
 block gallery-items
   - var pageName = 'Greeting-Card'
   - var numberOfPages = 2
+  - var url = "https://www.etsy.com/il-en/listing/505210548/greeting-card-pdf-pattern-kids-craft?ref=related-4"
+
   - for (var i = 1; i <= +numberOfPages; i++)
-      a(href='../pdf/The-Catbears_#{pageName}.pdf#page=#{i}' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__#{pageName}'); lightboxInit('subscribe')") 
+      a(href='#{url}' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__#{pageName}'); lightboxInit('subscribe')") 
         li.gallery__item.gallery__item--1 
           img(src='../img/pages/#{pageName}/page_#{i}.png', alt='Activity Page by The Catbears')
-
+  //- - for (var i = 1; i <= +numberOfPages; i++)
+  //-     a(href='../pdf/The-Catbears_#{pageName}.pdf#page=#{i}' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'PP-Gallery-Thumb__#{pageName}'); lightboxInit('subscribe')") 
+  //-       li.gallery__item.gallery__item--1 
+  //-         img(src='../img/pages/#{pageName}/page_#{i}.png', alt='Activity Page by The Catbears')
 block page-item__title
   | DIY Greeting Card
 
@@ -35,7 +40,12 @@ block page-item__cta--micro-text
 block page-item__cta
   - var pageName = 'Greeting-Card'
   - var numberOfPages = 2
-  a.btn.btn__icon.btn__large.btn__primary(href='../pdf/The-Catbears_#{pageName}.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Catbears-Stickers'); lightboxInit('subscribe')") PRINT (#{numberOfPages})
+  - var url = "https://www.etsy.com/il-en/listing/505210548/greeting-card-pdf-pattern-kids-craft?ref=related-4"
+
+  a.btn.btn__icon.btn__large.btn__primary(href='#{url}' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'Etsy__Catbears-Stickers'); lightboxInit('subscribe')") Shop On Etsy
+    .btn__icon--printer
+
+  //- a.btn.btn__icon.btn__large.btn__primary(href='../pdf/The-Catbears_#{pageName}.pdf' target="_blank" onClick = "ga('send', 'event', 'Button', 'Click', 'FREE__Catbears-Stickers'); lightboxInit('subscribe')") PRINT (#{numberOfPages})
     .btn__icon--printer
 
 block page-description
