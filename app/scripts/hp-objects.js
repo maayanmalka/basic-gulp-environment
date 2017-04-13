@@ -3,6 +3,11 @@ var duck;
 var fox;
 var card;
 var makerKit;
+var sunset;
+var hug;
+var cardboard;
+var pig;
+var farm;
 
 var objects = [];
 var objectsTotal;
@@ -18,10 +23,15 @@ $(document).ready(function(){
 	fox = 'object__fox.png';
 	card = 'object__card.png';
 	makerKit = 'object__maker-kit.png';
-	objects = [duck, fox, card, makerKit];
+	sunset = 'object__sunset.png';
+	hug = 'object__hug.png';
+	pig = 'object__pig.png';
+	farm = 'object__farm.png';
+	cardboard = 'object__cardboard.png';
+	objects = [ cardboard , fox , pig , sunset , farm , makerKit ,card , hug , duck ];
 	objectsTotal = objects.length;
 	posterObjects = $('.fullscreen__object--img');
-	showObjNum = 1;
+	showObjNum = 0;
 
 	// load images to cash
 	for (var i = 0; i < objectsTotal ; i++){

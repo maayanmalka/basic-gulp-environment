@@ -51,6 +51,7 @@ g
   .fullscreen__logo {
     width: 127px;
     height: 89px;
+    margin-top: 40px;
     background: url('../img/hp/hp-logo.png') center top no-repeat;      
   }
 
@@ -122,18 +123,18 @@ g
       background: url('../img/hp/hp-logo_small.png') center top no-repeat;      
     }
     .fullscreen__content-container {
-      padding : 20px;
+      // padding : 20px;
      h2 {
       text-align: center;
       font-size: 18px;
       font-weight: 400;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
       text-shadow: 2px 2px 3px rgba(0,0,0,0.2);
      }
     }
     .fullscreen__content-container .fullscreen__title {
         margin-top: 28px;
-        font-size: 29px;
+        font-size: 25px;
         margin: 0 auto;
         text-align: center;
         padding-top: 13px;
@@ -143,13 +144,4 @@ g
   }
 }
 
-// @media (max-width : 545px){
-// }
-
-// @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
-
-// }
-
-// @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:landscape) {
-// }
 

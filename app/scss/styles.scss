@@ -556,8 +556,6 @@ p.bullet {
   // background-color: blue;
 }
 
-@media (max-width: 1200px) {
-}
 
 @media (max-width: 500px) {
   .layout-850px {
@@ -565,14 +563,40 @@ p.bullet {
   }
 }
 
+
+
+
 // HORIZONTAL FORM
-@media (min-width: 1024px) and (max-width: 3000px) {
+
+.horizontal-form {
+  #mc_embed_signup {
+    #mc_embed_signup_scroll {
+      #mce-EMAIL  {
+        background-color: white !important;
+        color : black !important;
+        &:focus {
+          text-decoration: none !important;
+          outline:none !important;
+          border: none !important;
+          box-shadow: none !important;
+        }
+      }
+      .mc-field-group {
+        .mce_inline_error {
+          background-color: transparent !important;
+          color : yellow !important;
+          text-align: left !important;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1025px) and (max-width: 3000px) {
   .horizontal-form {
     max-width: 450px;
     width: 100%;
     margin: 0 !important;
     padding : 0 !important;
-
     #mc_embed_signup_scroll {
       display: flex;
       position: relative;
@@ -629,26 +653,32 @@ p.bullet {
 }
 
 @media (max-width: 1024px) {
+  
   .horizontal-form {
     max-width: 390px;
     margin: 0 auto;
-    #mc_embed_signup_scroll {
-      // background-color: blue;
-      #mce-EMAIL  {
-        // background-color: orange !important;
-        width: 100% !important;
-        margin: 0 !important;
-        height : 60px;
-        // border-radius: 8px !important;
-        margin-bottom: 6px !important;
-        border: none !important;
+    #mc_embed_signup {
+      #mc_embed_signup_scroll {
+        .mc-field-group {
+          .mce_inline_error {
+            background-color: transparent !important;
+            color : yellow !important;
+          }
+        }
+        #mce-EMAIL  {
+          width: 100% !important;
+          margin: 0 !important;
+          height : 60px;
+          background-color: white !important;
+          margin-bottom: 6px !important;
+          border: none !important;
+        }
       }
     }
   }
+
   #mc-embedded-subscribe {
-    // background-color: black;
     height : 60px !important;
     border-radius: 8px !important;
-    // background-color: #5f2929;
   }
 }
