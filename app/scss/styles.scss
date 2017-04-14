@@ -479,6 +479,12 @@ p.bullet {
   color : $catbears__skyblue;
 }
 
+.title-underline {
+  width: 280px;
+  margin: 0 auto;
+  margin-top: 5px;
+  border-bottom: 6px solid $catbears__primary;
+}
 // Pinetrest Btn
 
 .pinterestBtnContainer {
@@ -579,7 +585,7 @@ p.bullet {
         opacity: 0.85;
         transition : opacity 200ms ease-in-out;
         &:hover {
-          opacity: 1;
+          opacity: 1 !important;
         }
         &:focus {
           text-decoration: none !important;
@@ -591,6 +597,10 @@ p.bullet {
       }
       .clear #mc-embedded-subscribe {
         border-radius: 4px !important;
+        text-decoration: none !important;
+        outline:none !important;
+        border: none !important;
+        box-shadow: none !important;
       }
       .mc-field-group {
         .mce_inline_error {
@@ -624,6 +634,7 @@ p.bullet {
         height : 70px;
         border-radius: 8px !important;
         border: none !important;
+        opacity: 1 !important;
       }
       .mc-field-group {
         position: absolute;

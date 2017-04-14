@@ -19,16 +19,23 @@
     // font-family: 'Amatic SC', 'Open Sans', sans-serif;
     // font-family: 'Schoolbell', 'Open Sans', sans-serif;
     font-weight: 600;
-    height: 80px;
+    // height: 80px;
     padding-top: 20px;
     font-size : 22px;
     color : white;
-    background-color: $catbears__primary;
-    margin-bottom: 30px;
+    // background-color: $catbears__primary;
+    color: black;
+    // margin-bottom: 30px;
   }
   p {
-    margin-bottom: 20px; 
+    margin-top: 40px;
     color: $catbears__primary;
+  }
+  .subscribe-wrapper .foot-note {
+    margin-top : 0;
+    max-width : 400px;
+    padding: 20px 16px 0;
+    margin: 0 auto; 
   }
   .overlay-container {
     // overlay items located in relation to this container
@@ -44,11 +51,6 @@
   }
 }
 
-.foot-note {
-  max-width: 500px;
-  padding: 20px 16px 0;
-  margin: 0 auto; 
-}
 .overlay {
   background-blend-mode: multiply;
   mix-blend-mode: multiply;
@@ -79,13 +81,12 @@
   padding-bottom: 30px;
   max-width: 650px;
   margin : 0 auto ;
-  border : 3px solid $catbears__primary;
   background-color: white;
   border-radius: 6px; 
   .subscribe-form {
     margin : 0 auto ;
     margin-top: 15px;
-    max-width: 340px;
+    max-width: 400px;
     padding: 0 16px;
   }
 }
@@ -118,8 +119,22 @@
   }
 }
 
-#mc-embedded-subscribe , .clear , #mce-EMAIL{
-  border-radius: 0;
+#mce-EMAIL{ 
+  border: none !important;
+  box-shadow: 0px 0px 5px 2px rgba(00, 00, 00, 0.1);
+
+}
+.clear #mc-embedded-subscribe , #mce-EMAIL{
+  border-radius: 4px !important;
+  height: 60px;
+  text-decoration: none !important;
+  outline:none !important;
+  border: none !important;
+  cursor: pointer;
+  transition : box-shadow 0.2s ease-in-out;
+  &:hover {
+    box-shadow: 0px 0px 5px 2px rgba(00, 00, 00, 0.15);
+  }
 }
 
 
@@ -147,8 +162,8 @@
   .promo-item {
     padding-top: 10px;
     h2 {
-      font-size: 16px;
-      height: 70px;
+      font-size: 20px;
+      // height: 70px;
     }
   }
   .subscribe-wrapper {
