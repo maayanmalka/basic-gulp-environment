@@ -572,14 +572,25 @@ p.bullet {
   #mc_embed_signup {
     #mc_embed_signup_scroll {
       #mce-EMAIL  {
+        border-radius: 4px !important;
+        cursor: pointer;
         background-color: white !important;
         color : black !important;
+        opacity: 0.85;
+        transition : opacity 200ms ease-in-out;
+        &:hover {
+          opacity: 1;
+        }
         &:focus {
           text-decoration: none !important;
           outline:none !important;
           border: none !important;
           box-shadow: none !important;
+          opacity: 1;
         }
+      }
+      .clear #mc-embedded-subscribe {
+        border-radius: 4px !important;
       }
       .mc-field-group {
         .mce_inline_error {
@@ -625,23 +636,19 @@ p.bullet {
           padding-top: 10px !important;
         } 
       }
+      .clear #mc-embedded-subscribe {
+        position: absolute;
+        max-width: 150px;
+        // width: 150px;
+        margin: 0 !important;
+        padding: 0 !important;
+        // background-color: black;
+        right : 10px;
+        top: 10px;
+        height : 50px;
+      }
     }
 
-    .clear {
-    }
-
-    #mc-embedded-subscribe {
-      position: absolute;
-      max-width: 150px;
-      // width: 150px;
-      margin: 0 !important;
-      padding: 0 !important;
-      // background-color: black;
-      right : 8px;
-      top: 10px;
-      height : 50px;
-      border-radius: 4px !important;
-    }
     .micro-text.foot-note {
       color: white;
       padding: 0;

@@ -24,6 +24,7 @@ var ftp = require( 'vinyl-ftp' );
 var conn = ftp.create( {
     host:     'ftp.catbears.com',
     user:     'catbears',
+    port: 21,
     password: 'HB3g0yj24i'
 } );
 
