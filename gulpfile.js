@@ -22,11 +22,12 @@ gulp.task("bower-files", function(){
 // VINILE FTP
 var ftp = require( 'vinyl-ftp' );
 var conn = ftp.create( {
-    host:     'ftp.catbears.com',
-    user:     'catbears',
-    port: 21,
+    host: 'catbears.com',
+    user: 'catbears',
     password: 'HB3g0yj24i'
 } );
+
+var sftp = require('gulp-sftp');
 
 var projectFolders = [
 '*.*',
@@ -76,8 +77,18 @@ gulp.task('push:production-silent', function (cb) {
        }
     }
 
-    return purgeProjectFolders(0);
-
+    //return purgeProjectFolders(0);
+  return gulp.src('./dist/**/*')
+        .pipe(sftp({
+            host: 'ftp.catbears.com',
+            user: 'catbears',
+            password: 'HB3g0yj24i',
+            port: 18765,
+            remotePath: 'catbears.com'
+            //host: 'website.com',
+            //user: 'johndoe',
+            //pass: '1234'
+        }));
 } );
 
 gulp.task('push:production' , ['push:production-silent' , 'bush'], function (){
@@ -114,8 +125,18 @@ gulp.task('push:staging-silent', function (cb) {
        }
     }
 
-    return purgeProjectFolders(0);
- 
+    //return purgeProjectFolders(0);
+      return gulp.src('./dist/**/*')
+        .pipe(sftp({
+            host: 'ftp.catbears.com',
+            user: 'catbears',
+            password: 'HB3g0yj24i',
+            port: 18765,
+            remotePath: 'staging.catbears.com'
+            //host: 'website.com',
+            //user: 'johndoe',
+            //pass: '1234'
+        }));
  
 } );
 // END VINILE FTP
