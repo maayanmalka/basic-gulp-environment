@@ -32,6 +32,7 @@ var sftp = require('gulp-sftp');
 var projectFolders = [
 '*.*',
 'img/',
+'video/',
 'css/',
 'pages/',
 'pdf/',
@@ -163,6 +164,10 @@ gulp.task('img', function(){
   .pipe(gulp.dest('dist/img'))
 });
 
+gulp.task('video', function(){
+  return gulp.src('app/video/**/*.+(avi|mov|mpeg|mp4)')
+  .pipe(gulp.dest('dist/video'))
+});
 
 gulp.task('useref', function(){
   return gulp.src('app/*.html')
@@ -221,14 +226,15 @@ gulp.task('browserSync', function() {
 gulp.task('watch', ['browserSync', 'sass' , 'jade' , 'scripts'], function (){
   gulp.watch('app/scss/**/*.scss', ['sass']); 
   gulp.watch('app/**/*.jade', ['jade']); 
-  gulp.watch('app/**/*.+(png|jpg|jpeg|gif|svg)', ['img']); 
+  gulp.watch('app/**/*.+(png|jpg|jpeg|gif|svg)', ['img']);
+  gulp.watch('app/video/**/*.+(avi|mov|mpeg|mp4)', ['video'])
   gulp.watch('app/**/*.html', browserSync.reload); 
   gulp.watch('app/scripts/**/*.js', ['scripts']); 
 });
 
 gulp.task('build', function (callback) {
   runSequence(//'clean:dist', 
-    ['sass', 'jade', 'useref', 'img', 'scripts', 'pdf-files', 'fonts' , 'bower-files'],
+    ['sass', 'jade', 'useref', 'img', 'video', 'scripts', 'pdf-files', 'fonts' , 'bower-files'],
     callback
   )
 })

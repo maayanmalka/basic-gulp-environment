@@ -1,0 +1,48 @@
+//- lesson_template.jade
+
+doctype html
+html
+  head
+    include ../include/page-head-data.jade
+    link(rel='stylesheet', type='text/css', href='../css/styles.css')
+    link(rel='stylesheet', type='text/css', href='../css/lesson_template.css')
+
+    block title
+  body
+    .meat
+        .catbearsNav catbearsNav
+        .pageContainer
+            .pageNav pageNav
+            .lessonContainer
+                .lessonVideo 
+                    .videoContainer
+                        .videoPlayer
+                            //- embed(src='../video/exampleVid.mpeg', autostart='true', height='410', width='700')
+                            video(width='100%', height='100%', controls='')
+                              source(src='../video/exampleVid.mp4', type='video/mp4')
+                              | Your browser doesn't support HTML5 video.
+                              //- customize video controlls : http://blog.teamtreehouse.com/building-custom-controls-for-html5-videos
+                              //- #video-controls
+                              //-     button#play-pause(type='button') Play
+                              //-     input#seek-bar(type='range', value='0')
+                              //-     button#mute(type='button') Mute
+                              //-     input#volume-bar(type='range', min='0', max='1', step='0.1', value='1')
+                              //-     button#full-screen(type='button') Full-Screen
+
+                        .videoSteps 
+                        .videoInfoContainer
+                            .info 
+                                h3 Introduction
+                                p Palo santo humblebrag bespoke food truck. Brunch skateboard butcher bespoke asymmetrical, polaroid tacos whatever gluten-free actually bitters echo park slow-carb. Whatever banjo slow-carb bitters raw denim roof party, thundercats XOXO 8-bit. Subway tile art party twee pug YOLO selvage, banh mi cred keytar biodiesel prism mlkshk pitchfork kogi. Poutine portland schlitz kitsch fashion axe vice. Pour-over VHS everyday carry thundercats. Truffaut 3 wolf moon succulents chartreuse tofu cornhole, cray vexillologist quinoa.
+                            .showMoreBtn Show More
+                    .moreProjects moreProjects
+                    .footer footer
+
+                .lessonPanel 
+                    .activityPage activityPage
+                    .difficulty difficulty
+                    .instructor instructor
+                    .tools tools
+                    .help help
+
+

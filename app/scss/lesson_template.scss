@@ -1,0 +1,140 @@
+// product-page_temp.scss
+
+body {
+	text-align: center;
+	color: rgba(0,0,0,0.2);
+}
+
+.meat {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	.catbearsNav {
+		position: fixed;
+		width : 80px;
+		height : 100%;
+		background-color : rgba(233,11,44,0.7);
+	}
+
+	.pageContainer {
+		margin-left: 80px;
+		.pageNav {
+			height : 80px;
+			width : 100%;
+			background-color : white;
+			box-shadow: 0px 2px 2px 1px rgba(00, 00, 00, 0.09);
+		}
+
+		.lessonContainer {
+			height : auto;
+			width : 100%;
+			display: flex;
+			flex-direction: row;
+			.lessonVideo  {
+				padding: 54px 54px 0 54px;
+				flex:3;
+				background-color : rgba(255,255,255,0.1);
+				display: flex;
+				flex-direction : column;
+				max-width: 900px;
+				margin: 0 auto;
+				.videoContainer {
+					height : auto;
+					width : 100%;
+					display: flex;
+					flex-direction: column;
+					.videoPlayer {
+						// background-color : rgba(0,0,0,0.078);
+						padding : 0;
+						height: auto;
+						video {
+							padding : 0;
+							height : auto;
+							width : 100%;
+						}
+						// background-color : rgba(255,255,255,0.3);
+					};
+					.videoSteps {
+						margin-top: 20px;
+						height : 80px;
+						width : 100%;
+						background-color : rgba(0,0,255,0.1);
+					};
+					.videoInfoContainer {
+						height : auto;
+						width : 100%;
+						display: flex;
+						flex-direction: column;
+						margin-top: 40px;
+							.info {
+								text-align: left;
+								h3 {
+									margin-bottom: 13px;
+								}
+
+							}
+							.showMoreBtn{
+								margin-top: 20px;
+								height: 50px;
+								padding-top: 11px;
+								width: auto;
+								background-color : white;
+								border: 1px solid blue;
+								border-radius: 4px;
+								text-align: center;
+								color : blue;
+								text-transform: uppercase;
+							}
+					};
+				}
+				.moreProjects {
+					margin-top: 40px;
+					height : 350px;
+					width : 100%;
+					background-color : rgba(255,255,0,0.4);
+					display: flex;
+					flex-direction: column;	
+
+				}
+				.footer {
+					height : 140px;
+					width : 100%;
+					background-color : rgba(0,255,255,0.4);
+				}
+
+			}
+			.lessonPanel{
+				flex:1;
+				background-color : rgba(0,0,0,0.1);
+				max-width: 400px;
+				min-width: 340px;
+                    .activityPage {
+						background-color : rgba(0,0,0,0.1);
+						height : 310px;
+						width : 100%;
+                    }
+                    .difficulty {
+						background-color : rgba(0,0,0,0.2);
+						height : 136px;
+						width : 100%;
+                    }
+                    .instructor {
+						background-color : rgba(0,0,0,0.3);
+						height : 290px;
+						width : 100%;
+                    }
+                    .tools {
+						background-color : rgba(0,0,0,0.4);
+						height : 230px;
+						width : 100%;
+                    }
+                    .help {
+						background-color : rgba(0,0,0,0.5);
+						height : 210px;
+						width : 100%;
+                    }
+			}
+		}
+	}
+}
