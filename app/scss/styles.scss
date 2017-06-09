@@ -111,10 +111,8 @@ input, button, submit {
   cursor: pointer;
   width: 100% !important;
   border : none !important;
+  border-radius: 4px;
   text-align: center !important;
-  // display: flex !important;
-  // justify-content: center !important;
-  // align-content: center !important;
   
   // noMarkup
   -webkit-user-select: none;  /* Chrome all / Safari all */
@@ -126,22 +124,9 @@ input, button, submit {
   color: white;
   font-weight: 400;
   font-size : 24px !important;
-  background-color: $catbears__primary ;
+  background-color: $catbears__primary;
   margin: 0;
   padding: 0 30px;
-  // transition: background-color 0.35s ease-in-out;
-  transition: none !important;
-  &:visited {
-    background-color: $catbears__primary;
-    color: $white;
-  }
-  &:hover  {
-     background-color: $catbears__primary--hover;
-     color: $white;
-    }
-  &:active {
-    background-color: $catbears__primary--active;
-  }
 }
 
 .btn__large {
@@ -153,28 +138,61 @@ input, button, submit {
   // padding-bottom : 18px;
 }
 
+.btn__medium {
+  // line-height: 15px !important;
+  width: 100%;
+  height: 55px;
+  font-size : 18px !important;
+  line-height: 59px !important;
+  // padding : 0 !important;
+  // padding-bottom : 4px !important;
+}
+
 .btn__small {
   height: 46px ;
-  line-height: 6px;
+  line-height: 41px;
   font-weight: 600;
   font-size : 16px !important;
   letter-spacing: 1px;
 }
 .btn__primary {
   background-color: $catbears__primary;
-  // transition: background-color 0.09s ease-in-out ;//, box-shadow 0.50s ease-in-out;
-  &:hover  {
-    // box-shadow: 0px 0px 15px 2px $catbears__primary--highlight;
+  transition: color 120ms ease-in-out !important;
+  &:hover {
+     background-color: $catbears__primary--hover;
+     color: $white;
+    }
+  &:visited {
+    background-color: $catbears__primary;
+    color: $white;
+  }
+  &:active {
+    background-color: $catbears__primary--active;
   }
 }
 
 .btn__secondary {
   background-color: rgba(0,0,0,0) !important;
-  color : $white !important;
-  border : 1px solid $catbears--skyblue !important;
-  &:hover  {
-    border : 1px solid $catbears--orange !important;
+  color : $catbears__primary !important;
+  border : 1px solid $catbears__primary !important;
+  transition: 
+    color 120ms ease-in-out, 
+    background-color 120ms ease-in-out,
+    border 200ms ease-in-out !important;
+  &:visited {
+    color : $catbears__primary--hover !important;
+    border : 1px solid $catbears__primary--hover !important;
   }
+  &:hover  {
+    color : $catbears__primary--hover !important;
+    border : 1px solid $catbears__primary--hover !important;
+    background-color: $catbears__secondary--hover !important;
+  }
+  &:active {
+    color : $catbears__primary--hover !important;
+    border : 1px solid $catbears__primary--hover !important;
+    background-color: $catbears__secondary--active !important;
+   }
 }
 
 .btn_icon{

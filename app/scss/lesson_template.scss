@@ -1,8 +1,23 @@
 // product-page_temp.scss
+@import "./variables.scss";
 
 body {
-	text-align: center;
+	// text-align: center;
 	color: rgba(0,0,0,0.2);
+}
+h1 {
+	font-size : 28px;
+	color : black;
+}
+
+h2 {
+	font-size : 18px;
+	margin-bottom: 15px;
+}
+h3 {
+	font-size : 16px;
+	font-weight: 600;
+	color : black;
 }
 
 .meat {
@@ -10,131 +25,374 @@ body {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	.catbearsNav {
-		position: fixed;
-		width : 80px;
-		height : 100%;
-		background-color : rgba(233,11,44,0.7);
-	}
-
 	.pageContainer {
 		margin-left: 80px;
+		// background-color: red;
 		.pageNav {
+			z-index: 2;
 			height : 80px;
+			padding-left: 34px;
+			padding-right: 54px;
 			width : 100%;
 			background-color : white;
 			box-shadow: 0px 2px 2px 1px rgba(00, 00, 00, 0.09);
+			display: flex;
+			flex-direction: row;
+			justify-content : space-between;
+			.pageNav__icon {
+				min-height: 80px;
+				min-width: 80px;
+				margin-right: 5px;
+				img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+			.pageNavContainer {
+				display: flex;
+				flex-direction : row;
+				justify-content : space-between;
+				width: 100%;
+				margin-top: 15px;
+				.pageNav__left {
+					display: flex;
+					flex-direction : row;
+					h1 {
+						line-height: 42px;
+					}
+				}
+				.pageNav__right {
+					display: flex;
+					flex-direction : row;
+					// background-color: yellow;
+					.pageNav__right--item {
+						margin-left: 20px;
+					}
+				}
+			}
 		}
 
 		.lessonContainer {
+			z-index: 1 !important;
 			height : auto;
 			width : 100%;
 			display: flex;
 			flex-direction: row;
-			.lessonVideo  {
-				padding: 54px 54px 0 54px;
-				flex:3;
-				background-color : rgba(255,255,255,0.1);
+			justify-content: space-between;
+			.lessonMain {
 				display: flex;
 				flex-direction : column;
-				max-width: 900px;
+				width: 100%;
+				align-items : center;
 				margin: 0 auto;
-				.videoContainer {
-					height : auto;
-					width : 100%;
+				.lessonVideo  {
+					padding-top: 54px;
+					flex:3;
 					display: flex;
-					flex-direction: column;
-					.videoPlayer {
-						// background-color : rgba(0,0,0,0.078);
-						padding : 0;
-						height: auto;
-						video {
-							padding : 0;
-							height : auto;
-							width : 100%;
-						}
-						// background-color : rgba(255,255,255,0.3);
-					};
-					.videoSteps {
-						margin-top: 20px;
-						height : 80px;
-						width : 100%;
-						background-color : rgba(0,0,255,0.1);
-					};
-					.videoInfoContainer {
+					flex-direction : column;
+					margin: 0 auto;
+					.videoContainer {
 						height : auto;
 						width : 100%;
 						display: flex;
 						flex-direction: column;
-						margin-top: 40px;
+						.videoPlayer {
+							// background-color : rgba(0,0,0,0.078);
+							padding : 0;
+							height: auto;
+							video {
+								padding : 0;
+								height : auto;
+								width : 100%;
+							}
+							// background-color : rgba(255,255,255,0.3);
+						};
+						.videoSteps {
+							margin-top: 20px;
+							height : 80px;
+							width : 100%;
+							position: relative;
+							// background-color : rgba(0,0,255,0.1);
+							.stepsContainer {
+								display: flex;
+								height: 100%;
+								margin-top: 15px;
+								.step {
+									text-align: center;
+									flex:1;
+									display: flex;
+									flex-direction: column;
+									text-transform: uppercase;
+									font-size : 11px;
+									color: gray;
+									&:before {
+										margin: 0 auto;
+										margin-bottom: 10px;
+										border: 10px solid $catbears__primary;
+										border-radius: 15px;
+										content: "";
+										width: 0px;
+										height: 0px;
+								    	box-shadow: 
+								    		0 0 0 3px white,
+								    		0 0 0 4px #a7d8ff;
+							    		// transition : 
+							    		// 	box-shadow 120ms ease-in-out; 
+									}
+									&:after {
+										z-index: -1;
+										margin-top: -35px;
+										content: '';
+										border-bottom: 1px solid #a0bdd3;
+									}
+									&:hover {
+										color : $catbears__primary--hover;
+										&:before {
+											border: 12px solid $catbears__primary--hover;
+											margin-top: -2px;
+											box-shadow: 
+								    		0 0 0 3px white,
+								    		0 0 0 4px $catbears__primary--hover;
+										}
+										&:after {
+											margin-top: -37px;	
+										}
+									}
+								}
+								.step__selected {
+									// padding-bottom: 10px;
+									color : $catbears__primary;
+									font-weight: 600;
+									&:hover {
+										&:before {
+											border: 15px solid $catbears__primary;
+											margin-top: -5px;
+											box-shadow: 
+									    		0 0 0 3px white,
+									    		0 0 0 4px $catbears__primary--hover;
+											// background: url('../img/icons/icon-scissors.png') center no-repeat;
+											// background-size: 100% 100%;
+										}
+										&:after {
+											margin-top: -40px;
+										}	
+									}
+									&:before {
+										border: 15px solid $catbears__primary;
+										margin-top: -5px;
+										box-shadow: 
+								    		0 0 0 3px white,
+								    		0 0 0 4px $catbears__primary;
+										// background: url('../img/icons/icon-scissors.png') center no-repeat;
+										// background-size: 100% 100%;
+									}
+									&:after {
+										margin-top: -40px;
+									}
+								}
+							}
+						}
+							// .stepsLine {
+								// height: 2px;
+								// width: 85%;
+								// margin: 0 auto;
+								// margin-bottom: -10px;						}
+							// }
+						.videoInfoContainer {
+							height : auto;
+							width : 100%;
+							display: flex;
+							flex-direction: column;
 							.info {
-								text-align: left;
 								h3 {
 									margin-bottom: 13px;
 								}
-
 							}
-							.showMoreBtn{
-								margin-top: 20px;
-								height: 50px;
-								padding-top: 11px;
-								width: auto;
-								background-color : white;
-								border: 1px solid blue;
-								border-radius: 4px;
-								text-align: center;
-								color : blue;
-								text-transform: uppercase;
+							.showMoreBtn {
+								max-width: 500px;
+								margin: 0 auto;
 							}
-					};
+						}
+					}
 				}
 				.moreProjects {
 					margin-top: 40px;
-					height : 350px;
+					height : auto;
 					width : 100%;
-					background-color : rgba(255,255,0,0.4);
 					display: flex;
-					flex-direction: column;	
-
+					flex-direction: column;
+					justify-content: space-between;
+					.moreProjectsContainer {
+						display: flex;
+						flex-direction : row;
+						justify-content : space-between;
+						width: 100%;
+						margin-bottom: 100px;
+						.moreProjects__item {
+							height: 200px;
+							flex: 1;
+							max-width: 250px;
+							min-width: 200px;
+							margin-right: 20px;
+							margin-left: 20px;
+						}
+						.moreProjects__item:first-child {
+							margin-left: 0;
+						}
+						.moreProjects__item:last-child {
+							margin-right: 0;
+						}
+					}	
 				}
-				.footer {
-					height : 140px;
-					width : 100%;
-					background-color : rgba(0,255,255,0.4);
-				}
-
 			}
-			.lessonPanel{
+			.lessonPanel {
 				flex:1;
-				background-color : rgba(0,0,0,0.1);
+				background-color : #FAF9F9;
 				max-width: 400px;
 				min-width: 340px;
-                    .activityPage {
-						background-color : rgba(0,0,0,0.1);
-						height : 310px;
-						width : 100%;
-                    }
-                    .difficulty {
-						background-color : rgba(0,0,0,0.2);
-						height : 136px;
-						width : 100%;
-                    }
-                    .instructor {
-						background-color : rgba(0,0,0,0.3);
-						height : 290px;
-						width : 100%;
-                    }
-                    .tools {
-						background-color : rgba(0,0,0,0.4);
-						height : 230px;
-						width : 100%;
-                    }
-                    .help {
-						background-color : rgba(0,0,0,0.5);
-						height : 210px;
-						width : 100%;
-                    }
+				padding-right: 44px;
+				padding-left: 44px;
+				box-shadow: inset 0px 2px 2px 1px rgba(0, 0, 0, 0.09);
+                .activityPage {
+					// background-color : rgba(0,0,0,0.1);
+					height : auto;
+					text-align: center;
+					.activityPage__pager {
+						position: relative;
+						height: 170px;
+						width: 120px;
+						background-color: white;
+						margin: 0 auto;
+						margin-bottom: 30px;
+						margin-top: 30px;
+						border : 2px solid #c2c2c2;
+						box-shadow: 0px 1px 6px 4px rgba(00, 00, 00, 0.08);
+						transform: rotate(-5deg);
+					    -ms-transform: rotate(-5deg); /* IE 9 */
+						-webkit-transform: rotate(-5deg); /* Chrome, Safari, Opera */
+						img {
+							height: 100%;
+							width: 100%;
+						}
+						&:hover {
+							border : 2px solid $catbears__primary--hover;
+						}
+						&:after {
+							position: absolute;
+							right: 10px;
+							top: 10px;
+							font-size: 12px;
+							font-weight: 600;
+							content : "PDF";
+							padding: 0px 6px 2px 6px;
+							color: white;
+							border-radius: 4px;
+							background-color: #555;
+						}
+					}
+					.activityPage__button {
+					}
+                }
+                .difficulty {
+					height : auto;
+					.difficulty__iconsContainer {
+						display: flex;
+						flex-direction : row;
+						justify-content : start;
+						width: 100%;
+						flex-wrap: wrap;
+						.difficulty__icon {
+							height: auto;
+							height: 45px;
+							width: 45px;
+							border-radius: 100%;
+							background-color: #c9c9c9;
+							margin-right: 10px;
+							margin-bottom: 10px;
+						}
+					}
+                }
+                .instructor {
+					height : auto;
+					.instructor__header {
+						display: flex;
+						flex-direction : row;
+						margin-bottom: 15px;
+                       .instructor__profilePicture {
+							height: 60px;
+							width: 60px;
+							background-color: #e2e2e2;
+							border-radius: 100%;
+							margin-right: 15px;
+							margin-left: -5px;
+							img {
+								height: auto;
+								width: 100%;
+								border-radius: 100%;
+								object-fit: cover;
+								height: 60px;
+								width: 60px;
+								box-shadow: 
+						    		0 0 0 3px white,
+						    		0 0 0 4px #a7d8ff; 
+							}
+                       }
+                       .instructor__title h2 {
+                       	margin-top: 5px;
+                       	margin-bottom: 1px;
+                       }
+                       .instructor__title--name {
+                       		font-size: 14px;
+                       }
+					}
+                }
+                .tools {
+					height : auto;
+					.tools__iconsContainer {
+                        display: flex;
+                        flex-direction : row;
+                        justify-content: start;    
+						flex-wrap: wrap;    
+                        .tools__icon {
+                        	width: 40px;
+                        	height: 40px;
+                        	margin-right: 10px;
+                        	margin-bottom: 10px;
+                        	border-radius: 4px;
+                        	background-color: #c9c9c9;
+                        }
+					}
+                }
+                .help {
+					height : auto;
+					.help__paragraph {
+						margin-bottom: 20px;
+					}
+                }
 			}
 		}
 	}
 }
+
+.lesson__item {
+	padding-top : 30px;
+	padding-bottom: 40px;
+	padding-left : 0;
+	padding-right : 0;
+	max-width: 1000px;
+	width : 100%;
+	// background-color: pink;
+}
+
+.lesson__item--padding {
+	padding-left : 54px;
+	padding-right : 54px;
+}
+.step:first-child:after {
+	margin-left: 50%;
+}
+
+.step:last-child:after {
+	margin-right: 50%;
+}
+

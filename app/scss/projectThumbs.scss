@@ -1,0 +1,32 @@
+// projectThumbs.scss
+@import "./variables.scss";
+
+.projectThumb {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction : column;
+	&:hover {
+		img {
+			box-shadow: 0px 0px 0px 3px $catbears__primary;
+		}
+	}
+	img {
+		height: 100%;
+		background-color: #e2e2e2;
+		object-fit: contain;
+		border-radius: 10px;
+	}
+	.projectThumb__title {
+		margin-top: 5px;
+		text-align: center;
+		font-size: 14px;
+		text-transform: uppercase;
+	}
+}
+
+.projectThumb__craft {
+	img {
+		background-color: $catbears__craft;
+	}
+}
