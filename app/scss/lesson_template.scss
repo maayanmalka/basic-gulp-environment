@@ -12,7 +12,8 @@ h1 {
 
 h2 {
 	font-size : 18px;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
+	color : #333;
 }
 h3 {
 	font-size : 16px;
@@ -26,8 +27,8 @@ h3 {
 	display: flex;
 	flex-direction: column;
 	.pageContainer {
+		// animation: fadeIn 1.0s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 		margin-left: 80px;
-		// background-color: red;
 		.pageNav {
 			z-index: 2;
 			height : 80px;
@@ -66,6 +67,7 @@ h3 {
 					flex-direction : row;
 					// background-color: yellow;
 					.pageNav__right--item {
+						min-width: 180px;
 						margin-left: 20px;
 					}
 				}
@@ -133,6 +135,7 @@ h3 {
 										content: "";
 										width: 0px;
 										height: 0px;
+										cursor : pointer;
 								    	box-shadow: 
 								    		0 0 0 3px white,
 								    		0 0 0 4px #a7d8ff;
@@ -200,6 +203,7 @@ h3 {
 							// }
 						.videoInfoContainer {
 							height : auto;
+							// min-height: 310px;
 							width : 100%;
 							display: flex;
 							flex-direction: column;
@@ -208,15 +212,16 @@ h3 {
 									margin-bottom: 13px;
 								}
 							}
-							.showMoreBtn {
-								max-width: 500px;
-								margin: 0 auto;
+							.lesson__item {
+								padding-bottom: 0;
 							}
 						}
 					}
 				}
+
 				.moreProjects {
-					margin-top: 40px;
+					// background-color: pink;
+					margin-top: 0px;
 					height : auto;
 					width : 100%;
 					display: flex;
@@ -227,7 +232,9 @@ h3 {
 						flex-direction : row;
 						justify-content : space-between;
 						width: 100%;
+						height: auto;
 						margin-bottom: 100px;
+						margin-top: 10px;
 						.moreProjects__item {
 							height: 200px;
 							flex: 1;
@@ -253,10 +260,25 @@ h3 {
 				padding-right: 44px;
 				padding-left: 44px;
 				box-shadow: inset 0px 2px 2px 1px rgba(0, 0, 0, 0.09);
+                .panel__paragraph {
+             	   font-size: 15px;
+             	   line-height: 24px;
+             	   color : #777;
+                }
                 .activityPage {
 					// background-color : rgba(0,0,0,0.1);
 					height : auto;
 					text-align: center;
+					&:hover {
+						.activityPage__pager {
+							animation: hovering 1.4s cubic-bezier(0.36, 0.07, 0.19, 0.97) both infinite;
+							border : 2px solid #999;
+							box-shadow: 0px 1px 6px 4px rgba(00, 00, 00, 0.1);
+							&:after {
+								background-color: black;
+							}
+						}
+					}
 					.activityPage__pager {
 						position: relative;
 						height: 170px;
@@ -270,13 +292,19 @@ h3 {
 						transform: rotate(-5deg);
 					    -ms-transform: rotate(-5deg); /* IE 9 */
 						-webkit-transform: rotate(-5deg); /* Chrome, Safari, Opera */
+						transition : 
+							box-shadow 120ms ease-in-out,
+							border 120ms ease-in-out,
+							margin 120ms ease-in-out;
 						img {
 							height: 100%;
 							width: 100%;
 						}
-						&:hover {
-							border : 2px solid $catbears__primary--hover;
-						}
+						// &:hover {
+						// 	margin-top: 20px;
+						// 	margin-bottom: 40px;
+						// 	border : 2px solid $catbears__primary--hover;
+						// }
 						&:after {
 							position: absolute;
 							right: 10px;
@@ -308,7 +336,8 @@ h3 {
 							border-radius: 100%;
 							background-color: #c9c9c9;
 							margin-right: 10px;
-							margin-bottom: 10px;
+							margin-bottom: 5px;
+							margin-top: 5px;
 						}
 					}
                 }
@@ -344,6 +373,7 @@ h3 {
                        .instructor__title--name {
                        		font-size: 14px;
                        }
+
 					}
                 }
                 .tools {
@@ -357,7 +387,8 @@ h3 {
                         	width: 40px;
                         	height: 40px;
                         	margin-right: 10px;
-                        	margin-bottom: 10px;
+                        	margin-top: 5px;
+                        	margin-bottom: 5px;
                         	border-radius: 4px;
                         	background-color: #c9c9c9;
                         }
@@ -396,3 +427,8 @@ h3 {
 	margin-right: 50%;
 }
 
+.showMoreBtn {  
+  margin-top: 30px !important;
+  // max-width: 500px;
+  margin: 0 auto;
+}

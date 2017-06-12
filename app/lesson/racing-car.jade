@@ -1,33 +1,71 @@
 //- racing-car.jade
-
 extends ../templates/lesson_template.jade
 
+block variables
+    - var pageIcon = 'tractor.jpg'
+    - var pageName = 'Build a Racing Car'
+    - var numberOfPages = 1
+    - var video = 'exampleVid.mp4'
+    - var introTitle = 'Introduction'
+    - var step1 = '1'
+    - var moreProject1 = 'maker-kit.png'
+    //- #{introTitle}
+
+//- lesson icon
 block pageNav__icon
-    img(src='../img/icons/tractor.jpg', alt='tractor')
-
+    img(src='../img/icons/#{pageIcon}', alt='tractor')
+//- lesson title
 block pageNav__title 
-    | Build a Racing Car
+    | #{pageName}
+    //- | Build a Racing Car
+//- video
+block video
+    video(id="catbearsVideo" width='100%', height='100%', controls='')
+      source(src='../video/#{video}', type='video/mp4')
+      | Your browser doesn't support HTML5 video.
+//- steps
+//- block steps
+    //- .step.noMarkup#step-intro.step__selected Intro
+    //- .step.noMarkup#step-1 1
+    //- .step.noMarkup#step-2 2
+    //- .step.noMarkup#step-3 3
+    //- .step.noMarkup#step-tips Tips
+    //- .step.noMarkup#step-end End
 
-block steps
-    .step.noMarkup.step-intro.step__selected Intro
-    .step.noMarkup.step-1 1
-    .step.noMarkup.step-2 2
-    .step.noMarkup.step-3 3
-    .step.noMarkup.step-tips Tips
-    .step.noMarkup.step-end End
-
+//- intro title name
 block videoInfo--title 
-    | Introduction  
-
+    | #{introTitle}  
+//- intro text
 block videoInfo--text
-    | Boalo santo humblebrag bespoke food truck. Brunch skateboard butcher bespoke asymmetrical, polaroid tacos whatever gluten-free actually bitters echo park slow-carb. Whatever banjo slow-carb bitters raw denim roof party, thundercats XOXO 8-bit. Subway tile art party twee pug YOLO selvage, banh mi cred keytar biodiesel prism mlkshk pitchfork kogi. Poutine portland schlitz kitsch fashion axe vice. Pour-over VHS everyday carry thundercats. Truffaut 3 wolf moon succulents chartreuse tofu cornhole, cray vexillologist quinoa.
-
+    | Boalo santo humblebrag bespoke food truck. Brunch skateboard butcher bespoke asymmetrical, polaroid tacos whatever gluten-free actually bitters echo park slow-carb. Whatever banjo slow-carb bitters raw denim roof party, thundercats XOXO 8-bit. Subway tile art party twee pug YOLO selvage, banh mi cred keytar biodiesel prism mlkshk pitchfork kogi. Poutine portland schlitz kitsch fashion axe vice. Pour-over VHS everyday carry thundercats. Truffaut 3 wolf moon succulents chartreuse tofu cornhole, cray vexillologist quinoa. Boalo santo humblebrag bespoke food truck. Brunch skateboard butcher bespoke asymmetrical, polaroid tacos whatever gluten-free actually bitters echo park slow-carb. Whatever banjo slow-carb bitters raw denim roof party, thundercats XOXO 8-bit. Subway tile art party twee pug YOLO selvage, banh mi cred keytar biodiesel prism mlkshk pitchfork kogi. Poutine portland schlitz kitsch fashion axe vice. Pour-over VHS everyday carry thundercats. Truffaut 3 wolf moon succulents chartreuse tofu cornhole, cray vexillologist quinoa.
+//- activity page
 block activityPage
     img(src="../img/pages/Racing-Car/Racing-Car.png", alt="The Catbears Racing Car Activity Page")
-
+//- difficulty icons
 block diffifulty 
     .difficulty__icon.icon--age10.noMarkup
     .difficulty__icon.icon--cutting-knife.noMarkup
-
+//- tools icons
 block tools
     .tools__icon.icon--cutting-knife.noMarkup
+
+block moreProject1
+    a.projectThumb.projectThumb__craft(href='../maker-kit.html')
+        img(src="../img/projectThumbs/maker-kit.png", alt="Makers Kit")
+        .projectThumb--text
+            p.category Crafts
+            p.projectThumb__title.noMarkup Makers Kit 
+
+block moreProject2
+    .projectThumb.projectThumb__craft
+        img(src="../img/projectThumbs/greeting-card.png", alt="Greeting Card")
+        .projectThumb--text
+            p.category Crafts
+            p.projectThumb__title.noMarkup Greeting Card 
+
+block moreProject3
+    .projectThumb.projectThumb__craft
+        img(src="../img/projectThumbs/puppetshow.png", alt="Puppet Show")
+        .projectThumb--text
+            p.category Crafts
+            p.projectThumb__title.noMarkup Puppet Show 

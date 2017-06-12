@@ -32,6 +32,7 @@ var sftp = require('gulp-sftp');
 var projectFolders = [
 '*.*',
 'img/',
+'json',
 'video/',
 'css/',
 'pages/',
@@ -164,6 +165,11 @@ gulp.task('img', function(){
   .pipe(gulp.dest('dist/img'))
 });
 
+gulp.task('json', function(){
+  return gulp.src('app/json/**/*.json')
+  .pipe(gulp.dest('dist/json'))
+});
+
 gulp.task('video', function(){
   return gulp.src('app/video/**/*.+(avi|mov|mpeg|mp4)')
   .pipe(gulp.dest('dist/video'))
@@ -227,14 +233,15 @@ gulp.task('watch', ['browserSync', 'sass' , 'jade' , 'scripts'], function (){
   gulp.watch('app/scss/**/*.scss', ['sass']); 
   gulp.watch('app/**/*.jade', ['jade']); 
   gulp.watch('app/**/*.+(png|jpg|jpeg|gif|svg)', ['img']);
-  gulp.watch('app/video/**/*.+(avi|mov|mpeg|mp4)', ['video'])
+  gulp.watch('app/json/**/*.json', ['json']);
+  gulp.watch('app/video/**/*.+(avi|mov|mpeg|mp4)', ['video']);
   gulp.watch('app/**/*.html', browserSync.reload); 
   gulp.watch('app/scripts/**/*.js', ['scripts']); 
 });
 
 gulp.task('build', function (callback) {
   runSequence(//'clean:dist', 
-    ['sass', 'jade', 'useref', 'img', 'video', 'scripts', 'pdf-files', 'fonts' , 'bower-files'],
+    ['sass', 'jade', 'useref', 'img', 'json', 'video', 'scripts', 'pdf-files', 'fonts' , 'bower-files'],
     callback
   )
 })

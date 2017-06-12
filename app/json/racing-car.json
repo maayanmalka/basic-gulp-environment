@@ -1,0 +1,29 @@
+// racing-car.json
+
+{
+  "duke":{
+    "name": "duke",
+    "action": "tax",
+    "block": "foreign_aid"
+  },
+  "assassin": {
+    "name": "assassin",
+    "action": "assassinate",
+    "block": ""
+  },
+  "ambassador": {
+    "name": "ambassador",
+    "action": "exchange",
+    "block": "steal"
+  },
+  "captain": {
+    "name": "captain",
+    "action": "steal",
+    "block": "steal"
+  },
+  "contessa": {
+    "name": "contessa",
+    "action": "",
+    "block": "assassinate"
+  }
+}

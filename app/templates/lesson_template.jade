@@ -1,18 +1,24 @@
 //- lesson_template.jade
-
+    
 doctype html
 html
+  block variables
   head
     include ../include/page-head-data.jade
     link(rel='stylesheet', type='text/css', href='../css/styles.css')
     link(rel='stylesheet', type='text/css', href='../css/lesson_template.css')
-    link(rel='stylesheet', type='text/css', href='../css/projectThumbs.css')    
     link(rel='stylesheet', type='text/css', href='../css/icons.css')
+    link(rel='stylesheet', type='text/css', href='../css/projectThumbs.css')
+
+    //- script(type='text/javascript', src='../lib/jquery/dist/jquery.js')
+    script(type='text/javascript', src='../scripts/showMore.js')
+    script(type='text/javascript', src='../scripts/html5-video__controller.js')
+
     block title
   body
-    .meat
+    .meat 
         include ../include/catbearsNav.jade
-        .pageContainer
+        .pageContainer.fadeIn
             .pageNav 
                 .pageNav__icon.noMarkup
                     block pageNav__icon
@@ -21,16 +27,14 @@ html
                         h1.pageNav__left--title 
                             block pageNav__title
                     .pageNav__right
-                        .btn.btn__small.btn__secondary.pageNav__right--item.pageNav__right--feedback Feedback
-                        .btn.btn__small.btn__secondary.pageNav__right--item.pageNav__right--share Share  
+                        .btn.btn__small.btn__secondary.pageNav__right--item.pageNav__right--feedback 📣 Feedback
+                        .btn.btn__small.btn__secondary.pageNav__right--item.pageNav__right--share 👌 Share  
             .lessonContainer
                 .lessonMain
                     .lessonVideo.lesson__item.lesson__item--padding
                         .videoContainer
                             .videoPlayer
-                                video(width='100%', height='100%', controls='')
-                                  source(src='../video/exampleVid.mp4', type='video/mp4')
-                                  | Your browser doesn't support HTML5 video.
+                                block video
                                   //- customize video controlls : http://blog.teamtreehouse.com/building-custom-controls-for-html5-videos
                                   //- #video-controls
                                   //-     button#play-pause(type='button') Play
@@ -42,45 +46,39 @@ html
                             .videoSteps
                                 .stepsLine
                                 .stepsContainer 
-                                    block steps
-                                        .step.noMarkup.step-intro.step__selected Intro
-                                        .step.noMarkup.step-1 1
-                                        .step.noMarkup.step-2 2
-                                        .step.noMarkup.step-3 3
-                                        .step.noMarkup.step-tips Tips
-                                        .step.noMarkup.step-end End
+                                    //- block steps
+                                        //- .step.noMarkup.step-intro.step__selected Intro
+                                        //- .step.noMarkup.step-1 1
+                                        //- .step.noMarkup.step-2 2
+                                        //- .step.noMarkup.step-3 3
+                                        //- .step.noMarkup.step-tips Tips
+                                        //- .step.noMarkup.step-end End
                             .videoInfoContainer
-                                .info.lesson__item 
-                                    h2 
+                                .lesson__item 
+                                    h2#step__title
                                         block videoInfo--title 
                                             | Introduction
-                                    p 
+                                    p#step__description.showMore__Btn--js
                                         block videoInfo--text
                                             | This is a really easy step, just watch the video and follow the instructions.
-                                .showMoreBtn.btn.btn__secondary.btn__small Show More
+                                //- .showMoreBtn.btn.btn__secondary.btn__small.show-more Show More
                     .moreProjects.lesson__item.lesson__item--padding
                         h2 More Craft Projects
                         .moreProjectsContainer
                             .moreProjects__item
-                                .projectThumb.projectThumb__craft
-                                    img(src="../img/projectThumbs/maker-kit.png", alt="Makers Kit")
-                                    p.projectThumb__title.noMarkup Makers Kit 
+                                block moreProject1
                             .moreProjects__item
-                                .projectThumb.projectThumb__craft
-                                    img(src="../img/projectThumbs/greeting-card.png", alt="Greeting Card")
-                                    p.projectThumb__title.noMarkup Greeting Card 
+                                block moreProject2
                             .moreProjects__item
-                                .projectThumb.projectThumb__craft
-                                    img(src="../img/projectThumbs/puppetshow.png", alt="Puppet Show")
-                                    p.projectThumb__title.noMarkup Puppet Show    
+                                block moreProject3
                     .footer 
                         include ../include/footer.jade
                 .lessonPanel 
                     .activityPage.lesson__item.lesson__item 
                         h2.activityPage__title Activity Page
-                        .activityPage__pager.noMarkup
+                        .activityPage__pager.noMarkup.cursorHand
                             block activityPage
-                        .activityPage__button.btn.btn__primary.btn__small Print
+                        .activityPage__button.btn.btn__primary.btn__small ✨ Print
                     .difficulty.lesson__item.lesson__item 
                         h2.difficulty__title Difficulty
                         .difficulty__iconsContainer
@@ -95,7 +93,7 @@ html
                             .instructor__title    
                                 h2.instructor__title--title Instructor
                                 h3.instructor__title--name Maayan Malka
-                        p.instructor__paragraph Ethical stumptown iceland iPhone, man bun umami chartreuse meditation intelligentsia helvetica flexitarian disrupt austin knausgaard.
+                        p.instructor__paragraph.panel__paragraph Ethical stumptown iceland iPhone, man bun umami chartreuse meditation intelligentsia helvetica flexitarian disrupt austin knausgaard.
                     .tools.lesson__item.lesson__item
                         h2.tools__title Tools
                         .tools__iconsContainer
@@ -106,7 +104,7 @@ html
                                 .tools__icon.noMarkup
                     .help.lesson__item.lesson__item 
                         h2.help__title Need help?
-                        p.help__paragraph Got questions about this project? Send us a message and we'll get back to you in to time!
+                        p.help__paragraph.panel__paragraph Got questions about this project? Send us a message and we'll get back to you in to time!
                         .help__button.btn.btn__secondary.btn__small Ask a question
                     
 

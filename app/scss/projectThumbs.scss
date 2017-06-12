@@ -3,25 +3,48 @@
 
 .projectThumb {
 	width: 100%;
-	height: 100%;
+	height: 285px;
 	display: flex;
 	flex-direction : column;
-	&:hover {
-		img {
-			box-shadow: 0px 0px 0px 3px $catbears__primary;
-		}
+	background-color: white;
+	border: 1px solid #e2e2e2;
+	border-radius: 8px;
+	box-shadow: 0px 1px 6px 4px rgba(00, 00, 00, 0.04);
+	transition : 
+		margin 120ms ease-in-out,
+		border 120ms ease-in-out,
+		box-shadow 120ms ease-in-out;
+	.projectThumb--text {
+		padding: 20px 20px 0px 20px ;
 	}
 	img {
-		height: 100%;
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+		height: 200px;
 		background-color: #e2e2e2;
 		object-fit: contain;
-		border-radius: 10px;
+		// border-radius: 10px;
+	}
+	.category {
+		text-transform: uppercase;
+		font-size: 12px;
+		color : #444;
+		margin: 0;
+		padding: 0;
+		line-height: 10px;
 	}
 	.projectThumb__title {
 		margin-top: 5px;
-		text-align: center;
-		font-size: 14px;
-		text-transform: uppercase;
+		color : black;
+		font-weight: 500;
+	}
+	&:hover {
+		border: 1px solid #999;
+		box-shadow: 0px 3px 6px 4px rgba(00, 00, 00, 0.1);
+		margin-top: -5px;
+		// .projectThumb__title {
+		// 	color : $catbears__primary;
+		// }
 	}
 }
 
