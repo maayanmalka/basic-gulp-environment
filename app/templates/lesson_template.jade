@@ -27,35 +27,22 @@ html
                         h1.pageNav__left--title 
                             block pageNav__title
                     .pageNav__right
-                        .btn.btn__small.btn__secondary.pageNav__right--item.pageNav__right--feedback 📣 Feedback
-                        .btn.btn__small.btn__secondary.pageNav__right--item.pageNav__right--share 👌 Share  
+                        block pageNav__buttons
+                            a.btn.btn__small.btn__secondary.pageNav__right--item.pageNav__right--feedback(href="mailto:catbearsteam@gmail.com?subject=Feedback!&body=Hey Catbears, Here are a few thoughts on your course", target='_top') 📣 Feedback
+                            a.btn.btn__small.btn__secondary.pageNav__right--item.pageNav__right--share(href='mailto:?subject=The Catbears website&body=Hey, I just saw this really fun website called "The Catbears" with online courses for kids: www.catbears.com', target='_top') 👌 Share
             .lessonContainer
                 .lessonMain
                     .lessonVideo.lesson__item.lesson__item--padding
                         .videoContainer
-                            .videoPlayer
+                            .videoPlayer(onclick='togglePlayPause()')
                                 block video
-                                  //- customize video controlls : http://blog.teamtreehouse.com/building-custom-controls-for-html5-videos
-                                  //- #video-controls
-                                  //-     button#play-pause(type='button') Play
-                                  //-     input#seek-bar(type='range', value='0')
-                                  //-     button#mute(type='button') Mute
-                                  //-     input#volume-bar(type='range', min='0', max='1', step='0.1', value='1')
-                                  //-     button#full-screen(type='button') Full-Screen
-
+                                .videoWatermark.comic.noMarkup The Catbears
                             .videoSteps
                                 .stepsLine
                                 .stepsContainer 
-                                    //- block steps
-                                        //- .step.noMarkup.step-intro.step__selected Intro
-                                        //- .step.noMarkup.step-1 1
-                                        //- .step.noMarkup.step-2 2
-                                        //- .step.noMarkup.step-3 3
-                                        //- .step.noMarkup.step-tips Tips
-                                        //- .step.noMarkup.step-end End
                             .videoInfoContainer
                                 .lesson__item 
-                                    h2#step__title
+                                    h2#step__title.fadeIn
                                         block videoInfo--title 
                                             | Introduction
                                     p#step__description.showMore__Btn--js
@@ -105,7 +92,9 @@ html
                     .help.lesson__item.lesson__item 
                         h2.help__title Need help?
                         p.help__paragraph.panel__paragraph Got questions about this project? Send us a message and we'll get back to you in to time!
-                        .help__button.btn.btn__secondary.btn__small Ask a question
+                        //- .help__button.btn.btn__secondary.btn__small 
+                        a.help__button.btn.btn__secondary.btn__small(href="mailto:catbearsteam@gmail.com?subject=The Catbears, I could use some help&body=Hey Catbears, I could use your help with...", target='_top') 😮 Ask a question
+
                     
 
 

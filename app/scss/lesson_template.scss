@@ -99,7 +99,7 @@ h3 {
 						display: flex;
 						flex-direction: column;
 						.videoPlayer {
-							// background-color : rgba(0,0,0,0.078);
+							position: relative;
 							padding : 0;
 							height: auto;
 							video {
@@ -107,6 +107,32 @@ h3 {
 								height : auto;
 								width : 100%;
 							}
+							.videoWatermark {
+								position: absolute;
+								bottom: 0;
+								right: 0;
+								margin : 10px;
+								// margin-bottom: 50px;
+								color: white;
+								opacity: 0.5;
+								font-size: 15px;
+
+							}
+							.videoTitleContainer {
+								position: absolute;
+								top: 0;
+								left: 0;
+								background-color: white;
+								padding: 10px 22px 6px;
+								margin: 15px;
+								.videoTitle {
+									padding-top: 2px;
+								}
+								.videoSubTitle {
+									margin-top: 5px;
+								}
+							}
+							
 							// background-color : rgba(255,255,255,0.3);
 						};
 						.videoSteps {
