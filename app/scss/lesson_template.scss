@@ -109,14 +109,12 @@ h3 {
 							}
 							.videoWatermark {
 								position: absolute;
-								bottom: 0;
+								bottom: 26px;
 								right: 0;
-								margin : 10px;
-								// margin-bottom: 50px;
+								margin : 14px;
 								color: white;
 								opacity: 0.5;
-								font-size: 15px;
-
+								font-size: 16px;
 							}
 							.videoTitleContainer {
 								position: absolute;
@@ -132,8 +130,6 @@ h3 {
 									margin-top: 5px;
 								}
 							}
-							
-							// background-color : rgba(255,255,255,0.3);
 						};
 						.videoSteps {
 							margin-top: 20px;
