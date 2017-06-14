@@ -3,7 +3,11 @@ extends ./templates/hp-fullscreen.jade
 block title
   title The Catbears - Printable Activities
 
+block message__primary
+    | Learn Something Awesome
 
+block message__secondary
+    | We're building a new online learning experience for kids around the world, and you can be a part of it.  
 //- block poster-fullscreen
 //-   .poster-fullscreen
 //-     .poster-fullscreen__bg-img.rainbow-animation-slow
@@ -20,26 +24,24 @@ block title
 
 block about-catbears
   p.about-catbears 
-    strong New projects each week! 
-    | We’re making craft projects for creative kids. Each project comes with step by step instructions and printable activity pages. Try one of our craft projects!
-    //- br
-    //- br  
-    //- strong Our goal 
-    //- | is to spark creative thinking using fun printable activities that encourage children to think and create their own worlds. Why printables? When technology is taking such a big part of our lives we feel it's important to get kids in and out of the digital world.
+    strong 👶 The school we've always dreamed of!
+    br
+    |  Our job as educators is first to inspire. We're always looking for ways to make any subject interesting. Then we try to make the learning experience as easy as possible by constantly perfecting our teaching skills. And finally, we aspire to make meaningful, memorable experiences that will last a life time.
+    br
+    br  
+    strong 😺 Artists, Magicians, Instructos.   
+    br 
+    |  A good teacher is first of all an amazing learner. Passing on the knowledge you've learned is a mission, not only a profession. If you are a teacher and passionate about what you do then your place is with us. We would love to set up a personal meeting and discuss your future as an instructor in one of the most advanced online learning platforms in the world. 
 
 block grid-title
   .grid-title
-    h1 Explore Our Projects
-    .title-underline
-
-
-
-
+    h1 Motivate Achievable Life Lessons
+    //- .title-underline
 
 
 //------------ GRID BOXES ----
 
-block greeting-card
+//- block greeting-card
   .box
     a(href='greeting-card.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__Greeting-Card')")
       .image-container
@@ -51,7 +53,7 @@ block greeting-card
             h2 DIY Greeting Card
             p Make
 
-block sunset
+//- block sunset
   .box
     a(href='sunset.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__sunset')")
       .image-container
@@ -63,7 +65,7 @@ block sunset
             h2 Paper Sunset
             p Make
 
-block maker-kit
+//- block maker-kit
   .box
     a(href='maker-kit.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__maker-kit')")
       .image-container
@@ -77,7 +79,7 @@ block maker-kit
 
 
 
-block make-a-fox
+//- block make-a-fox
   .box
     a(href='felt-catbears.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__felt-catbears')")
       .image-container
@@ -89,7 +91,7 @@ block make-a-fox
             h2 Felt Catbears
             p Make
 
-block coloring-pages
+//- block coloring-pages
   .box
     a(href='5-coloring-pages_catbears.html' onClick = "ga('send', 'event', 'Button', 'Click', 'HP-Thumb__coloring-pages')")
       .image-container
@@ -205,6 +207,6 @@ block coloring-pages
 //-         h2 The Catbears on Instagram
 //-         p Check out our Instagram profile
 
-block box-spacer
+//- block box-spacer
   .box.box-spacer
 

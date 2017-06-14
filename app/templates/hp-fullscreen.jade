@@ -17,30 +17,36 @@ html
 
   body
     //- h3.notification Try our stickers for iMessage
-    include ../include/navigation.jade
+    //- include ../include/navigation.jade
     #site-wrapper
       #upper-site
         .poster-fullscreen
           .poster-fullscreen__bg-img
-          .layout-850px
+          .layout-850px.poster-fullscreen--layout
             .fullscreen__content-container
-              .fullscreen__logo
-              h1.fullscreen__title.noMarkup Craft Something Awesome 
-              h2 New DIY Projects To Your Mailbox!
-              .subscribe-form.horizontal-form
-                include ../include/mailchimp-form.jade
+              img.bee-logo(src="../img/icons/logo-maker-bee.png" , alt="The Catbears Logo")
+              //- .fullscreen__logo
+              h1.message__primary.hovering
+                block message__primary
+              h2.message__secondary 
+                block message__secondary
+              //- .subscribe-form.horizontal-form
+              //-   include ../include/mailchimp-form.jade
                 //- p.micro-text.foot-note * We will only ever email you about Catbears, and we promise to do it as little as possilbe, Cross our hears, Spam’s the worst.
             .fullscreen__object
               .fullscreen__object--img
           .poster-bottom
-      .layout-850px.flex-grid.hp-grid
-        block about-catbears
+      .layout-550px
         block grid-title
+        block about-catbears
+        //- .subscribe-form.horizontal-form
+        .subscribe-form
+            include ../include/mailchimp-form.jade
         //- block sunset    
-        block make-a-fox
-        block maker-kit  
-        block coloring-pages
-        block greeting-card
+        //- block make-a-fox
+        //- block maker-kit  
+        //- block coloring-pages
+        //- block greeting-card
         //- block catbears-stickers
         //- block learn-to-draw
         //- block finger-puppets
@@ -49,10 +55,10 @@ html
         //- block ranni
         //- block riddle-games
         //- block iMessage-stickers
-        block box-spacer
-        block box-spacer
-    #coast2coast--centered
-      include ../include/join-us.jade
+        //- block box-spacer
+        //- block box-spacer
+    //- #coast2coast--centered
+      //- include ../include/join-us.jade
   
     include ../include/footer.jade 
     include ../include/page-bottom-scripts.jade

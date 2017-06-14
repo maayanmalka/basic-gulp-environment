@@ -19,6 +19,8 @@ var showObjNum;
 $(document).ready(function(){
 
 	// SETTING VARS
+	car = 'object__car.png'; 
+	logo = 'object__logo.png'; 
 	duck = 'object__duck.png'; 
 	fox = 'object__fox.png';
 	card = 'object__card.png';
@@ -28,7 +30,7 @@ $(document).ready(function(){
 	pig = 'object__pig.png';
 	farm = 'object__farm.png';
 	cardboard = 'object__cardboard.png';
-	objects = [ cardboard , fox , pig , sunset , farm , makerKit ,card , hug , duck ];
+	objects = [ cardboard , car, fox , pig , sunset ,logo, farm , makerKit ,card , hug , duck ];
 	objectsTotal = objects.length;
 	posterObjects = $('.fullscreen__object--img');
 	showObjNum = 0;
@@ -38,16 +40,16 @@ $(document).ready(function(){
 	  	posterObjects.css("background-image" , ['url("../img/hp/' + objects[i] + '")']);
 	}
 
-	setInterval('cycleImages()', 5000);
+	setInterval('cycleImages()', 3500);
 
 
 
 });
 
 function cycleImages(){
-  posterObjects.css("margin-top" , '-10px' ).css('z-index' , '1').fadeOut(300, function(){
+	posterObjects.css('z-index' , '1').fadeOut(150, function(){
   	posterObjects.css("background-image" , ['url("../img/hp/' + objects[showObjNum] + '")']);
-  	posterObjects.css('z-index' , '1').fadeIn(300).css("margin-top" , '0px' );
+  	posterObjects.css('z-index' , '1').fadeIn(150);
   	showObjNum ++;
   	showObjNum = showObjNum % objectsTotal;
   })
