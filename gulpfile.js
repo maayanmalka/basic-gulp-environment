@@ -11,7 +11,8 @@ var gulp = require('gulp'),
   del = require('del'),
   runSequence = require('run-sequence'),
   open = require('gulp-open'),
-  gulpBowerFiles = require('gulp-bower-files');
+  gulpBowerFiles = require('gulp-bower-files'),
+  // rsync = require('gulp-rsync');
  
 
 
@@ -20,12 +21,12 @@ gulp.task("bower-files", function(){
 });
 
 // VINILE FTP
-var ftp = require( 'vinyl-ftp' );
-var conn = ftp.create( {
-    host: 'catbears.com',
-    user: 'catbears',
-    password: 'HB3g0yj24i'
-} );
+// var ftp = require( 'vinyl-ftp' );
+// var conn = ftp.create( {
+//     host: 'catbears.com',
+//     user: 'catbears',
+//     password: 'HB3g0yj24i'
+// } );
 
 var sftp = require('gulp-sftp');
 
@@ -59,48 +60,73 @@ gulp.task('open:staging', function(){
 });
 
 
+// gulp-rsync!!!!!!!!!!!!!!!!!!
+// gulp.task('deploy', function() {
+//   console.log ("---------------------------------------DEPLOY")
+//   // gulp.src('./dist/**/*')
+//   gulp.src('dist/**/*')
+//     .pipe(rsync({
+//       root: 'dist/',
+//       hostname: 'ftp.catbears.com',
+//       destination: '/public_html',
+//       archive: true,
+//       silent: false,
+//       compress: true
+//     }));
+// });
+
 // PUSH PRODUCTION
 
 
 
 gulp.task('push:production-silent', function (cb) {
 
-    function purgeProjectFolders (index){
-      if (index < projectFolders.length){
-       conn.rmdir ( "/public_html" + projectFolders[index] , function () {
-        console.log ("cleared " + projectFolders[index]);
-        purgeProjectFolders(index + 1);
-       })
-      }
-       else {
-        console.log('finish clearing')
-        return gulp.src('./dist/**/*')
-        .pipe( conn.dest( '/public_html' ) ).on('end' , cb)
-       }
-    }
+    console.log ("----------------------------------------START")
+    // function purgeProjectFolders (index){
+    //   if (index < projectFolders.length){
+    // console.log ("----------------------------------------PURGING")
+    //    conn.rmdir ( "/public_html" + projectFolders[index] , function () {
+    //     console.log ("cleared " + projectFolders[index]);
+    //     purgeProjectFolders(index + 1);
+    //    })
+    //   }
+    //    else {
+    //     console.log('finish clearing')
+    //     console.log('finish clearing')
+    //     console.log('finish clearing')
+    //     // return gulp.src('./dist/**/*')
+    //     // .pipe( conn.dest( '/public_html' ) ).on('end' , cb)
+    //    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    //    return gulp.deploy
+
+
+    //    }
+    // }
 
     //return purgeProjectFolders(0);
+    // runSequence('deploy');
+
+    console.log ("----------------------------------------SFTP")
   return gulp.src('./dist/**/*')
         .pipe(sftp({
             host: 'ftp.catbears.com',
             user: 'catbears',
             password: 'HB3g0yj24i',
             port: 18765,
-            remotePath: '/public_html'
-            //host: 'website.com',
-            //user: 'johndoe',
-            //pass: '1234'
+            // port: 21,
+            remotePath: 'public_html'
         }));
 } );
 
-gulp.task('push:production' , ['push:production-silent' , 'bush'], function (){
+// gulp.task('push:production' , ['push:production-silent' , 'bush'], function (){
+// })
+gulp.task('push:production' , ['push:production-silent'], function (){
 })
 
-
 gulp.task ('bush' , function () {
-  console.log ("!!  Finished uploading to production  !!")
-  runSequence('in-the-bush')
-  runSequence('open:homepage')
+  // console.log ("!!  step 2  !!")
+  // runSequence('in-the-bush')
+  // runSequence('open:homepage')
 })
 
 
@@ -123,6 +149,7 @@ gulp.task('push:staging-silent', function (cb) {
        else {
         console.log('finish clearing')
         return gulp.src('./dist/**/*')
+        // .pipe( conn.dest( '/staging.catbears.com' ) ).on('end', cb);
         .pipe( conn.dest( '/staging.catbears.com' ) ).on('end', cb);
        }
     }
