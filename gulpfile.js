@@ -86,7 +86,7 @@ gulp.task('push:production-silent', function (cb) {
             user: 'catbears',
             password: 'HB3g0yj24i',
             port: 18765,
-            remotePath: 'catbears.com'
+            remotePath: '/public_html'
             //host: 'website.com',
             //user: 'johndoe',
             //pass: '1234'
