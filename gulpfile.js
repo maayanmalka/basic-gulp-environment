@@ -11,7 +11,7 @@ var gulp = require('gulp'),
   del = require('del'),
   runSequence = require('run-sequence'),
   open = require('gulp-open'),
-  gulpBowerFiles = require('gulp-bower-files'),
+  gulpBowerFiles = require('gulp-bower-files');
   // rsync = require('gulp-rsync');
  
 
