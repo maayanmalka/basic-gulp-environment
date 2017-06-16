@@ -1,0 +1,67 @@
+{
+    "details" : {
+        "category" : "crafts",
+        "pageName" : "",
+        "lessonName" : "Create a Star System Drawing",
+        "lessonIcon" : "tractor.jpg",
+        "lessonActivityPageImg" : "Racing-Car.png",
+        "pdf" : "tractor.jpg",
+        "video" : "star-system_the-catbears.mp4",
+        "descriptionTitle" : "Introduction",
+        "description" : "",
+        "picture" : "",
+        "moreProject__1" : "maker-kit.png"
+    },
+
+    "steps" : [
+      {
+        "name": "into",
+        "title": "💫 Create a Star System Drawing",
+        "subtitle": "",
+        "seekToSecond": 0,
+        "description": "In this lesson you'll make a star system drawing using felt. it's very simple to make and in the end you'll have a nice drawing to hang up in your room! so get your scissors and stick glue ready and let's get started!"
+      },
+      {
+        "name": "1",
+        "title": "1. Punch Holes",
+        "subtitle": "",
+        "seekToSecond": 2,
+        "description": "Print out the activity pages, and use a pencil to punch holes into the first activity page. This will help us trace the drawing outline into the felt background."
+      },
+      {
+        "name": "2",
+        "title": "2. Trace The Drawing",
+        "subtitle": "",
+        "seekToSecond": 13,
+        "description": "It's time to trace your drawing. you'll need a dark sheet of felt, and a white marker (you can also use a tippex pen / white acrylic paint). place your holy activty page on top of the felt and start tracing your drawing outline."
+      },
+      {
+        "name": "🌟TIP",
+        "title": "🌟 Tip",
+        "subtitle": "Draw large circles for the stars",
+        "seekToSecond": 23.5,
+        "description": "Trace large circle where the stars are located, so it will be easier to position them."
+      },
+      {
+        "name": "3",
+        "title": "3. Glue The Stars",
+        "subtitle": "",
+        "seekToSecond": 27,
+        "description": "Use the second activity page to cut out stars in any color that you like. once you're done, glue them using stick glue (or any other glue you prefer) on to the dark felt background"
+      },
+      {
+        "name": "4",
+        "title": "5. Glue The Star Names",
+        "subtitle": "",
+        "seekToSecond": 31,
+        "description": "From the first activity page, Cut out the star names into little squares, and glue them next to the right star."
+      },
+      {
+        "name": "Done",
+        "title": "Frame Your Drawing",
+        "subtitle": "",
+        "seekToSecond": 36,
+        "description": "Your Star System drawing is ready! now all you have to do is find the right frame and hang it up in your room to always look apon the stars! good night!"
+      }
+    ]
+}

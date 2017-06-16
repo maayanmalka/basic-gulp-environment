@@ -41,13 +41,14 @@ html
                                 .stepsLine
                                 .stepsContainer 
                             .videoInfoContainer
-                                .lesson__item 
-                                    h2#step__title.fadeIn
-                                        block videoInfo--title 
-                                            | Introduction
-                                    p#step__description.showMore__Btn--js
-                                        block videoInfo--text
-                                            | This is a really easy step, just watch the video and follow the instructions.
+                                .videoInfoBubble
+                                    .lesson__item 
+                                        h2#step__title.fadeIn
+                                            block videoInfo--title 
+                                                | Introduction
+                                        p#step__description.showMore__Btn--js
+                                            block videoInfo--text
+                                                | This is a really easy step, just watch the video and follow the instructions.
                                 //- .showMoreBtn.btn.btn__secondary.btn__small.show-more Show More
                     .moreProjects.lesson__item.lesson__item--padding
                         h2 More Craft Projects
@@ -70,9 +71,9 @@ html
                         h2.difficulty__title Difficulty
                         .difficulty__iconsContainer
                            block diffifulty 
-                                .difficulty__icon.noMarkup
-                                .difficulty__icon.noMarkup
-                                .difficulty__icon.noMarkup    
+                                //- .difficulty__icon.noMarkup
+                                //- .difficulty__icon.noMarkup
+                                //- .difficulty__icon.noMarkup    
                     .instructor.lesson__item.lesson__item
                         .instructor__header
                             .instructor__profilePicture.noMarkup

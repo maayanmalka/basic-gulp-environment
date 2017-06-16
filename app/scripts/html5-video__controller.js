@@ -16,13 +16,16 @@ $(document).ready(function(){
 
     vid = document.getElementById("catbearsVideo");
     setPageVar();
-    setActivityPage();
+    // setActivityPage();
 
     // load Json & create steps into 'output' var
     $.getJSON('../../json/' + jsonName, function(data) {
         dataBase = data;
         stepsNum = dataBase.steps.length;
         
+        lessonInit(dataBase);
+
+
         for (var i in dataBase.steps){
             output += '<div class="step noMarkup" id="step-' + dataBase.steps[i].name + '" >' ;
             output += dataBase.steps[i].name; 
@@ -176,11 +179,6 @@ function setPageVar (){
     fileName = fileName.split(' ').join('-');
 }
 
-function setActivityPage () {
-    $(".activityPage__pager , .activityPage__button").click(function (){
-        window.open('../../pdf/The-Catbears_' + fileName)
-    })
-}
 
 // capitilize every first letter in string
 function capitalizer (string) {
@@ -216,3 +214,27 @@ function updateVideoTitles (dataBaseSteps , titleNumberToShow) {
 
     $('#videoTitle-' + dataBase.steps[titleNumberToShow].name).removeClass('displayNone') 
 };
+
+
+// -----------
+
+
+function lessonInit (dataBase) {
+    setActivityPage ();
+    setLessonDetails(dataBase.details);
+}
+
+
+function setActivityPage () {
+    $(".activityPage__pager , .activityPage__button").click(function (){
+        window.open('../../pdf/The-Catbears_' + fileName)
+    })
+}
+
+function setLessonDetails (dataBaseDetails) {
+    $(".lessonName--js").html(dataBaseDetails.lessonName);
+    $(".lessonIcon--js").html("<img src='../../img/icons/" + dataBaseDetails.lessonIcon + "' , alt='" + dataBaseDetails.lessonName + " '> ");
+
+    $(".lessonActivityPageImg--js").html("<img src='../../img/activityPageImg/" + dataBaseDetails.lessonActivityPageImg + "' , alt='" + dataBaseDetails.lessonName + " '> ");
+
+}

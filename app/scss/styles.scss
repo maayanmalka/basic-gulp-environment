@@ -322,88 +322,9 @@ input, button, submit {
 }
 
 
-// shake logo
-
-.shake__hover:hover {
-  animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
-  transform: translate3d(0, 0, 0);
-  backface-visibility: hidden;
-  perspective: 1000px;
-}
-
-@keyframes hovering {
-    0%, 100% {top: 0px;}
-    50% {top: -12px;}
-}
-
-@keyframes fadeIn {
-    0%, 10% {opacity: 0;}
-    100% {opacity: 1;}
-}
 
 
-@keyframes fadeInSlideRight {
-    0%, {opacity: 0; left: -10px;} 
-    20%, 100% {opacity: 1; left: 0px;}
-}
 
-@keyframes fadeOutSlideLeft {
-    0%, 80% {opacity: 1; left: 0px;}
-    100% {opacity: 0; left: -10px;}
-}
-
-@keyframes fadeInSlideRightDelaySlideLeftFadeOut {
-    0%, {opacity: 0; left: -10px;} 
-    20%, 80% {opacity: 1; left: 0px;}
-    100% {opacity: 0; left: -10px;} 
-}
-
-
-.fadeIn {
-  animation: fadeIn 1.0s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-}
-
-.fadeInSlideRight {
-  animation: fadeInSlideRight 5.0s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-}
-
-.fadeInSlideRightDelaySlideLeftFadeOut {
-  animation: fadeInSlideRightDelaySlideLeftFadeOut 5.0s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-}
-.fadeOutSlideLeft {
-  animation: fadeInSlideRight 5.0s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-}
-
-@keyframes shake {
-  10% {
-    transform: rotate(2deg);
-    // transform: translate3d(-1px, 0, 0);
-  }
-  
-  20% {
-    transform: rotate(-4deg);
-    // transform: translate3d(2px, 0, 0);
-  }
-
-  30% {
-    transform: rotate(5deg);
-    // transform: translate3d(-4px, 0, 0);
-  }
-
-  50% {
-   transform: rotate(-4deg);
-    // transform: translate3d(4px, 0, 0);
-  } 
-
-  60% {
-   transform: rotate(2deg);
-    // transform: translate3d(4px, 0, 0);
-  }
-  80% {
-   transform: rotate(0deg);
-    // transform: translate3d(4px, 0, 0);
-  }
-}
 
 // end - shake logo
 
@@ -419,99 +340,9 @@ input, button, submit {
   margin-bottom: 40px;
 }
 
-.beating {
-  animation: beating 1.4s cubic-bezier(0.36, 0.07, 0.19, 0.97) both infinite;
-}
-
-.hovering {
-  animation: hovering 1.4s cubic-bezier(0.36, 0.07, 0.19, 0.97) both infinite;
-}
-
-@keyframes beating {
-    0% {
-      transform: scale(1.0);
-    }
-    10% {
-      transform: scale(1.07);
-    }
-    20% {
-      transform: scale(1);
-    }
-    30% {
-      transform: scale(1.1);
-    }
-    37% {
-      transform: scale(0.95);
-    }
-    44% {
-      transform: scale(1.0);
-    }
-}
-
-// RAINBOW ANIMATION 
-.rainbow-animation {
-
-      -webkit-animation-name: rainbow; /* Safari 4.0 - 8.0 */
-      -webkit-animation: rainbow 10s infinite; /* Safari 4.0 - 8.0 */
-      animation-name: rainbow;
-      animation: rainbow 10s infinite;
-    /* Safari 4.0 - 8.0 */
-    @-webkit-keyframes rainbow {
-        from {  
-          -webkit-filter: hue-rotate(0deg);
-        filter: hue-rotate(0deg);
-        }
-      to {
-        -webkit-filter: hue-rotate(359deg);
-        filter: hue-rotate(359deg);
-    }
-    }
-
-    /* Standard syntax */
-    @keyframes rainbow {
-      from {  
-        -webkit-filter: hue-rotate(0deg);
-        filter: hue-rotate(0deg);
-      }
-      to {
-        -webkit-filter: hue-rotate(360deg);
-        filter: hue-rotate(360deg);
-    }
-    }
-}
 
 
-.rainbow-animation-slow {
 
-      -webkit-animation-name: rainbow; /* Safari 4.0 - 8.0 */
-      -webkit-animation: rainbow 100s infinite; /* Safari 4.0 - 8.0 */
-      animation-name: rainbow;
-      animation: rainbow 100s infinite;
-    /* Safari 4.0 - 8.0 */
-    @-webkit-keyframes rainbow {
-        from {  
-          -webkit-filter: hue-rotate(0deg);
-        filter: hue-rotate(0deg);
-        }
-      to {
-        -webkit-filter: hue-rotate(359deg);
-        filter: hue-rotate(359deg);
-    }
-    }
-
-    /* Standard syntax */
-    @keyframes rainbow {
-      from {  
-        -webkit-filter: hue-rotate(0deg);
-        filter: hue-rotate(0deg);
-      }
-      to {
-        -webkit-filter: hue-rotate(360deg);
-        filter: hue-rotate(360deg);
-    }
-    }
-}
-    // END - RAINBOW ANIMATION
 
 ul, ol, li {
   font-size : 18px;
@@ -548,15 +379,6 @@ p.bullet {
 // }
 
 
-.rotate-scale-on-hover {
-  transition : transform  0.07s ease-in-out;
-  &:hover {
-    transform: rotate(1.2deg) scale(1.04);
-    -ms-transform: rotate(1.2deg) scale(1.04); /* IE 9 */
-    -webkit-transform: rotate(1.2deg) scale(1.04);
-  }
-  
-}
 
 .comic {
   font-family: 'Schoolbell', 'Open Sans', sans-serif;
@@ -746,31 +568,6 @@ p.bullet {
 }
 
 
-// CASES
-
-.saturateOnHover {
-  -webkit-filter: saturate(0.85);
-  filter: saturate(0.85);
-  transition : filter 100ms ease-in-out , -webkit-filter 100ms ease-in-out , margin-top 100ms ease-in-out , margin-bottom 100ms ease-in-out , transform 100ms ease-in-out;
-
-  &:hover {
-    -webkit-filter: saturate(1);
-    filter: saturate(1);
-  }
-}
-
-
-.unSaturateOnHover {
-  -webkit-filter: saturate(1);
-  filter: saturate(1);
-  transition : filter 100ms ease-in-out , -webkit-filter 100ms ease-in-out , margin-top 100ms ease-in-out , margin-bottom 100ms ease-in-out , transform 100ms ease-in-out;
-
-  &:hover {
-    -webkit-filter: saturate(0.85);
-    filter: saturate(0.85);
-  }
-}
-
 .sticky {
   position: fixed !important;
 }
@@ -822,4 +619,238 @@ p.bullet {
 .vertical-form {
   max-width: 400px;
   margin: 0 auto;
+}
+
+
+
+
+// ANIMATIONS
+
+.shake__hover:hover {
+  animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes hovering {
+    0%, 100% {top: 0px;}
+    50% {top: -12px;}
+}
+
+@keyframes hoveringSlighly {
+    0%, 100% {top: 0px;}
+    50% {top: -5px;}
+}
+
+@keyframes fadeIn {
+    0%, 10% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+@keyframes fadeInSlideRight {
+    0%, {opacity: 0; left: -10px;} 
+    20%, 100% {opacity: 1; left: 0px;}
+}
+
+@keyframes fadeOutSlideLeft {
+    0%, 80% {opacity: 1; left: 0px;}
+    100% {opacity: 0; left: -10px;}
+}
+
+@keyframes fadeInSlideRightDelaySlideLeftFadeOut {
+    0%, {opacity: 0; left: -10px;} 
+    20%, 80% {opacity: 1; left: 0px;}
+    100% {opacity: 0; left: -10px;} 
+}
+
+
+.saturateOnHover {
+  -webkit-filter: saturate(0.85);
+  filter: saturate(0.85);
+  transition : filter 100ms ease-in-out , -webkit-filter 100ms ease-in-out , margin-top 100ms ease-in-out , margin-bottom 100ms ease-in-out , transform 100ms ease-in-out;
+
+  &:hover {
+    -webkit-filter: saturate(1);
+    filter: saturate(1);
+  }
+}
+
+
+.unSaturateOnHover {
+  -webkit-filter: saturate(1);
+  filter: saturate(1);
+  transition : filter 100ms ease-in-out , -webkit-filter 100ms ease-in-out , margin-top 100ms ease-in-out , margin-bottom 100ms ease-in-out , transform 100ms ease-in-out;
+
+  &:hover {
+    -webkit-filter: saturate(0.85);
+    filter: saturate(0.85);
+  }
+}
+
+.rotateSmall {
+   transform: rotate(5.6deg);
+   -ms-transform: rotate(5.6deg); /* IE 9 */
+   -webkit-transform: rotate(5.6deg);
+}
+.rotate-scale-on-hover {
+  transition : transform  0.07s ease-in-out;
+  &:hover {
+    transform: rotate(1.2deg) scale(1.04);
+    -ms-transform: rotate(1.2deg) scale(1.04); /* IE 9 */
+    -webkit-transform: rotate(1.2deg) scale(1.04);
+  }
+  
+}
+
+// RAINBOW ANIMATION 
+.rainbow-animation {
+
+      -webkit-animation-name: rainbow; /* Safari 4.0 - 8.0 */
+      -webkit-animation: rainbow 10s infinite; /* Safari 4.0 - 8.0 */
+      animation-name: rainbow;
+      animation: rainbow 10s infinite;
+    /* Safari 4.0 - 8.0 */
+    @-webkit-keyframes rainbow {
+        from {  
+          -webkit-filter: hue-rotate(0deg);
+        filter: hue-rotate(0deg);
+        }
+      to {
+        -webkit-filter: hue-rotate(359deg);
+        filter: hue-rotate(359deg);
+    }
+    }
+
+    /* Standard syntax */
+    @keyframes rainbow {
+      from {  
+        -webkit-filter: hue-rotate(0deg);
+        filter: hue-rotate(0deg);
+      }
+      to {
+        -webkit-filter: hue-rotate(360deg);
+        filter: hue-rotate(360deg);
+    }
+    }
+}
+
+
+.rainbow-animation-slow {
+
+      -webkit-animation-name: rainbow; /* Safari 4.0 - 8.0 */
+      -webkit-animation: rainbow 100s infinite; /* Safari 4.0 - 8.0 */
+      animation-name: rainbow;
+      animation: rainbow 100s infinite;
+    /* Safari 4.0 - 8.0 */
+    @-webkit-keyframes rainbow {
+        from {  
+          -webkit-filter: hue-rotate(0deg);
+        filter: hue-rotate(0deg);
+        }
+      to {
+        -webkit-filter: hue-rotate(359deg);
+        filter: hue-rotate(359deg);
+    }
+    }
+
+    /* Standard syntax */
+    @keyframes rainbow {
+      from {  
+        -webkit-filter: hue-rotate(0deg);
+        filter: hue-rotate(0deg);
+      }
+      to {
+        -webkit-filter: hue-rotate(360deg);
+        filter: hue-rotate(360deg);
+    }
+    }
+}
+    // END - RAINBOW ANIMATION
+
+
+
+.beating {
+  animation: beating 1.4s cubic-bezier(0.36, 0.07, 0.19, 0.97) both infinite;
+}
+
+.hovering {
+  animation: hovering 1.4s cubic-bezier(0.36, 0.07, 0.19, 0.97) both infinite;
+}
+
+.hoveringSlighly {
+  animation: hoveringSlighly 1.4s cubic-bezier(0.36, 0.07, 0.19, 0.97) both infinite;
+}
+
+@keyframes beating {
+    0% {
+      transform: scale(1.0);
+    }
+    10% {
+      transform: scale(1.07);
+    }
+    20% {
+      transform: scale(1);
+    }
+    30% {
+      transform: scale(1.1);
+    }
+    37% {
+      transform: scale(0.95);
+    }
+    44% {
+      transform: scale(1.0);
+    }
+}
+
+
+.fadeIn {
+  animation: fadeIn 1.0s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.fadeInFast {
+  animation: fadeIn 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.fadeInSlideRight {
+  animation: fadeInSlideRight 5.0s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.fadeInSlideRightDelaySlideLeftFadeOut {
+  animation: fadeInSlideRightDelaySlideLeftFadeOut 5.0s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+.fadeOutSlideLeft {
+  animation: fadeInSlideRight 5.0s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes shake {
+  10% {
+    transform: rotate(2deg);
+    // transform: translate3d(-1px, 0, 0);
+  }
+  
+  20% {
+    transform: rotate(-4deg);
+    // transform: translate3d(2px, 0, 0);
+  }
+
+  30% {
+    transform: rotate(5deg);
+    // transform: translate3d(-4px, 0, 0);
+  }
+
+  50% {
+   transform: rotate(-4deg);
+    // transform: translate3d(4px, 0, 0);
+  } 
+
+  60% {
+   transform: rotate(2deg);
+    // transform: translate3d(4px, 0, 0);
+  }
+  80% {
+   transform: rotate(0deg);
+    // transform: translate3d(4px, 0, 0);
+  }
 }

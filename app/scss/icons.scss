@@ -1,11 +1,73 @@
-// difficulty__icons.scss
+// icons.scss
 
-.icon--age10 {
-	background: url('../img/icons/icon-difficulty-age10.png') center no-repeat;
-	background-size: 100% 100%;
+
+.infoIcon {
+    height: auto;
+    height: 45px;
+    width: 45px;
+    background-color: #c9c9c9 !important;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    .tooltipContainer {
+        display: none;
+        width: 150px;
+        height: 80px;
+        margin-top: -90px;
+        margin-left: -53px;
+        position: relative;
+        &:after {
+            position: absolute;
+            opacity: 1;
+            background-color: rgba(0,0,0,0.66) !important;
+            color: white;
+            width: auto;
+            text-align: center;
+            padding : 5px 10px;
+            bottom : 0px;
+            left : 25%;
+            right: 25%;
+            border-radius: 5px;
+        }
+    }
+    
+    &:hover {
+        .tooltipContainer {
+            display: block;
+        }
+        .tooltipContainer:after {
+            opacity: 1;
+        }
+    }
 }
 
-.icon--cutting-knife {
-	background: url('../img/icons/icon-cutting-knife.png') center no-repeat;
-	background-size: 100% 100%;
+.infoIcon__circle {
+    border-radius: 100%;
+}
+
+.infoIcon__square {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+
+
+.infoIcon__age10 {
+    background: url('../img/icons/icon-difficulty-age10.png') center no-repeat;
+    background-size: 100% 100%;
+    .tooltipContainer:after {
+        content : "+10";
+    }
+}
+
+.infoIcon__cutting-knife {
+    background: url('../img/icons/icon-cutting-knife.png') center no-repeat;
+    background-size: 100% 100%;
+    .tooltipContainer:after {
+        content : "Cutting Knife";
+    }
 }

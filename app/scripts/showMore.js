@@ -4,7 +4,7 @@ $(document).ready(function() {
 });
 
 function showMoreInit(){
-  	var showChar = 400;
+  	var showChar = 300;
     var ellipsestext = "...";
 	$('.showMore__Btn--js').each(function() {
         var content = $(this).html();
