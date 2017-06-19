@@ -12,7 +12,8 @@ html
 
     //- script(type='text/javascript', src='../lib/jquery/dist/jquery.js')
     script(type='text/javascript', src='../scripts/showMore.js')
-    script(type='text/javascript', src='../scripts/html5-video__controller.js')
+    //- script(type='text/javascript', src='../scripts/html5-video__controller.js')
+    script(type='text/javascript', src='../scripts/lesson.js')
 
     block title
   body
@@ -35,11 +36,13 @@ html
                     .lessonVideo.lesson__item.lesson__item--padding
                         .videoContainer
                             .videoPlayer(onclick='togglePlayPause()')
+                                block stepsTitlesContainer
                                 .videoWatermark.comic.noMarkup The Catbears
                                 block video
                             .videoSteps
                                 .stepsLine
-                                .stepsContainer 
+                                .stepsDotsContainer--js
+                                //- block stepsDotsContainer    
                             .videoInfoContainer
                                 .videoInfoBubble
                                     .lesson__item 

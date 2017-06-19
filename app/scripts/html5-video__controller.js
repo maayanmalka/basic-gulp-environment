@@ -3,7 +3,7 @@
 var vid;
 var now;
 var dataBase;
-var stepCurrentlyPlaying;
+var global_stepPlaying;
 var output = "";
 var stepsNum;
 var autoPlay = true;
@@ -11,6 +11,7 @@ var path;
 var pageName;
 var fileName; 
 var jsonName;
+var stepToggles = false;
 
 $(document).ready(function(){
 
@@ -29,6 +30,7 @@ $(document).ready(function(){
         for (var i in dataBase.steps){
             output += '<div class="step noMarkup" id="step-' + dataBase.steps[i].name + '" >' ;
             output += dataBase.steps[i].name; 
+            output += '<div class="step__icon step__icon--play"></div>';
             output += '</div>';
         };
 
@@ -43,18 +45,23 @@ $(document).ready(function(){
                 $(".stepsContainer").find(step).removeClass("step__selected");
                 return step.onclick = function (){
                     stepClicked = document.getElementById("step-" + dataBase.steps[xx].name);
+                    
+                    //click on selected step
+                    if (stepClicked == global_stepPlaying){
+                        togglePlayPause(vid);
+                        // initStepsIcons(dataBase.steps)
+                        toggleStepIcon(stepClicked , dataBase.steps);
 
-                    if (stepClicked == stepCurrentlyPlaying){
-                        togglePlayPause();
+                    //click on step
                     }else{
-                        // what happen if clicked on Step to Play
+                        // initStepsIcons(dataBase.steps)
                         appendStepTexts(xx);
-                        stepCurrentlyPlaying = stepClicked;
-                        // console.log("step currently playing : " + stepCurrentlyPlaying.name)
-                        vidSeekTo(dataBase.steps[xx].seekToSecond);
-                        removeAllSelectedSteps();
-                        $(".stepsContainer").find(stepCurrentlyPlaying).addClass("step__selected");
+                        global_stepPlaying = stepClicked;
+                        vidSeekTo(vid, dataBase.steps[xx].seekToSecond);
+                        removeAllSelectedSteps(dataBase.steps);
+                        $(".stepsContainer").find(global_stepPlaying).addClass("step__selected");
                         updateVideoTitles(dataBase.steps , xx);
+                        toggleStepIcon(stepClicked, dataBase.steps);
                     };
                 }
             }(i);
@@ -68,21 +75,36 @@ $(document).ready(function(){
         };
         
         // this function selects the playing step in the steps bar
-        function listenCurrentStep () {
-            vid.addEventListener("timeupdate", function(){
+        function listenCurrentStep (video , stepToggles) {
+            video.addEventListener("timeupdate", function(){
                now = this.currentTime; 
+                
                 for (var i in dataBase.steps){
+
+                    // listening, next step arrived
                     if (dataBase.steps[i].seekToSecond > now){
-                        removeAllSelectedSteps();
+                        // initStepsIcons(dataBase.steps);
+                        removeAllSelectedSteps(dataBase.steps);
                         setSelectedStep(i - 1);
-                         updateVideoTitles(dataBase.steps , i - 1);
+                        updateVideoTitles(dataBase.steps , i - 1);
+                        // if (stepToggles == false ){ // !!!!!!!!!!!!!!!!!!@@$!@$!@#!#!@#!@#!@#!@#!@#!@##!@#!@#!@@!#
+                        //     toggleStepIcon($("#step-" + dataBase.steps[i-1].name) , dataBase.steps);
+                        //     stepToggles = true;
+                        // }
+                        // console.log (dataBase.steps[i - 1])
                         break;
                     };
 
-                    if ( dataBase.steps[stepsNum - 1].seekToSecond < now){
-                        removeAllSelectedSteps();
+                    // listening, last step arrived
+                    if (dataBase.steps[stepsNum - 1].seekToSecond < now){
+                        // initStepsIcons(dataBase.steps);
+                        removeAllSelectedSteps(dataBase.steps);
                         setSelectedStep(stepsNum - 1);
-                        updateVideoTitles(dataBase.steps , stepsNum - 1)
+                        updateVideoTitles(dataBase.steps , stepsNum - 1);
+                         if (stepToggles  == false){
+                            toggleStepIcon($("#step-" + dataBase.steps[i-1].name) , dataBase.steps);
+                             stepToggles = true;
+                         }
                         break;
                     }
                 }
@@ -90,16 +112,16 @@ $(document).ready(function(){
         }
 
         // init - remove selected steps, choose the first one, and seek video to it.
-        removeAllSelectedSteps();
+        removeAllSelectedSteps(dataBase.steps);
         setSelectedStep(0)
         vid.currentTime = 0;
         appendStepTexts(0);
-        listenCurrentStep();
+        listenCurrentStep(vid);
         generateVideoTitles(dataBase.steps);
         updateVideoTitles(dataBase.steps ,0);
 
     }).fail( function(data, textStatus, error) {
-        console.error("getJSON failed, status: " + textStatus + ", error: "+error)
+        console.error("getJSON failed, status: " + textStatus + ", error: "+ error)
     });
 });
 
@@ -109,35 +131,63 @@ $(document).ready(function(){
 
 // FUNCTIONS
 function setSelectedStep (num) {
-    stepCurrentlyPlaying = document.getElementById("step-" + dataBase.steps[num].name);
-    $(".stepsContainer").find(stepCurrentlyPlaying).addClass("step__selected");
+    global_stepPlaying = document.getElementById("step-" + dataBase.steps[num].name);
+    $(".stepsContainer").find(global_stepPlaying).addClass("step__selected");
     appendStepTexts(num);
 } 
 
 
-function vidSeekTo(second) { 
-    vid.currentTime = second;
-    if(vid.paused){
-       vid.play(); 
+function vidSeekTo(video, second) { 
+    video.currentTime = second;
+    if(video.paused){
+       video.play(); 
      }else{ 
-       vid.play();
+       video.play();
     }; 
 }; 
 
-function togglePlayPause() { 
-    if(vid.paused){
-       vid.play(); 
+function togglePlayPause(video) { 
+    if(video.paused){
+       video.play();
      }else{ 
-       vid.pause();
+       video.pause();
     }; 
 };
 
-function removeAllSelectedSteps () {
-    for (var i in dataBase.steps){
-        var step = document.getElementById("step-" + dataBase.steps[i].name);
+function toggleStepIcon (step , dataBaseSteps) {
+    switch (true) {
+        case ($(step).find(".step__icon").hasClass("step__icon--pause")) :
+            console.log('is pasued')
+            initStepsIcons (dataBaseSteps);
+            $(step).find(".step__icon").removeClass("step__icon--pause");
+            $(step).find(".step__icon").addClass("step__icon--play");
+            break;
+        case ($(step).find(".step__icon").hasClass("step__icon--play")) :
+            console.log('is played')
+            initStepsIcons (dataBaseSteps);
+           $(step).find(".step__icon").removeClass("step__icon--play");
+           $(step).find(".step__icon").addClass("step__icon--pause");
+           break;
+    }
+}
+
+function initStepsIcons (dataBaseSteps) {
+    for (var i in dataBaseSteps){
+        var step = document.getElementById("step-" + dataBaseSteps[i].name);
+        $(step).find(".step__icon").removeClass("step__icon--pause")
+        $(step).find(".step__icon").addClass("step__icon--play")
+    }
+}
+
+
+function removeAllSelectedSteps (dataBaseSteps) {
+    for (var i in dataBaseSteps){
+        var step = document.getElementById("step-" + dataBaseSteps[i].name);
         $(".stepsContainer").find(step).removeClass("step__selected");
     }
 }
+
+
 
 function appendStepTexts (num) {
     $("#step__title").html(dataBase.steps[num].title)
@@ -160,8 +210,8 @@ function loadJson(jsonFileName) {
     }
 };
 
-function pauseOnSecond () {
-    vid.addEventListener("timeupdate", function(){
+function pauseOnSecond (video) {
+    video.addEventListener("timeupdate", function(){
         if( this.currentTime > 10 && this.currentTime < 11) {
             this.pause();
         }

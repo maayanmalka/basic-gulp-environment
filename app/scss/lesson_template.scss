@@ -120,7 +120,7 @@ h3 {
                                 opacity: 0.5;
                                 font-size: 16px;
                             }
-                            .videoTitleContainer {
+                            .stepsTitlesContainer--js {
                                 position: absolute;
                                 top: 0;
                                 left: 0;
@@ -128,10 +128,10 @@ h3 {
                                 border-radius: 2px;
                                 padding: 10px 22px 0px;
                                 margin: 15px;
-                                .videoTitle {
+                                .stepMainTitle {
                                     padding-top: 2px;
                                 }
-                                .videoSubTitle {
+                                .stepSubTitle {
                                     margin-top: 5px;
                                     padding-bottom: 14px;
                                     font-weight: 500;
@@ -144,11 +144,12 @@ h3 {
                             width : 100%;
                             position: relative;
                             // background-color : rgba(0,0,255,0.1);
-                            .stepsContainer {
+                            .stepsDotsContainer--js {
                                 display: flex;
                                 height: 100%;
                                 margin-top: 3px;
-                                .step {
+                                .stepDot {
+                                    position: relative;
                                     text-align: center;
                                     flex:1;
                                     display: flex;
@@ -156,6 +157,27 @@ h3 {
                                     text-transform: uppercase;
                                     font-size : 11px;
                                     color: gray;
+                                    .stepDot__icon {
+                                        position: absolute;
+                                        left: 0;
+                                        right: 0;
+                                        top: 5px;
+                                        margin-right: auto;
+                                        margin-left: auto;
+                                        width: 10px;
+                                        height: 10px;
+                                        // background-color: red;
+                                        background-size: 10px 10px;
+                                    }
+                                    .stepDot__icon--play {
+                                        background: url('../img/icons/icon__stepDot--play.png') center no-repeat;
+                                    }
+                                    .stepDot__icon--pause {
+                                        background: url('../img/icons/icon__stepDot--pause.png') center no-repeat;
+                                    }
+                                    .stepDot__icon--v {
+                                        background: url('../img/icons/icon__stepDot--v.png') center no-repeat;
+                                    }
                                     &:before {
                                         margin: 0 auto;
                                         margin-bottom: 10px;
@@ -189,9 +211,22 @@ h3 {
                                         &:after {
                                             margin-top: -37px;  
                                         }
+                                        // .step__icon {
+                                        //     position: absolute;
+                                        //     margin-left: auto;
+                                        //     margin-right: auto;
+                                        //     left: 2px;
+                                        //     right: 0;
+                                        //     top: 5px;
+                                        //     width: 0; 
+                                        //     height: 0; 
+                                        //     border-top: 4px solid transparent;
+                                        //     border-bottom: 4px solid transparent;
+                                        //     border-left: 6.6px solid white;
+                                        // }
                                     }
                                 }
-                                .step__selected {
+                                .stepDot__selected {
                                     // padding-bottom: 10px;
                                     color : $catbears__primary;
                                     font-weight: 600;
@@ -437,11 +472,11 @@ h3 {
     padding-left : 54px;
     padding-right : 54px;
 }
-.step:first-child:after {
+.stepDot:first-child:after {
     margin-left: 50%;
 }
 
-.step:last-child:after {
+.stepDot:last-child:after {
     margin-right: 50%;
 }
 
